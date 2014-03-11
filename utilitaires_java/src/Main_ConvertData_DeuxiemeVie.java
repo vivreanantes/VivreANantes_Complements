@@ -1,4 +1,4 @@
-import java.io.BufferedInputStream;
+ï»¿import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -37,8 +37,8 @@ public class Main_ConvertData_DeuxiemeVie extends Abstract_ConvertData {
 	static public final String QUARTIER_ORVAULT = "Orvault";
 	static public final String QUARTIER_VIARME = "Viarme";
 	static public final String QUARTIER_CHANTENAY = "Chantenay";
-	static public final String QUARTIER_BREIL = "Breil Dervallières Bellevue";
-	static public final String QUARTIER_ERDRE = "Erdre Ranzay Bottière Perray";
+	static public final String QUARTIER_BREIL = "Breil DervalliÃ¨res Bellevue";
+	static public final String QUARTIER_ERDRE = "Erdre Ranzay BottiÃ¨re Perray";
 	static public final String QUARTIER_MALKOFF = "Malakoff";
 	static public final String QUARTIER_BARBERIE = "Nantes Nord Barberie";
 	static public final String QUARTIER_SAINT_DONATIEN = "Saint Donatien";
@@ -75,9 +75,9 @@ public class Main_ConvertData_DeuxiemeVie extends Abstract_ConvertData {
 	static public final String NEW_ITEM5_VALUE_DECHETERIE = "modco_decheterie";
 	static public final String NEW_ITEM5_VALUE_ECOPOINT = "modco_ecopoint";
 	static public final String NEW_ITEM5_VALUE_REEMPLOI = "modco_reemploi";
-	static public final String NEW_ITEM6_VALUE_REEMPLOI = "Récupération";
+	static public final String NEW_ITEM6_VALUE_REEMPLOI = "RÃ©cupÃ©ration";
 	static public final String NEW_ITEM6_VALUE_ECOPOINT = "Ecopoint";
-	static public final String NEW_ITEM6_VALUE_DECHETERIE = "Décheterie";
+	static public final String NEW_ITEM6_VALUE_DECHETERIE = "DÃ©cheterie";
 
 	static public final String SEPARATOR = ",";
 
@@ -92,7 +92,7 @@ public class Main_ConvertData_DeuxiemeVie extends Abstract_ConvertData {
 
 	public void convertXMLToCSV(XMLStreamReader xmlStreamReader,
 			PrintWriter writer) throws XMLStreamException {
-		System.out.println("Conversion commencée...");
+		System.out.println("Conversion commencÃ©e...");
 
 		Map<String, StoreElement> storeElements = new HashMap<String, StoreElement>();
 
@@ -221,7 +221,7 @@ public class Main_ConvertData_DeuxiemeVie extends Abstract_ConvertData {
 		// sortie
 		int i = 1;
 		for (String mapKey : storeElements.keySet()) {
-			// utilise ici hashMap.get(mapKey) pour accéder aux valeurs
+			// utilise ici hashMap.get(mapKey) pour accÃ©der aux valeurs
 			StoreElement storeElement = storeElements.get(mapKey);
 			writer. //
 			append(esc(storeElement.getItem00() + i)).append(SEPARATOR). //
@@ -251,7 +251,7 @@ public class Main_ConvertData_DeuxiemeVie extends Abstract_ConvertData {
 		}
 		xmlStreamReader.require(XMLStreamConstants.END_ELEMENT, null, ROOT);
 		writer.close();
-		System.out.println("Conversion terminée.");
+		System.out.println("Conversion terminÃ©e.");
 
 	}
 

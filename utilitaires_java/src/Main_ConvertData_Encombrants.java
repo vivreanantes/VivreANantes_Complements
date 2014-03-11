@@ -1,4 +1,4 @@
-import java.io.BufferedInputStream;
+ï»¿import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -37,8 +37,8 @@ public class Main_ConvertData_Encombrants extends Abstract_ConvertData {
 	static public final String QUARTIER_ORVAULT = "Orvault";
 	static public final String QUARTIER_VIARME = "Viarme";
 	static public final String QUARTIER_CHANTENAY = "Chantenay";
-	static public final String QUARTIER_BREIL = "Breil Dervallières Bellevue";
-	static public final String QUARTIER_ERDRE = "Erdre Ranzay Bottière Perray";
+	static public final String QUARTIER_BREIL = "Breil DervalliÃ¨res Bellevue";
+	static public final String QUARTIER_ERDRE = "Erdre Ranzay BottiÃ¨re Perray";
 	static public final String QUARTIER_MALKOFF = "Malakoff";
 	static public final String QUARTIER_BARBERIE = "Nantes Nord Barberie";
 	static public final String QUARTIER_SAINT_DONATIEN = "Saint Donatien";
@@ -47,11 +47,11 @@ public class Main_ConvertData_Encombrants extends Abstract_ConvertData {
 
 	static public final String ROOT = "Document";
 	static public final String ITEM = "Placemark";
-	static public final String ITEM1 = "description"; // possède des données
+	static public final String ITEM1 = "description"; // possÃ¨de des donnÃ©es
 														// CDATA
 	static public final String ITEM2 = "styleUrl";
 	static public final String ITEM3 = "objet";
-	static public final String ITEM4 = "Point"; // possède un noeud fils
+	static public final String ITEM4 = "Point"; // possÃ¨de un noeud fils
 
 	static public final String COL_A = "code";
 	static public final String COL_A_VALUE = "stco_e";
@@ -63,11 +63,11 @@ public class Main_ConvertData_Encombrants extends Abstract_ConvertData {
 	static public final String COL_E_VALUE = "";
 	static public final String COL_F = "adresse";
 	static public final String COL_F_VALUE = "";
-	static public final String COL_G = "coordinates"; // possède un noeud fils
+	static public final String COL_G = "coordinates"; // possÃ¨de un noeud fils
 	static public final String COL_H = "plage_horaire";
 	static public final String COL_H_VALUE = "";
 	static public final String COL_J = "src";
-	static public final String COL_J_VALUE = "Infos reprises de Google Maps publiée par Nantes Métropôle";
+	static public final String COL_J_VALUE = "Infos reprises de Google Maps publiÃ©e par Nantes MÃ©tropÃ´le";
 	static public final String COL_I = "conseils";
 	static public final String COL_I_VALUE = "";
 	static public final String COL_K = "type";
@@ -98,12 +98,12 @@ public class Main_ConvertData_Encombrants extends Abstract_ConvertData {
 		xmlStreamReader.nextTag();
 		List<StoreElement> users = new ArrayList<StoreElement>();
 		while (xmlStreamReader.hasNext()) {
-			// Récupération du type de l'élement
+			// RÃ©cupÃ©ration du type de l'Ã©lement
 			int type = xmlStreamReader.next();
 
 			switch (type) {
 			case XMLStreamReader.START_ELEMENT:
-				// Si c'est un début de balise user, alors on lance le
+				// Si c'est un dÃ©but de balise user, alors on lance le
 				// traitement d'un utilisateur
 				if ("Placemark".equals(xmlStreamReader.getLocalName()))
 					processUser(users, xmlStreamReader);
@@ -141,7 +141,7 @@ public class Main_ConvertData_Encombrants extends Abstract_ConvertData {
 		}
 		// xmlStreamReader.require(XMLStreamConstants.END_ELEMENT, null, ROOT);
 		writer.close();
-		System.out.println("Conversion terminée.");
+		System.out.println("Conversion terminÃ©e.");
 	}
 
 	private static void processUser(List<StoreElement> users,
@@ -164,7 +164,7 @@ public class Main_ConvertData_Encombrants extends Abstract_ConvertData {
 			int type = reader.next();
 
 			switch (type) {
-			// Si c'est un début d'elément, on garde son type
+			// Si c'est un dÃ©but d'elÃ©ment, on garde son type
 			case XMLStreamReader.START_ELEMENT:
 				if (reader.getLocalName().equals("name"))
 					flag = FLAG_USERNAME;
@@ -181,17 +181,17 @@ public class Main_ConvertData_Encombrants extends Abstract_ConvertData {
 			case XMLStreamReader.CHARACTERS:
 				switch (flag) {
 				case FLAG_DESCRIPTION:
-					// et que ce n'est pas une chaîne de blancs
+					// et que ce n'est pas une chaÃ®ne de blancs
 					if (!(reader.isWhiteSpace())) {
 						description = reader.getText();
 					}
 					description = description
 							.replaceAll("<div dir=\"ltr\">", "")
 							.replace("</div>", "").replace("<br>", "");
-					// La collecte des encombrants pour l&#39;habitat vertical ou habitat collectif a lieu à cette adresse 
+					// La collecte des encombrants pour l&#39;habitat vertical ou habitat collectif a lieu Ã  cette adresse 
 					plage_horaire = description
 							.replace(
-									"La collecte des encombrants pour l&#39;habitat vertical ou habitat collectif a lieu à cette adresse ",
+									"La collecte des encombrants pour l&#39;habitat vertical ou habitat collectif a lieu Ã  cette adresse ",
 									"");
 					break;
 				case FLAG_PASSWORD:
@@ -210,9 +210,9 @@ public class Main_ConvertData_Encombrants extends Abstract_ConvertData {
 									"Collecte encombrants en habitat vertical - Quartier ",
 									"")
 							.replace(
-									"habitat vertical ou habitat collectif a lieu à cette adresse tous les vendredi après-midis de chaque mois.",
-									"").replace("Repère 44", "")
-							.replace("Repère 45", "");
+									"habitat vertical ou habitat collectif a lieu Ã  cette adresse tous les vendredi aprÃ¨s-midis de chaque mois.",
+									"").replace("RepÃ¨re 44", "")
+							.replace("RepÃ¨re 45", "");
 					break;
 				}
 				break;
