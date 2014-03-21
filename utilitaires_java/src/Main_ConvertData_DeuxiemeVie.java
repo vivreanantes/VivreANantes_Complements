@@ -15,7 +15,7 @@ import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 
 public class Main_ConvertData_DeuxiemeVie extends Abstract_ConvertData {
-	
+
 	public static void main(String[] args) throws XMLStreamException,
 			FileNotFoundException {
 
@@ -27,8 +27,6 @@ public class Main_ConvertData_DeuxiemeVie extends Abstract_ConvertData {
 				new BufferedInputStream(new FileInputStream(src)),
 				new BufferedOutputStream(new FileOutputStream(dst)));
 	}
-
-
 
 	static public final String DEUXIEME_VIE_DIRECTORY = "deuxieme_vie\\";
 	static public final String SEPARATOR_BETWEEN_2_ELEMENTS = ",";
@@ -67,15 +65,13 @@ public class Main_ConvertData_DeuxiemeVie extends Abstract_ConvertData {
 	static public final String NEW_ITEM_SRC_ = "src";
 	static public final String NEW_ITEM_SRC__VALUE = "deuxiemeVie";
 	static public final String NEW_ITEM2 = "modesCollecte";
-	static public final String NEW_ITEM3 = "string_horaires";
 	static public final String NEW_ITEM3_VALUE = " ";
-	static public final String NEW_ITEM4 = "quartier";
 	static public final String NEW_ITEM4_VALUE = " ";
 	static public final String NEW_ITEM5 = "type";
 	static public final String NEW_ITEM5_VALUE_DECHETERIE = "modco_decheterie";
 	static public final String NEW_ITEM5_VALUE_ECOPOINT = "modco_ecopoint";
 	static public final String NEW_ITEM5_VALUE_REEMPLOI = "modco_reemploi";
-	static public final String NEW_ITEM6_VALUE_REEMPLOI = "Récupération";
+	static public final String NEW_ITEM6_VALUE_REEMPLOI = "Récup";
 	static public final String NEW_ITEM6_VALUE_ECOPOINT = "Ecopoint";
 	static public final String NEW_ITEM6_VALUE_DECHETERIE = "Décheterie";
 
@@ -111,9 +107,7 @@ public class Main_ConvertData_DeuxiemeVie extends Abstract_ConvertData {
 				+ ITEM12 //
 				+ SEPARATOR + ITEM13 + SEPARATOR + NEW_ITEM_SRC_
 				+ SEPARATOR
-				+ NEW_ITEM2 //
-				+ SEPARATOR + NEW_ITEM3 + SEPARATOR + NEW_ITEM4 + SEPARATOR
-				+ NEW_ITEM5); //
+				+ NEW_ITEM2 + SEPARATOR + NEW_ITEM5); //
 		xmlStreamReader.nextTag();
 		// <MARKERS>
 		xmlStreamReader.require(XMLStreamConstants.START_ELEMENT, null, ROOT);
@@ -157,7 +151,7 @@ public class Main_ConvertData_DeuxiemeVie extends Abstract_ConvertData {
 			String itemG = xmlStreamReader.getAttributeValue(6);
 
 			String itemH = name;
-			String townInInnerCase = translateName(name);
+			// String townInInnerCase = translateName(name);
 
 			String itemI = xmlStreamReader.getAttributeValue(8);
 			String horaires = xmlStreamReader.getAttributeValue(9);
@@ -180,14 +174,27 @@ public class Main_ConvertData_DeuxiemeVie extends Abstract_ConvertData {
 							replaceAll("Vetement", "vet"). //
 							replaceAll("Jeux_Jouet", "jouet");
 			String newHoraires = this.tranlateHoraires(horaires);
-			String itemQ = newHoraires;
-			String itemR = townInInnerCase;
+			// String itemR = townInInnerCase;
 
-			String itemS = collectMod;
+			String itemR = object.replaceAll("Dechets", "")
+							. //
+							replaceAll("Informatique", " informatique")
+							. //
+							replaceAll("Electromenager", " électroménager")
+							. //
+							replaceAll("Cartouche",
+									" cartouches encres/tuners")
+							. //
+							replaceAll("Livres_Revue_CD_BD", " livres/CD/BD")
+							. //
+							replaceAll("Meuble", " meuble"). //
+							replaceAll("Autres", " divers"). //
+							replaceAll("Vetement", " vêtement"). //
+							replaceAll("Jeux_Jouet", " jouets");
 			// String itemS = NEW_ITEM5_VALUE;
 			StoreElement elt = new StoreElement(columnA, itemA, itemB, columnD,
 					columnE, itemE, itemF, itemG, itemH, itemI, itemJ, itemK,
-					itemL, itemM, itemN, itemO, itemP, itemQ, itemR, itemS);
+					itemL, itemM, itemN, itemO, itemP, itemR);
 
 			// On filtre ce qui n'est pas sur Nantes
 			// VIGNEUX DE BRETAGNE est proche de Orvault
@@ -197,17 +204,22 @@ public class Main_ConvertData_DeuxiemeVie extends Abstract_ConvertData {
 					&& !name.equals(StructureName.FROSSAY.toString())
 					&& !name.equals(StructureName.SAINT_PERE_EN_RETZ.toString())
 					&& !name.equals(StructureName.DONGES.toString())
-					&& !name.equals(StructureName.SAINT_BREVIN_LES_PINS.toString())
-					&& !name.equals(StructureName.SAINT_MALO_DE_GUERSAC.toString())
+					&& !name.equals(StructureName.SAINT_BREVIN_LES_PINS
+							.toString())
+					&& !name.equals(StructureName.SAINT_MALO_DE_GUERSAC
+							.toString())
 					&& !name.equals(StructureName.SAINT_JOACHIM.toString())
 					&& !name.equals(StructureName.PORNICHET.toString())
 					&& !name.equals(StructureName.CUNEIX.toString())
-					&& !name.equals(StructureName.MEAN_PENHOET_SAINT_NAZAIRE.toString())) {
+					&& !name.equals(StructureName.MEAN_PENHOET_SAINT_NAZAIRE
+							.toString())) {
 				boolean estDejaPresent = false;
 				StoreElement oldElement = storeElements.get(itemA);
 				if (storeElements.containsKey(itemA)) {
 					oldElement.setItem15(oldElement.getItem15()
 							+ SEPARATOR_BETWEEN_2_ELEMENTS + itemP);
+					oldElement.setItem16(oldElement.getItem16()
+							+ SEPARATOR_BETWEEN_2_ELEMENTS + itemR);
 					estDejaPresent = true;
 				}
 
@@ -241,9 +253,7 @@ public class Main_ConvertData_DeuxiemeVie extends Abstract_ConvertData {
 					append(esc(storeElement.getItem13())).append(SEPARATOR). //
 					append(esc(storeElement.getItem14())).append(SEPARATOR). //
 					append(esc(storeElement.getItem15())).append(SEPARATOR). //
-					append(esc(storeElement.getItem16())).append(SEPARATOR). //
-					append(esc(storeElement.getItem17())).append(SEPARATOR). //
-					append(esc(storeElement.getItem18())); //
+					append(esc(storeElement.getItem16())); //
 
 			i++;
 
@@ -262,10 +272,4 @@ public class Main_ConvertData_DeuxiemeVie extends Abstract_ConvertData {
 		return string;
 	}
 
-
-	private String translateName(String town) {
-		return town.replaceAll("CEDEX", "");
-	}
-
-	
 }

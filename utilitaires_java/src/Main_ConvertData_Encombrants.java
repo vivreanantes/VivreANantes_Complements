@@ -132,9 +132,7 @@ public class Main_ConvertData_Encombrants extends Abstract_ConvertData {
 					append(esc(user.getItem13())).append(SEPARATOR). //
 					append(esc(user.getItem14())).append(SEPARATOR). //
 					append(esc(user.getItem15())).append(SEPARATOR). //
-					append(esc(user.getItem16())).append(SEPARATOR). //
-					append(esc(user.getItem17())).append(SEPARATOR). //
-					append(esc(user.getItem18())); //
+					append(esc(user.getItem16())); //
 			i++;
 
 			writer.println();
@@ -227,7 +225,7 @@ public class Main_ConvertData_Encombrants extends Abstract_ConvertData {
 		StoreElement elt = new StoreElement(COL_A_VALUE, name, quartier,
 				COL_D_VALUE, COL_E_VALUE, COL_F_VALUE, coordinates,
 				plage_horaire, COL_I_VALUE, COL_J_VALUE, COL_K_VALUE,
-				description, "", "", "", "", "", "", "", "");
+				description, "", "", "", "", "", "");
 
 		users.add(elt);
 		// users.add(UserBuilder.createUser());
