@@ -63,7 +63,7 @@ public class Main_ConvertData_DeuxiemeVie extends Abstract_ConvertData {
 	static public final String NEW_ITEM_CODE = "code";
 	static public final String NEW_ITEM_CODE_VALUE = "stco_reemploi";
 	static public final String NEW_ITEM_SRC_ = "src";
-	static public final String NEW_ITEM_SRC__VALUE = "deuxiemeVie";
+	static public final String NEW_ITEM_SRC__VALUE = "DeuxiemeVie 03/14";
 	static public final String NEW_ITEM2 = "modesCollecte";
 	static public final String NEW_ITEM3_VALUE = " ";
 	static public final String NEW_ITEM4_VALUE = " ";
@@ -71,7 +71,7 @@ public class Main_ConvertData_DeuxiemeVie extends Abstract_ConvertData {
 	static public final String NEW_ITEM5_VALUE_DECHETERIE = "modco_decheterie";
 	static public final String NEW_ITEM5_VALUE_ECOPOINT = "modco_ecopoint";
 	static public final String NEW_ITEM5_VALUE_REEMPLOI = "modco_reemploi";
-	static public final String NEW_ITEM6_VALUE_REEMPLOI = "Récup";
+	static public final String NEW_ITEM6_VALUE_REEMPLOI = "Récup.";
 	static public final String NEW_ITEM6_VALUE_ECOPOINT = "Ecopoint";
 	static public final String NEW_ITEM6_VALUE_DECHETERIE = "Décheterie";
 
@@ -173,7 +173,7 @@ public class Main_ConvertData_DeuxiemeVie extends Abstract_ConvertData {
 							replaceAll("Autres", "divers"). //
 							replaceAll("Vetement", "vet"). //
 							replaceAll("Jeux_Jouet", "jouet");
-			String newHoraires = this.tranlateHoraires(horaires);
+			String itemS = this.tranlateHoraires(horaires);
 			// String itemR = townInInnerCase;
 
 			String itemR = object.replaceAll("Dechets", "")
@@ -183,18 +183,18 @@ public class Main_ConvertData_DeuxiemeVie extends Abstract_ConvertData {
 							replaceAll("Electromenager", " électroménager")
 							. //
 							replaceAll("Cartouche",
-									" cartouches encres/tuners")
+									" cartouches encre/tuners")
 							. //
-							replaceAll("Livres_Revue_CD_BD", " livres/CD/BD")
+							replaceAll("Livres_Revue_CD_BD", " livres/BD/CD/DVD")
 							. //
 							replaceAll("Meuble", " meuble"). //
 							replaceAll("Autres", " divers"). //
-							replaceAll("Vetement", " vêtement"). //
-							replaceAll("Jeux_Jouet", " jouets");
+							replaceAll("Vetement", " vêtements"). //
+							replaceAll("Jeux_Jouet", " jouet");
 			// String itemS = NEW_ITEM5_VALUE;
 			StoreElement elt = new StoreElement(columnA, itemA, itemB, columnD,
 					columnE, itemE, itemF, itemG, itemH, itemI, itemJ, itemK,
-					itemL, itemM, itemN, itemO, itemP, itemR);
+					itemL, itemM, itemN, itemO, itemP, itemR, itemS);
 
 			// On filtre ce qui n'est pas sur Nantes
 			// VIGNEUX DE BRETAGNE est proche de Orvault
@@ -253,7 +253,8 @@ public class Main_ConvertData_DeuxiemeVie extends Abstract_ConvertData {
 					append(esc(storeElement.getItem13())).append(SEPARATOR). //
 					append(esc(storeElement.getItem14())).append(SEPARATOR). //
 					append(esc(storeElement.getItem15())).append(SEPARATOR). //
-					append(esc(storeElement.getItem16())); //
+					append(esc(storeElement.getItem16())).append(SEPARATOR). //
+					append(esc(storeElement.getItem17())); //
 
 			i++;
 

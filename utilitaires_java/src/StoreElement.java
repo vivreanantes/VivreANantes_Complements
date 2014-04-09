@@ -19,11 +19,12 @@ public class StoreElement {
 	String item14;
 	String item15;
 	String item16;
+	String item17;
 	
 	public StoreElement(String item00, String item0, String item1, String item2, String item3, String item4,
 			String item5, String item6, String item7, String item8,
 			String item9, String item10, String item11, String item12,
-			String item13, String item14, String item15, String item16) {
+			String item13, String item14, String item15, String item16, String item17) {
 		super();
 		this.item00 = item00;
 		this.item0 = item0;
@@ -43,6 +44,7 @@ public class StoreElement {
 		this.item14 = item14;
 		this.item15 = item15;
 		this.item16 = item16;
+		this.item17 = item17;
 	}
 	
 	
@@ -153,5 +155,11 @@ public class StoreElement {
 	}
 	public void setItem16(String item16) {
 		this.item16 = item16;
+	}
+	public void setItem17(String item17) {
+		this.item17 = item17;
+	}
+	public String getItem17() {
+		return item17;
 	}
 }

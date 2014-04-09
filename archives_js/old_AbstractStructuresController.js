@@ -14,7 +14,7 @@
 				var typeTraduit = "";
 				if (record.data["modesCollecte"] != null
 						&& record.data["modesCollecte"] !== "") {
-					// On découpe modesCollecte, puis on traduit
+					// On dï¿½coupe modesCollecte, puis on traduit
 					var arModesCollecte = record.data["modesCollecte"].split(",");
 					for (var i = 0; i < arModesCollecte.length; i++) {
 						var unModeCollecte = arModesCollecte[i];
@@ -76,7 +76,7 @@
 			if (record.data["conseils"] !== "") {
 				conseils = record.data["conseils"] + ",";
 			}
-			var arraysItemsAdvices = this.getItemsAdvices(conseils);
+			var arraysItemsAdvices = _getAdvicesBlock(conseils);
 			this.setItemsElement(this.structuresDetail,
 					"structuresDetails_advices", arraysItemsAdvices);
 
@@ -138,9 +138,9 @@
 
 	// ///////////////////////////////////////////////////////////////////////////////
 	/*
-	 * Renvoie les horaires (ou complete ceux existant) horaires "de 14h30 à
+	 * Renvoie les horaires (ou complete ceux existant) horaires "de 14h30 ï¿½
 	 * 19h00", debut "Tue Jan 01 2013 00:00:00 GMT+0100 (Paris, Madrid)"
-	 * horaires "de 14h30 à 19h00 et de 14h30 à 19h00"
+	 * horaires "de 14h30 ï¿½ 19h00 et de 14h30 ï¿½ 19h00"
 	 */
 	old_getAttributes_HoursFromToAsTextAndDaysFromToAsTextAttribute : function(
 			arPlagesHoraires, dateDebut, dateFin, fromToAttribute, timeZone, stLocale) {
@@ -170,22 +170,22 @@
 					+ minutesDebut + " " + stLabelA + " " + heuresFinInt + stLabelH
 					+ minutesFin;
 			if (result!="") {
-				// On ajoute "Et de 19h45 à 20h30"
+				// On ajoute "Et de 19h45 ï¿½ 20h30"
 				result = result + " " + stLabelEt + " " + stHoraires;
 			} else {
-				// On ajoute "19h45 à 20h30"
+				// On ajoute "19h45 ï¿½ 20h30"
 				result = result + stHoraires;
 			}
 			/*var estPresent = false;
 			for (var i = 0; i < arPlagesHoraires.length; i++) {
 				// meme jour : "du 0101 au 3112"
-				// et meme jour de la semaine ex "Toute l'année (du lundi au mercredi)"
+				// et meme jour de la semaine ex "Toute l'annï¿½e (du lundi au mercredi)"
 				if (arPlagesHoraires[i]["dateDebut"].toString() === dateDebut
 						.toString()
 						&& arPlagesHoraires[i]["dateFin"].toString() === dateFin
 								.toString()
 						&& arPlagesHoraires[i]["fromTo"].toString() === fromToAttribute) {
-					// On complète les horaires
+					// On complï¿½te les horaires
 					stSchedule = arPlagesHoraires[i]["schedule"] + " " + stLabelEt
 							+ " " + stHoraires;
 					estPresent = true;
@@ -237,15 +237,15 @@
 		var stTomorrowSpecialDay = this.old_getTomorrowSpecialDay();
 
 
-		// Ce qui sera ajouté à l"objet Structures
+		// Ce qui sera ajoutï¿½ ï¿½ l"objet Structures
 		var arNewAttributes = Array();
 		if (stPlagesHoraire != null && stPlagesHoraire != "") {
 
-			// Split la chaîne de caractère "plagesHoraires" pour fabriquer le
+			// Split la chaï¿½ne de caractï¿½re "plagesHoraires" pour fabriquer le
 			// tableau des plages horaires
 			var arPlagesHoraires = stPlagesHoraire.split(",");
 
-			// Récupère le contenu de la zône des jours fériés
+			// Rï¿½cupï¿½re le contenu de la zï¿½ne des jours fï¿½riï¿½s
 			var specialDayZone = "";
 			for (var i = 0; i < arPlagesHoraires.length; i++) {
 				var plageHoraire = arPlagesHoraires[i];
@@ -255,10 +255,10 @@
 			}
 
 			// Parcours le tableau des plages horaires pour obtenir plusieurs
-			// évènements
+			// ï¿½vï¿½nements
 			for (var i = 0; i < arPlagesHoraires.length; i++) {
 				var plageHoraire = arPlagesHoraires[i];
-				// On traite hors zone Jour ferie et si il y a des données
+				// On traite hors zone Jour ferie et si il y a des donnï¿½es
 				if (plageHoraire != specialDayZone && plageHoraire.length > 0) {
 					var indexSeparator1 = plageHoraire.indexOf("_", 0);
 					var indexSeparator2 = plageHoraire.indexOf("_",
@@ -332,7 +332,7 @@
 				}
 			}
 			var stplagesHoraires = "";
-			// Parcours tous les évènements obtenus
+			// Parcours tous les ï¿½vï¿½nements obtenus
 			for (var i = 0; i < arNewAttributes.length; i++) {
 				stplagesHoraires = stplagesHoraires + "- "
 						+ arNewAttributes[i]["fromTo"] + " "
@@ -363,7 +363,7 @@
 		objStructures.data["plagesHoraires_prochainsJours"] = stOuvertAujourdhuiEtDemain;
 	},
 
-	/* renvoie une chaine de caractère */
+	/* renvoie une chaine de caractï¿½re */
 	old_getTimeZone_JourDebutMoisDebutJourFinMoisFin : function(plageHoraire) {
 		var index1 = plageHoraire.indexOf("_", 0);
 		if (index1 == 9) {
@@ -377,7 +377,7 @@
 			var jourFinJJ = strDateFin.substring(0, 2);
 			var moisFinMM = strDateFin.substring(2, 4);
 		} else if (index1 == 6) {
-			// On est dans le cas d"une date précise
+			// On est dans le cas d"une date prï¿½cise
 			var stDate = plageHoraire.substring(0, index1);
 			if (stDate.length === 6) {
 				var jourDebutJJ = stDate.substring(0, 2);
@@ -464,7 +464,7 @@
 				&& this.utilArrayContainObject(arDays, tomorrowTwoDays)) {
 			bOuvertDemain = true;
 		}
-		// 3 - Vérif les jours fériés
+		// 3 - Vï¿½rif les jours fï¿½riï¿½s
 		if (this.verifSpecialDay(stTodayFerieSpecialDay, specialDayZone)) {
 			bOuvertAujourdhui = false;
 		}
@@ -507,7 +507,7 @@
 	},
 
 	/**
-	 * Valorise les options des listes déroulantes "quartier"
+	 * Valorise les options des listes dï¿½roulantes "quartier"
 	 */
 	setOptionsQuartier_old : function(selectField) {
 
@@ -524,16 +524,16 @@
 					text : "Centre-ville",
 					value : "Centre-ville"
 				}, {
-					text : "Dervallières Zola",
+					text : "Dervalliï¿½res Zola",
 					value : "Dervallieres Zola"
 				}, {
-					text : "Doulon Bottière",
+					text : "Doulon Bottiï¿½re",
 					value : "Doulon Bottiere"
 				}, {
-					text : "Hauts-Pavés Saint-Félix",
+					text : "Hauts-Pavï¿½s Saint-Fï¿½lix",
 					value : "Hauts-Paves Saint-Felix"
 				}, {
-					text : "Île de Nantes",
+					text : "ï¿½le de Nantes",
 					value : "Ile de Nantes"
 				}, {
 					text : "Malakoff Saint-Donatien",
