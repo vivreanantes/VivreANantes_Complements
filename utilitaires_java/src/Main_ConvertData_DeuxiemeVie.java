@@ -153,7 +153,7 @@ public class Main_ConvertData_DeuxiemeVie extends Abstract_ConvertData {
 			String itemH = name;
 			// String townInInnerCase = translateName(name);
 
-			String itemI = xmlStreamReader.getAttributeValue(8);
+			String itemI = xmlStreamReader.getAttributeValue(8) + this.addComment(xmlStreamReader.getAttributeValue(9));
 			String horaires = xmlStreamReader.getAttributeValue(9);
 			String itemJ = horaires;
 			String itemK = xmlStreamReader.getAttributeValue(10);
