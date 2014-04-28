@@ -71,7 +71,7 @@ public class Main_ConvertData_DeuxiemeVie extends Abstract_ConvertData {
 	static public final String NEW_ITEM5_VALUE_DECHETERIE = "modco_decheterie";
 	static public final String NEW_ITEM5_VALUE_ECOPOINT = "modco_ecopoint";
 	static public final String NEW_ITEM5_VALUE_REEMPLOI = "modco_reemploi";
-	static public final String NEW_ITEM6_VALUE_REEMPLOI = "Récup.";
+	static public final String NEW_ITEM6_VALUE_REEMPLOI = "Réemploi";
 	static public final String NEW_ITEM6_VALUE_ECOPOINT = "Ecopoint";
 	static public final String NEW_ITEM6_VALUE_DECHETERIE = "Décheterie";
 
