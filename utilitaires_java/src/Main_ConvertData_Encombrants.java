@@ -16,9 +16,16 @@ import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 
-public class Main_ConvertData_Encombrants extends Abstract_ConvertData {
+public class Main_ConvertData_Encombrants {
+	
+	static public final String FILE_DIRECTORY = "C:\\dev\\github-repositories\\VivreANantes_Complements\\utilitaires_java\\";
+	static public final String RESSOURCES_DIRECTORY = "in\\";
+	static public final String RES_DIRECTORY = "out\\";
+	
 	public static void main(String[] args) throws XMLStreamException,
 			FileNotFoundException {
+
+		  
 
 		String src = FILE_DIRECTORY + RESSOURCES_DIRECTORY
 				+ DEUXIEME_VIE_DIRECTORY + "data.xml"; // args[0]
@@ -81,6 +88,7 @@ public class Main_ConvertData_Encombrants extends Abstract_ConvertData {
 	public void convertXMLToCSV(InputStream in, OutputStream out)
 			throws XMLStreamException {
 
+		 
 		PrintWriter writer = new PrintWriter(out);
 		XMLStreamReader xmlStreamReader = XMLInputFactory.newInstance()
 				.createXMLStreamReader(in);
@@ -222,12 +230,7 @@ public class Main_ConvertData_Encombrants extends Abstract_ConvertData {
 				break;
 			}
 		}
-		StoreElement elt = new StoreElement(COL_A_VALUE, name, quartier,
-				COL_D_VALUE, COL_E_VALUE, COL_F_VALUE, coordinates,
-				plage_horaire, COL_I_VALUE, COL_J_VALUE, COL_K_VALUE,
-				description, "", "", "", "", "", "");
 
-		users.add(elt);
 		// users.add(UserBuilder.createUser());
 	}
 
