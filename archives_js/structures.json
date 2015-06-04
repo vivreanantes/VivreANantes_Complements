@@ -1,8 +1,10 @@
 {
-	"structures" : [{
+	"structures" : [
+
+	{
 		"code" : "stco_reemploiajout1",
-		"latitude" : "-1.575083",
-		"longitude" : "47.20508",
+		"latitude" : "47.20508",
+		"longitude" : "-1.575083",
 		"modesCollecte" : "smco_reemp",
 		"type" : " réemploi vêtements, divers, livres/BD/CD/DVD",
 		"statut" : "Association",
@@ -19,8 +21,8 @@
 		"mots_cles" : "Vetements, bibelots, livres"
 	}, {
 		"code" : "stco_reemploisolidarimeuble",
-		"latitude" : "-1.596764",
-		"longitude" : "47.198314",
+		"latitude" : "47.198314",
+		"longitude" : "-1.596764",
 		"modesCollecte" : "smco_reemp",
 		"type" : " réemploi meuble, électroménager",
 		"statut" : "Association",
@@ -37,8 +39,8 @@
 		"mots_cles" : "meuble,electromenager"
 	}, {
 		"code" : "stco_spopaffaires",
-		"latitude" : "-1.550847",
-		"longitude" : "47.210229",
+		"latitude" : "47.210229",
+		"longitude" : "-1.550847",
 		"modesCollecte" : "smco_reemp",
 		"type" : " réemploi vêtements, divers, livres/BD/CD/DVD",
 		"statut" : "Association",
@@ -55,8 +57,8 @@
 		"mots_cles" : "vetement, petit mobilier, livre, jouet, vaisselle"
 	}, {
 		"code" : "stco_reemploiajout2",
-		"latitude" : "-1.610673",
-		"longitude" : "47.208928",
+		"latitude" : "47.208928",
+		"longitude" : "-1.610673",
 		"modesCollecte" : "smco_reemp",
 		"type" : " réemploi vélo",
 		"statut" : "Association",
@@ -73,8 +75,8 @@
 		"mots_cles" : "Velos entiers, pieces detachees fonctionnelles, accessoires, equipements"
 	}, {
 		"code" : "stco_reemploiajout3",
-		"latitude" : "-1.554955",
-		"longitude" : "47.243274",
+		"latitude" : "47.243274",
+		"longitude" : "-1.554955",
 		"modesCollecte" : "smco_reemp",
 		"type" : " réemploi vélo",
 		"statut" : "Association",
@@ -100,8 +102,8 @@
 		"src" : "Renseigné sur formulaire de mieuxtrieranantes.fr, le 15/07/2014"
 	}, {
 		"code" : "stco_reemploiajout5",
-		"latitude" : "-1.802187",
-		"longitude" : "47.112545",
+		"latitude" : "47.112545",
+		"longitude" : "-1.802187",
 		"modesCollecte" : "smco_reemp",
 		"type" : " réemploi meuble, livres/bd/cd/dvd, jouet, vêtements, divers",
 		"statut" : "Association",
@@ -119,8 +121,8 @@
 		"mots_cles" : "velo,mobilier,textile,vaisselle,jouet,puericulture,livre,CD,DVD,outillage,materiel electrique"
 	}, {
 		"code" : "stco_reemploiajout6",
-		"latitude" : "-1.755177",
-		"longitude" : "47.200633",
+		"latitude" : "47.200633",
+		"longitude" : "-1.755177",
 		"modesCollecte" : "smco_reemp",
 		"type" : " réemploi meuble, livres/bd/cd/dvd, jouet, vêtements, divers",
 		"statut" : "Association",
@@ -138,8 +140,8 @@
 		"mots_cles" : "velo,mobilier,textile,vaisselle,jouet,puericulture,livre,CD,DVD,outillage,materiel electrique"
 	}, {
 		"code" : "stco_reemploiajout7",
-		"latitude" : "-1.590294",
-		"longitude" : "47.231095",
+		"latitude" : "47.231095",
+		"longitude" : "-1.590294",
 		"modesCollecte" : "smco_reemp",
 		"type" : " réemploi meuble, livres/bd/cd/dvd, jouet, vêtements, divers",
 		"statut" : "Association",
@@ -157,8 +159,8 @@
 		"mots_cles" : "velo,mobilier,textile,vaisselle,jouet,puericulture,livre,CD,DVD,outillage,materiel electrique"
 	}, {
 		"code" : "stco_reemploiajout8",
-		"latitude" : "-2.154311",
-		"longitude" : "47.240987",
+		"latitude" : "47.240987",
+		"longitude" : "-2.154311",
 		"modesCollecte" : "smco_reemp",
 		"type" : " réemploi meuble, livres/bd/cd/dvd, jouet, vêtements, divers",
 		"statut" : "Association",
@@ -176,8 +178,8 @@
 		"mots_cles" : "velo,mobilier,textile,vaisselle,jouet,puericulture,livre,CD,DVD,outillage,materiel electrique"
 	}, {
 		"code" : "stco_reemploiajout9",
-		"latitude" : "-1.571628",
-		"longitude" : "47.201027",
+		"latitude" : "47.201027",
+		"longitude" : "-1.571628",
 		"modesCollecte" : "smco_reemp",
 		"type" : " réemploi livres/bd/cd/dvd, jouet, vêtements, divers",
 		"statut" : "Association",
@@ -225,8 +227,8 @@
 		"mots_cles" : "vetement"
 	}, {
 		"code" : "stco_reemploiajout12",
-		"latitude" : "-1.552638",
-		"longitude" : "47.216793",
+		"latitude" : "47.216793",
+		"longitude" : "-1.552638",
 		"modesCollecte" : "smco_reemp",
 		"type" : " réemploi 0",
 		"statut" : "Entreprise",
@@ -328,7 +330,7 @@
 		"latitude" : "47.242692",
 		"longitude" : "-1.571018",
 		"modesCollecte" : "smco_reemp",
-		"type" : " réemploi vêtement",
+		"type" : " réemploi vêtements",
 		"statut" : "Association",
 		"descr" : "RE-act est un service né en 2010 de proximité proposant aux gens de transformer leurs vêtements afin de s'offrir une nouvelle pièce unique et sur-mesure.<br/><br/>Il s'adresse majoritairement à des personnes peu consuméristes à la recherche d'originalité et de singularité par une nouvelle expérience du vêtement et leur offre ainsi une alternative séduisante à la consommation de textiles neufs.<br/>Les clients apportent leurs vieux vêtements en boutique, choisissent parmi les coupes disponibles et commandent leur nouveau vêtement, personnalisé, fait à partir de leurs propres vêtements",
 		"nom" : "Re-act",
@@ -518,21 +520,23 @@
 		"src" : "MieuxTrierANantes 01/15",
 		"mots_cles" : "papier"
 	}, {
-		"code" : "stco_lesmarchandsdesable",
-		"latitude" : "47.200229",
-		"longitude" : "-1.561791",
+		"code" : "stco_reemploi37",
+		"latitude" : "47.223204",
+		"longitude" : "-1.642425",
 		"modesCollecte" : "smco_reemp",
-		"type" : " réemploi meuble",
+		"type" : " réemploi informatique",
 		"statut" : "Association",
-		"descr" : "Créations d'aménagements intérieurs à partir de matériaux de réemploi.<br/><img src='resources/images/images_non_libres/marchands_de_sable.jpg' />Scénographie Architecture Bâti Lieux Expérimentaux. Notre travail trouve son application dans la création d'installation urbaines et constructions temporaires <b>à base d'objets récupérés</b>.<br/>Ils recherchent surtout du mobilier, du bois (mais de préférence du dois brut et pas de l'aggloméré) et des structures métalliques.",
-		"nom" : "Les marchands de sable",
-		"adresseTemp" : "18 quai du président Wilson  44200 NANTES",
-		"url" : "<a href='marchandsdesable.com' target='_blank'>marchandsdesable.com</a>",
-		"email" : "lesmarchandsdesable@gmail.com",
-		"tel" : "06 81 67 42 06",
-		"src" : "MieuxTrierANantes 02/15",
-		"mots_cles" : "meuble,bois,structure metallique"
-	}, , {
+		"descr" : "Créée par l'association Actif Ouest, cette entreprise d'insertion est spécialisées dans la <br/>- rénovation de micro-ordinateurs réformés et leur revente avec garantie,<br/>- démantèlement assuré par l'atelier d'insertion pour le matériel ‘obsolète' ou en panne.<br/><br/>C'est un lieu de dépôt des Déchets d'équipement électrique et électronique (D3E).<br/>Tri Actif Ouest est labellisé Ordi2.0 (filière nationale de collecte, rénovation est réemploi des ordinateurs).<br/><br/>C'est également un lieu de vente d'ordinateurs fixes ou portables (avec garantie), de dépannage et de vente de pièces détachées.",
+		"nom" : "TRIS Actif Ouest",
+		"adresseTemp" : "8 rue du Charron  44800 SAINT-HERBLAIN",
+		"url" : "<a href='http://www.actifouest.fr' target='_blank'>http://www.actifouest.fr</a>",
+		"email" : "tris-actif-ouest@orange.fr",
+		"tel" : "02 51 80 05 38",
+		"src" : "MieuxTrierANantes 01/15",
+		"horaires" : "Du lundi au vendredi de 9h00 à  12h30 et de 14h00 à  18h00.",
+		"plagesHoraires" : "0101-3112_lu+ma+me+je+ve_09h00-12h30+14h00-18h00,",
+		"mots_cles" : "ordi,ordinateur,pc,portable"
+	}, {
 		"code" : "stco_lesmarchandsdesable",
 		"latitude" : "47.200229",
 		"longitude" : "-1.561791",
@@ -938,11 +942,86 @@
 		"type" : " vente au vrac",
 		"statut" : "Entreprise",
 		"descr" : "Situé dans le centre commercial 'Les grands prés', propose des viennoiseries en sac tissus et pâtisseries en boîte.",
-		"nom" : "Boulangerie L'arbre à pain",
-		"adresseTemp" : "44 Rue des Frères Rousseau  44860 SAINT-AIGNAN-GRANDLIEU",
+		"nom" : "Boulangerie L'arbre à pain (Saint-Aignan de Grand Lieu",
+		"adresseTemp" : "44 Rue des Frères Rousseau  44860 Saint-Aignan de Grand Lieu",
 		"tel" : "02 40 31 00 85",
 		"src" : "MieuxTrierANantes 04/15",
-		"sous_zone" : "47.126671"
+		"sous_zone" : "hnsl"
+	}, {
+		"code" : "stco_ventevrac2",
+		"latitude" : "47.233946",
+		"longitude" : "-1.585963",
+		"modesCollecte" : "ventevrac",
+		"type" : " vente au vrac",
+		"statut" : "Entreprise",
+		"descr" : "Chlorophylle est une coopérative de consommateurs de produits biologiques. ",
+		"nom" : "Chlorophylle Beauséjour",
+		"adresseTemp" : "34 rue des Plantes Quartier Beauséjour 44800 Saint-Herblain",
+		"url" : "<a href='http://www.chlorophylle-coop.com/' target='_blank'>http://www.chlorophylle-coop.com/</a>",
+		"tel" : "02 40 40 10 10",
+		"src" : "MieuxTrierANantes 04/15",
+		"horaires" : "Magasins ouverts de 9h00 à 19h30 du lundi au samedi sans interruption",
+		"sous_zone" : "hnnl"
+	}, {
+		"code" : "stco_ventevrac2",
+		"latitude" : "47.260188",
+		"longitude" : "-1.515858",
+		"modesCollecte" : "ventevrac",
+		"type" : " vente au vrac",
+		"statut" : "Entreprise",
+		"descr" : "Chlorophylle est une coopérative de consommateurs de produits biologiques. ",
+		"nom" : "Chlorophylle Beaujoire",
+		"adresseTemp" : "20 rue Eugénie Cotton Quartier Beaujoire 44300 Nantes",
+		"url" : "<a href='http://www.chlorophylle-coop.com/' target='_blank'>http://www.chlorophylle-coop.com/</a>",
+		"tel" : "02 40 25 11 11",
+		"src" : "MieuxTrierANantes 04/15",
+		"horaires" : "Magasins ouverts de 9h00 à 19h30 du lundi au samedi sans interruption",
+		"sous_zone" : "Nantes"
+	}, {
+		"code" : "stco_ventevrac2",
+		"latitude" : "47.154536",
+		"longitude" : "-1.534992",
+		"modesCollecte" : "ventevrac",
+		"type" : " vente au vrac",
+		"statut" : "Entreprise",
+		"descr" : "Chlorophylle est une coopérative de consommateurs de produits biologiques. ",
+		"nom" : "Chlorophylle Beaucéane",
+		"adresseTemp" : "147 route des Sorinières ZAC de la Brosse 44400 Rezé",
+		"url" : "<a href='http://www.chlorophylle-coop.com/' target='_blank'>http://www.chlorophylle-coop.com/</a>",
+		"tel" : "02 40 76 76 00",
+		"src" : "MieuxTrierANantes 04/15",
+		"horaires" : "Magasins ouverts de 9h00 à 19h30 du lundi au samedi sans interruption",
+		"sous_zone" : "hnsl"
+	}, {
+		"code" : "stco_ventevrac2",
+		"latitude" : "47.191749",
+		"longitude" : "-1.582477",
+		"modesCollecte" : "ventevrac",
+		"type" : " vente au vrac",
+		"statut" : "Entreprise",
+		"descr" : "Chlorophylle est une coopérative de consommateurs de produits biologiques. ",
+		"nom" : "Chlorophylle Beausud",
+		"adresseTemp" : "18 rue Ordronneau Zone Atout Sud 44400 Rezé",
+		"url" : "<a href='http://www.chlorophylle-coop.com/' target='_blank'>http://www.chlorophylle-coop.com/</a>",
+		"tel" : "02 51 82 00 82",
+		"src" : "MieuxTrierANantes 04/15",
+		"horaires" : "Magasins ouverts de 9h00 à 19h30 du lundi au samedi sans interruption",
+		"sous_zone" : "hnsl"
+	}, {
+		"code" : "stco_ventevrac2",
+		"latitude" : "47.187644",
+		"longitude" : "-1.462337",
+		"modesCollecte" : "ventevrac",
+		"type" : " vente au vrac",
+		"statut" : "Entreprise",
+		"descr" : "Chlorophylle est une coopérative de consommateurs de produits biologiques. ",
+		"nom" : "Chlorophylle Bio Goulaine",
+		"adresseTemp" : "5 rue de l’Atlantique Zone Pôle Sud 44115 Basse-Goulaine",
+		"url" : "<a href='http://www.chlorophylle-coop.com/' target='_blank'>http://www.chlorophylle-coop.com/</a>",
+		"tel" : "02 52 200 200",
+		"src" : "MieuxTrierANantes 04/15",
+		"horaires" : "Magasins ouverts de 9h00 à 19h30 du lundi au samedi sans interruption",
+		"sous_zone" : "hnsl"
 	}, {
 		"code" : "stco_ventevrac2",
 		"latitude" : "47.226519",
@@ -950,14 +1029,45 @@
 		"modesCollecte" : "ventevrac",
 		"type" : " vente au vrac",
 		"statut" : "Entreprise",
-		"descr" : "Céréales, légumes secs, fruits secs et noix, biscuits, thé, chocolat et quelques épices en vrac",
-		"nom" : "Biocoop les Halles Saint Herblain",
+		"descr" : "boucherie, fromagerie traditionnelle, du pain frais et un rayon vrac avec plus de 200 références.",
+		"nom" : "Biocoop les Halles Nantes Ouest",
 		"adresseTemp" : "332 boulevard Marcel Paul CP 612 44806 SAINT-HERBLAIN",
 		"url" : "<a href='http://stherblainleshalles.biocoop.net/' target='_blank'>http://stherblainleshalles.biocoop.net/</a>",
+		"email" : "leshalles.biocoop@gmail.com",
 		"tel" : "02 28 06 47 43",
 		"src" : "MieuxTrierANantes 04/15",
 		"horaires" : "lundi au jeudi 9h30-19h, vendredi 9h30-19h30, samedi 9h-19h.",
-		"sous_zone" : "47.226519"
+		"sous_zone" : "hnnl"
+	}, {
+		"code" : "stco_ventevrac2",
+		"latitude" : "47.260536",
+		"longitude" : "-1.581200",
+		"modesCollecte" : "ventevrac",
+		"type" : " vente au vrac",
+		"statut" : "Entreprise",
+		"nom" : "Biocoop les Halles Nantes Nord",
+		"adresseTemp" : "188 Route de Rennes  44300 NANTES",
+		"url" : "<a href='http://www.biocoop.fr/magasins-bio/Trouver-mon-magasin-Biocoop/Pays-de-la-Loire/Loire-Atlantique/BIOCOOP-NANTES-NORD' target='_blank'>http://www.biocoop.fr/magasins-bio/Trouver-mon-magasin-Biocoop/Pays-de-la-Loire/Loire-Atlantique/BIOCOOP-NANTES-NORD</a>",
+		"email" : "biocoopnantes@orange.fr",
+		"tel" : "02 40 89 13 90 ",
+		"src" : "MieuxTrierANantes 04/15",
+		"horaires" : "Lundi 14h à 19h30, mardi au samedi 9h30 à 19h30, samedi 9h30 à 18h30",
+		"sous_zone" : "Nantes"
+	}, {
+		"code" : "stco_ventevrac2",
+		"latitude" : "47.188556",
+		"longitude" : "-1.491574",
+		"modesCollecte" : "ventevrac",
+		"type" : " vente au vrac",
+		"statut" : "Entreprise",
+		"nom" : "Biocoop les Halles Nantes Sud",
+		"adresseTemp" : "Rue Louis Blanc  44230 ST SEBASTIEN SUR LOIRE",
+		"url" : "<a href='http://www.biocoop.fr/magasins-bio/Trouver-mon-magasin-Biocoop/Pays-de-la-Loire/Loire-Atlantique/BIOCOOP-NANTES-SUD' target='_blank'>http://www.biocoop.fr/magasins-bio/Trouver-mon-magasin-Biocoop/Pays-de-la-Loire/Loire-Atlantique/BIOCOOP-NANTES-SUD</a>",
+		"email" : "biocoopnantessud@orange.fr",
+		"tel" : "02 40 04 05 18 ",
+		"src" : "MieuxTrierANantes 04/15",
+		"horaires" : "Lundi 14h à 19h30, mardi au samedi 9h30 à 19h30, samedi 9h30 à 18h30",
+		"sous_zone" : "ST SEBASTIEN SUR LOIRE"
 	}, {
 		"code" : "stco_ventevrac3",
 		"latitude" : "47.204353",
@@ -966,13 +1076,13 @@
 		"type" : " vente au vrac",
 		"statut" : "Entreprise",
 		"descr" : "Horizon vert est un supermarché bio, produits issus de l'agriculture biologique, produits naturels.",
-		"nom" : "Horizon Vert",
+		"nom" : "Horizon Vert Ile Beaulieu",
 		"adresseTemp" : "17 Bd Gustave Roch  44000 NANTES",
 		"url" : "<a href='http://www.horizon-vert.eu/info_pvt.php?id=1' target='_blank'>http://www.horizon-vert.eu/info_pvt.php?id=1</a>",
 		"tel" : "02 40 48 55 67 ",
 		"src" : "MieuxTrierANantes 04/15",
 		"horaires" : "lundi au samedi 9h30-19h45",
-		"sous_zone" : "47.204353"
+		"sous_zone" : "Nantes"
 	}, {
 		"code" : "stco_ventevrac4",
 		"latitude" : "47.254254",
@@ -981,13 +1091,13 @@
 		"type" : " vente au vrac",
 		"statut" : "Entreprise",
 		"descr" : "Horizon vert est un supermarché bio, produits issus de l'agriculture biologique, produits naturels. ",
-		"nom" : "Horizon Vert",
+		"nom" : "Horizon Vert Nantes",
 		"adresseTemp" : "Rue de Cdt Charcot  44700 ORVAULT",
 		"url" : "<a href='http://www.horizon-vert.eu/info_pvt.php?id=5' target='_blank'>http://www.horizon-vert.eu/info_pvt.php?id=5</a>",
 		"tel" : "02 40 48 55 67 ",
 		"src" : "MieuxTrierANantes 04/15",
 		"horaires" : "lundi au vendredi 9h-19h15, samedi 9h-19h",
-		"sous_zone" : "47.254254"
+		"sous_zone" : "hnnl"
 	}, {
 		"code" : "stco_ventevrac5",
 		"latitude" : "47.216681",
@@ -1002,7 +1112,21 @@
 		"tel" : "09 72 43 32 94 ",
 		"src" : "MieuxTrierANantes 04/15",
 		"horaires" : "mardi à vendredi 11h30–19h, samedi 10h-19h",
-		"sous_zone" : "47.216681"
+		"sous_zone" : "Nantes"
+	}, {
+		"code" : "stco_ventevrac5",
+		"latitude" : "47.216736",
+		"longitude" : "-1.559302",
+		"modesCollecte" : "ventevrac",
+		"type" : " vente au vrac",
+		"statut" : "Entreprise",
+		"descr" : "Boutique sans emballage jetable à Nantes. Quelque 450 références de pâtes, graines, légumes, fruits secs, confiseries, thés et autres huiles, mais aussi des produits ménagers ou pour le corps, sont disponibles dans cette boutique de 50 m2, approvisionnée par une centrale basée en région parisienne. On y trouve une dizaine de sortes de farine. Il est aussi possible de moudre son café sur place.",
+		"nom" : "Ô Bocal (Day by Day)",
+		"adresseTemp" : "3 rue Pierre-Chéreau  44000 NANTES",
+		"url" : "<a href='http://www.obocal.com/' target='_blank'>http://www.obocal.com/</a>",
+		"src" : "MieuxTrierANantes 04/15",
+		"horaires" : "ouvert du mardi au samedi ",
+		"sous_zone" : "Nantes"
 	}, {
 		"code" : "1011",
 		"zone" : "Nantes",
@@ -1209,7 +1333,32 @@
 		"plagesHoraires" : ",0101-3112_lu+ma_14h00-17h45,0101-3112_sa_10h00-17h45,feries_suivant,060415_lu_10h00-18h00,250515_lu_10h00-18h00,140715_ma_10h00-18h00,150815_sa_10h00-18h00,111115_me_10h00-18h00",
 		"src" : "OpenDataNantes 01/2015",
 		"descr" : "Réservé aux particuliers habitant Nantes Métropole.<br/><br/><b>Déchets admis</b> : batteries, bois, cartons, déblais et gravats issus du bricolage familial, déchets d'équipement électrique et électronique, encombrants ménagers divers, ferrailles, huiles moteur, papiers-journaux-livres, plastiques ménagers, textiles, tontes de pelouse-produits d'élagage-branchages de jardin (production admissible pour un ménage, et branchages de longueur inférieure à 1 mètre), verre.<br/><br/><b>Déchets interdits</b> : cadavres d'animaux, déblais-gravats autres que ceux issus du bricolage familial, déchets anatomiques ou infectieux, déchets hospitaliers, éléments entiers de carrosserie de voiture ou camion, médicaments, ordures ménagères, pneus, produits explosifs-inflammables-radioactifs, résidus de fabrication industrielle.<br/><br/><b>Déchets admis sous conditions</b> : se renseigner à la déchèterie AVANT les dépôts : déchets d'amiante liée, tontes de pelouse-produits d'élagage-branchages de jardin en grande quantité."
-	}, {
+	},
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	 {
 		"code" : "stco_conteneur_593",
 		"adresseTemp" : "Rue de la Libération 44230 St-Sébastien-sur-Loire",
 		"latitude" : "47.1997754795774",
@@ -12866,7 +13015,42 @@
 		"type" : "Collecte encombrants",
 		"longitude" : "47.20",
 		"descr" : "tous les mardis après-midis, tous les mardis après-midis, tous les mardis après-midis, tous les mardis matins, tous les mercredis après-midis, tous les mercredis matins"
-	}, {
+	},
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	 {
 		"code" : "81",
 		"sous_zone" : "qidn",
 		"nom" : "BUSWAY Ile de Nantes",
