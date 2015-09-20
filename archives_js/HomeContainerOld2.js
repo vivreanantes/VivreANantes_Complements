@@ -1,0 +1,44 @@
+/**
+ * Conteneur avec
+ */
+Ext.define('MieuxTrierANantes.view.home.HomeContainerOld2', {
+	extend : 'Ext.Container',
+	xtype : 'homeContainerOld2_xtype',
+
+	config : {
+
+		layout : 'hbox',
+		
+		minWidth : '230px',
+		maxWidth : '600px',
+		width : '90%',
+		layout : 'vbox',
+		items : [{
+					xtype : 'homeZone1_xtype'
+				}, {
+					html : '',
+					height : '5px',
+					style : 'background-image:url(resources/images/bandeau_ligne_droite.png);background-repeat:repeat-y;background-size:100%;'
+				}, {
+					xtype : 'homeZone2_xtype'
+				}, {
+					html : '',
+					height : '10px',
+					style : 'background-image:url(resources/images/bandeau_ligne_droite.png);background-repeat:repeat-y;background-size:100%;'
+				}, {
+					xtype : 'homeZone3_xtype'
+				}, {
+					xtype : 'homeZone4_xtype'
+				}, /*{
+				html : '',
+				height : '150px',
+				style : 'background-image:url(resources/images/background.png);background-repeat:no-repeat;background-size:100% 150px'
+				}, */{
+					html : '',
+					flex : 1,
+					style : 'background-image:url(resources/images/bandeau_ligne_droite.png);background-repeat:repeat-y;background-size:100%;'
+				}, {
+					xtype : 'homeZone5_xtype'
+				}]
+	}
+});
