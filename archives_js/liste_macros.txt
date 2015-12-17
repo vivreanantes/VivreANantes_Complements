@@ -1,0 +1,16 @@
+
+Function RemplaceColonnesEntModeDeCollecte(TypeDechet as String)
+Function RemplaceColonnesModeDeCollecte(nomFeuille as String, nomColLatitude as String, nomColLongitude as String, ligneDebut as Integer, ligneFin as Integer, colB as String, mainLatitude as Double, mainLongitude as Double)
+Function RemplaceTypeDechet(TypeDechet as String)
+Function JsonColLat(colM as String)
+Function JsonColLong(colM as String)
+Function ExtraitElement(ChaineRecherche As String, Position As Long, Delim As String) As String
+Function GetJoursSemaine(joursSemaine as String, separator as String)
+Function GetJoursSemaineUtil(joursSemaine as String, jourATrouver as String, jourMini as String, separator as String)
+Function UtilCollectionIndexOf(aCollection, elementToFind)
+Function soustraireChaine(chaine1 as String, chaine2 as String)
+Function recupereCommentaires(idElement as String, previousCommentaires as String)
+Function recupereDeCategorie2(idCategorie as String, typeElementRecupere as String, previousCommentaires as String)
+Function RemplaceEmplacementTrisac(PlageHoraire as String, idElement as String, rue as String, typeDistribution as String)
+Function RemplaceEmplacementTrisac2(PlageHoraire as String, idElement as String, rue as String, typeDistribution as String)
+Function TestEstNantesMetropole(Element as String)

@@ -1,0 +1,240 @@
+REM  *****  BASIC  *****
+
+
+
+' Remplace dans une chaîne de caractère 'Source' un texte 'Search' par un autre 'NewText'
+Function UtilReplace(Source As String, Search As String, NewText As String)
+  Dim Result As String
+  Dim StartPos As Long
+  Dim CurrentPos As Long
+ 
+  Result = ""
+  StartPos = 1
+  CurrentPos = 1
+ 
+  If Search = "" Then
+    Result = Source
+  Else 
+    Do While CurrentPos <> 0
+      CurrentPos = InStr(StartPos, Source, Search)
+      If CurrentPos <> 0 Then
+        Result = Result + Mid(Source, StartPos, _
+        CurrentPos - StartPos)
+        Result = Result + NewText
+        StartPos = CurrentPos + Len(Search)
+      Else
+        Result = Result + Mid(Source, StartPos, Len(Source))
+      End If                ' Position <> 0
+    Loop 
+  End If 
+ 
+  UtilReplace = Result
+End Function
+
+' Définition de la conversion > utilise dans UtilSansAccents
+Const accent As String = "ÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÌÍÎÏìíîïÙÚÛÜùúûüÿÑñÇç-"
+Const noAccent As String = "AAAAAAaaaaaaOOOOOOooooooEEEEeeeeIIIIiiiiUUUUuuuuyNnCc "
+
+' La fonction retire les accents
+' Exemple : 'Déchet' devient 'Dechet'
+Private Function UtilSansAccents(ByRef s As String) As String
+	Dim i As Integer
+	Dim lettre As String * 1
+	UtilSansAccents = s
+	For i = 1 To Len(accent)
+		lettre = Mid$(accent, i, 1)
+		If InStr(UtilSansAccents, lettre) > 0 Then
+			UtilSansAccents = Replace(UtilSansAccents, lettre, Mid$(noAccent, i, 1))
+		End If
+	Next i
+End Function
+
+
+
+Function testLatitude()
+	Temp = "47.206829,-1.587939"
+	Temp2 = Latitude(Temp)
+	Temp3 = Longitude(Temp)
+End Function
+
+'' Cette fonction permet de récupérer l'identifiant de la colonne en fonction de son index,
+' Exemple '1' renvoie 'A', 27 renvoie 'AA'
+Function RemplaceNumerosColonneParLettresColonne(Index as String)
+	Result = ""
+	'' ElseIf Index = 2  Then Result = "B"
+    If (Index = 1)  Then 
+    	Result = "A"
+    ElseIf (Index = 2)  Then 
+    	Result = "B"
+    ElseIf (Index = 3)  Then 
+    	Result = "C"
+    ElseIf (Index = 4)  Then 
+    	Result = "D"
+    ElseIf (Index = 5)  Then 
+    	Result = "E"
+    ElseIf (Index = 6)  Then 
+    	Result = "F"
+    ElseIf (Index = 7)  Then 
+    	Result = "G"
+    ElseIf (Index = 8)  Then 
+    	Result = "H"
+    ElseIf (Index = 9)  Then 
+    	Result = "I"
+    ElseIf (Index = 10)  Then 
+    	Result = "J"
+    ElseIf (Index = 11)  Then 
+    	Result = "K"
+    ElseIf (Index = 12)  Then 
+    	Result = "L"
+    ElseIf (Index = 13)  Then 
+    	Result = "M"
+    ElseIf (Index = 14)  Then 
+    	Result = "N"
+    ElseIf (Index = 15)  Then 
+    	Result = "O"
+    ElseIf (Index = 16)  Then 
+    	Result = "P"
+    ElseIf (Index = 17)  Then 
+    	Result = "Q"
+    ElseIf (Index = 18)  Then 
+    	Result = "R"
+    ElseIf (Index = 19)  Then 
+    	Result = "S"
+    ElseIf (Index = 20)  Then 
+    	Result = "T"
+    ElseIf (Index = 21)  Then 
+    	Result = "U"
+    ElseIf (Index = 22)  Then 
+    	Result = "Z"
+    ElseIf (Index = 23)  Then 
+    	Result = "V"
+    ElseIf (Index = 24)  Then 
+    	Result = "W"
+    ElseIf (Index = 25)  Then 
+    	Result = "X"
+    ElseIf (Index = 26)  Then 
+    	Result = "Y"
+    ElseIf (Index = 27)  Then 
+    	Result = "Z"
+    ElseIf (Index = 28)  Then
+    	Result = "AA"
+    ElseIf (Index = 29)  Then
+    	Result = "AB"
+    ElseIf (Index = 30)  Then 
+    	Result = "AC"
+    ElseIf (Index = 31)  Then 
+    	Result = "AD"
+    ElseIf (Index = 32)  Then 
+    	Result = "AE"
+    ElseIf (Index = 33)  Then 
+    	Result = "AF"
+    ElseIf (Index = 34)  Then 
+    	Result = "AG"
+    ElseIf (Index = 35)  Then 
+    	Result = "AH"
+    ElseIf (Index = 36)  Then 
+    	Result = "AI"
+    ElseIf (Index = 37)  Then 
+    	Result = "AJ"
+    ElseIf (Index = 38)  Then 
+    	Result = "AK"
+    ElseIf (Index = 39)  Then 
+    	Result = "AL"
+    ElseIf (Index = 40)  Then 
+    	Result = "AM"
+    ElseIf (Index = 41)  Then 
+    	Result = "AN"
+    ElseIf (Index = 42)  Then 
+    	Result = "AO"
+    ElseIf (Index = 43)  Then 
+    	Result = "AP"
+    ElseIf (Index = 44)  Then 
+    	Result = "AQ"
+    ElseIf (Index = 45)  Then 
+    	Result = "AR"
+    ElseIf (Index = 46)  Then 
+    	Result = "AS"
+    ElseIf (Index = 47)  Then 
+    	Result = "AT"
+    ElseIf (Index = 48)  Then 
+    	Result = "AU"
+    ElseIf (Index = 49)  Then 
+    	Result = "AZ"
+    ElseIf (Index = 50)  Then 
+    	Result = "AV"
+    ElseIf (Index = 51)  Then 
+    	Result = "AW"
+    ElseIf (Index = 52)  Then 
+    	Result = "AX"
+    ElseIf (Index = 53)  Then 
+    	Result = "AY"
+    ElseIf (Index = 54)  Then 
+    	Result = "AZ"
+	End If
+	RemplaceNumerosColonneParLettresColonne = Result
+End Function
+
+'' Renvoie le libelle court du jour de la semaine selon la date fournie en paramètre
+'' Exemple "2015" "11" 09" renvoie "lu" (qui signifie lundi)
+Function getJourDeLaSemaine(Annee as String, Mois as String, Jour as String)
+	Dim MyVar As Date
+	
+	jourDeLaSemaine = ""
+	If Annee<>"" and Mois<>"" and Jour<>"" Then
+		MyDate = DateSerial (Annee, Mois, Jour)
+	
+		REM	date2 = DATE(Annee, Mois, Jour)
+		numeroJourDeLaSemaine = WEEKDAY(MyDate)
+		If numeroJourDeLaSemaine = 2 Then
+			jourDeLaSemaine = "lu"
+		ElseIf numeroJourDeLaSemaine = 3 Then
+			jourDeLaSemaine = "ma"
+		ElseIf numeroJourDeLaSemaine = 4 Then
+			jourDeLaSemaine = "me"
+		ElseIf numeroJourDeLaSemaine = 5 Then
+			jourDeLaSemaine = "je"
+		ElseIf numeroJourDeLaSemaine = 6 Then
+			jourDeLaSemaine = "ve"
+		ElseIf numeroJourDeLaSemaine = 7 Then
+			jourDeLaSemaine = "sa"
+		ElseIf numeroJourDeLaSemaine = 0 Then
+			jourDeLaSemaine = "di"
+		End If
+	End If
+	getJourDeLaSemaine = jourDeLaSemaine
+End Function
+
+'' Renvoie un tableau avec toutes les lettres.
+Function GetLettres()
+	Dim MyLettres(1 To 24)
+	MyLettres(1)="a"
+	MyLettres(2)="b"	
+	MyLettres(3)="c"
+	MyLettres(4)="d"
+	MyLettres(5)="e"
+	MyLettres(6)="f"
+	MyLettres(7)="g"
+	MyLettres(8)="h"
+	MyLettres(9)="i"
+	MyLettres(10)="j"	
+	MyLettres(11)="k"
+	MyLettres(12)="l"
+	MyLettres(13)="m"
+	MyLettres(14)="n"
+	MyLettres(15)="o"
+	MyLettres(16)="p"
+	MyLettres(17)="q"
+	MyLettres(18)="r"	
+	MyLettres(19)="s"
+	MyLettres(20)="v"
+	MyLettres(21)="w"
+	MyLettres(22)="x"
+	MyLettres(23)="y"
+	MyLettres(24)="z"
+	GetLettres = MyLettres
+End Function
+
+
+Sub Main
+
+End Sub

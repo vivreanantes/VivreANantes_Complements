@@ -1,0 +1,2970 @@
+REM  *****  BASIC  *****
+
+REM 47.206829,-1.587939
+
+Public Const CONSTQuartierNantes As String = "Nantes"
+Public Const CONSTQuartierHorsNantesSudLoire As String = "hnsl"
+Public Const CONSTQuartierHorsNantesNordLoire As String = "hnnl"
+
+Public Const CONSTQuartierAdminBellevueChantenaySaineAnne As String = "qbcsa"
+Public Const CONSTQuartierAdminBreilBarberie As String = "qbb"
+Public Const CONSTQuartierAdminCentreVille As String = "qcv"
+Public Const CONSTQuartierAdminDervallieresZola As String = "qdz"
+Public Const CONSTQuartierAdminBoulonBottiere As String = "qdb"
+Public Const CONSTQuartierAdminHautsPavesSaintFelix As String = "qhpsf"
+Public Const CONSTQuartierAdminIleDeNantes As String = "qidn"
+Public Const CONSTQuartierAdminMalakoffSaintDonatien As String = "qmsd"
+Public Const CONSTQuartierAdminNantesErdre As String = "qne"
+Public Const CONSTQuartierAdminNantesNord As String = "qnn"
+Public Const CONSTQuartierAdminNantesSud As String = "qns"
+
+Function testLatitude()
+	Temp = "47.206829,-1.587939"
+	Temp2 = Latitude(Temp)
+	Temp3 = Longitude(Temp)
+End Function
+
+Function LatitudePos(Position as String)
+	ValeurDefaut = "47.20"
+	PosPointVirgule = InStr(1, Position, ",")
+	REM Position = Right(Position,Len(Position)-1)
+	If PosPointVirgule <> 0 Then
+		Temp = Left(Position, PosPointVirgule-1)
+	Else
+		Temp = ValeurDefaut
+	End If
+	LatitudePos = Temp
+End Function
+Function LongitudePos(Position as String)
+	ValeurDefaut = "-1.60"
+
+	PosPointVirgule = InStr(2, Position, ",")
+	REM à revoir
+	REM mettre une vérif sur la valeur
+	If PosPointVirgule <> 0 Then
+		Temp = Left(Position, PosPointVirgule)
+	Else
+		Temp = ValeurDefaut
+	End If
+	Temp = UtilReplace(Position, Temp, "")
+	LongitudePos = Temp
+End Function
+
+Function Tempo(colB)
+	Temp =  UtilReplace(colB,"Collecte encombrants en habitat vertical - Quartier ","")
+	Tempo = UtilGetQuartierAdmin(Temp)
+End Function
+
+Function UtilGetQuartierAdmin(Element As String)
+	Result = ""
+  	REM arrayElements = Split(Source," ")
+	REM For Each Element in arrayElements
+		REM Madeleine - Champ de Mars - Decré - Cathédrale - Gloriette - Feydeau - Graslin - Commerce - Guist'hau - Bretagne - Dobrée - Bon Port
+		If Element = "Madeleine" Or Element = "Champ de Mars" Or Element = "Decré" Or Element = "Cathédrale" Or Element = "Gloriette" Or Element = "Feydeau" Or Element = "Graslin" Or Element = "Commerce" Or Element = "Guist'hau" Or Element = "Bretagne" Or Element = "Dobrée" Or Element = "Bon Port" Then
+			Result = CONSTQuartierAdminCentreVille
+		ElseIf Element = "Salorges" Or Element = "Sainte-Anne" Or Element = "Chantenay" Or Element = "Jean Macé" Or Element = "Croix Bonneau" Or Element = "Bourderies" Or Element = "Boucardière" Or Element = "Mallève" Or Element = "Lauriers" Or Element = "Mendès-France" Or Element = "La Musse" Or Element = "Plessis-Cellier" Or Element = "Janvret" Or Element = "Roche Maurice" Or Element = "Cheviré" Or Element = "Bellevue" Then
+			Result = CONSTQuartierAdminBellevueChantenaySaineAnne
+		ElseIf Element = "Dervallières" Or Element = "Chézine" Or Element = "Contrie" Or Element = "Joncours-Procé" Or Element = "Durantière" Or Element = "Zola-Grillaud" Or Element = "Procé-Petit Bois" Or Element = "Canclaux" Or Element = "Mellinet" Or Element = "Quai de la Fosse" Then
+			Result = CONSTQuartierAdminDervallieresZola
+		ElseIf Element = "Monselet" Or Element = "Procé-Viarme" Or Element = "Talensac" Or Element = "Pont Morand" Or Element = "Hauts-Pavés" Or Element = "Bellamy-Barbin" Or Element = "Vannes" Or Element = "Rennes-Bellamy" Or Element = "Saint-Pasquier" Or Element = "Saint-Félix" Or Element = "Université-Michelet" Then
+			Result = CONSTQuartierAdminHautsPavesSaintFelix
+		ElseIf Element = "Waldeck-Sully" Or Element = "Richebourg" Or Element = "Saint-Clément" Or Element = "Coulmiers" Or Element = "Jardin des Plantes" Or Element = "Dalby-Saint-Donatien" Or Element = "Le Coudray" Or Element = "Les Agenêts" Or Element = "Toutes-Aides" Or Element = "Le Vieux Malakoff" Or Element = "Malakoff" Or Element = "Malakoff " Then
+			Result = CONSTQuartierAdminMalakoffSaintDonatien
+		ElseIf Element = "République" Or Element = "Les Ponts" Or Element = "Mangin" Or Element = "Galarne" Then
+			Result = CONSTQuartierAdminIleDeNantes
+		ElseIf Element = "Carcouët" Or Element = "Breil" Or Element = "Malville" Or Element = "Rond point de Vannes" Or Element = "Rond point de Rennes" Or Element = "Beauséjour" Or Element = "Schuman" Or Element = "Gaudinière" Or Element = "Barberie" Or Element = "Perverie" Then
+			Result = CONSTQuartierAdminBreilBarberie
+		ElseIf Element = "Université-Jonelière" Or Element = "Petit Port-Bourgeonnière" Or Element = "Pont du Cens" Or Element = "Côte d'or-Boissière" Or Element = "Chauvinière" Or Element = "Santos-Dumont" Or Element = "Bout des Pavés-Chêne des Anglais" or Element="Nantes Nord" or Element="Nantes Nord " Then
+			Result = CONSTQuartierAdminNantesNord
+		ElseIf Element = "Tortière" Or Element = "Le Plessis Tison" Or Element = "Port Boyer" Or Element = "Eraudière" Or Element = "Renaudière" Or Element = "Ranzay" Or Element = "Clos" Or Element = "Beaujoire" Or Element = "Halvèque" Or Element = "Halvèque " Or Element = "Halvêque" Or Element = "Saint-Joseph de Porterie" Or Element = "Chantrerie" Or Element = "Gachet" Then
+			Result = CONSTQuartierAdminNantesErdre
+		ElseIf Element = "Haluchère" Or Element = "Perray" Or Element = "Pilotière" Or Element = "Pin sec" Or Element = "Bottière" Or Element = "Jules Verne" Or Element = "Rond-point de Paris" Or Element = "Noë Lambert" Or Element = "Landreau" Or Element = "Mairie de Doulon" Or Element = "Vieux Doulon" Or Element = "Prairie de Mauves" Or Element = "Route de Sainte-Luce" Or Element = "Bois-Briand" Then
+			Result = CONSTQuartierAdminBoulonBottiere
+		ElseIf Element = "Saint-Jacques" Or Element = "Pirmil" Or Element = "Grande Gréneraie" Or Element = "Clos-Toreau" Or Element = "Clos Toreau" Or Element = "Ripossière" Or Element = "Sèvre" Or Element = "Lion d'Or" Or Element = "Gilarderie" Then
+			Result = CONSTQuartierAdminNantesSud
+		End If
+	REM  Next Element
+	UtilGetQuartierAdmin = Result
+End Function
+
+
+
+Function UtilReplace(Source As String, Search As String, NewPart As String)
+  Dim Result As String
+  Dim StartPos As Long
+  Dim CurrentPos As Long
+ 
+  Result = ""
+  StartPos = 1
+  CurrentPos = 1
+ 
+  If Search = "" Then
+    Result = Source
+  Else 
+    Do While CurrentPos <> 0
+      CurrentPos = InStr(StartPos, Source, Search)
+      If CurrentPos <> 0 Then
+        Result = Result + Mid(Source, StartPos, _
+        CurrentPos - StartPos)
+        Result = Result + NewPart
+        StartPos = CurrentPos + Len(Search)
+      Else
+        Result = Result + Mid(Source, StartPos, Len(Source))
+      End If                ' Position <> 0
+    Loop 
+  End If 
+ 
+  UtilReplace = Result
+End Function
+
+Function UtilConcatPlage(plage As Range) As String
+    REM Dim rep As String, c As Range
+    For Each c In plage
+            rep = rep & c
+    Next c
+    UtilConcatPlage = Left(rep, Len(rep))
+End Function
+
+
+
+
+Function UtilGetQuartier(Element As String)
+	Result = ""
+	REM Nantes
+	If InStr(Element,"44000 Nantes")>0 Or Element="NANTES" Then
+		Result = CONSTQuartierNantes
+	REM Sud Loire
+	ElseIf InStr(Element," 44120 Vertou")>0 Or Element="VERTOU" Then
+		Result = CONSTQuartierHorsNantesSudLoire
+	ElseIf InStr(Element,"44340 Bouguenais")>0 Or Element="BOUGENAIS" Then
+		Result = CONSTQuartierHorsNantesSudLoire
+	ElseIf InStr(Element,"44340 Bouguenais")>0 Or Element="LA-MONTAGNE" Then
+		Result = CONSTQuartierHorsNantesSudLoire
+	ElseIf InStr(Element,"44230 Saint Sébastien sur Loire")>0 Or Element="ST-SEBASTIEN" Then
+		Result = CONSTQuartierHorsNantesSudLoire
+	ElseIf InStr(Element,"44115 Basse Goulaine")>0 Then
+		Result = CONSTQuartierHorsNantesSudLoire
+	ElseIf InStr(Element,"44860 Saint Aignan de Grandlieu")>0 Or Element="SAINT-AIGNAN-GRANDLIEU" Then
+		Result = CONSTQuartierHorsNantesSudLoire
+	ElseIf InStr(Element,"44980 Sainte-Luce-Sur-Loire")>0 Then
+		Result = CONSTQuartierHorsNantesSudLoire
+	ElseIf  Element="SAINT-JEAN-DE-BOISEAU" Then
+		Result = CONSTQuartierHorsNantesSudLoire
+	REM Nord Loire
+	ElseIf InStr(Element,"44470 Carquefou")>0 Or Element="CARQUEFOU" Then
+		Result = CONSTQuartierHorsNantesNordLoire
+	ElseIf InStr(Element,"44800 Saint Herblain")>0 Or Element="BOUGENAIS" Then
+		Result = CONSTQuartierHorsNantesNordLoire
+	ElseIf InStr(Element,"44700 Orvault")>0 Or Element="ORVAULT" Then
+		Result = CONSTQuartierHorsNantesNordLoire
+	ElseIf InStr(Element,"44470 Mauves-sur-Loire")>0 Or Element="MAUVES-SUR-LOIRE" Then
+		Result = CONSTQuartierHorsNantesNordLoire
+	ElseIf InStr(Element,"44240 La Chapelle sur Erdre")>0 Or Element="LA-CHAPELLE-SUR-ERDRE" Then
+		Result = CONSTQuartierHorsNantesNordLoire
+	ElseIf InStr(Element,"44470 Thouaré sur Loire")>0 Then
+		Result = CONSTQuartierHorsNantesNordLoire
+	ElseIf InStr(Element,"44400 Rezé")>0 Or Element="REZE" Then
+		Result = CONSTQuartierHorsNantesNordLoire
+	ElseIf  Element="ST-HERBLAIN" Then	
+		Result = CONSTQuartierHorsNantesNordLoire
+	End If
+
+	UtilGetQuartier = Result
+End Function
+
+
+
+Function RemplaceQuartier(QuartierSource)
+ 	Temp = UtilReplace(QuartierSource,"Autre Nantes Nord",CONSTQuartierAdminNantesNord)
+    Temp = UtilReplace(Temp,"Beaulieu",CONSTQuartierAdminIleDeNantes)
+    Temp = UtilReplace(Temp,"Bonne Garde",CONSTQuartierHorsNantesSudLoire)
+    Temp = UtilReplace(Temp,"Bout des Landes",CONSTQuartierAdminNantesNord)
+    Temp = UtilReplace(Temp,"Breil",CONSTQuartierAdminBreilBarberie)
+    Temp = UtilReplace(Temp,"Breil-Malville",CONSTQuartierAdminBreilBarberie)
+    Temp = UtilReplace(Temp,"Chantenay",CONSTQuartierAdminBellevueChantenaySaineAnne)
+    Temp = UtilReplace(Temp,"Chateau de Rezé",CONSTQuartierHorsNantesSudLoire)
+    Temp = UtilReplace(Temp,"Chêne des Anglais",CONSTQuartierAdminNantesNord)
+    Temp = UtilReplace(Temp,"Clos Toreau",CONSTQuartierHorsNantesSudLoire)
+    Temp = UtilReplace(Temp,"Cremetterie",CONSTQuartierHorsNantesNordLoire)
+    Temp = UtilReplace(Temp,"Decré - Cathédrale",CONSTQuartierAdminCentreVille)
+    Temp = UtilReplace(Temp,"Dervallières",CONSTQuartierAdminDervallieresZola)
+    Temp = UtilReplace(Temp,"Dervallières - Chézine",CONSTQuartierAdminDervallieresZola)
+    Temp = UtilReplace(Temp,"Doulon",CONSTQuartierAdminBoulonBottiere)
+    Temp = UtilReplace(Temp,"Haluchère-Perray",CONSTQuartierAdminBoulonBottiere)
+    Temp = UtilReplace(Temp,"Ile Beaulieu",CONSTQuartierAdminIleDeNantes)
+    Temp = UtilReplace(Temp,"Indre",CONSTQuartierHorsNantesNordLoire)
+    Temp = UtilReplace(Temp,"Lauriers",CONSTQuartierAdminBellevueChantenaySaineAnne)
+    Temp = UtilReplace(Temp,"Malakoff",CONSTQuartierAdminMalakoffSaintDonatien)
+    Temp = UtilReplace(Temp,"Mendes France",CONSTQuartierAdminIleDeNantes)
+    Temp = UtilReplace(Temp,"Pirmil","Nantes Sud")
+    Temp = UtilReplace(Temp,"Pré Gauchet",CONSTQuartierAdminMalakoffSaintDonatien)
+    Temp = UtilReplace(Temp,"Quai des Antilles",CONSTQuartierAdminIleDeNantes)
+    Temp = UtilReplace(Temp,"Salorges",CONSTQuartierAdminBellevueChantenaySaineAnne)
+    Temp = UtilReplace(Temp,"Sorinières",CONSTQuartierHorsNantesSudLoire)
+    Temp = UtilReplace(Temp,"St Joseph de Porterie",CONSTQuartierAdminNantesErdre)
+    Temp = UtilReplace(Temp,"St-Jean-de-Boiseau",CONSTQuartierHorsNantesSudLoire)
+    Temp = UtilReplace(Temp,"Ste Thérèse",CONSTQuartierAdminBreilBarberie)
+    Temp = UtilReplace(Temp,"Talensac",CONSTQuartierAdminHautsPavesSaintFelix)
+    Temp = UtilReplace(Temp,"Trentemoult",CONSTQuartierHorsNantesSudLoire)
+    Temp = UtilReplace(Temp,"Waldeck",CONSTQuartierAdminMalakoffSaintDonatien)
+    RemplaceQuartier = UtilReplace(Temp,"VIGNEUX DE BRETAGNE",CONSTQuartierAdminDervallieresZola)
+
+End Function
+
+Function RemplaceQuartierSCO(QuartierSource)
+	If (QuartierSource="Quartier Nantais : Bellevue / Chantenay / Sainte-Anne" or QuartierSource="Bellevue Chantenay Sainte Anne") Then
+		RemplaceQuartierSCO = CONSTQuartierAdminBellevueChantenaySaineAnne
+	ElseIf (QuartierSource="Quartier Nantais : Breil / Barberie" or QuartierSource="Breil Barberie") Then
+		RemplaceQuartierSCO = CONSTQuartierAdminBreilBarberie
+	ElseIf (QuartierSource="Quartier Nantais : Centre Ville" or QuartierSource="Centre Ville") Then
+		RemplaceQuartierSCO = CONSTQuartierAdminCentreVille
+	ElseIf (QuartierSource="Quartier Nantais : Dervallières / Zola" or QuartierSource="Dervallières Zola") Then
+		RemplaceQuartierSCO = CONSTQuartierAdminDervallieresZola
+	ElseIf (QuartierSource="Quartier Nantais : Doulon / Bottière" or QuartierSource="Doulon Bottière") Then
+		RemplaceQuartierSCO = CONSTQuartierAdminBoulonBottiere
+	ElseIf (QuartierSource="Quartier Nantais : Hauts Pavés / Saint Félix" or QuartierSource="Hauts Pavés Saint Félix") Then
+		RemplaceQuartierSCO = CONSTQuartierAdminHautsPavesSaintFelix
+	ElseIf (QuartierSource="Quartier Nantais : Ile De Nantes" or QuartierSource="Ile de Nantes") Then
+		RemplaceQuartierSCO = CONSTQuartierAdminIleDeNantes
+	ElseIf (QuartierSource="Quartier Nantais : Malakoff / Saint-Donatien" or QuartierSource="Malakoff Saint-Donatien") Then
+		RemplaceQuartierSCO = CONSTQuartierAdminMalakoffSaintDonatien
+	ElseIf (QuartierSource="Quartier Nantais : Nantes Erdre" or QuartierSource="Nantes Erdre") Then
+		RemplaceQuartierSCO = CONSTQuartierAdminNantesErdre
+	ElseIf (QuartierSource="Quartier Nantais : Nantes Nord" or QuartierSource="Nantes Nord") Then
+		RemplaceQuartierSCO = CONSTQuartierAdminNantesNord
+	ElseIf (QuartierSource="Quartier Nantais : Nantes Sud" or QuartierSource="Nantes Sud") Then
+		RemplaceQuartierSCO = CONSTQuartierAdminNantesSud
+	ElseIf (QuartierSource="Hors Nantes : au nord de la Loire" or QuartierSource="") Then
+		RemplaceQuartierSCO = CONSTQuartierHorsNantesNordLoire
+	ElseIf (QuartierSource="Hors Nantes : au sud de la Loire" or QuartierSource="") Then
+		RemplaceQuartierSCO = CONSTQuartierHorsNantesSudLoire
+	Else
+	 	Temp = UtilReplace(QuartierSource,"BOUGENAIS",CONSTQuartierHorsNantesSudLoire)
+	 	Temp = UtilReplace(Temp,"CARQUEFOU",CONSTQuartierHorsNantesNordLoire)
+	 	Temp = UtilReplace(Temp,"CHANTENAY",CONSTQuartierAdminBellevueChantenaySaineAnne)
+	 	Temp = UtilReplace(Temp,"DERVALLIERES",CONSTQuartierAdminDervallieresZola)
+	 	Temp = UtilReplace(Temp,"DONGES",,CONSTQuartierHorsNantesNordLoire)
+	 	Temp = UtilReplace(Temp,"FROSSAY",CONSTQuartierHorsNantesSudLoire)
+	 	Temp = UtilReplace(Temp,"LA CHAPELLE SUR ERDRE",CONSTQuartierHorsNantesNordLoire)
+	 	Temp = UtilReplace(Temp,"LA MONTAGNE",CONSTQuartierHorsNantesSudLoire)
+	 	Temp = UtilReplace(Temp,"LE PELLERIN",CONSTQuartierHorsNantesSudLoire)
+	 	Temp = UtilReplace(Temp,"MAUVES-SUR-LOIRE",CONSTQuartierHorsNantesNordLoire)
+	 	Temp = UtilReplace(Temp,"NANTES",CONSTQuartierNantes)
+	 	Temp = UtilReplace(Temp,"ORVAULT",CONSTQuartierHorsNantesNordLoire)
+	 	Temp = UtilReplace(Temp,"PAIMBOEUF",CONSTQuartierHorsNantesSudLoire)
+	 	Temp = UtilReplace(Temp,"PORNICHET",CONSTQuartierHorsNantesNordLoire)
+	 	Temp = UtilReplace(Temp,"REZE",CONSTQuartierHorsNantesSudLoire)
+	 	Temp = UtilReplace(Temp,"SAINT NAZAIRE",CONSTQuartierHorsNantesNordLoire)
+	 	Temp = UtilReplace(Temp,"SAINT_PERE_EN_RETZ",CONSTQuartierHorsNantesNordLoire)
+	 	Temp = UtilReplace(Temp,"SAINT SEBASTIEN SUR LOIRE",CONSTQuartierHorsNantesSudLoire)
+	 	Temp = UtilReplace(Temp,"SAINT_ANDRE_DES_EAUX",CONSTQuartierHorsNantesNordLoire)
+	 	Temp = UtilReplace(Temp,"SAINT_BREVIN_LES_PINS",CONSTQuartierHorsNantesSudLoire)
+	 	Temp = UtilReplace(Temp,"SAINT-HERBLAIN",CONSTQuartierHorsNantesNordLoire)
+	 	Temp = UtilReplace(Temp,"SAINT_JOACHIM",CONSTQuartierHorsNantesNordLoire)
+	 	Temp = UtilReplace(Temp,"SAINT-MALO-DE-GUERSAC",CONSTQuartierHorsNantesNordLoire)
+	 	Temp = UtilReplace(Temp,"SAINT-NAZAIRE",CONSTQuartierHorsNantesNordLoire)
+	 	Temp = UtilReplace(Temp,"SAINTE-PAZANNE",CONSTQuartierHorsNantesSudLoire)
+	 	Temp = UtilReplace(Temp,"SAUTRON",CONSTQuartierHorsNantesNordLoire)
+	 	Temp = UtilReplace(Temp,"SAVENAY",CONSTQuartierHorsNantesNordLoire)
+	 	Temp = UtilReplace(Temp,"ST PHILBERT DE GRAND LIEU",CONSTQuartierHorsNantesSudLoire)
+	 	Temp = UtilReplace(Temp,"TREILLIERES",CONSTQuartierHorsNantesNordLoire)
+	 	Temp = UtilReplace(Temp,"TRIGNAC",CONSTQuartierHorsNantesNordLoire)
+	 	Temp = UtilReplace(Temp,"VALLET",CONSTQuartierHorsNantesSudLoire)
+	 	Temp = UtilReplace(Temp,"VERTOU",CONSTQuartierHorsNantesSudLoire)
+	 	Temp = UtilReplace(Temp,"Couëron",CONSTQuartierHorsNantesNordLoire)
+	 	Temp = UtilReplace(Temp,"Thouaré",CONSTQuartierHorsNantesNordLoire)
+	 	Temp = UtilReplace(Temp,"Saint-Luce sur Loire",CONSTQuartierHorsNantesNordLoire)
+	 	Temp = UtilReplace(Temp,"Mauves sur Loire",CONSTQuartierHorsNantesNordLoire)
+	 	Temp = UtilReplace(Temp,"Bouguenais",CONSTQuartierHorsNantesSudLoire)
+	 	Temp = UtilReplace(Temp,"Sorinières",CONSTQuartierHorsNantesSudLoire)
+	  	Temp = UtilReplace(Temp,"Basse-Goulaine",CONSTQuartierHorsNantesSudLoire)
+	 	Temp = UtilReplace(Temp,"Saint-Sébastien sur Loire",CONSTQuartierHorsNantesSudLoire)
+	 	Temp = UtilReplace(Temp,"Saint-Léger-les-Vignes",CONSTQuartierHorsNantesSudLoire)
+	 	Temp = UtilReplace(Temp,"Pellerin",CONSTQuartierHorsNantesSudLoire)
+	 	Temp = UtilReplace(Temp,"Rezé",CONSTQuartierHorsNantesSudLoire)
+	 	Temp = UtilReplace(Temp,"Saint-Aignan de Grand Lieu",CONSTQuartierHorsNantesSudLoire)
+	 	Temp = UtilReplace(Temp,"Brains",CONSTQuartierHorsNantesSudLoire)
+	 	Temp = UtilReplace(Temp,"Bouaye",CONSTQuartierHorsNantesSudLoire)
+	 	Temp = UtilReplace(Temp,"VIARME",CONSTQuartierAdminHautsPavesSaintFelix)
+	    RemplaceQuartierSCO = UtilReplace(Temp,"VIGNEUX DE BRETAGNE",CONSTQuartierHorsNantesNordLoire)
+	EndIf
+End Function
+
+Function RemplaceModeDeCollecte(Category as String, Name as String)
+	If (Name="CHANTENAY" or Name="DERVALLIERES" or Name="VIARME" or Name="LA BEAUJOIRE") and Category="Décheterie" Then
+		Temp = "modco_ecopoint"
+	ElseIf (Name<>"CHANTENAY" and Name<>"DERVALLIERES" and Name<>"VIARME" and Name<>"LA BEAUJOIRE") and Category="Décheterie" Then
+		Temp = "modco_decheterie"
+	Else
+		Temp = "modco_reemploi"
+	End If
+    RemplaceModeDeCollecte = Temp
+End Function
+
+Function LogoForStructure(Category as String, Name as String)
+	Temp = ""
+	Repertoire = "resources/images/images_non_libres/"
+	If Name="Atelier du Retz Emploi (Sainte-Pazanne)" or Name="Atelier du Retz Emploi (Le Pèlerin)" or Name="Atelier du Retz Emploi (Le Breil)" or Name="Atelier du Retz Emploi (Saint Brévin)" Then
+		Temp = Repertoire & "logo_lesateliersduretzemploi.png"
+	ElseIf Name="Velocampus" Then
+		Temp = Repertoire & "logo-velocampus.png"
+	ElseIf Name="Le comptoir du Solilab (Atelier du Retz Emploi et Ding Fring)" Then
+		Temp = Repertoire & "logo_lecomptoir_du_solilab.jpg"
+	ElseIf Name="Nâga" Then
+		Temp = Repertoire & "logo_naga.png"
+	ElseIf Name="Tech Recyclage" Then
+		Temp = Repertoire & "logo_techrecyclage.png"
+	ElseIf Name="ATAO (Nantes)" or Name="ATAO (Saint-Herblain)" Then
+		Temp = Repertoire & "logo_atao.jpg"
+	ElseIf Name="Re-act" Then
+		Temp = Repertoire & "logo_react.png"
+	ElseIf Name="À prendre ou à laisser (Nantes)" Then
+		Temp = Repertoire & "logo_catournautroc.png"
+	ElseIf Name="Ecologie L'Air Livre (château Nantes)" or  Name="Nantes Ecologie L'Air Livre (Cité des Congrès Nantes)" Then
+		Temp = Repertoire & "logo_nantesecologie.png"	
+	ElseIf Name="Po' Fringues (Secours Populaire Français Nantes)" or  Name="Secours populaire" or  Name="Solidari'meubles (Secours Populaire Français Nantes)" or Name="S'POP affaires (Secours Populaire Français Nantes)" Then
+		Temp = Repertoire & "logo_secours_populaire_francais.png"
+	REM ElseIf Name="La Boîte Utile" Then
+	REM		Temp = Repertoire & "logo_catournautroc.png"
+	ElseIf Name="Stations Services" Then
+		Temp = Repertoire & "logo_stationsservices.png"
+	ElseIf Name="La récupérette (Clisson)" Then
+		Temp = Repertoire & "logo_larecuperette.png"
+	End If
+	LogoForStructure = Temp
+End Function 
+
+Function ConseilForStructure(Category as String, Name as String)
+	Temp = ""
+	If Category="Décheterie" Then
+		Temp = Temp & ",cons_decheterieecopointquartheure"
+	End If
+	If (Name<>"LA CHAPELLE SUR ERDRE" and Name<>"SAINT SEBASTIEN SUR LOIRE") and Category="Décheterie" Then
+		Temp =  Temp & ",cons_dechetecolimite2metres"
+	End If
+	ConseilForStructure = Temp
+End Function
+
+REM renvoie lu pour un lundi, selon la date fournie en paramètre
+Function getJourDeLaSemaine(Annee as String, Mois as String, Jour as String)
+	Dim MyVar As Date
+	
+	jourDeLaSemaine = ""
+	If Annee<>"" and Mois<>"" and Jour<>"" Then
+		MyDate = DateSerial (Annee, Mois, Jour)
+	
+		REM	date2 = DATE(Annee, Mois, Jour)
+		numeroJourDeLaSemaine = WEEKDAY(MyDate)
+		If numeroJourDeLaSemaine = 2 Then
+			jourDeLaSemaine = "lu"
+		ElseIf numeroJourDeLaSemaine = 3 Then
+			jourDeLaSemaine = "ma"
+		ElseIf numeroJourDeLaSemaine = 4 Then
+			jourDeLaSemaine = "me"
+		ElseIf numeroJourDeLaSemaine = 5 Then
+			jourDeLaSemaine = "je"
+		ElseIf numeroJourDeLaSemaine = 6 Then
+			jourDeLaSemaine = "ve"
+		ElseIf numeroJourDeLaSemaine = 7 Then
+			jourDeLaSemaine = "sa"
+		ElseIf numeroJourDeLaSemaine = 0 Then
+			jourDeLaSemaine = "di"
+		End If
+	End If
+	getJourDeLaSemaine = jourDeLaSemaine
+End Function
+
+Function UtilGetPlagePourHoraires(jour1 as String, heureDeb1 as String, heureFin1 as String)
+	Element = jour1
+	heureDeb = UtilReplace(heureDeb1, ":", "h")
+	heureFin = UtilReplace(heureFin1, ":", "h")
+	Annee = Mid(Element, 7, 4)
+	Mois = Mid(Element, 4, 2)
+	Jour  = Mid(Element, 1, 2)
+	jourDeLaSemaine = getJourDeLaSemaine(Annee, Mois, Jour)
+	Annee = Mid(Annee, 3, 2)
+	Result =  Jour & Mois & Annee & "_" & jourDeLaSemaine & "_"+heureDeb+"-"+heureFin
+	UtilGetPlagePourHoraires = Result
+End Function
+
+REM renvoie la plage horaire à partir d'un texte libre
+Function RemplaceHorairesTrisac2(jour1 as String, heureDeb1 as String, heureFin1 as String, jour2 as String, heureDeb2 as String, heureFin2 as String, jour3 as String, heureDeb3 as String, heureFin3 as String, idElement as String, rue as String, typeDistribution as String)
+	Result = ""
+	If jour1 <>0 Then
+		Result =  Result & "," & UtilGetPlagePourHoraires(jour1, heureDeb1, heureFin1)
+		Result =  Result & "," & UtilGetPlagePourHoraires(jour2, heureDeb2, heureFin2)
+		Result =  Result & "," & UtilGetPlagePourHoraires(jour3, heureDeb3, heureFin3)
+	Else
+		If idElement = "Epicerie Aux 4 saisons" Then
+			REM Du mardi au samedi de 7h à 13h et de 15h à 19h30
+			Result = "0101-3112_ma+me+je+ve+sa_07h00-13h00+15h00-19h30"
+		ElseIf  idElement = "Carrefour City" and rue = "Boulevard Pierre de Coubertin" Then
+			REM Lundi au samedi de 07h00 à 21h00, Dimanche de 09h00 à 13h
+			Result = "0101-3112_ma+me+je+ve+sa_07h00-21h00,0101-3112_di_09h00-13h00"
+		ElseIf  idElement = "Mairie Annexe Dervallières" Then
+			REM Lundi au vendredi de 09h00 à 12h45 et de 14h00 à 17h30
+			Result = "0101-3112_lu+ma+me+je+ve_09h00-12h45+14h00-17h30"
+		ElseIf  idElement = "Nantes Habitat Agence Watteau" Then
+			REM Lundi au vendredi de 08h30 à 12h00 et de 13h30 à 17h00
+			Result = "0101-3112_lu+ma+me+je+ve_08h30-12h00+13h30-17h00"
+		ElseIf  idElement = "Nantes Habitat Agence Jamet" Then
+			REM Lundi au vendredi de 08h30 à 12h00 et de 13h30 à 17h
+			Result = "0101-3112_lu+ma+me+je+ve_08h30-12h00+13h30-17h00"
+		ElseIf  idElement = "Nantes Habitat Agence Feyder" Then
+			REM Lundi au vendredi de 08h30 à 12h00 et de 13h30 à 17h00
+			Result = "0101-3112_lu+ma+me+je+ve_08h30-12h00+13h30-17h00"
+		ElseIf  idElement = "Bar Tabac l'Hebdo" Then
+			REM Lundi au vendredi de 07h00 à 20h00, samedi et dimanche de 08h00 à 20h
+			Result = "0101-3112_lu+ma+me+je+ve_07h00-20h00,0101-3112_sa+di_08h00-20h00"
+		ElseIf  idElement = "Café la butte" Then
+			REM Du lundi au vendredi de 7h30 à 20h Le samedi de 9h à 20h, le dimanche de 9h à 14h Fermé le mercredi.
+			Result = "0101-3112_lu+ma+je+ve_07h30-20h00,0101-3112_sa_09h00-20h00,0101-3112_di_09h00-14h00"
+		ElseIf  idElement = "Pôle de proximité Nantes Ouest" Then
+			REM Lundi au vendredi de 08h30 à 12h30 et de 13h30 à 17h30
+			Result = "0101-3112_lu+ma+me+je+ve_08h30-12h30,0101-3112_lu+ma+me+je+ve_13h30-17h30"
+		ElseIf  idElement = "Mairie annexe Chantenay" Then
+			REM Du lundi au ven de 8h30 à 18h00, sam 9h00 à 12h00
+			Result = "0101-3112_lu+ma+me+je+ve_08h30-18h00,0101-3112_sa_09h00-12h00"
+		ElseIf  idElement = "Boulangerie" and rue = "Boulevard Professeur Auvigné" Then
+			REM Du lundi au samedi de 6h30 à 13h15 et de 15h à 19h30 (fermé le jeudi) Dimanche de 7h30 à 13h
+			Result = "0101-3112_lu+ma+me+ve+sa_06h30-13h15+15h00-19h30,0101-3112_di_07h30-13h00"
+		ElseIf  idElement = "Mairie Annexe Ranzay" Then
+			REM Lundi au vendredi de 09h00 à 12h00 et de 13h15 à 17h30
+			Result = "0101-3112_lu+ma+me+je+ve_09h00-12h00,0101-3112_lu+ma+me+je+ve_13h15-17h30"
+		ElseIf  idElement = "Mairie Annexe Bottière" Then
+			REM Lundi au vendredi de 09h00 à 12h45 et de 14h00 à 17h30
+			Result = "0101-3112_lu+ma+me+je+ve_09h00-12h45,0101-3112_lu+ma+me+je+ve_14h00-17h30"
+		ElseIf  idElement = "Leclerc Paridis" Then
+			REM 8h30 20h45
+			Result = "0101-3112_lu+ma+me+je+ve+sa_08h30-20h45"
+		ElseIf  idElement = "Piscine Jules Verne" Then
+			Result = "0101-3112_lu+ma+me+je+ve+sa+di_01h00-23h00"
+		ElseIf  idElement = "Association ADDA" Then
+			REM Jeudi et samedi de 11h00 à 14h00, Mardi  et vendredi de 16h30 à 19h00
+			Result = "0101-3112_je+sa_11h00-14h00,0101-3112_ma+ve_16h30-19h00"
+		ElseIf  idElement = "Maison de l'Environnement Ecopole" Then
+			REM Du lundi au vendredi de 13h30 à 18h • Mercredi de 9h à 12h
+			Result = "0101-3112_lu+ma+me+je+ve_13h30-18h00,0101-3112_me_09h00-12h00"
+		ElseIf  idElement = "Carrefour City" and rue = "Rue des Hauts Pavés" Then
+			REM Du lundi au samedi de 7h à 21h Dimanche de 9h à 13h
+			Result = "0101-3112_lu+ma+me+je+ve+sa_07h00-21h00,0101-3112_di_09h00-13h00"
+		ElseIf  idElement = "Carrefour Market" Then
+			REM Lundi au samedi de 08h30 à 20h00
+			Result = "0101-3112_lu+ma+me+je+ve+sa_08h30-20h00"
+		ElseIf  idElement = "Intermarché" and rue = "Rue Félix Thomas" Then
+			REM Du lundi au samedi de 8h45 à 20h
+			Result = "0101-3112_lu+ma+me+je+ve+sa_08h45-20h00"
+		ElseIf  idElement = "Café tabac le Bel air" Then
+			REM Lundi au vendredi de 6h45 à 19h30, samedi de 08h00 à 12h30
+			Result = "0101-3112_lu+ma+me+je+ve_06h45-19h30,0101-3112_sa_08h00-12h30"
+		ElseIf  idElement = "Carrefour Market" Then
+			REM Du lundi au samedi de 8h30 à 20h
+			Result = "0101-3112_lu+ma+me+je+ve+sa_08h30-20h00"
+		ElseIf  idElement = "Marché de Talensac" Then
+			REM Distributeur
+			Result = "0101-3112_ma+me+je+ve+sa_07h00-13h00"
+		ElseIf  idElement = "Boulangerie Pain de Sophie" Then
+			REM Du lundi au vendredi et dimanche de 7h à 20h Fermé le samedi
+			Result = "0101-3112_lu+ma+me+je+ve+di_07h00-20h00,0101-3112_di_07h00-20h00"
+		ElseIf  idElement = "Boulangerie, Le Fournil de Mangin" Then
+			REM Du mardi au samedi de 7h à 19h Dimanche de 7h à 13h
+			Result = "0101-3112_ma+me+je+ve+sa_07h00-19h00,0101-3112_di_07h00-13h00"
+		ElseIf  idElement = "Spar" Then
+			REM Du lundi au samedi de 8h à 21h Dimanche de 9h à 13h
+			Result = "0101-3112_lu+ma+me+je+ve+sa_08h00-21h00,0101-3112_di_09h00-13h00"
+		ElseIf  idElement = "Mairie Annexe Beaulieu" Then
+			REM Du lundi au vendredi de 9h à 12h45 et de 14h à 17h30
+			Result = "0101-3112_lu+ma+me+je+ve_09h00-12h45+14h00-17h30"
+		ElseIf  idElement = "Mairie Annexe Malakoff" Then
+			REM Du lundi au vendredi de 9h à 12h et de 13h15 à 17h30
+			Result = "0101-3112_lu+ma+me+je+ve_09h00-12h00+13h15-17h30"
+		ElseIf  idElement = "Nantes Habitat Agence Angleterre" Then
+			REM Du lundi au vendredi de 8h30 à 12h30 et de 13h30 à 17h30
+			Result = "0101-3112_lu+ma+me+je+ve_08h30-12h30+13h30-17h30"
+		ElseIf  idElement = "Piscine Petite Amazonie" Then
+			Result = "0101-3112_lu+ma+me+je+ve+sa+di_01h00-23h00"
+		ElseIf  idElement = "Velo Campus" Then
+			REM Lundi et mercredi de 13h30 à 20h Mardi, jeudi et samedi de 14h à 18h
+			Result = "0101-3112_lu+me_13h30-20h00,0101-3112_ma+je+sa_14h00-18h00"
+		ElseIf  idElement = "Carrefour City" and rue = "rue Guillaume Grootaers" Then
+			REM Du lundi au samedi de 7h à 21h Dimanche de 8h30 à 13h
+			Result = "0101-3112_lu+ma+me+je+ve+sa_07h00-21h00,0101-3112_du_08h30-13h00"
+		ElseIf  idElement = "Boulangerie La p'tite cantine" Then
+			REM Du dimanche au vendredi de 7h à 19h30 Fermé le samedi
+			Result = "0101-3112_lu+ma+me+je+ve+di_07h00-19h30"
+		ElseIf  idElement = "Boulangerie Le bon la croute la mie" Then
+			REM Du lundi au vendredi de 6h30 à 14h et de 16h à 20h Samedi de 7h à 14h
+			Result = "0101-3112_lu+ma+me+je+ve_06h00-14h00+16h00-20h00,0101-3112_sa_07h00-14h00"
+		ElseIf  idElement = "Café tabac Le Sulky" Then
+			REM Du lundi au vendredi de 7h à 20h Dimanche de 10h à 17h
+			Result = "0101-3112_lu+ma+me+je+ve_07h00-20h00,0101-3112_du_10h00-17h00"
+		ElseIf  idElement = "Mairie Annexe Barberie" Then
+			REM Du lundi au vendredi de 9h à 12h45 et de 14h à 17h30
+			Result = "0101-3112_lu+ma+me+je+ve_09h00-12h45+14h00-17h30"
+		ElseIf  idElement = "Mairie Annexe Nantes Nord" Then
+			REM Du lundi au vendredi de 9h à 12h et de 13h15 à 17h30
+			Result = "0101-3112_lu+ma+me+je+ve_09h00-12h00+13h15-17h30"
+		ElseIf  idElement = "Pôle de proximité Erdre et Cens" Then
+			REM Du lundi au vendredi de 8h30 à 12h30 et de 13h30 à 17h30
+			Result = "0101-3112_lu+ma+me+je+ve_08h30-12h30+13h30-17h30"
+		ElseIf  idElement = "Super U Dalby" Then
+			REM Du lundi au samedi de 8h30 à 20h30
+			Result = "0101-3112_lu+ma+me+je+ve+sa_08h00-20h30"
+		ElseIf  idElement = "Shopi" Then
+			REM Du lundi au samedi de 8h à 20h30
+			Result = "0101-3112_lu+ma+me+je+ve+sa_08h00-20h30"
+		ElseIf  idElement = "Intermarché" and rue = "Rue Pitre Chevalier" and typeDistribution = "PDIS" Then
+			REM Du lundi au samedi de 9h à 20h (Juillet/Août fermeture entre 12h30 et 14h30)
+			Result = "0101-3112_lu+ma+me+je+ve+sa_09h00-20h00"
+		ElseIf  idElement = "Boulangerie Le blé d'or" Then
+			REM Du lundi au vendredi de 7h à 14h et de 15h à 20h • Samedi de 7h15 à 13h et de 15h30 à 19h30
+			Result = "0101-3112_ma+me+je+ve_07h00-14h00+15h00-20h00,0101-3112_sa_07h15-13h00+15h30-19h30"
+		ElseIf  idElement = "Casino" and rue = "Boulevard du Général Buat" Then
+			REM Du lundi au samedi de 8h45 à 20h
+			Result = "0101-3112_lu+ma+me+je+ve+sa_08h45-20h00"
+		ElseIf  idElement = "Pôle Municipal Strasbourg" Then
+			REM Du lundi au vendredi de 8h30 à 18h
+			Result = "0101-3112_lu+ma+me+je+ve_08h30-18h00"
+		ElseIf  idElement = "Intermarché" and rue = "Rue Pitre Chevalier" and typeDistribution = "Vente" Then
+			REM lundi au vend 9h00 20h15, sam 9h00 20h00
+			Result = "0101-3112_lu+ma+me+je+ve_09h00-20h15,0101-3112_sa_09h00-20h00"
+		ElseIf  idElement = "Super U Dalby" Then
+			REM lundi au samedi 8h30 20h30
+			Result = "0101-3112_lu+ma+me+je+ve+sa_08h30-20h30"
+		ElseIf  idElement = "Pôle de Proximité Erdre et Loire" Then
+			REM Du lundi au vendredi de 8h30 à 12h30 et de 13h30 à 17h30
+			Result = "0101-3112_lu+ma+me+je+ve_08h30-12h30+13h30-17h30"
+		ElseIf  idElement = "Boulangerie" and rue = "Rue des Bourderies" Then
+			REM Du mardi au vendredi de 7h à 13h30 et 15h30 à 19h30 • Samedi de 7h à 13h et de 16h à 19h • Dimanche de 7h à 13
+			Result = "0101-3112_ma+me+je+ve_07h00-13h30+15h30-19h30,0101-3112_sa_07h00-13h00+16h00-19h00,0101-3112_di_07h00-13h00"
+		ElseIf  idElement = "Mairie Annexe Bellevue" Then
+			REM Du lundi au vendredi de 9h à 12h45 et 14h à 17h30
+			Result = "0101-3112_lu+ma+me+je+ve_09h00-12h45+14h00-17h30"
+		ElseIf  idElement = "Aux Délices de Procé" Then
+			REM Lundi, mardi, jeudi, vendredi et samedi de 7h à 20h
+			Result = "0101-3112_lu+ma+je+ve+sa_07h00-20h00"
+		ElseIf  idElement = "Le Monselet" Then
+			REM Du lundi au vendredi de 7h à 19h30 Samedi de 8h à 13h et 14h30 à 18h30
+			Result = "0101-3112_lu+ma+me+je+ve_07h00-19h30,0101-3112_sa_08h00-13h00+14h30-18h30"
+		ElseIf  idElement = "La Cabane à Pain" Then
+			REM Du lundi au vendredi de 7h à 13h30 et 15h30 à 19h30  Samedi de 7h à 13h30
+			Result = "0101-3112_lu+ma+me+je+ve_07h00-13h30+15h30-19h30,0101-3112_sa_07h00-13h30"
+		ElseIf  idElement = "Mairie Annexe Doulon" Then
+			REM Du lundi au vendredi de 8h30 à 18h
+			Result = "0101-3112_lu+ma+me+je+ve_08h30-18h00"
+		ElseIf  idElement = "Intermarché" and rue = "Route de Saint Joseph" Then
+			REM lundi au samedi 8h30 20h30
+			Result = "0101-3112_lu+ma+me+je+ve+sa_08h30-20h30"
+		ElseIf  idElement = "Boulangerie Rainard" Then
+			REM Du lundi au vendredi de 6h45 à 13h30 et de 15h à 19h30 • Fermée le mardi
+			Result = "0101-3112_lu+je+ve_06h45-13h30+15h00-19h30"
+		ElseIf  idElement = "Super U St Jacques" Then
+			REM Du lundi au samedi de 8h30 à 19h30 Dimanche de 9h à 12h30
+			Result = "0101-3112_lu+ma+me+je+ve_08h30-19h30,0101-3112_di_09h00-12h30"
+		ElseIf  idElement = "Mairie Annexe Nantes Sud" Then
+			REM Du lundi au vendredi de 9h à 12h et de 13h15 à 17h30
+			Result = "0101-3112_lu+ma+me+je+ve_09h00-12h00+13h15-17h30"
+		ElseIf  idElement = "Le Fournil d'Aristide" Then
+			REM Du lundi au vendredi de 7h à 14h et de 16h à 20h Dimanche de 8h à 13h
+			Result = "0101-3112_lu+ma+me+je+ve_07h00-14h00+16h00-20h00,0101-3112_di_08h00-13h00"
+		ElseIf  idElement = "Mairie Centrale" Then
+			REM Du lundi au vendredi de 8h30 à 18h
+			Result = "0101-3112_lu+ma+me+je+ve_08h30-18h00"
+		ElseIf  idElement = "Nantes Métropole, bâtiment Valmy" Then
+			REM Du lundi au vendredi de 8h45 à 12h et de 13h30 à 17h
+			Result = "0101-3112_lu+ma+me+je+ve_08h45-12h00+13h30-17h00"
+		ElseIf  idElement = "Carrefour City" and rue = "Rue Cassini" Then
+			REM Du lundi au samedi de 7h à 22h Dimanche de 9h à 13h
+			Result = "0101-3112_lu+ma+me+je+ve+sa_07h00-22h00,0101-3112_di_09h30-13h00"
+		ElseIf  idElement = "Carrefour City" and rue = "Avenue Carnot" Then
+			REM Du lundi au samedi de 7h à 22h Dimanche de 9h à 13h
+			Result = "0101-3112_lu+ma+me+je+ve+sa_07h00-22h00,0101-3112_di_09h00-13h00"
+		ElseIf  idElement = "Casino" and rue = "Chaussée de la Madeleine" Then
+			REM Du lundi au samedi de 8h30 à 20h
+			Result = "0101-3112_lu+ma+me+je+ve+sa_08h30-20h00"
+		ElseIf  idElement = "Tabac Presse" and rue="Allée Duguay Trouin" Then
+			REM Du lundi au vendredi de 8h à 20h Samedi de 9h à 20h
+			Result = "0101-3112_lu+ma+me+je+ve_08h00-20h00,0101-3112_sa_09h00-20h00"
+		ElseIf  idElement = "Tabac Presse Le Voltaire" Then
+			REM Du lundi au vendredi de 6h30 à19h30 Samedi de 7h30 à 19h
+			Result = "0101-3112_lu+ma+me+je+ve_06h30-19h30,0101-3112_sa_07h30-19h00"
+		ElseIf  idElement = "Glubs" Then
+			REM Lundi de 14h à 19h Du mardi au vendredi de 11h à 19h  Samedi de 10h à 19h
+			Result = "0101-3112_lu_14h00-19h00,0101-3112_ma+je+ve_11h00-19h00,0101-3112_sa_10h00-19h00"
+		ElseIf  idElement = "Du Vert en Ville" Then
+			REM Du lundi au samedi de 7h à 22h Dimanche de 9h à 13h
+			Result = "0101-3112_lu+ma+me+je+ve+sa_07h00-22h00,0101-3112_di_09h00-13h00"
+		ElseIf  idElement = "Boulangerie" and rue = "Allée Duquesne" Then
+			REM Du lundi au samedi de 7h à 19h30
+			Result = "0101-3112_lu+ma+me+je+ve+sa_07h00-19h30"
+		ElseIf  idElement = "Papeterie" and rue = "Rue de l'évêché" Then
+			REM Du lundi au samedi de 9h à 12h et 14h à 19h
+			Result = "0101-3112_lu+ma+me+je+ve+sa_09h00-12h00+14h00-19h00"
+		ElseIf  idElement = "Tabac Presse" and rue = "Rue de Budapest" Then
+			REM Du lundi au samedi de 6h45 à 19h30
+			Result = "0101-3112_lu+ma+me+je+ve+sa_06h45-19h30"
+		ElseIf  idElement = "Tabac Presse du Pilori" Then
+			REM Du lundi au samedi de 7h30 à 20h
+			Result = "0101-3112_lu+ma+me+je+ve+sa_07h30-20h00"
+		ElseIf  idElement = "Boulangerie La Mie Câline" Then
+			REM Du lundi au dimanche de 6h30 à 21h30
+			Result = "0101-3112_lu+ma+me+je+ve+sa+di_06h30-21h30"
+		ElseIf  idElement = "Glup's" Then
+			REM http://www.les-horaires.fr/44000/Nantes/Glup-s-10-rue-de-la-fosse,571.html
+			Result = "0101-3112_lu_14h00-19h00,0101-3112_ma+me+je+ve_11h00-19h30,0101-3112_sa_10h00-19h30,0101-3112_di_15h00-19h00"
+		ElseIf  idElement = "Intermarché Eraudière" Then
+			REM Du lundi au dimanche de 8h30 à 20h30
+			Result = "0101-3112_lu+ma+me+je+ve+sa_08h30-20h30"
+		ElseIf  idElement = "Mairie Annexe Ile de Nantes" Then
+			REM Du lundi au vendredi de 9h à 12h45 et de 14h à 17h30.
+			Result = "0101-3112_lu+ma+me+je+ve_09h30-12h45+14h00-17h30"
+		ElseIf  idElement = "Carrefour City" and rue="Rue Guillaume Grootaers" Then
+			REM lundi au samedi 07h00 - 21h00, dimanche 8h30 à 13h00
+			Result = "0101-3112_lu+ma+me+je+ve+sa_07h30-21h00,0101-3112_di_08h30-13h00"
+		ElseIf  idElement = "Super U" and rue="Boulevard Ernest Dalby" Then
+			REM Du lundi au dimanche de 8h30 à 20h30
+			Result = "0101-3112_lu+ma+me+je+ve+sa_08h30-20h30"
+		ElseIf  idElement = "Pôle Municipal Strasbourg, Manufacture des tabacs" and rue=""  Then
+			REM Pas horaire !!!!!!!!!!!!!!!!!!!!!!!
+			Result = ""
+		ElseIf  idElement = "Casino" and rue="Rue Général Buat" Then
+			REM Lundi au samedi : 8h45-20h Dimanche : 9h00-12h30 
+			Result = "0101-3112_lu+ma+me+je+ve+sa_08h45-20h00,0101-3112_di_09h00-12h30"
+		ElseIf  idElement = "Boulangerie" and rue="Boulevard Professeur René Auvigné" Then
+			REM PAS HORAIRES
+			Result = ""
+		ElseIf  idElement = "Papeterie Pouteau"  Then
+			REM Lundi au samedi : 9h-12h 14h-19h
+			Result = "0101-3112_lu+ma+me+je+ve+sa_09h00-12h00+14h00-19h00"
+		ElseIf  idElement = "Nantes Habitat Agence Goudy" Then
+			REM L'agence est ouverte du lundi au vendredi de 8h30 à 12h00 et de 13h30 à 17h00. 
+			Result = "0101-3112_lu+ma+me+je+ve_08h30-12h00+13h30-17h00"
+		End If
+	End If
+	RemplaceHorairesTrisac2 = Result
+End Function
+
+
+REM renvoie la plage horaire à partir d'un texte libre
+Function RemplaceHoraires(PlageHoraire as String)
+	If PlageHoraire = "Ouvert tous les jours de 10h à  17h45, dimanche compris (sauf jours fériés)" Then 
+		Result = "0101-3112_lu+ma+me+je+ve+sa+di_10h00-17h45,sauf_ferie"
+	ElseIf PlageHoraire = "La boutique est ouverte tous les mercredi et samedi de 9h30 à 12h et de 14h à 16h45. Chacun peut également venir y déposer les objets encore utilisables, aux mêmes jours et heures d’ouverture." Then 
+		Result = "0101-3112_lu+ma+me+je+ve_12h00-14h00"
+	ElseIf PlageHoraire = "Ouvert tous les jours de 10h à  18h, dimanche compris (sauf jours fériés)" Then 
+		Result = "0101-3112_lu+ma+me+je+ve+sa+di_10h00-18h00,sauf_ferie"
+	ElseIf PlageHoraire = "le MERCREDI de 9 h à 12 h, le SAMEDI de 9 h à 12 h 30" Then 
+		Result = "0101-3112_me_09h00-12h00,0101-3112_sa_09h00-12h30"
+	ElseIf PlageHoraire = "Pour effectuer vos dépôts : du lundi au samedi de 8h00 à  11h30 et de 14h à  17h30" Then 
+		Result = "0101-3112_lu+ma+me+je+ve+sa_08h00-11h30+14h00-17h30"
+	ElseIf PlageHoraire = "Ouvert tous les jours de 10h à  18h, dimanche compris (sauf jours fériés)" Then 
+		Result = "0101-3112_lu+ma+me+je+ve+sa+di_10h00-18h00,sauf_ferie"
+	ElseIf PlageHoraire = "Ouvert Lundi, Mardi, Mercredi, Vendredi et Samedi de 10h à  18h (sauf jours fériés)" Then 
+		Result = "0101-3112_lu+ma+me_10h00-18h00,0101-3112_ve+sa_10h00-18h00,sauf_ferie"
+	ElseIf PlageHoraire = " Été (Du 1er avril au 30 septembre) : Lundi au Samedi de 9h à 19h. Dimanche de 9h à 12h15. Hiver (du 1er octobre au 31 mars) : Lundi au Samedi de 9h à 18h. Dimanche de 9h à 12h15. Fermeture les jours fériés." Then 
+		Result = "0109-3103_lu+ma+me+je+ve+sa_09h00-18h00,0104-3008_lu+ma+me+je+ve+sa_09h00-18h00,0101-3112_di_09h00-12h15,sauf_ferie"
+	ElseIf PlageHoraire = "Le magasin est ouvert du mardi au samedi de 9h30 à 12h30 et de 13h30 à 18h" Then 
+		Result = "0101-3112_ma+me+je+ve+sa_09h30-12h30+13h30-18h00"
+	ElseIf PlageHoraire = "Ouvert du Lundi au Samedi de 10h à  18h et le Dimanche de 8h30 à  12h (sauf jours fériés)" Then 
+		Result = "0101-3112_lu+ma+me+je+ve+sa_10h00-18h00,0101-3112_di_08h30-12h00,sauf_ferie"
+	ElseIf PlageHoraire = "Du mardi au samedi de 10h à 12h30 et de 14h30 à 19h" Then 
+		Result = "0101-3112_ma+me+je+ve+sa_12h00-14h00+14h30-19h00"
+	ElseIf PlageHoraire = "Du mardi au samedi de 10h à 19h, le lundi de 14h à 19h" Then 
+		Result = "0101-3112_ma+me+je+ve+sa_10h00-19h00,0101-3112_lu_14h00-19h00"
+	ElseIf PlageHoraire = "Du lundi au vendredi de 10h à 12h30 et de 14h à 19h00. Le samedi de 10h à 12h30 et de 14h à 18h30" Then 
+		Result = "0101-3112_lu+ma+me+je+ve_10h00-12h30+14h00-19h00,0101-3112_sa_10h00-12h30+14h00-18h30"
+	ElseIf PlageHoraire = "Ferme le mercredi apres midi et le vendredi. Devis meuble le mardi de 14 a 17h et le jeudi de 9 a 12h." Then 
+		Result = "0101-3112_lu+ma+me+je+ve_12h00-14h00"
+	ElseIf PlageHoraire = "du lundi au vendredi de 8h à 12h30 et de 14h à 19h ainsi que le samedi matin de 9h à 12h30" Then 
+		Result = "0101-3112_lu+ma+me+je+ve_08h00-12h30+14h00-19h00,0101-3112_sa_09h00-12h30"
+	ElseIf PlageHoraire = "Ouvert tous les jours de 10h à  18h, dimanche compris (sauf jours fériés)" Then 
+		Result = "0101-3112_lu+ma+me+je+ve+sa+di_10h00-18h00,sauf_ferie"
+	ElseIf PlageHoraire = "Lundi au Samedi de 09H00 à 19H00" Then 
+		Result = "0101-3112_lu+ma+me+je+ve+sa_09h00-19h00"
+	ElseIf PlageHoraire = "Ouvert Lundi et Mercredi de 14h à  18h et Samedi de 10h à  18 h (sauf jours fériés)" Then 
+		Result = "0101-3112_lu+ma+me+sa_14h00-18h00,sauf_ferie"
+	ElseIf PlageHoraire = "Ouvert tous les jours de 10h à  18h, dimanche compris (sauf jours fériés)" Then 
+		Result = "0101-3112_lu+ma+me+je+ve+sa+di_10h00-18h00,sauf_ferie"
+	ElseIf PlageHoraire = "Dépôts des dons : Mardi, mercredi, vendredi et le samedi de 9h30 à 11h30 et de 13h30 à 16h30. Salle de vente : Le mercredi de 13h30 à 17h30 et le samedi de 9h30 à 11h30 et de 13h30 à 17h30." Then 
+		Result = "0101-3112_lu+ma+me+je+ve_12h00-14h00"
+	ElseIf PlageHoraire = "Ouvert au public le jeudi de 14h à 17h" Then 
+		Result = "0101-3112_je_14h00-17h00"
+	ElseIf PlageHoraire = "Du lundi au vendredi, 9h-12h et 14h-18h" Then 
+		Result = "0101-3112_lu+ma+me+je+ve_09h00-12h00+14h00-18h00"
+	ElseIf PlageHoraire = "Ouvert le Lundi de 14h à  19h, du Mardi au Vendredi de 10h à  13h et de 14h à  19h et le samedi de 10h à  13h et de 14h à  18h" Then 
+		Result = "0101-3112_lu_14h00-19h00,0101-3112_ma+me+je+ve_10h00-13h00+14h00-19h00,0101-3112_sa_10h00-13h00+14h00-18h00"
+	ElseIf PlageHoraire = "Du lundi au samedi de 10h à 13h et de 14h à 19h" Then 
+		Result = "0101-3112_lu+ma+me+je+ve+sa_10h00-13h00+14h00-19h00"
+	ElseIf PlageHoraire = "Du lundi au vendredi de 9h00 à  18h00." Then 
+		Result = "0101-3112_lu+ma+me+je+ve_09h00-18h00"
+	ElseIf PlageHoraire = "Lundi à Vendredi 9h-13h et 14h30-18h30" Then 
+		Result = "0101-3112_lu+ma+me+je+ve_09h00-13h00+14h30-18h30"
+	ElseIf PlageHoraire = "Ouvert le Lundi de 14h à  19h, du Mardi au Vendredi de 9h30 à  12h30 et de 14h à  19h et le samedi de 10h à  12h30 et de 14h à  17h" Then 
+		Result = "0101-3112_lu_14h00-19h00,0101-3112_ma+me+je+ve_09h00-12h30+14h00-19h00,0101-3112_sa_10h00-12h30+14h00-17h00"
+	ElseIf PlageHoraire = "Du lundi au vendredi de 9h00 à  12h30 et de 14h00 à  18h00." Then 
+		Result = "0101-3112_lu+ma+me+je+ve_09h00-12h30+14h00-18h00"
+	ElseIf PlageHoraire = "Ouvert le mardi, jeudi et vendredi, de 10 h à 12 h et de 14 h à 19 h; le samedi, de 15 h à 18 h." Then 
+		Result = "0101-3112_ma+je+ve_10h00-12h00+14h00-19h00,0101-3112_sa_15h00-18h00"
+	ElseIf PlageHoraire = " Été (Du 1er avril au 30 septembre) : Lundi au Vendredi de 10h à 12h15 et de 14h30 à 19h. Samedi de 9h à 12h15 et de 14h30 à 19h. Hiver (du 1er octobre au 31 mars) : Lundi au Samedi de 9h à 12h15 et de 14h30 à 18h. Fermeture les jours fériés." Then 
+		Result = "3009-3103_lu+ma+me+je+ve+sa_09h00-12h15,3009-3103_lu+ma+me+je+ve+sa_14h30-19h00,0104-3009_lu+ma+me+je+ve+sa_10h00-12h15,0104-3009_lu+ma+me+je+ve+sa_14h30-18h00,sauf_ferie"
+	ElseIf PlageHoraire = "le MERCREDI de 9 h à 17 h 30, le SAMEDI de 9 h à 17 h 30" Then 
+		Result = "0101-3112_me-sa_09h00-17h30"
+	ElseIf PlageHoraire = "Du lundi au vendredi de 10h à 19h00 et le samedi de 10h à 18h30" Then 
+		Result = "0101-3112_lu+ma+me+je+ve_10h00-19h00"
+	ElseIf PlageHoraire = "Ouvert tous les jours de 10h à  18h, dimanche compris (sauf jours fériés)" Then 
+		Result = "0101-3112_lu+ma+me+je+ve+sa+di_10h00-18h00,sauf_ferie"
+	ElseIf PlageHoraire = "Ouvert tous les jours de 10h à  18h, dimanche compris (sauf jours fériés)" Then 
+		Result = "0101-3112_lu+ma+me+je+ve+sa+di_10h00-18h00,sauf_ferie"
+	ElseIf PlageHoraire = "Ouvert du Lundi au Samedi de 10h à  18h et Dimanche de 8h30 à  12h (sauf jours fériés)" Then 
+		Result = "0101-3112_lu+ma+me+je+ve+sa_10h00-18h00,0101-3112_di_08h30-12h00,sauf_ferie"
+	ElseIf PlageHoraire = "Mardi et jeudi de 9h30 à 12h00 et de 14h00 à 17h00" Then 
+		Result = "0101-3112_ma+je_09h30-12h00+14h00-17h00"
+	ElseIf PlageHoraire = "Ouvert tous les jours de 10h à  18h, dimanche compris (sauf jours fériés)" Then 
+		Result = "0101-3112_lu+ma+me+je+ve+sa+di_10h00-18h00,sauf_ferie"
+	ElseIf PlageHoraire = "Ouvert du Mardi au Samedi de 10h à  17h30 (sauf jours fériés)" Then 
+		Result = "0101-3112_ma+me+je+ve+sa_10h00-17h30,sauf_ferie"
+	ElseIf PlageHoraire = "Ouvert du Mardi au Samedi de 10h à  17h30 (sauf jours fériés)" Then 
+		Result = "0101-3112_ma+me+je+ve+sa_10h00-17h30,sauf_ferie"
+	ElseIf PlageHoraire = "Lundi, mardi, jeudi, vendredi 9h-13h et 14h00-18h00" Then 
+		Result = "0101-3112_lu+ma+je+ve_09h00-13h00+14h00-18h00"
+	ElseIf PlageHoraire = "Du lundi au vendredi de 10h à 19h00. Le samedi de 10h à 18h30" Then 
+		Result = "0101-3112_lu+ma+me+je+ve_12h00-14h00,0101-3112_sa_10h00-18h30"
+	ElseIf PlageHoraire = "Le mardi de 10h à 12 h." Then 
+		Result = "0101-3112_ma_10h00-12h00"
+	REM pb sur '
+	ElseIf PlageHoraire = "Dépôt d\'objets réutilisables : lundi+samedi de 9h à 12h Boutique solidaire : le samedi de 10h à 18h" Then 
+		Result = "0101-3112_lu+ma+me+je+ve_12h00-14h00"
+	ElseIf PlageHoraire = "Le Samedi de 9h30 à 12h, et en semaine selon les horaires suivants : Meubles : Lundi, Mardi, Mercredi, Jeudi de 14h30 à 17h, Vestiaire : Mardi, un  Mercredi sur deux ( non distribution alimentaire ), Jeudi  :  10h à12h et de 14h30 à 16h30, Jouets : Mardi et Jeudi de 10h à 12h et de 14h30 à 16h30, Bibliothèque : Jeudi de 14h30 à 16h30.  Les dépots de vêtements, livres, jouets, vaisselle, bibelots peuvent se faire tous les jours, de 9h à 12 h et de 14h30 à 16h30. De préférence, venez le lundi et le samedi matin. Dépots de meubles toutes les après-midi, du lundi au jeudi, de 14 h à 17 h. " Then 
+		Result = "0101-3112_lu+ma+me+je+ve_12h00-14h00"
+	ElseIf PlageHoraire = "Du lundi au jeudi : de 10h à 12h30 et de 14h30 à 19h00 ; Le vendredi : 10h00 à 19h00 ; Le samedi : 10h00 à 12h30 et de 14h30 à 18h30" Then 
+		Result = "0101-3112_lu+ma+me+je_10h00-12h30+14h30-19h00,0101-3112_ve_10h00-19h00,0101-3112_sa_10h00-12h30+14h30-18h30"
+	ElseIf PlageHoraire = "du lundi au vendredi 7h00-19h00 et le samedi 8h00-19h00" Then 
+		Result = "0101-3112_lu+ma+me+je+ve_07h00-19h00,0101-3112_sa_08h00-19h00"
+	ElseIf PlageHoraire = "Tous les jours du lundi au vendredi de 9h à 12h et de 14h à 17h" Then 
+		Result = "0101-3112_lu+ma+me+je+ve_09h00-12h00+14h00-17h00"
+	ElseIf PlageHoraire = "Du lundi au jeudi de 9h00 à 12h30 et de 14h00 à 17h00. Le vendredi de 9h00 à 12h30 et de 14h00 à 16h00." Then 
+		Result = "0101-3112_lu+ma+me+je_09h00-12h30+14h00-17h00,0101-3112_ve_09h00-12h30+14h00-16h00"
+	ElseIf PlageHoraire = "Ouvert le lundi de 13h à 19h ; du mardi au vendredi de 9h à 12h45 et de 13h45 à 19h ; le samedi de 14h à 19h." Then 
+		Result = "0101-3112_lu_13h00-19h00,0101-3112_ma+me+je+ve_09h00-12h45+13h45-19h00,0101-3112_sa_14h00-19h00"
+	ElseIf PlageHoraire = "Du lundi au vendredi de 10h à 19h00 et le samedi de 10h à 12h et de 14h à 18h30" Then 
+		Result = "0101-3112_lu+ma+me+je+ve_10h00-19h00,0101-3112_sa_10h00-12h00+14h00-18h30"
+	ElseIf PlageHoraire = "Ouvert le lundi de 14h15 à 17h45, le mardi et le jeudi de 9h à 12h30 et de 14h15 à 17h45, le mercredi de 9h à 12h et de 14h15 à 17h45, le vendredi de 9h à 12h30 et de 13h30 à 17h30, le samedi de 9h à 12h." Then 
+		Result = "0101-3112_lu_14h15-17h45,0101-3112_ma+je_09h00-12h30+14h15-17h45,0101-3112_me_09h00-12h00+14h15-17h45,0101-3112_ve_09h00-12h30+13h30-17h30,0101-3112_sa_09h00-12h00"
+	ElseIf PlageHoraire = "Du lundi au samedi de 8 heures à 20 heures." Then 
+		Result = "0101-3112_lu+ma+me+je+ve+sa_08h00-20h00"
+	ElseIf PlageHoraire = "Ouvert du Mardi au Samedi de 10h à  17h30 (sauf jours fériés)" Then 
+		Result = "0101-3112_ma+me+je+ve+sa_10h00-17h30,sauf_ferie"
+	ElseIf PlageHoraire = "Ouvert le lundi de 14h00 à 18h00 - Du mardi au vendredi : 10h00 - 12h30 et de 14h00 à 18h30 - le samedi : 10h00 - 12h30 et de 14h00 à 18h00." Then 
+		Result = "0101-3112_lu_14h00-18h00,0101-3112_ma+me+je+ve_10h00-12h30+14h00-18h30,0101-3112_sa_10h00-12h30+14h00-18h00"
+	ElseIf PlageHoraire = "Ouvert tous les jours de 10h à  18h, dimanche compris (sauf jours fériés)" Then 
+		Result = "0101-3112_lu+ma+me+je+ve+sa+di_10h00-18h00,sauf_ferie"
+	ElseIf PlageHoraire = "Du lundi au vendredi de 8h à 12h et de 13h à 17h." Then 
+		Result = "0101-3112_lu+ma+me+je+ve_08h00-12h00+13h00-17h00"
+	End If
+	RemplaceHoraires = Result
+End Function
+
+Function RemplaceQuartierTrisac(QuartierSource, AdresseSource)
+If QuartierSource="Chantenay" Then
+	Temp = "Bellevue Chantenay"
+ElseIf QuartierSource="Breil Dervallières Bellevue" Then
+	Temp = ""
+ElseIf QuartierSource="Saint Donatien" or QuartierSource="Malakoff" Then
+	Temp = "Malakoff - Saint-Donatien"
+ElseIf QuartierSource="Ile De Nantes" Then
+	Temp = CONSTQuartierAdminIleDeNantes
+ElseIf QuartierSource="Breil Dervallières Bellevue"  Then
+	Temp = ""
+ElseIf QuartierSource="Hauts Pavé Saint Félix"  Then
+	Temp = ""
+ElseIf QuartierSource="Nantes Nord Barberie"  Then
+	Temp = ""
+ElseIf QuartierSource="Erdre Ranzay Bottière Perray"  Then
+	Temp = ""
+ElseIf QuartierSource="Nantes"  Then
+	Temp = ""
+End If
+    RemplaceQuartierTrisac =Temp
+End Function
+
+Public Const ouve As String = "{"
+Public Const separe As String = ":"
+Public Const virgule As String = ","
+Public Const ferme As String = ","
+
+Function getCleValeurPasVide(cle As String, valeur As String, separator as String)
+	If valeur = "" or valeur = " " or valeur = "0" Then
+	 	Result = ""
+	Else
+	 	Result = """" & cle & """:""" & valeur & """" & separator	
+	End If
+	getCleValeurPasVide = Result
+End Function
+
+
+Function getCleValeurAvecDefaut(cle As String, valeur As String, separator as String, defaut as String)
+	If valeur = "" or valeur = " " or valeur = "0" Then
+	 	Result = """" & cle & """:""" & defaut & """" & separator	
+	Else
+	 	Result = """" & cle & """:""" & valeur & """" & separator	
+	End If
+	getCleValeurAvecDefaut = Result
+End Function
+
+Function getKeyValueIntegerGroovy(cle As String, valeur As String)
+	If valeur = "0" Then
+	 	valeur = ""
+	End If
+	getKeyValueIntegerGroovy= cle & ":" & valeur
+End Function
+
+
+Function getKeyValueStringGroovy(cle As String, valeur As String)
+	If valeur = "0" Then
+	 	valeur = ""
+	End If
+	getKeyValueStringGroovy = cle & ":""" & valeur & """"
+End Function
+
+REM Function JsonDechetsFin(colA, colB, colC, colD, colE, colF, colG, colH, colI)
+REM	Temp = JsonDechets(colA, colB, colC, colD, colE, colF, colG, colH, colI)
+REM	REM retire le dernier ","
+REM	JsonDechetsFin = Left(Temp, Len(Temp)-1)
+REM End Function
+
+Function JsonDechets(colA, colB, colC, colD, colE, colF, colG, colH, colI, colJ)
+	Result = "{"  & getCleValeurPasVide("code",colA,",")
+	Result = Result & getCleValeurPasVide("nom",colB,",")
+	Result = Result & getCleValeurPasVide("categoriesUsuelles",colC,",")
+	Result = Result & getCleValeurPasVide("categorieTraitement",colD,",")
+	Result = Result & getCleValeurPasVide("description",colF,",")
+	Result = Result & getCleValeurAvecDefaut("descNoAccents",UtilTransformeEnMotsCles(colF),",","")
+	REM on prend les conseils sur l'élément et sur sa catégorie
+	If colG<>0 Then
+	 	Temp = colG
+	Else
+	 	Temp = ""
+	EndIf
+	Temp = recupereDeCategorie2(colD, "cons", Temp)
+	Result = Result & getCleValeurPasVide("cons",Temp,",")
+	Result = Result & getCleValeurAvecDefaut("image",colH,",","image_defaut_mini.png")
+	Result = Result & getCleValeurPasVide("image_secondaire",colI,",")
+	REM on récupère le mode de collecte sur la catégorie
+	Temp = recupereDeCategorie2(colD, "modco", "")
+	Result = Result & getCleValeurPasVide("modco",Temp,",")
+	REM on récupère est recyclable sur sa catégorie
+	Temp = recupereDeCategorie2(colD, "rec", "")
+	Result = Result & getCleValeurPasVide("rec",Temp,",")
+	REM récupère le commentaire associé à l'élément
+	Temp = recupereCommentaires(colA, "")
+	REM récupère le commentaire associé à sa catégorie de traitement
+	Temp = recupereCommentaires(colD, Temp)
+	Result = Result & getCleValeurPasVide("commentaires",Temp,",")
+	Result = Result & getCleValeurPasVide("src",colJ,",")
+	Result = Result & "},"
+	Result = UtilReplace(Result, ",}", "}")
+	JsonDechets = Result
+End Function
+
+
+Function GroovyDechets(colA, colB, colC, colD, colE, colF, colG, colH, colI)
+	ClassName = "Dechet"
+	Result = ClassName & " " & colA & " = new " & ClassName & "("
+	Result = Result & getKeyValueStringGroovy("code",colA) & ","
+	Result = Result & getKeyValueStringGroovy("nom",colB) & ","
+	Result = Result & getKeyValueIntegerGroovy("categoriesUsuelles",colC) & ","
+	Result = Result & getKeyValueIntegerGroovy("categorieTraitement",colD) & ","
+	Result = Result & getKeyValueStringGroovy("description",colF) & ","
+	Result = Result & getKeyValueStringGroovy("cons",colG) & ","
+	Result = Result & getKeyValueStringGroovy("image",colH) & ","
+	Result = Result & getKeyValueStringGroovy("image_secondaire",colI)
+	Result = Result & "); " & colA & ".save();"
+	GroovyDechets = Result
+End Function
+
+
+Function GroovyCategorieUsuelle(colA, colB, colC, colD, colE, colF, colG, colH, colI)
+	ClassName = "CategorieUsuelle"
+	Result = ClassName & " " & colA & " = new " & ClassName & "("
+	Result = Result & getKeyValueStringGroovy("code",colA) & ","
+	Result = Result & getKeyValueStringGroovy("nom",colB) & ","
+	Result = Result & getKeyValueIntegerGroovy("estSousCategorie",colE)
+	Result = Result & "); " & colA & ".save();"
+	GroovyCategorieUsuelle = Result
+End Function
+
+
+Function GroovyCategorieTraitement(colA, colB, colC, colD, colE, colF, colG, colH, colI)
+	ClassName = "CategorieTraitement"
+	Result = ClassName & " " & colA & " = new " & ClassName & "("
+	Result = Result & getKeyValueStringGroovy("code",colA) & ","
+	Result = Result & getKeyValueStringGroovy("nom",colB) & ","
+	Result = Result & getKeyValueStringGroovy("description",colD)
+	Result = Result & "); "
+
+	GroovyCategorieTraitement = Result
+End Function
+
+
+Function GroovyCategorieTraitement2(colA)
+	Result = " " &  colA & ".save();"
+	GroovyCategorieTraitement2 = Result
+End Function
+
+
+Function GroovyModeCollecte(colA, colB, colC, colD, colE, colF, colG, colH, colI)
+	ClassName = "ModeCollecte"
+	Result = ClassName & " " & colA & " = new " & ClassName & "("
+	Result = Result & getKeyValueStringGroovy("code",colA) & ","
+	Result = Result & getKeyValueStringGroovy("nom",colB) & ","
+	Result = Result & getKeyValueStringGroovy("description",colE)
+	Result = Result & "); " & colA & ".save();"
+	GroovyModeCollecte = Result
+End Function
+
+
+Function Json_CommentaireFin(colA as String, colB as String, colC as String, colD as String, colE as String, colF as String, colG as String, colH as String)
+	Temp = Json_Commentaire(colA, colB, colC, colD, colE, colF, colG, colH)
+	REM retire le dernier ","
+	Json_CommentaireFin = Left(Temp, Len(Temp)-1)
+	 
+End Function
+
+Function Json_Commentaire(colA as String, colB as String, colC as String, colD as String, colE as String, colF as String, colG as String, colH as String)
+	Result = "{"  & getCleValeurPasVide("code",colA,",")
+	Result = Result & getCleValeurPasVide("type",colB,",")
+	Result = Result & getCleValeurPasVide("auteurs",colC,",")
+	Result = Result & getCleValeurPasVide("dates",colD,",")
+	Result = Result & getCleValeurPasVide("nom",colE,",")
+	Result = Result & getCleValeurPasVide("description",colF,",")
+	Result = Result & getCleValeurPasVide("elements",colG,",")
+	Result = Result & "},"
+	Result = UtilReplace(Result, ",}", "}")
+	Json_Commentaire = Result
+	REM FIXME supprime le dernier ','
+End Function
+
+Function Json_FicheFin(colA as String, colB as String, colC as String, colD as String, colE as String, colF as String, colG as String, colH as String)
+	Temp = Json_Fiche(colA, colB, colC, colD, colE, colF, colG, colH)
+	REM retire le dernier ","
+	Json_FicheFin = Left(Temp, Len(Temp)-1)
+End Function
+
+Function Json_Fiche(colA as String, colB as String, colC as String, colD as String, colE as String, colF as String, colG as String, colH as String)
+	Result = "{"  & getCleValeurPasVide("code",colA,",")
+	Result = Result & getCleValeurPasVide("nom",colB,",")
+	Result = Result & getCleValeurPasVide("descr",colC,",")
+	Result = Result & getCleValeurPasVide("bouton",colE,",")
+	Result = Result & getCleValeurAvecDefaut("image",colD,",","image_defaut_mini.png")
+	REM récupère le commentaire associé à l'élément
+	Temp = recupereCommentaires(colA, "")
+	Result = Result & getCleValeurPasVide("commentaire",Temp,",")	
+	Result = Result & "},"
+	Result = UtilReplace(Result, ",}", "}")
+	Json_Fiche = Result
+	REM FIXME supprime le dernier ','
+End Function
+
+REM pour les nouveau Trisac
+Function JsonTrisacs(colCode as String, colB as String, colC as String, colD as String, colE as String, colF as String, colG as String, colH as String, colI as String, colJ as String, colK as String, colL as String, colM as String, colHoraires as String, colP as String)
+
+	Result = "{"  & getCleValeurPasVide("code",colCode,",")
+	Quartier = UtilReplace(colF, " - ", " ")
+	Quartier = REMPLACEQUARTIERSCO(Quartier)	
+	Result = Result & getCleValeurPasVide("sous_zone",Quartier,",")
+	Result = Result & getCleValeurPasVide("nom",colB,",")
+	Result = Result & getCleValeurPasVide("modesCollecte","modco_distrisac",",")
+	Temp2 = UtilReplace(colH, "vente_distrib_auto", "Distributeur automatique Trisac")
+	Temp2 = UtilReplace(Temp2, "RDV", "Rendez-vous Trisac")
+	Temp2 = UtilReplace(Temp2, "PDIS", "Relais Trisac")
+	Temp2 = UtilReplace(Temp2, "vente", "Magasin Trisac")
+	REM Temp2 = UtilReplace(Temp2, "____", "vente")
+	Result = Result & getCleValeurPasVide("type",Temp2,",")
+	REM TODO on force les conseils
+	If Temp2="Rendez-vous Trisac" Then
+		Result = Result & getCleValeurPasVide("cons","cons_distrisac_piecesobligatoires",",")
+	ElseIf Temp2="Magasin Trisac" Or  Temp2="Distributeur automatique" Then
+		Result = Result & getCleValeurPasVide("cons","cons_distrisac_achat",",")
+	ElseIf Temp2="Relais Trisac" Then
+		Result = Result & getCleValeurPasVide("cons","cons_distrisac_relais,cons_distrisac_piecesobligatoires",",")
+	EndIf
+	If colD = 0 Then
+		colD = ""
+	EndIf
+	If colE = 0 Then
+		colE = ""
+	EndIf
+	If colK = 0 Then
+		colK = ""
+	EndIf
+	If colL = 0 Then
+		colL = ""
+	EndIf
+	Result = Result & getCleValeurPasVide("adresseTemp",colD & " " & colE & " " & colK & " " & colL,",")
+	Result = Result & getCleValeurPasVide("cons",colO,",")
+	Temp = getLatitudeLongitude(colM)
+	Result = Result & getCleValeurPasVide("latitude", LatitudePos(Temp),",")
+	Result = Result & getCleValeurPasVide("longitude",LongitudePos(Temp),",")		
+	Result = Result & getCleValeurPasVide("horaires",colI,",")
+	Result = Result & getCleValeurPasVide("plagesHoraires",colHoraires,",")
+	Result = Result & getCleValeurPasVide("sous_zone",Quartier,",")
+	Result = Result & getCleValeurPasVide("src","OpenDataNantes 11/2014",",")
+	Result = Result & getCleValeurPasVide("image", "relais_trisac.jpg",",")
+	REM todo à remettre
+	Result = Result & getCleValeurPasVide("descr",colP,",")
+	Result = Result & "},"
+	Result = UtilReplace(Result, ",}", "}")
+	JsonTrisacs = Result
+	REM FIXME supprime le dernier ','
+End Function
+
+Function JsonTrisacsFin(colA as String, colB as String, colC as String, colD as String, colE as String, colF as String, colG as String, colH as String, colI as String, colJ as String, colK as String, colL as String, colPos1 as String, colPos2 as String, colHoraires as String, colP as String)
+	Temp = JsonTrisacs(colA, colB, colC, colD, colE, colF, colG, colH, colI, colJ, colK, colL, colM, colP, colQ)
+	REM retire le dernier ","
+	JsonTrisacsFin = Left(Temp, Len(Temp)-1)
+End Function
+
+Function getLatitudeLongitude(latitudeLongitude as String)
+	Temp2 = UtilReplace(latitudeLongitude, "[ ", "")
+	Temp2 = UtilReplace(Temp2, "]", "")
+	Temp2 = UtilReplace(Temp2, " , ", ",")
+	getLatitudeLongitude = Temp2
+End Function
+
+Function JsonStructures(colA as String, colB as String, colC as String, colD as String, colE as String, colF as String, colG as String, colH as String, colI as String, colJ as String, colK as String, colL as String, colM as String,colN as String, colO as String, colP as String, colQ as String, colR as String, colS as String, colDechets as String)
+	REM Les déchetèries proviennent de Open Data
+	If colD <> "Décheterie" and colD <> "Ecopoint" and colF <> "DING-FRING Saint-Nazaire" Then
+		Result = "{"  & getCleValeurPasVide("code",colA,",")
+		Result = Result & getCleValeurPasVide("latitude",colB,",")
+		Result = Result & getCleValeurPasVide("longitude",colC,",")
+		REM Temp2 = RemplaceModeDeCollecte(colD, colI)
+		REM Result = Result & getCleValeurPasVide("modesCollecte",Temp2,",")
+		REM Result = Result & getCleValeurPasVide("type",colQ,",")
+		REM Result = Result & getCleValeurPasVide("modesCollecte",colQ & ",smco_reemp",",")
+		Result = Result & getCleValeurPasVide("modesCollecte","smco_reemp",",")
+		Result = Result & getCleValeurPasVide("type",colD & " " & colR,",")
+		Result = Result & getCleValeurPasVide("descr",colJ,",")
+		Result = Result & getCleValeurPasVide("nom",colF,",")
+		REM Temp = Temp & getCleValeurPasVide("sousModesCollecte", colQ,",")
+		If colG = 0 Then
+			colG = ""
+		EndIf
+		If colH = 0 Then
+			colH = ""
+		EndIf
+		If colI = 0 Then
+			colI = ""
+		EndIf
+		Result = Result & getCleValeurPasVide("adresseTemp",colG & " " & colH & " " &colI,",")
+		Result = Result & getCleValeurPasVide("tel",colL,",")
+		Result = Result & getCleValeurPasVide("src",colP,",")
+		Result = Result & getCleValeurPasVide("horaires",colK,",")
+		Result = Result & getCleValeurPasVide("plagesHoraires",colS,",")
+		Result = Result & getCleValeurPasVide("url",colO,",")
+		Result = Result & getCleValeurPasVide("email",colN,",")
+		Result = Result & getCleValeurPasVide("sous_zone", REMPLACEQUARTIERSCO(colI),",")
+		Result = Result & getCleValeurPasVide("cons",ConseilForStructure(colD,colI),",")
+		Result = Result & getCleValeurPasVide("logo",LogoForStructure(colD,colI),",")
+	  	Temp = UtilReplace(colF," ",",")
+	  	Temp = UtilReplace(Temp,"(","")
+	  	Temp = UtilReplace(Temp,")","")
+		Result = Result & getCleValeurPasVide("mots_cles",UtilTransformeEnMotsCles(colDechets) & "," & UtilTransformeEnMotsCles(Temp),",")
+		Result = Result & "},"
+		Result = UtilReplace(Result, ",}", "}")
+	End If
+	JsonStructures = Result
+End Function
+
+
+Function JsonStructuresAjout(colCode as String, colHeure as String, colNom as String, colCategorieDechets as String, colCategorie as String, colEmail as String, colTel as String, colF as String, colDescr as String, colDescrEn as String,colH as String, colI as String, colJ as String, colK as String, colL as String, colM as String,colN as String, colO as String, colP as String, colQ as String, colSite as String, colS as String, colDechets as String, colDechetsEn as String, colMotsCles as String, colMotsClesEn as String)
+		Result = "{"  & getCleValeurPasVide("code",colCode,",")
+		Result = Result & getCleValeurPasVide("latitude",colO,",")
+		Result = Result & getCleValeurPasVide("longitude",colN,",")
+		REM Temp2 = RemplaceModeDeCollecte(colD, colI)
+		REM Result = Result & getCleValeurPasVide("modesCollecte",Temp2,",")
+		REM Result = Result & getCleValeurPasVide("type",colQ,",")
+	
+		if colCategorie <> "Déchèterie" Then
+			Result = Result & getCleValeurPasVide("modesCollecte","smco_reemp",",")
+			REM "Association réemploi" ou "Entreprise réemploi"
+			Result = Result & getCleValeurPasVide("type"," réemploi "& colCategorieDechets,",")
+		Else
+			Result = Result & getCleValeurPasVide("modesCollecte","modco_ecopointmodco_decheterie",",")
+			Result = Result & getCleValeurPasVide("type",colCategorie,",")
+		End If 
+		
+		Result = Result & getCleValeurPasVide("statut",colCategorie,",")
+		Result = Result & getCleValeurPasVide("descr",colDescr,",")
+		Result = Result & getCleValeurPasVide("descr_en",colDescrEn,",")
+		Result = Result & getCleValeurPasVide("nom",colNom,",")
+		REM Temp = Temp & getCleValeurPasVide("sousModesCollecte", colQ,",")
+		If colH = 0 Then
+			colH = ""
+		EndIf
+		If colI = 0 Then
+			colI = ""
+		EndIf
+		If colJ = 0 Then
+			colJ = ""
+		EndIf
+		If colK = 0 Then
+			colK = ""
+		EndIf
+		Result = Result & getCleValeurPasVide("adresseTemp",colH & " " & colI & " " &colJ & " " &colK,",")
+		if colSite<>0 Then
+			Result = Result & getCleValeurPasVide("url","<a href='" & colSite & "' target='_blank'>" & colSite & "</a>", ",")
+		EndIf
+		Result = Result & getCleValeurPasVide("email",colEmail,",")
+		Result = Result & getCleValeurPasVide("tel",colTel,",")
+		Result = Result & getCleValeurPasVide("logo",LogoForStructure(colCategorieDechets,colNom),",")
+		Result = Result & getCleValeurPasVide("src",colHeure,",")
+		Result = Result & getCleValeurPasVide("horaires",colP,",")
+		Result = Result & getCleValeurPasVide("plagesHoraires",colQ,",")
+		Result = Result & getCleValeurPasVide("sous_zone", REMPLACEQUARTIERSCO(colM),",")
+		REM nom et dechets pour la colonne mots cles
+	  	REM Temp = UtilReplace(colNom," ",",")
+	  	REM Temp = UtilReplace(Temp,"(","")
+	  	REMTemp = UtilReplace(Temp,")","")
+		REM Result = Result & getCleValeurPasVide("mots_cles",UtilTransformeEnMotsCles(colDechets) & "," & UtilTransformeEnMotsCles(Temp),",")
+		Result = Result & getCleValeurPasVide("mots_cles",colMotsCles,",")
+		Result = Result & getCleValeurPasVide("mots_cles_en",colMotsClesEn,",")
+		Result = Result & getCleValeurPasVide("image", "icon-go-home.png",",")
+		Result = Result & "},"
+		Result = UtilReplace(Result, ",}", "}")
+	JsonStructuresAjout = Result
+End Function
+
+
+
+
+Function JsonStructuresVrac(colCode as String, colHeure as String, colNom as String, colCategorieDechets as String, colCategorie as String, colEmail as String, colTel as String, colF as String, colDescr as String, colH as String, colI as String, colJ as String, colK as String, colL as String, colM as String,colN as String, colO as String, colP as String, colQ as String, colSite as String, colS as String, colDechets as String, colDechetsEn as String, colDescrEn as String)
+		Result = "{"  & getCleValeurPasVide("code",colCode,",")
+		Result = Result & getCleValeurPasVide("latitude",colN,",")
+		Result = Result & getCleValeurPasVide("longitude",colO,",")
+		Result = Result & getCleValeurPasVide("modesCollecte","ventevrac",",")
+		Result = Result & getCleValeurPasVide("type"," vente au vrac",",")
+		Result = Result & getCleValeurPasVide("type_en"," bulk sale",",")
+		Result = Result & getCleValeurPasVide("statut",colCategorie,",")
+		Result = Result & getCleValeurPasVide("descr",colDescr,",")
+		Result = Result & getCleValeurPasVide("descr_en",colDescrEn,",")
+		Result = Result & getCleValeurPasVide("nom",colNom,",")
+		Result = Result & getCleValeurPasVide("nom_en",colNom,",")
+		If colH = 0 Then
+			colH = ""
+		EndIf
+		If colI = 0 Then
+			colI = ""
+		EndIf
+		If colJ = 0 Then
+			colJ = ""
+		EndIf
+		If colK = 0 Then
+			colK = ""
+		EndIf
+		Result = Result & getCleValeurPasVide("adresseTemp",colH & " " & colI & " " &colJ & " " &colK,",")
+		if colSite<>0 Then
+			Result = Result & getCleValeurPasVide("url","<a href='" & colSite & "' target='_blank'>" & colSite & "</a>", ",")
+		EndIf
+		Result = Result & getCleValeurPasVide("email",colEmail,",")
+		Result = Result & getCleValeurPasVide("tel",colTel,",")
+		Result = Result & getCleValeurPasVide("logo",LogoForStructure(colCategorieDechets,colNom),",")
+		Result = Result & getCleValeurPasVide("src",colHeure,",")
+		Result = Result & getCleValeurPasVide("horaires",colP,",")
+		Result = Result & getCleValeurPasVide("plagesHoraires",colQ,",")
+		Result = Result & getCleValeurPasVide("sous_zone", REMPLACEQUARTIERSCO(colM),",")
+	  	Temp = UtilReplace(colNom," ",",")
+	  	Temp = UtilReplace(Temp,"(","")
+	  	Temp = UtilReplace(Temp,")","")
+		Result = Result & getCleValeurPasVide("mots_cles",UtilTransformeEnMotsCles(colDechets) & "," & UtilTransformeEnMotsCles(Temp),",")
+	  	Temp = UtilReplace(colNom," ",",")
+	  	Temp = UtilReplace(Temp,"(","")
+	  	Temp = UtilReplace(Temp,")","")
+		Result = Result & getCleValeurPasVide("mots_cles_en",UtilTransformeEnMotsCles(colDechetsEn) & "," & UtilTransformeEnMotsCles(Temp),",")
+		Result = Result & getCleValeurPasVide("image", "paperbag.png",",")
+		Result = Result & "},"
+		Result = UtilReplace(Result, ",}", "}")
+	JsonStructuresVrac = Result
+End Function
+
+Function ModeCollecteDomocile_ModeCollecte(colH as String)
+	If (colH="TRI'SAC") Then
+		Result = "modco_sacjaune,modco_sacbleu"
+	ElseIf (colH="bacs bleus et bacs jaunes") Then
+		Result = "modco_bacbleu,modco_bacjaune"
+	ElseIf (colH="bacs bleus et bacs jaunes") Then
+		Result = "modco_bacbleu,modco_bacjaune"
+	ElseIf (colH="bacs bleus ") Then
+		Result = "modco_bacbleu"
+	ElseIf (colH="Centre-ville en C3") Then
+		REM TODO retirer colH
+		Result = "modco_bacbleu" & "_" & colH
+	ElseIf (colH="zone_transition") Then
+		REM TODO retirer colH
+		Result = "modco_bacbleu,modco_bacjaune" & "_" & colH
+	ElseIf (colH="extension tri'sac 2013") Then
+		REM TODO retirer colH
+		Result = "modco_bacbleu,modco_bacjaune" & "_" & colH
+	End If
+	ModeCollecteDomocile_ModeCollecte = Result
+End Function
+
+Function ModeCollecteDomocile_substituteSeparator(colH)
+ 	Result = UtilReplace(colH,"merc_sem_","mercredi semaines ")
+ 	Result = UtilReplace(Result," - ",", ")
+ 	Result = UtilReplace(Result," et ",", ")
+ 	ModeCollecteDomocile_substituteSeparator = Result
+End Function
+ 	
+Function ModeCollecteDomocile_joursCollecteTriSac(colH as String, colK as String)
+	If (colH="TRI'SAC") Then
+		Result = ModeCollecteDomocile_substituteSeparator(colK)
+	Else
+		Result = ""
+	End If
+	ModeCollecteDomocile_joursCollecteTriSac = Result
+End Function
+
+Function ModeCollecteDomocile_joursCollecteBacsBleus(colH as String, colK as String)
+	If (colH<>"TRI'SAC") Then
+		Result = ModeCollecteDomocile_substituteSeparator(colK)
+	Else
+		Result = ""
+	End If
+	ModeCollecteDomocile_joursCollecteBacsBleus = Result
+End Function
+
+Function ModeCollecteDomocile_joursCollecteBacsJaunes(colH as String, colL as String)
+	If (colH<>"TRI'SAC") Then
+		Result = ModeCollecteDomocile_substituteSeparator(colL)
+	Else
+		Result = ""
+	End If
+	ModeCollecteDomocile_joursCollecteBacsJaunes = Result
+End Function
+
+REM	If valeur = "" or valeur = " " or valeur = "0" Then
+REM	 	Result = ""
+REM	Else
+REM	 	Result = """" & cle & """:""" & valeur & """" & separator	
+REM	End If
+REM	getCleValeurPasVide = Result
+REM End Function
+
+
+
+Function MotDirecteurADomicile(colB as String)
+	Temp = colB
+	Temp = MotDirecteurADomicile1(Temp, "Allée")
+	Temp = MotDirecteurADomicile1(Temp, "Avenue")
+	Temp = MotDirecteurADomicile1(Temp, "Bas Chemin")
+	Temp = MotDirecteurADomicile1(Temp, "Basse Tenue")
+	Temp = MotDirecteurADomicile1(Temp, "Boulevard")
+	Temp = MotDirecteurADomicile1(Temp, "Chemin")
+	Temp = MotDirecteurADomicile1(Temp, "Cours")
+	Temp = MotDirecteurADomicile1(Temp, "Esplanade")
+	Temp = MotDirecteurADomicile1(Temp, "Hameau")
+	Temp = MotDirecteurADomicile1(Temp, "Haute Impasse")
+	Temp = MotDirecteurADomicile1(Temp, "Impasse")
+	Temp = MotDirecteurADomicile1(Temp, "Jardin")
+	Temp = MotDirecteurADomicile1(Temp, "Mail")
+	Temp = MotDirecteurADomicile1(Temp, "Nouvelle Impasse")
+	Temp = MotDirecteurADomicile1(Temp, "Parvis")
+	Temp = MotDirecteurADomicile1(Temp, "Passage")
+	Temp = MotDirecteurADomicile1(Temp, "Petit Chemin")
+	Temp = MotDirecteurADomicile1(Temp, "Petite Avenue")
+	Temp = MotDirecteurADomicile1(Temp, "Petite Rue")
+	Temp = MotDirecteurADomicile1(Temp, "Place")
+	Temp = MotDirecteurADomicile1(Temp, "Pont")
+	Temp = MotDirecteurADomicile1(Temp, "Promenade")
+	Temp = MotDirecteurADomicile1(Temp, "Quai")
+	Temp = MotDirecteurADomicile1(Temp, "Rond-Point")
+	Temp = MotDirecteurADomicile1(Temp, "Route")
+	Temp = MotDirecteurADomicile1(Temp, "Rue")
+	Temp = MotDirecteurADomicile1(Temp, "Ruelle")
+	Temp = MotDirecteurADomicile1(Temp, "Sentier")
+	Temp = MotDirecteurADomicile1(Temp, "Square")
+	Temp = MotDirecteurADomicile1(Temp, "Venelle")
+	Temp = MotDirecteurADomicile1(Temp, "Voie")
+	MotDirecteurADomicile = Temp
+End Function
+
+
+Function MotDirecteurADomicile1(Adresse as String, TypeVoie as String)
+	Adresse = MotDirecteurADomicile2(Adresse, TypeVoie & " de la ")
+	Adresse = MotDirecteurADomicile2(Adresse, TypeVoie & " de ")
+	Adresse = MotDirecteurADomicile2(Adresse, TypeVoie & " du ")
+	Adresse = MotDirecteurADomicile2(Adresse, TypeVoie & " des ")
+	Adresse = MotDirecteurADomicile2(Adresse, TypeVoie & " d'")
+	Adresse = MotDirecteurADomicile2(Adresse, TypeVoie & " ")
+	MotDirecteurADomicile1 = Adresse
+End Function
+
+
+Function MotDirecteurADomicile2(colB as String, chaine as String)
+	MotDirecteurADomicile2 = colB
+	LongeurChaine = LEN(chaine)
+	Temp = Left(colB, LongeurChaine)
+	If (chaine=Temp) Then
+		Temp = MID(colB, 1+LongeurChaine, 10000)
+	 	MotDirecteurADomicile2 = Temp
+	End If
+End Function
+
+Function JsonModeCollecteDomicile(colCode as String, colModesDeCollecte as String, colLibelleRue as String, colW as String, colMotDirecteurCorrige as String, colJusquAuNumero as String, colJoursSacs as String, colBacJaune as String, colBacBleu as String)
+	If (colAD<>"true") Then
+		Result = "{"  & getCleValeurPasVide("code",colCode,",")
+		REM modesCollecte
+		REM Result = Result & getCleValeurPasVide("mco",colU,",")
+		REM If colU = "modco_sacjaune,modco_sacbleu"  Then
+		REM	Result = Result & getCleValeurPasVide("mco","<b>Modes de collecte</b> : Sacs jaunes et bleus",",")
+		REM ElseIf colU = "modco_bacbleu,modco_bacjaune" Then
+		REM	Result = Result & getCleValeurPasVide("mco","<b>Modes de collecte</b> : Bacs jaunes et bleus",",")
+		REM Else
+		REM 	Result = Result & getCleValeurPasVide("mco","",",")
+		REM End If
+		REM denominationCompleteVoie
+		Result = Result & getCleValeurPasVide("dcv",colLibelleRue,",")
+		REM nomVoie_SansAccents
+		If (colMotDirecteurCorrige<>" ") Then
+			Result = Result & getCleValeurPasVide("nvsa",UtilTransformeEnMotsCles(colMotDirecteurCorrige),",")
+		Else
+			Result = Result & getCleValeurPasVide("nvsa",UtilTransformeEnMotsCles(colLibelleRue),",")
+		End If
+		REM Result = Result & getCleValeurPasVide("typeVoie",colX,",")
+		TempJusquauNumero = UtilReplace(colJusquAuNumero,"numero","numéro")
+		REM complementInformation
+		If TempJusquauNumero = "" or TempJusquauNumero = " " or TempJusquauNumero = "0" Then
+		Else
+			TempJusquauNumero = " (" + TempJusquauNumero + ")"
+		End If
+		Result = Result & getCleValeurPasVide("ci",TempJusquauNumero,",")
+		REM joursCollecteTriSac
+		REM Result = Result & getCleValeurPasVide("jct",colJoursSacs,",")
+		If colJoursSacs<>"" Then
+			Result = Result & getCleValeurPasVide("cons","cons_sacs",",")
+		ElseIf colAB<>"" Then
+			Result = Result & getCleValeurPasVide("cons","cons_bacs",",")
+		End If
+		REM joursCollecteBacsBleus
+		REM Result = Result & getCleValeurPasVide("jcbb", colAA,",")
+		REM joursCollecteBacsJaunes
+		REM	Result = Result & getCleValeurPasVide("jcbj",colAB,",")
+		CurrentPos = InStr(1, colModesDeCollecte, "modco_bacjaune")
+   		If CurrentPos <> 0 Then
+			Result = Result & getCleValeurPasVide("jcbj","<B>Jaune</B> " & colBacJaune,",")
+   		End If
+		CurrentPos = InStr(1, colModesDeCollecte, "modco_bacbleu")
+ 		If CurrentPos <> 0 Then
+			Result = Result & getCleValeurPasVide("jcbj","<B>Bleu</B> " & colBacBleu,",")
+   		End If
+		REM If colU = "modco_bacjaune"  Then
+		REM 	Result = Result & getCleValeurPasVide("jcbj","<B>Jaune</B> ",",")
+		REM End If
+		REM If colU = "  Then
+		REM 	Result = Result & getCleValeurPasVide("jcbb","<B></B> ",",")
+		REM End If
+		If colBacJaune <> "" or colBacBleu <> "" or colJoursSacs <> "" Then
+			Result = Result & getCleValeurPasVide("jcprefixe","Jours de collecte : ",",")
+		Else
+			Result = Result & getCleValeurPasVide("jcprefixe","",",")
+		End If
+		
+ 		REM Result = Result & getCleValeurPasVide("src","OpenDataNantes 16/09/2013 ","")
+ 		Result = Result & getCleValeurPasVide("src","OpenDataNantes 13/05/2014 ","")
+		Result = Result & "},"
+		Result = UtilReplace(Result, ",}", "}")
+	Else
+		Result = ""
+	End If
+	JsonModeCollecteDomicile = Result
+End Function
+
+
+Function JsonModeCollecteDomicile2(colCode as String, colModesDeCollecte as String, colLibelleRue as String, colW as String, colMotDirecteurCorrige as String, colJusquAuNumero as String, colJoursSacs as String, colBacJaune as String, colBacBleu as String, colMco as String)
+	If (colAD<>"true") Then
+		Result = "'" & colCode & "' :"
+		Result = Result & "[{"  & getCleValeurPasVide("code",colCode,",")
+		REM modesCollecte
+		REM Result = Result & getCleValeurPasVide("mco",colU,",")
+		REM If colU = "modco_sacjaune,modco_sacbleu"  Then
+		REM	Result = Result & getCleValeurPasVide("mco","<b>Modes de collecte</b> : Sacs jaunes et bleus",",")
+		REM ElseIf colU = "modco_bacbleu,modco_bacjaune" Then
+		REM	Result = Result & getCleValeurPasVide("mco","<b>Modes de collecte</b> : Bacs jaunes et bleus",",")
+		REM Else
+		REM 	Result = Result & getCleValeurPasVide("mco","",",")
+		REM End If
+		REM denominationCompleteVoie
+		
+		Result = Result & getCleValeurPasVide("mco",colMco,",")
+		Result = Result & getCleValeurPasVide("dcv",colLibelleRue,",")
+		REM nomVoie_SansAccents
+		If (colMotDirecteurCorrige<>" ") Then
+			Result = Result & getCleValeurPasVide("nvsa",UtilTransformeEnMotsCles(colMotDirecteurCorrige),",")
+		Else
+			Result = Result & getCleValeurPasVide("nvsa",UtilTransformeEnMotsCles(colLibelleRue),",")
+		End If
+		REM Result = Result & getCleValeurPasVide("typeVoie",colX,",")
+		TempJusquauNumero = UtilReplace(colJusquAuNumero,"numero","numéro")
+		REM complementInformation
+		If TempJusquauNumero = "" or TempJusquauNumero = " " or TempJusquauNumero = "0" Then
+		Else
+			TempJusquauNumero = " (" + TempJusquauNumero + ")"
+		End If
+		Result = Result & getCleValeurPasVide("ci",TempJusquauNumero,",")
+		REM joursCollecteTriSac
+		REM Result = Result & getCleValeurPasVide("jct",colJoursSacs,",")
+		If colJoursSacs<>"" Then
+			Result = Result & getCleValeurPasVide("cons","cons_sacs",",")
+		ElseIf colAB<>"" Then
+			Result = Result & getCleValeurPasVide("cons","cons_bacs",",")
+		End If
+		REM joursCollecteBacsBleus
+		REM Result = Result & getCleValeurPasVide("jcbb", colAA,",")
+		REM joursCollecteBacsJaunes
+		REM	Result = Result & getCleValeurPasVide("jcbj",colAB,",")
+		CurrentPos = InStr(1, colModesDeCollecte, "modco_bacjaune")
+   		If CurrentPos <> 0 Then
+			Temp2 = "<B>jaune</B> " & colBacJaune
+   		End If
+		CurrentPos = InStr(1, colModesDeCollecte, "modco_bacbleu")
+ 		If CurrentPos <> 0 Then
+			Temp2 = Temp2 & " <B>bleu</B> " & colBacBleu
+   		End If
+   		If colBacJaune <> "" and colBacBleu <> "" Then
+			Result = Result & getCleValeurPasVide("jcbj","Bacs " & Temp2,",")
+   		End If
+		REM If colU = "modco_bacjaune"  Then
+		REM 	Result = Result & getCleValeurPasVide("jcbj","<B>Jaune</B> ",",")
+		REM End If
+		REM If colU = "  Then
+		REM 	Result = Result & getCleValeurPasVide("jcbb","<B></B> ",",")
+		REM End If
+		If colJoursSacs <> "" Then
+			Result = Result & getCleValeurPasVide("jcbj","Sacs (jaunes et bleus) " & colJoursSacs ,",")
+		End If
+		
+ 		REM Result = Result & getCleValeurPasVide("src","OpenDataNantes 16/09/2013 ","")
+ 		Result = Result & getCleValeurPasVide("src","OpenDataNantes 13/05/2014 ","")
+		Result = Result & "}],"
+		Result = UtilReplace(Result, ",}", "}")
+	Else
+		Result = ""
+	End If
+	JsonModeCollecteDomicile2 = Result
+End Function
+
+Function GetLettres()
+	Dim MyLettres(1 To 24)
+	MyLettres(1)="a"
+	MyLettres(2)="b"	
+	MyLettres(3)="c"
+	MyLettres(4)="d"
+	MyLettres(5)="e"
+	MyLettres(6)="f"
+	MyLettres(7)="g"
+	MyLettres(8)="h"
+	MyLettres(9)="i"
+	MyLettres(10)="j"	
+	MyLettres(11)="k"
+	MyLettres(12)="l"
+	MyLettres(13)="m"
+	MyLettres(14)="n"
+	MyLettres(15)="o"
+	MyLettres(16)="p"
+	MyLettres(17)="q"
+	MyLettres(18)="r"	
+	MyLettres(19)="s"
+	MyLettres(20)="v"
+	MyLettres(21)="w"
+	MyLettres(22)="x"
+	MyLettres(23)="y"
+	MyLettres(24)="z"
+	GetLettres = MyLettres
+End Function
+
+Function domicile(colMotDirecteurCorrige as String, colLibelleRue as String)
+	Result = ""
+	If (colMotDirecteurCorrige<>" ") Then
+			Result = UtilTransformeEnMotsCles(colMotDirecteurCorrige)
+		Else
+			Result = UtilTransformeEnMotsCles(colLibelleRue)
+		End If
+	domicile = Result
+End Function
+
+Function GetHashModeCo(i as String)
+	Temp = ""
+	MyLettres1 = GetLettres
+	REM MyLettres2 = GetLettres
+	REM	For Each i In MyLettres1()
+ 	 	For Each j In MyLettres1()
+ 	 		REM On cherche dans "ADomicile" et dans "ADomHorsNantes"
+ 		 	Temp = Temp + GetHash(i & j, 3, 3141, "ADomicile", "Y", 2, 22, "ADomHorsNantes", "B") 
+		Next j
+	REM Next i
+	GetHashModeCo = Temp
+End Function
+
+Function GetHash(Lettres as String, numColDebut as Integer, numColFin as Integer, nomFeuille as String, colElements as String, numColDebut2 as Integer, numColFin2 as Integer, nomFeuille2 as String, colElements2 as String)
+	REM If Lettres="la" Then
+	REM 	Temp = ""
+	REM End If
+	Temp = ""
+	REM numColDebut = 3
+	REM numColFin = 3141
+	REM nomFeuille = "ADomicile"
+	REM colElements = "Y"
+	colId = "A"
+	Doc = thisComponent
+	Sheet = Doc.Sheets.getByName(nomFeuille)
+	StPlage = colElements & numColDebut & ":" & colElements & numColFin
+	CellRange = Sheet.getCellRangeByName(StPlage)
+	oRanges = Doc.createInstance("com.sun.star.sheet.SheetCellRanges") 
+	oRanges.insertByName("", CellRange)   ' - I presume first parameter could be name of range ??, second is an object
+	oSearchCells = oRanges.Cells.createEnumeration 
+
+
+	idCurentColl = numColDebut
+	While oSearchCells.hasMoreElements 
+	   oCell = oSearchCells.nextElement 
+	   value = oCell.String
+		REM If idCategorie = value Then
+		REM    Temp = Sheet.getCellRangeByName(colElements & idCurentColl)
+		REM    Result = Temp.String
+		REM EndIf
+		REM If idCurentColl=340 Then
+		REM 	t= ee
+		REM End If
+		If (InStr(1, value, Lettres)) Then
+		
+			If Temp<>"" Then
+				Temp = Temp & ","
+			EndIf
+			elementId =  Sheet.getCellRangeByName(colId & idCurentColl).String
+			Temp = Temp & "'" & elementId & "'"
+		End If
+		idCurentColl = idCurentColl + 1
+	Wend
+	
+	Doc2 = thisComponent
+	Sheet2 = Doc2.Sheets.getByName(nomFeuille2)
+	StPlage2 = colElements2 & numColDebut2 & ":" & colElements2 & numColFin2
+	CellRange2 = Sheet2.getCellRangeByName(StPlage2)
+	oRanges2 = Doc2.createInstance("com.sun.star.sheet.SheetCellRanges") 
+	oRanges2.insertByName("", CellRange2)   ' - I presume first parameter could be name of range ??, second is an object
+	oSearchCells2 = oRanges2.Cells.createEnumeration 
+
+
+	idCurentColl2 = numColDebut2
+	While oSearchCells2.hasMoreElements 
+	   oCell2 = oSearchCells2.nextElement 
+	   value = oCell2.String
+		REM If idCategorie = value Then
+		REM    Temp = Sheet.getCellRangeByName(colElements & idCurentColl)
+		REM    Result = Temp.String
+		REM EndIf
+		REM If idCurentColl=340 Then
+		REM 	t= ee
+		REM End If
+		If (InStr(1, value, Lettres)) Then
+		
+			If Temp<>"" Then
+				Temp = Temp & ","
+			EndIf
+			elementId2 =  Sheet2.getCellRangeByName(colId & idCurentColl2).String
+			Temp = Temp & "'" & elementId2 & "'"
+		End If
+		idCurentColl2 = idCurentColl2 + 1
+	Wend
+	
+	If Temp <> "" Then
+		Temp = ",'" & Lettres & "' : [" & Temp & "]"
+	EndIf
+	GetHash =  Temp
+End Function
+
+' Définition de la conversion
+Const accent As String = "ÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÌÍÎÏìíîïÙÚÛÜùúûüÿÑñÇç-"
+Const noAccent As String = "AAAAAAaaaaaaOOOOOOooooooEEEEeeeeIIIIiiiiUUUUuuuuyNnCc "
+
+' La fonction :retire les accents
+Private Function UtilSansAccents(ByRef s As String) As String
+	Dim i As Integer
+	Dim lettre As String * 1
+	UtilSansAccents = s
+	For i = 1 To Len(accent)
+		lettre = Mid$(accent, i, 1)
+		If InStr(UtilSansAccents, lettre) > 0 Then
+			UtilSansAccents = Replace(UtilSansAccents, lettre, Mid$(noAccent, i, 1))
+		End If
+	Next i
+End Function
+
+Const min As String = "abcdefghijklmnopqrstuvwxyz"
+Const maj As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ'"
+
+' La fonction :retire les accents et met tout en minuscule
+Private Function UtilTransformeEnMotsCles(ByRef s As String) As String
+	Dim i As Integer
+	Dim lettre As String * 1
+	Result = UtilSansAccents(s)
+	For i = 1 To Len(maj)
+		lettre = Mid$(maj, i, 1)
+		If InStr(Result, lettre) > 0 Then
+			Result = Replace(Result, lettre, Mid$(min, i, 1))
+		End If
+	Next i
+	Result = UtilReplace(Result, " ", ",")
+	UtilTransformeEnMotsCles = Result
+End Function
+
+Function JsonConseil(colA as String, colB as String, colC as String, colD as String, colE as String, colF as String)
+	Result = "{"  & getCleValeurPasVide("code",colA,",")
+	Result = Result & getCleValeurPasVide("nom",colB,",")
+	Result = Result & getCleValeurPasVide("description", colC,",")
+	Result = Result & getCleValeurPasVide("fiche", colD,",")
+	Result = Result & getCleValeurPasVide("source", colF,",")
+	Result = Result & "},"
+	Result = UtilReplace(Result, ",}", "}")
+	JsonConseil = Result
+End Function
+
+Function JsonConseilFin(colA as String, colB as String, colC as String, colD as String, colE as String, colF as String)
+	Temp = JsonConseil(colA, colB, colC, colD, colE, colF)
+	REM retire le dernier ","
+	JsonConseilFin = Left(Temp, Len(Temp)-1)
+End Function
+
+Function JsonCategorieUsuelle(colEstSousCatescriptionode as String, colNom as String, colEstSousCatescription as String, colEstSousCat as String, colSousCat as String, colBouton as String, colSource as String, colImage as String, colStatut as String)
+	Result = "{"  & getCleValeurPasVide("code",colEstSousCatescriptionode,",")
+	Result = Result & getCleValeurPasVide("nom",colNom,",")
+	Result = Result & getCleValeurPasVide("descr", colEstSousCatescription,",")
+	Result = Result & getCleValeurPasVide("estSousCategorie", colEstSousCat,",")
+	Result = Result & getCleValeurPasVide("sousCategories", colSousCat,",")
+	Result = Result & getCleValeurPasVide("source", colSource,",")
+	Result = Result & getCleValeurAvecDefaut("image",colImage,",","image_defaut_mini.png")
+	Result = Result & getCleValeurPasVide("bouton", colBouton,",")
+	Result = Result & "},"
+	Result = UtilReplace(Result, ",}", "}")
+	JsonCategorieUsuelle = Result
+End Function
+
+Function JsonCategorieUsuelleFin(colEstSousCatescriptionode as String, colNom as String, colEstSousCatescription as String, colEstSousCat as String, colSousCat as String, colBouton as String, colSource as String, colImage as String, colStatut as String)
+	Temp = JsonCategorieUsuelle(colEstSousCatescriptionode, colNom, colEstSousCatescription, colEstSousCat, colSousCat, colBouton, colSource, colImage, colStatut)
+	REM retire le dernier ","
+	JsonCategorieUsuelleFin = Left(Temp, Len(Temp)-1)
+End Function
+
+Function JsonCategorieTraitement(colA as String, colB as String, colC as String, colD as String, colE as String, colF as String, colG as String)
+	Result = "{"  & getCleValeurPasVide("code",colA,",")
+	Result = Result & getCleValeurPasVide("nom",colB,",")
+	Result = Result & getCleValeurPasVide("modesCollecte", colC,",")
+	Result = Result & getCleValeurPasVide("description", colD,",")
+	Result = Result & getCleValeurPasVide("cons", colE,",")
+	Result = Result & getCleValeurPasVide("recyclable", colF,",")
+	Result = Result & "},"
+	Result = UtilReplace(Result, ",}", "}")
+	JsonCategorieTraitement = Result
+End Function
+
+Function JsonCategorieTraitementFin(colA as String, colB as String, colC as String, colD as String, colE as String, colF as String, colG as String)
+	Temp = JsonCategorieTraitement(colA, colB, colC, colD, colE, colF, colG)
+	REM retire le dernier ","
+	JsonCategorieTraitementFin = Left(Temp, Len(Temp)-1)
+End Function
+
+
+Function JsonEcotox(colA as String, colB as String, colC as String, colD as String, colE as String, colF as String, colG as String, colH as String, colI as String, colJ as String, colK as String, colL as String)
+	Result = "{"  & getCleValeurPasVide("code",colA,",")
+	Result = Result & getCleValeurPasVide("sous_zone",colB,",")
+	Result = Result & getCleValeurPasVide("zone",CONSTQuartierNantes,",")
+	Result = Result & getCleValeurPasVide("nom",colC,",")
+	Result = Result & getCleValeurPasVide("modesCollecte",colD,",")
+	REM Result = Result & getCleValeurPasVide("sousModesCollecte",colE,",")
+	Result = Result & getCleValeurPasVide("type",colK,",")
+	Result = Result & getCleValeurPasVide("adresseTemp",colF,",")
+	Result = Result & getCleValeurPasVide("latitude", LatitudePos(colG),",")
+	Result = Result & getCleValeurPasVide("longitude", LongitudePos(colG),",")
+	Result = Result & getCleValeurPasVide("horaires","",",")
+	Result = Result & getCleValeurPasVide("plagesHoraires",colH,",")
+	Result = Result & getCleValeurPasVide("cons",colI,",")
+	Result = Result & getCleValeurPasVide("src",colJ,",")
+	Result = Result & getCleValeurPasVide("descr",colL,",")
+	Result = Result & "},"
+	Result = UtilReplace(Result, ",}", "}")
+	JsonEcotox = Result
+End Function
+
+
+Function JsonADomicileHorsNantes(colA as String, colB as String, colC as String, colD as String, colE as String)
+	Result = "'" & colA & "' :"
+	Result = Result & "[{"  &  getCleValeurPasVide("code",colA,",")
+	Result = Result & getCleValeurPasVide("zone", REMPLACEQUARTIERSCO(colB),",")
+	Result = Result & getCleValeurPasVide("dcv", "Ville " & colB,",")
+	Result = Result & getCleValeurPasVide("ci", colC,",")
+	Result = Result & getCleValeurPasVide("nvsa", UtilTransformeEnMotsCles(colB),",")
+	Result = Result & getCleValeurPasVide("cons",colD,",")
+	Result = Result & getCleValeurPasVide("mco","modco_bacbleu,modco_bacjaune,modco_sacjaune",",")
+	Result = Result & getCleValeurPasVide("src","Mémo sur site Nantes Métropole",",")
+	Result = Result & getCleValeurPasVide("jcbj","Bacs et sacs selon quartier (voir détail)",",")
+	Result = Result & "}],"
+	Result = UtilReplace(Result, ",}", "}")
+	JsonADomicileHorsNantes = Result
+End Function
+
+Function JsonLeRelais(colA as String, colB as String, colC as String, colD as String, colE as String, colF as String, colG as String, colH as String, colI as String, colJ as String, colK as String, colL as String)
+	Result = "{"  & getCleValeurPasVide("code",colA,",")
+	Result = Result & getCleValeurPasVide("sous_zone",colB,",")
+	Temp = UtilGetQuartier(colF)
+	Result = Result & getCleValeurPasVide("zone",Temp,",")
+	Result = Result & getCleValeurPasVide("nom",colC,",")
+	Result = Result & getCleValeurPasVide("modesCollecte",colD,",")
+	REM Result = Result & getCleValeurPasVide("sousModesCollecte",colE,",")
+	Result = Result & getCleValeurPasVide("type",colK,",")
+	Result = Result & getCleValeurPasVide("adresseTemp",colF,",")
+	Result = Result & getCleValeurPasVide("latitude", LatitudePos(colG),",")
+	Result = Result & getCleValeurPasVide("longitude", LongitudePos(colG),",")
+	Result = Result & getCleValeurPasVide("horaires","",",")
+	Result = Result & getCleValeurPasVide("plagesHoraires",colH,",")
+	Result = Result & getCleValeurPasVide("cons",colI,",")
+	Result = Result & getCleValeurPasVide("src",colJ,",")
+	Result = Result & getCleValeurPasVide("descr",colL,",")
+		Result = Result & getCleValeurPasVide("image", "conteneur_le_relais_instructions_mini.png",",")
+	Result = Result & "},"
+	Result = UtilReplace(Result, ",}", "}")
+	JsonLeRelais = Result
+End Function
+
+Function JsonDecheterieEcopoint(colA as String, colB as String, colC as String, colD as String, colE as String, colF as String, colG as String, colH as String, colI as String, colJ as String, colK as String, colL as String, colM as String, colN as String, colO as String, colP as String, colDescEn as String)
+	separator0 = ","
+	Result = "{"  & getCleValeurPasVide("code",colA,",")
+	Temp = UtilGetQuartier(colE)
+	Result = Result & getCleValeurPasVide("zone",Temp,",")
+	Temp = UtilReplace(ColB, "Déchèterie de", "")
+	Temp = UtilReplace(Temp, "Déchèterie d'", "")
+	Temp = UtilReplace(Temp, "Ecopoint", "")
+	Result = Result & getCleValeurPasVide("nom",Temp,",")
+	REM calcule le type et on déduit le mode de collecte
+	PosEspace = InStr(1, colB, " ")
+	If PosEspace <> 0 Then
+		Temp2 = Left(colB, PosEspace-1)
+		if Temp2 = "Déchèterie" Then
+			Temp3 = "modco_decheterie"
+		Else 
+			Temp3 = "modco_ecopoint"
+		End if
+	Else
+		Temp2 = ""
+		Temp3 = ""
+	End if
+	REM Result = Result & getCleValeurPasVide("sousModesCollecte",Temp2,",")
+	Result = Result & getCleValeurPasVide("modesCollecte", Temp3,",")
+	Result = Result & getCleValeurPasVide("type", Temp2,",")
+	If colG = 0 Then
+		colG = ""
+	EndIf
+		If colF = 0 Then
+		colF = ""
+	EndIf
+		If colE = 0 Then
+		colE = ""
+	EndIf
+	Result = Result & getCleValeurPasVide("adresseTemp",colG & " " & colF & " " & colE ,",")
+	Result = Result & getCleValeurPasVide("tel",colH,",")
+	Temp2 = UtilReplace(colK, "[ ", "")
+	Temp2 = UtilReplace(Temp2, "]", "")
+	Temp2 = UtilReplace(Temp2, " , ", ",")
+	Result = Result & getCleValeurPasVide("latitude", LatitudePos(Temp2),",")
+	Result = Result & getCleValeurPasVide("longitude", LongitudePos(Temp2),",")
+	REM Result = Result & getCleValeurPasVide("horaires","",",")
+	horaires = colP & separator0 & colO
+	horaires = UtilReplace(horaires, ",,", ",")
+	Result = Result & getCleValeurPasVide("plagesHoraires", horaires,",")
+	Result = Result & getCleValeurPasVide("cons", "",",")
+	Result = Result & getCleValeurPasVide("src", colN,",")
+	Result = Result & getCleValeurPasVide("image", "panneau_dechetterie_mini.png",",")
+	Temp = colL
+	Temp = UtilReplace(Temp, "sous conditions", "sous conditions</b>")
+	Temp = UtilReplace(Temp, "Déchets admis", "<br/><br/><b>Déchets admis</b>")
+	Temp = UtilReplace(Temp, "admis</b> sous conditions</b>", "admis sous conditions</b>")
+	Temp = UtilReplace(Temp, "Déchets interdits", "<br/><br/><b>Déchets interdits</b>")
+	Result = Result & getCleValeurPasVide("descr", Temp,",")
+	Temp = colDescEn
+	Result = Result & getCleValeurPasVide("descr_en", Temp,",")
+	Result = Result & "},"
+	Result = UtilReplace(Result, ",}", "}")
+	JsonDecheterieEcopoint = Result
+End Function
+
+
+Function JsonEncombrant(colA as String, colB as String, colC as String, colD as String, colE as String, colF as String, colG as String, colH as String, colI as String, colJ as String, colK as String, colL as String)
+	Result = "{"  & getCleValeurPasVide("code",colA,",")
+	Temp =  UtilReplace(colB,"Collecte encombrants en habitat vertical - Quartier ","")
+	Temp = 	UtilGetQuartierAdmin(Temp)
+	Result = Result & getCleValeurPasVide("sous_zone",Temp,",")
+	Result = Result & getCleValeurPasVide("zone",CONSTQuartierNantes,",")
+	Temp =  UtilReplace(colB,"Collecte encombrants en habitat vertical - Quartier","")
+	Result = Result & getCleValeurPasVide("nom",Temp,",")
+	Result = Result & getCleValeurPasVide("modesCollecte",colD,",")
+	REM Result = Result & getCleValeurPasVide("sousModesCollecte",colK,",")
+	Result = Result & getCleValeurPasVide("type",colE,",")
+	Result = Result & getCleValeurPasVide("adresseTemp",colF,",")
+	Temp =  UtilReplace(colG,",0.000000","")
+	Result = Result & getCleValeurPasVide("longitude", LatitudePos(Temp),",")
+	Result = Result & getCleValeurPasVide("latitude", LongitudePos(Temp),",")
+	Temp =  UtilReplace(colL,"La collecte des encombrants pour l&#39;habitat vertical ou habitat collectif a lieu à cette adresse ","")
+	Result = Result & getCleValeurPasVide("horaires",colH,",")
+	Result = Result & getCleValeurPasVide("plagesHoraires",colH,",")
+	Result = Result & getCleValeurPasVide("image", "encombrant_mini.png",",")
+	Result = Result & getCleValeurPasVide("cons",colI,",")
+	REM src est en dur
+	Result = Result & getCleValeurPasVide("descr",colL,",")
+	Result = Result & "},"
+	Result = UtilReplace(Result, ",}", "}")
+	JsonEncombrant = Result
+End Function
+
+
+Function JsonModesDeCollecte(colA as String, colB as String, colC as String, colD as String, colE as String, colF as String, colG as String, colH as String, colI as String)
+	Result = "{"  & getCleValeurPasVide("code",colA,",")
+	Temp = UtilReplace(colB, "<br/>", " ")
+	Result = Result & getCleValeurPasVide("nom",Temp,",")
+	Result = Result & getCleValeurPasVide("libelleBouton",colB,",")
+	Result = Result & getCleValeurPasVide("sous_modes_collecte",colC,",")
+	Result = Result & getCleValeurPasVide("modesCollecte",colD,",")
+	Result = Result & getCleValeurPasVide("est_sous_mode_collecte",colK,",")
+	Result = Result & getCleValeurPasVide("description",colE,",")
+	Result = Result & getCleValeurPasVide("cons",colF,",")
+	Result = Result & getCleValeurPasVide("bouton", colI,",")
+	Result = Result & getCleValeurAvecDefaut("image",colG,",","image_defaut_mini.png")
+	REM récupère le commentaire associé à l'élément
+	Temp = recupereCommentaires(colA, "")
+	Result = Result & getCleValeurPasVide("commentaire",Temp,",")	
+	Result = Result & "},"
+	Result = UtilReplace(Result, ",}", "}")
+	JsonModesDeCollecte = Result
+End Function
+
+Function RemplaceColonnesEntModeDeCollecte(TypeDechet as String)
+	Result = ""
+	If TypeDechet="om_ent" Then
+		Result = "modco_contomr"
+	ElseIf TypeDechet="verre_ent" Then
+		Result = "modco_contverre"
+	ElseIf TypeDechet="ds_ent" Then
+		Result = "modco_contdechetssecs"
+	End If
+    RemplaceColonnesEntModeDeCollecte = Result
+End Function
+
+
+
+Function JsonColonnesEnt(colA as String, colB as String, colC as String, colD as String, colE as String, colF as String, colG as String, colH as String, colI as String, colJ as String, colK as String, colL as String, colM as String, colN as String, colO as String, colP as String, colQ as String, colR as String, colS as String, colT as String, colU as String, colV as String, colModco as String)
+	Result = ""
+	If colModco<>0 and colModco<>"" Then
+		Result = "{"  & getCleValeurPasVide("code","stco_conteneur_" & colA,",")
+		Result = Result & getCleValeurPasVide("nom",colC,",")
+		If colD = 0 Then
+			colD = ""
+		EndIf
+			If colE = 0 Then
+			colE = ""
+		EndIf
+			If colR = 0 Then
+			colR = ""
+		EndIf
+		Result = Result & getCleValeurPasVide("adresseTemp",colD & " " & colE & " " & colR,",")
+		Result = Result & getCleValeurPasVide("longitude",colV,",")
+		Result = Result & getCleValeurPasVide("latitude",colU,",")
+		Result = Result & getCleValeurPasVide("cons","",",")
+		Result = Result & getCleValeurPasVide("src","OpenDataNantes 07/2015",",")
+		colModcoTexte = SupprimeDoublonsModco(colModco, False)
+		' Result = Result & getCleValeurPasVide("type",RemplaceColonnesEntType(colB),",")
+		Result = Result & getCleValeurPasVide("type",colModcoTexte,",")
+		colModcoCle = SupprimeDoublonsModco(colModco, True)
+		Result = Result & getCleValeurPasVide("modesCollecte", colModcoCle,",")
+		Result = Result & getCleValeurPasVide("zone",colP,",")
+		Result = Result & "},"
+		Result = UtilReplace(Result, ",}", "}")
+	EndIf
+	JsonColonnesEnt = Result
+End Function
+
+
+Function RemplaceColonnesModeDeCollecte(nomFeuille as String, nomColLatitude as String, nomColLongitude as String, ligneDebut as Integer, ligneFin as Integer, colB as String, mainLatitude as Double, mainLongitude as Double)
+	Result = ""
+	JeSuisMaitre = false
+ 	Doc = thisComponent
+	Sheet = Doc.Sheets.getByName(nomFeuille)
+	REM CellRange = Sheet.getCellRangeByName(celRange)
+	CellRange = Sheet.getCellRangeByName(nomColLatitude & ligneDebut & ":" & nomColLongitude & ligneFin)
+	nomColTypeDechet = "B"
+	
+	oRanges = Doc.createInstance("com.sun.star.sheet.SheetCellRanges") 
+	oRanges.insertByName("", CellRange)   ' - I presume first parameter could be name of range ??, second is an object
+	oSearchCells = oRanges.Cells.createEnumeration 
+	idCurentColl = ligneDebut
+	While oSearchCells.hasMoreElements 
+		oCell = oSearchCells.nextElement 
+		value = oCell.String
+		elementLatitude = value
+		REM Temp2 = UtilReplace(value, "[ ", "")
+		REM Temp2 = UtilReplace(Temp2, "]", "")
+		REM Temp2 = UtilReplace(Temp2, " , ", ",")
+		REM elementLatitude  =  LatitudePos(Temp2)
+		REM elementLongitude  =  LongitudePos(Temp2)
+		elementLongitude  =  Sheet.getCellRangeByName(nomColLongitude & idCurentColl).String
+		REM elementLongitude  =  Sheet.getCellRangeByName("Xé & idCurentColl).String
+		difLatitude =  mainLatitude-elementLatitude
+		difLongitude = mainLongitude-elementLongitude
+		Temp = Abs(difLatitude) + Abs(difLongitude)
+		If (Temp = 0 and Result = "") Then
+			JeSuisMaitre = true
+		End If
+		If ( Temp < 0.00005) Then
+			Temp3 = Sheet.getCellRangeByName(nomColTypeDechet & idCurentColl).String
+			REM Result = Result & "," & idCurentColl
+			Result = Result & "," & RemplaceTypeDechet(Temp3)
+		End If
+	   idCurentColl = idCurentColl + 1
+	Wend
+	
+	REM on garde uniquement celui qui commence 
+	If JeSuisMaitre = false Then
+		Result = ""
+	EndIf
+	' Temp3 = "," & RemplaceTypeDechet(colB)
+	' PosPointVirgule = InStr(1, Result, Temp3)
+	' If PosPointVirgule<>1 Then
+	' 	Result = ""
+	' EndIf
+    RemplaceColonnesModeDeCollecte = Result
+End Function
+
+' Utilisé par RemplaceColonnesModeDeCollecte
+Function RemplaceTypeDechet(TypeDechet as String)
+	Result = ""
+	If TypeDechet="Emb. ménager" Then
+		Result = "modco_contembjournmag"
+	ElseIf TypeDechet="verre" Then
+		Result = "modco_contverre"
+	ElseIf TypeDechet="papiercarton" Then
+		Result = "modco_contpapiercarton"
+	ElseIf TypeDechet="plastique" Then
+		Result = "modco_contmpb"
+	ElseIf TypeDechet="ts_ent" Then
+		' http://data.nantes.fr/forum/?tx_mmforum_pi1[action]=list_post&tx_mmforum_pi1[tid]=166#pid823
+		' La valeur ts_ent est utilisée pour désigner les secteurs couverts par les tri'sac.
+		Result = "modco_contomr"
+	ElseIf TypeDechet="verre_ent" Then
+		Result = "modco_contverre"
+	ElseIf TypeDechet="ds_ent" Then
+		Result = "modco_contdechetssecs"
+	ElseIf TypeDechet="carton_ent" Then
+		Result = "modco_contpapiercarton"
+	ElseIf TypeDechet="om_ent" Then
+		Result = "modco_contomr"
+	End If
+    RemplaceTypeDechet = Result
+End Function
+
+
+
+
+Function RemplaceColonnesAerType(TypeDechet as String)
+	Result = ""
+	If TypeDechet="Emb. ménager" Then
+		Result = "Conteneur embal. journ. mag."
+	ElseIf TypeDechet="verre" Then
+		Result = "Conteneur verre"
+	ElseIf TypeDechet="papiercarton" Then
+		Result = "Conteneur papier carton"
+	ElseIf TypeDechet="plastique" Then
+		Result = "Conteneur plastique"
+	End If
+    RemplaceColonnesAerType = Result
+End Function
+
+
+Function RemplaceColonnesAerModco(Modco as String)
+	Result = ""
+	If Modco="modco_contembjournmag" Then
+		Result = "emballages journaux magazines"
+	ElseIf Modco="modco_contverre" Then
+		Result = "verre"
+	ElseIf Modco="modco_contpapiercarton" Then
+		Result = "papier-carton"
+	ElseIf Modco="modco_contmpb" Then
+		Result = "plastique"
+	End If
+    RemplaceColonnesAerModco = Result
+End Function
+
+' Par exemple "modco_verre,modco_verre" donnera "modco_verre"
+Function SupprimeDoublonsModco(TypeDechet as String, cle as Boolean)
+	Result = ""
+	' Initialise les variables (qui vaudront 0, ou 1 (si une fois) ou 10 (si plusieurs fois)
+	Dim modco_contembjournmag as Integer
+	modco_contembjournmag = 0
+	Dim modco_contverre as Integer
+	modco_contverre = 0
+	Dim modco_contpapiercarton as Integer
+	modco_contpapiercarton = 0
+	Dim modco_contmpb as Integer
+	modco_contmpb = 0
+	Dim modco_contdechetssecs as Integer
+	modco_contdechetssecs = 0
+	Dim modco_contomr as Integer
+	modco_contomr = 0
+	Dim modco_contsac as Integer
+	modco_contsac = 0
+	If  InStr(1, TypeDechet, "modco_contembjournmag") <> 0 Then
+		modco_contembjournmag = modco_contembjournmag + 1
+	End If
+	If  InStr(10, TypeDechet, "modco_contembjournmag") <> 0 Then
+		modco_contembjournmag = modco_contembjournmag + 1
+	End If
+	If InStr(1, TypeDechet, "modco_contverre") <> 0 Then
+		modco_contverre = modco_contverre + 1
+	End If
+	If InStr(10, TypeDechet, "modco_contverre") <> 0 Then
+		modco_contverre = modco_contverre + 1
+	End If
+	If InStr(1, TypeDechet, "modco_contpapiercarton") <> 0 Then
+		modco_contpapiercarton = modco_contpapiercarton + 1
+	End If
+	If InStr(10, TypeDechet, "modco_contpapiercarton") <> 0 Then
+		modco_contpapiercarton = modco_contpapiercarton + 1
+	End If
+	If InStr(1, TypeDechet,  "modco_contmpb") <> 0 Then
+		modco_contmpb = modco_contmpb + 1
+	End If
+	If InStr(10, TypeDechet,  "modco_contmpb") <> 0 Then
+		modco_contmpb = modco_contmpb + 1
+	End If
+	If InStr(1, TypeDechet, "modco_contdechetssecs") <> 0 Then
+		modco_contdechetssecs = modco_contdechetssecs + 1
+	End If
+	If InStr(10, TypeDechet, "modco_contdechetssecs") <> 0 Then
+		modco_contdechetssecs = modco_contdechetssecs + 1
+	End If
+	If InStr(1, TypeDechet, "modco_contomr") <> 0 Then
+		modco_contomr = modco_contomr + 1
+	End If
+	If InStr(10, TypeDechet, "modco_contomr") <> 0 Then
+		modco_contomr = modco_contomr + 1
+	End If
+	If InStr(1, TypeDechet, "modco_contsac") <> 0 Then
+		modco_contsac = modco_contsac + 1
+	End If
+	If InStr(10, TypeDechet, "modco_contsac") <> 0 Then
+		modco_contsac = modco_contsac + 1
+	End If
+	' On gère les clés
+	If cle = True Then
+		If modco_contembjournmag > 0 Then
+			Result = Result & ",modco_contembjournmag"
+		EndIf
+		If modco_contverre > 0 Then
+			Result = Result & ",modco_contverre"
+		EndIf
+		If modco_contpapiercarton > 0 Then
+			Result = Result & ",modco_contpapiercarton"
+		EndIf
+		If modco_contmpb > 0 Then
+			Result = Result & ",modco_contmpb"
+		EndIf
+		If modco_contdechetssecs > 0 Then
+			Result = Result & ",modco_contdechetssecs"
+		EndIf
+		If modco_contomr > 0 Then
+			Result = Result & ",modco_contomr"
+		EndIf
+		If modco_contsac > 0 Then
+			Result = Result & ",modco_contsac"
+		EndIf
+	EndIf
+	' On gère les libellés
+	If cle = False Then
+	
+		If (modco_contembjournmag > 1 and modco_contverre = 0 and modco_contpapiercarton = 0 and modco_contmpb = 0 and modco_contdechetssecs = 0 and  modco_contomr = 0 and modco_contsac = 0) Then
+			Result = "Conteneurs "
+			Separateur = ""
+		ElseIf (modco_contembjournmag = 0 and modco_contverre > 1 and modco_contpapiercarton = 0 and modco_contmpb = 0 and modco_contdechetssecs = 0 and  modco_contomr = 0 and modco_contsac = 0) Then
+			Result = "Conteneurs "
+			Separateur = ""
+		ElseIf (modco_contembjournmag = 0 and modco_contverre = 0 and modco_contpapiercarton > 1 and modco_contmpb = 0 and modco_contdechetssecs = 0 and  modco_contomr = 0 and modco_contsac = 0) Then
+			Result = "Conteneurs "
+			Separateur = ""
+		ElseIf (modco_contembjournmag = 0 and modco_contverre = 0 and modco_contpapiercarton = 0 and modco_contmpb > 1 and modco_contdechetssecs = 0 and  modco_contomr = 0 and modco_contsac = 0) Then
+			Result = "Conteneurs "
+			Separateur = ""
+		ElseIf (modco_contembjournmag = 0 and modco_contverre = 0 and modco_contpapiercarton = 0 and modco_contmpb = 0 and modco_contdechetssecs > 1 and  modco_contomr = 0 and modco_contsac = 0) Then
+			Result = "Conteneurs "
+			Separateur = ""
+		ElseIf (modco_contembjournmag = 0 and modco_contverre = 0 and modco_contpapiercarton = 0 and modco_contmpb = 0 and modco_contdechetssecs = 0 and  modco_contomr > 1 and modco_contsac = 0) Then
+			Result = "Conteneurs "
+			Separateur = ""
+		ElseIf (modco_contembjournmag = 0 and modco_contverre = 0 and modco_contpapiercarton = 0 and modco_contmpb = 0 and modco_contdechetssecs = 0 and  modco_contomr = 0 and modco_contsac > 1) Then
+			Result = "Conteneurs "
+			Separateur = ""
+		ElseIf  modco_contembjournmag + modco_contverre + modco_contpapiercarton + modco_contmpb + modco_contdechetssecs + modco_contomr + modco_contsac > 1 Then
+			Result = "Conteneurs"
+			Separateur = ", "
+		Else
+			Result = "Conteneur "
+			Separateur = ""
+		EndIf
+		If modco_contembjournmag > 0 Then
+			Result = Result & Separateur & "emballages journaux magazines"
+		EndIf
+		If modco_contverre > 0 Then
+			Result = Result & Separateur & "verre"
+		EndIf
+		If modco_contpapiercarton > 0 Then
+			Result = Result & Separateur & "papier-carton"
+		EndIf
+		If modco_contmpb > 0 Then
+			Result = Result & Separateur & "plastique"
+		EndIf
+		If modco_contdechetssecs > 0 Then
+			Result = Result & Separateur & "déchets secs"
+		EndIf
+		If modco_contomr > 0 Then
+			Result = Result & Separateur & "ordures"
+		EndIf
+		If modco_contsac > 0 Then
+			Result = Result & Separateur & "trisacs"
+		EndIf
+		Result = UtilReplace(Result, "Conteneurs, ", "Conteneurs : ")
+	EndIf
+	SupprimeDoublonsModco = Result
+
+End Function
+
+Function RemplaceColonnesEntType(TypeDechet as String)
+	arrayElements = Split(TypeDechet,",")
+	For Each Element in arrayElements
+	
+	Next Element
+'20141105
+		' Point tri
+		Temp = ""
+		Compteur = 0
+		For Each Element in arrayElements
+			If Element <> "" Then
+				If Compteur = 0 Then
+					Titre = "Conteneur "
+					Separateur = ""
+				Else
+					Titre = "Point tri : conteneurs "
+					Separateur = ", "
+				EndIf
+				Temp = Temp & Separateur & RemplaceColonnesAerModco(Element)
+				Compteur = Compteur + 1
+			EndIf
+		Next Element
+		Temp = Titre & Temp
+
+
+
+
+
+
+
+
+
+
+
+
+	Result = ""
+	If TypeDechet="om_ent" Then
+		Result = "Conteneur déchets ménagers"
+	ElseIf TypeDeche="verre_ent" Then
+		Result = "Conteneur verre"
+	ElseIf TypeDechet="ds_ent" Then
+		Result = "Conteneur déchets secs"
+	End If
+    RemplaceColonnesEntType = Result
+End Function
+
+
+Function JsonColonnesAer(colA as String, colB as String, colC as String, colD as String, colE as String, colF as String, colG as String, colH as String, colI as String, colJ as String, colK as String, colL as String, colM as String, colN as String, colO as String, colP as String)
+	Result = ""
+	If colP<>"" Then
+		Result = "{"  & getCleValeurPasVide("code","stco_conteneur_" & colA,",")
+		If colF = 0 Then
+			colF = ""
+		EndIf
+			If colI = 0 Then
+			colI = ""
+		EndIf
+			If colJ = 0 Then
+			colJ = ""
+		EndIf
+		Result = Result & getCleValeurPasVide("adresseTemp",colF & " " & colI & " " & colJ,",")
+		Temp = getLatitudeLongitude(colM)
+		Result = Result & getCleValeurPasVide("latitude",LatitudePos(Temp),",")
+		Result = Result & getCleValeurPasVide("longitude",LongitudePos(Temp),",")
+		Result = Result & getCleValeurPasVide("cons","",",")
+		Result = Result & getCleValeurPasVide("src","OpenDataNantes 07/2015 ",",")
+		arrayElements = Split(colP,",")
+		colModcoTexte = SupprimeDoublonsModco(colP, False)
+		' Result = Result & getCleValeurPasVide("type",RemplaceColonnesEntType(colB),",")
+		Result = Result & getCleValeurPasVide("type",colModcoTexte,",")
+		colModcoCle = SupprimeDoublonsModco(colP, True)
+		Result = Result & getCleValeurPasVide("modesCollecte", colModcoCle,",")
+
+		' Point tri
+		' Temp = ""
+		' Compteur = 0
+		' For Each Element in arrayElements
+		' 	If Element <> "" Then
+		' 		If Compteur = 0 Then
+		' 			Titre = "Conteneur "
+		' 			Separateur = ""
+		' 		Else
+		' 			Titre = "Point tri : conteneurs "
+		' 			Separateur = ", "
+		' 		EndIf
+		' 		Temp = Temp & Separateur & RemplaceColonnesAerModco(Element)
+		' 		Compteur = Compteur + 1
+		' 	EndIf
+		' Next Element
+		' Temp = Titre & Temp
+		' Result = Result & getCleValeurPasVide("type",Temp,",")
+		' Result = Result & getCleValeurPasVide("modesCollecte", colP,",")
+		Result = Result & "},"
+		Result = UtilReplace(Result, ",}", "}")
+	EndIf
+	JsonColonnesAer = Result
+End Function
+
+
+Function JsonColLat(colM as String)
+	Result = ""
+	Temp2 = UtilReplace(colM, "[ ", "")
+	Temp2 = UtilReplace(Temp2, "]", "")
+	Temp2 = UtilReplace(Temp2, " , ", ",")
+	JsonColLat =  LatitudePos(Temp2)
+End Function
+
+Function JsonColLong(colM as String)
+	Result = ""
+	Temp2 = UtilReplace(colM, "[ ", "")
+	Temp2 = UtilReplace(Temp2, "]", "")
+	Temp2 = UtilReplace(Temp2, " , ", ",")
+	JsonColLong =  LongitudePos(Temp2)
+End Function
+
+Function ExtraitElement(ChaineRecherche As String, Position As Long, Delim As String) As String
+         
+	' Renvoie une chaîne vide si l'extraction n'est pas possible
+	On Error GoTo Err_Function
+	
+	Dim compteur As Long, LastPos As Long, CurPos As Long
+	
+	If InStr(ChaineRecherche, Delim) = 0 Or Len(ChaineRecherche) = 0 Then Exit Function
+	LastPos = 1
+	Do
+	    CurPos = InStr(LastPos, ChaineRecherche, Delim)
+	    If CurPos = 0 Then
+	        If compteur = Position - 1 Then ExtraitElement = Mid(ChaineRecherche, LastPos)
+	        Exit Do
+	    Else
+	        compteur = compteur + 1
+	        If compteur = Position Then
+	            ExtraitElement = Mid(ChaineRecherche, LastPos, CurPos - LastPos)
+	            Exit Do
+	        End If
+	    End If
+	    LastPos = CurPos + 1
+	Loop While CurPos > 0
+	Exit Function
+	   
+	Err_Function:
+	    MsgBox "Error " & Err.Number & " : " & Err.Description
+	    Resume Next
+
+End Function
+
+REM Extrait des horaires des décheteries/écopoints (données Open Data Nantes HORAIRES_EXCEPT_DECHETERIES_ECOPOINTS_NM)
+Function HORAIRESEXCEPTIONNELSDecheterieEcopoint(nomFeuille, colIdentifiant as String, colJours as String, numColDebut, numColFin, id as String, horairesDefaut as String)
+	separator0 = ","
+	separator1 = "_"
+	rep = ""
+	 Doc = thisComponent
+	Sheet = Doc.Sheets.getByName(nomFeuille)
+	StPlage = colIdentifiant & numColDebut & ":" & colIdentifiant & numColFin
+	CellRange = Sheet.getCellRangeByName(StPlage)
+	oRanges = Doc.createInstance("com.sun.star.sheet.SheetCellRanges") 
+	oRanges.insertByName("", CellRange)   ' - I presume first parameter could be name of range ??, second is an object
+	oSearchCells = oRanges.Cells.createEnumeration 
+
+	idCurentColl = numColDebut
+	While oSearchCells.hasMoreElements 
+	   oCell = oSearchCells.nextElement 
+	   value = oCell.String
+	   If id = value Then
+		   CellJour = Sheet.getCellRangeByName(colJours & idCurentColl)
+		   anneeMoisJour = CellJour.String
+		   jour = mid(anneeMoisJour,1,2)
+		   mois = mid(anneeMoisJour,4,2)
+		   annee = mid(anneeMoisJour,9,2)
+		   jourDeLaSemaine = getJourDeLaSemaine(20 & Annee, Mois, Jour)
+		   nouvelHoraire = separator0 & jour & mois & annee & separator1 & jourDeLaSemaine &separator1 & horairesDefaut
+		   rep = rep & nouvelHoraire
+	   End If
+	   idCurentColl = idCurentColl + 1
+	Wend
+    HORAIRESEXCEPTIONNELSDecheterieEcopoint = rep
+End Function
+
+
+
+REM http://forum.openoffice.org/en/forum/viewtopic.php?f=20&t=61325
+Function HORAIRESPeriodeDecheterieEcopoint(nomFeuille, colIdentifiant as String, colJourDebut as String, colJourFin as String, colJourSemaine as String, colHeureDebut as String, colHeureFin as String, numColDebut, numColFin, id as String, horairesDefaut as String)
+	separator0 = ","
+	separator1 = "_"
+	separator2 = "-"
+	separator3 = "+"
+	separatorHeures = "h"
+	Dim resultHorairesJours As New Collection, resultHorairesJoursSemaines As New Collection,  resultHorairesHeures As New Collection
+	rep = ""
+	 Doc = thisComponent
+	Sheet = Doc.Sheets.getByName(nomFeuille)
+	StPlage = colIdentifiant & numColDebut & ":" & colIdentifiant & numColFin
+	CellRange = Sheet.getCellRangeByName(StPlage)
+	oRanges = Doc.createInstance("com.sun.star.sheet.SheetCellRanges") 
+	oRanges.insertByName("", CellRange)   ' - I presume first parameter could be name of range ??, second is an object
+	oSearchCells = oRanges.Cells.createEnumeration 
+
+	idCurentColl = numColDebut
+	While oSearchCells.hasMoreElements 
+	   oCell = oSearchCells.nextElement 
+	   value = oCell.String
+	   If id = value Then
+		   CellJourDebut = Sheet.getCellRangeByName(colJourDebut & idCurentColl)
+		   CellJourFin = Sheet.getCellRangeByName(colJourFin & idCurentColl)
+		   CellJourSemaine = Sheet.getCellRangeByName(colJourSemaine & idCurentColl)
+		   CellHeureDebut = Sheet.getCellRangeByName(colHeureDebut & idCurentColl)
+		   CellHeureFin = Sheet.getCellRangeByName(colHeureFin & idCurentColl)
+		   anneeMoisJourDebut = CellJourDebut.String
+		   jourDebut = mid(anneeMoisJourDebut,1,2)
+		   moisDebut = mid(anneeMoisJourDebut,4,2)
+		   anneeMoisJourFin = CellJourFin.String
+		   jourFin = mid(anneeMoisJourFin,1,2)
+		   moisFin = mid(anneeMoisJourFin,4,2)
+		   jourSemaine = CellJourSemaine.String
+		   jours = jourDebut & moisDebut & separator2 & jourFin & moisFin
+		   heureDebut = UtilReplace(CellHeureDebut.String, ":", separatorHeures)
+		   heureFin = UtilReplace(CellHeureFin.String, ":", separatorHeures)
+		   heures = heureDebut & "-" & heureFin
+		   cle = jours & separator1 & heures
+		   indexElementTrouve = 0
+		   	For i = 1 To resultHorairesJours.Count
+		      If resultHorairesJours.Item(i)=jours and resultHorairesHeures.Item(i)=heures Then
+		         indexElementTrouve = i
+			   End If
+			Next i
+			If indexElementTrouve = 0 Then
+				REM clé pas trouvée
+				resultHorairesJours.Add(jours, cle)
+				resultHorairesJoursSemaines.Add(jourSemaine, cle)
+				resultHorairesHeures.add(heures, cle)
+			Else
+				REM clé trouvée
+				REM cle = resultHorairesJours.Item(indexElementTrouve)
+				jourSemaine = resultHorairesJoursSemaines.Item(indexElementTrouve) + separator3 + jourSemaine
+				heures = resultHorairesHeures.Item(indexElementTrouve)
+				resultHorairesJours.remove(indexElementTrouve)
+				resultHorairesJoursSemaines.remove(indexElementTrouve)
+				resultHorairesHeures.remove(indexElementTrouve)
+				resultHorairesJours.add(jours, cle)
+				resultHorairesJoursSemaines.add(jourSemaine, cle)
+				resultHorairesHeures.add(heures, cle)
+			End If
+		   REM resultHoraires.Item("aa")
+
+		 trouve = trouve
+	   End If
+	   idCurentColl = idCurentColl + 1
+	Wend
+    For i = 1 To resultHorairesJours.Count
+	    joursSemaines = GetJoursSemaine(resultHorairesJoursSemaines.Item(i), separator3)
+        rep = rep & separator0 & resultHorairesJours.Item(i) & separator1 & joursSemaines & separator1 & resultHorairesHeures.Item(i)
+    Next i
+    rep = rep & ",feries_suivant"
+    
+    HORAIRESPeriodeDecheterieEcopoint = rep
+End Function
+
+REM renvoie les jours de la semaine raccoucis, séparés par le séparateur  : ex "di" ou "lu-ma-me"
+Function GetJoursSemaine(joursSemaine as String, separator as String)
+	Result = ""
+	Result = Result & GetJoursSemaineUtil(joursSemaine, "LUNDI", "lu", separator)
+	Result = Result & GetJoursSemaineUtil(joursSemaine, "MARDI", "ma", separator)
+	Result = Result & GetJoursSemaineUtil(joursSemaine, "MERCREDI", "me", separator)
+	Result = Result & GetJoursSemaineUtil(joursSemaine, "JEUDI", "je", separator)
+	Result = Result & GetJoursSemaineUtil(joursSemaine, "VENDREDI", "ve", separator)
+	Result = Result & GetJoursSemaineUtil(joursSemaine, "SAMEDI", "sa", separator)
+	Result = Result & GetJoursSemaineUtil(joursSemaine, "DIMANCHE", "di", separator)
+	If Len(Result)>1 Then
+		Result = Left(Result, Len(Result)-Len(separator))
+	End If
+	GetJoursSemaine = Result
+End Function
+
+Function GetJoursSemaineUtil(joursSemaine as String, jourATrouver as String, jourMini as String, separator as String)
+	GetJoursSemaineUtil = ""
+	If (InStr(1, joursSemaine, jourATrouver)) Then
+		GetJoursSemaineUtil = jourMini & separator
+	End If
+End Function
+
+REM renvoie l'index d'un élément dans une collection (renvoie 0 si pas trouvé)
+Function UtilCollectionIndexOf(aCollection, elementToFind)
+	UtilCollectionIndexOf = 0
+  	For i = 1 To aCollection.Count
+		If aCollection.Item(i)=elementToFind Then
+			UtilCollectionIndexOf = i
+	   	End If
+	Next i
+End Function
+
+Function soustraireChaine(chaine1 as String, chaine2 as String)
+	chaine1 = Trim(chaine1)
+	chaine2 = Trim(chaine2)
+	Result = UtilReplace(chaine1, chaine2, "")
+	soustraireChaine = Result
+End Function
+
+REM renvoie tous les commentaires de l'élément recherché
+Function recupereCommentaires(idElement as String, previousCommentaires as String)
+	result = previousCommentaires
+	numColDebut = 5
+	numColFin = 100
+	nomFeuille = "Commentaire"
+	colElements = "G"
+	colCodeCommentaire = "A"
+	Doc = thisComponent
+	Sheet = Doc.Sheets.getByName(nomFeuille)
+	StPlage = colElements & numColDebut & ":" & colElements & numColFin
+	CellRange = Sheet.getCellRangeByName(StPlage)
+	oRanges = Doc.createInstance("com.sun.star.sheet.SheetCellRanges") 
+	oRanges.insertByName("", CellRange)   ' - I presume first parameter could be name of range ??, second is an object
+	oSearchCells = oRanges.Cells.createEnumeration 
+
+	idCurentColl = numColDebut
+	While oSearchCells.hasMoreElements 
+	   oCell = oSearchCells.nextElement 
+	   value = oCell.String
+	   arrayElements = Split(value,",")
+	   For Each Element in arrayElements
+		   If Element = idElement Then
+
+			   CellCommentaire = Sheet.getCellRangeByName(colCodeCommentaire & idCurentColl)
+			   codeCommentaire = CellCommentaire.String
+			 	If result <> "" Then
+			   		result = result + ","
+			   	EndIf 
+				result = result + codeCommentaire
+			End If
+		Next Element
+		idCurentColl = idCurentColl + 1
+	Wend
+	recupereCommentaires = Result
+End Function
+
+REM renvoie le texte d'un élément (soit le mode de collecte, soit le conseil, soit le recyclage)  associé à la catégorie
+REM typeElementRecupere vaut "modco", "cons" ou "rec"
+Function recupereDeCategorie2(idCategorie as String, typeElementRecupere as String, previousCommentaires as String)
+	Result = previousCommentaires
+	numColDebut = 5
+	numColFin = 100
+	nomFeuille = "CategorieTraitement"
+	If typeElementRecupere = "modco" Then
+		colElements = "C"
+	ElseIf typeElementRecupere = "cons" Then
+		colElements = "E"
+	ElseIf typeElementRecupere = "rec" Then
+		colElements = "F"
+	End If
+	colCode = "A"
+	 Doc = thisComponent
+	Sheet = Doc.Sheets.getByName(nomFeuille)	
+	StPlage = colCode & numColDebut & ":" & colCode & numColFin
+	CellRange = Sheet.getCellRangeByName(StPlage)
+	oRanges = Doc.createInstance("com.sun.star.sheet.SheetCellRanges") 
+	oRanges.insertByName("", CellRange)   ' - I presume first parameter could be name of range ??, second is an object
+	oSearchCells = oRanges.Cells.createEnumeration 
+
+	idCurentColl = numColDebut
+	While oSearchCells.hasMoreElements 
+	   oCell = oSearchCells.nextElement 
+	   value = oCell.String
+		If idCategorie = value Then
+		   Temp = Sheet.getCellRangeByName(colElements & idCurentColl)
+		   Result = Temp.String
+		EndIf
+		idCurentColl = idCurentColl + 1
+	Wend
+	If previousCommentaires<>"" Then
+		Result = previousCommentaires & "," & Result
+	EndIf
+	recupereDeCategorie2 = Result
+End Function
+
+
+
+REM renvoie les emplacements à partir d'un texte libre
+Function RemplaceEmplacementTrisac(PlageHoraire as String, idElement as String, rue as String, typeDistribution as String)
+		If idElement = "Epicerie Aux 4 saisons" Then
+			Result = "47.208695,-1.611092"
+		ElseIf  idElement = "Carrefour City" and rue = "Boulevard Pierre de Coubertin" Then
+			Result = "47.228567, -1.587267"
+		ElseIf  idElement = "Mairie Annexe Dervallières" Then
+			Result = "47.223969,-1.598346"
+		ElseIf  idElement = "Nantes Habitat Agence Watteau" Then
+			Result = "47.224275,-1.599505"
+		ElseIf  idElement = "Nantes Habitat Agence Jamet" Then
+			Result = "47.206158,-1.604784"
+		ElseIf  idElement = "Nantes Habitat Agence Feyder" Then
+			Result = "47.230119,-1.585772"
+		ElseIf  idElement = "Bar Tabac l'Hebdo" Then
+			Result = "47.208535,-1.570129"
+		ElseIf  idElement = "Café la butte" Then
+			Result = "47.201956, -1.578117"
+		ElseIf  idElement = "Pôle de proximité Nantes Ouest" Then
+			Result = "47.206522, -1.587746"
+		ElseIf  idElement = "Mairie annexe Chantenay" Then
+			Result = "47.206552,-1.588304"	
+		ElseIf  idElement = "Boulangerie" and rue = "Boulevard Professeur Auvigné" Then
+			Result = "47.254495,-1.518062"
+		ElseIf  idElement = "Mairie Annexe Ranzay" Then
+			Result = "47.25398,-1.530325"
+		ElseIf  idElement = "Mairie Annexe Bottière" Then
+			Result = "47.239866,-1.518953"
+		ElseIf  idElement = "Leclerc Paridis" Then
+			Result = "47.248941,-1.515942"
+		ElseIf  idElement = "Piscine Jules Verne" Then
+			Result = "47.248446,-1.517279"
+		ElseIf  idElement = "Association ADDA" Then
+			Result = "47.226651,-1.5591"
+		ElseIf  idElement = "Maison de l'Environnement Ecopole" Then
+			Result = "47.225995,-1.556157"
+		ElseIf  idElement = "Carrefour City" and rue = "Rue des Hauts Pavés" Then
+			Result = "47.22359,-1.563499"
+		ElseIf  idElement = "Carrefour Market" Then
+			Result = "47.230017,-1.572786"
+		ElseIf  idElement = "Intermarché" and rue = "Rue Félix Thomas" Then
+			Result = "47.230439,-1.553907"
+		ElseIf  idElement = "Café tabac le Bel air" Then
+			Result = "47.225208,-1.559207"
+		ElseIf  idElement = "Marché de Talensac" Then
+			Result = "47.221263,-1.55785"
+		ElseIf  idElement = "Boulangerie Pain de Sophie" Then
+			Result = "47.206392,-1.549165"
+		ElseIf  idElement = "Boulangerie, Le Fournil de Mangin" Then
+			Result = "47.201202,-1.544766"
+		ElseIf  idElement = "Spar" Then
+			Result = "47.20543,-1.556375"
+		ElseIf  idElement = "Mairie Annexe Beaulieu" Then
+			Result = "47.208812,-1.529832"
+		ElseIf  idElement = "Mairie Annexe Malakoff" Then
+			Result = "47.214431,-1.527221"
+		ElseIf  idElement = "Nantes Habitat Agence Angleterre" Then
+			Result = "47.214904,-1.526814"
+		ElseIf  idElement = "Piscine Petite Amazonie" Then
+			Result = "47.216697,-1.531692"
+		ElseIf  idElement = "Velo Campus" Then
+			Result = "47.243624,-1.554894"
+		ElseIf  idElement = "Carrefour City" and rue = "rue Guillaume Grootaers" Then
+			Result = "47.238817,-1.585472"
+		ElseIf  idElement = "Boulangerie La p'tite cantine" Then
+			Result = "47.261859,-1.582704"
+		ElseIf  idElement = "Boulangerie Le bon la croute la mie" Then
+			Result = "47.255262,-1.56558"
+		ElseIf  idElement = "Café tabac Le Sulky" Then
+			Result = "47.248999,-1.568499"
+		ElseIf  idElement = "Mairie Annexe Barberie" Then
+			Result = "47.241905,-1.571867"
+		ElseIf  idElement = "Mairie Annexe Nantes Nord" Then
+			Result = "47.257082,-1.575923"
+		ElseIf  idElement = "Pôle de proximité Erdre et Cens" Then
+			Result = "47.264582,-1.572082"
+		ElseIf  idElement = "Super U Dalby" Then
+			Result = "47.224203, -1.530538"
+		ElseIf  idElement = "Shopi" Then
+			Result = "47.240783,-1.547012"
+		ElseIf  idElement = "Intermarché" and rue = "Rue Pitre Chevalier" and typeDistribution = "PDIS" Then
+			Result = "47.224538,-1.550946"
+		ElseIf  idElement = "Boulangerie Le blé d'or" Then
+			Result = "47.221441,-1.535972"
+		ElseIf  idElement = "Casino" and rue = "Boulevard du Général Buat" Then
+			Result = "47.226432,-1.543024"
+		ElseIf  idElement = "Pôle Municipal Strasbourg" Then
+			Result = "47.219087,-1.536952"
+		ElseIf  idElement = "Intermarché" and rue = "Rue Pitre Chevalier" and typeDistribution = "Vente" Then
+			Result = "47.223896,-1.550663"
+		ElseIf  idElement = "Super U Dalby" Then
+			Result = "47.224057,-1.529978"
+		ElseIf  idElement = "Pôle de Proximité Erdre et Loire" Then
+			Result = "47.276143,-1.510645"
+		ElseIf  idElement = "Boulangerie" and rue = "Rue des Bourderies" Then
+			Result = "47.206421,-1.59699"
+		ElseIf  idElement = "Mairie Annexe Bellevue" Then
+			Result = "47.204322,-1.60523"
+		ElseIf  idElement = "Aux Délices de Procé" Then
+			Result = "47.224494,-1.576885"
+		EndIf
+	RemplaceEmplacementTrisac = Result
+End Function			
+			
+			
+REM renvoie les emplacements à partir d'un texte libre
+Function RemplaceEmplacementTrisac2(PlageHoraire as String, idElement as String, rue as String, typeDistribution as String)
+		If  idElement = "Le Monselet" Then
+			Result = "47.220982,-1.570362"
+		ElseIf  idElement = "La Cabane à Pain" Then
+			Result = "47.239676,-1.579138"
+		ElseIf  idElement = "Mairie Annexe Doulon" Then
+			Result = "47.227321,-1.519013"
+		ElseIf  idElement = "Intermarché" and rue = "Route de Saint Joseph" Then
+			Result = "47.245561,-1.534377"
+		ElseIf  idElement = "Boulangerie Rainard" Then
+			Result = "47.235204,-1.541222"
+		ElseIf  idElement = "Super U St Jacques" Then
+			Result = "47.194043,-1.530214"
+		ElseIf  idElement = "Mairie Annexe Nantes Sud" Then
+			Result = "47.194481,-1.53163"
+		ElseIf  idElement = "Le Fournil d'Aristide" Then
+			Result = "47.218592,-1.5618"
+		ElseIf  idElement = "Mairie Centrale" Then
+			Result = "47.219,-1.553582"
+		ElseIf  idElement = "Nantes Métropole, bâtiment Valmy" Then
+			Result = "47.214001,-1.544741"
+		ElseIf  idElement = "Carrefour City" and rue = "Rue Cassini" Then
+			Result = "47.215691,-1.564482"
+		ElseIf  idElement = "Carrefour City" and rue = "Avenue Carnot" Then
+			Result = "47.214146,-1.545299"
+		ElseIf  idElement = "Casino" and rue = "Chaussée de la Madeleine" Then
+			Result = "47.211042,-1.551221"
+		ElseIf  idElement = "Tabac Presse" and rue="Allée Duguay Trouin" Then
+			Result = "47.213286,-1.556672"
+		ElseIf  idElement = "Tabac Presse Le Voltaire" Then
+			Result = "47.211916,-1.566842"
+		ElseIf  idElement = "Glubs" Then
+			Result = "47.214001,-1.558796"
+		ElseIf  idElement = "Du Vert en Ville" Then
+			Result = "47.214452,-1.565255"
+		ElseIf  idElement = "Boulangerie" and rue = "Allée Duquesne" Then
+			Result = "47.217484,-1.556586"
+		ElseIf  idElement = "Papeterie" and rue = "Rue de l'évêché" Then
+			Result = "47.218971,-1.550685"
+		ElseIf  idElement = "Tabac Presse" and rue = "Rue de Budapest" Then
+			Result = "47.216916,-1.559933"
+		ElseIf  idElement = "Tabac Presse du Pilori" Then
+			Result = "47.216551,-1.552938"
+		ElseIf  idElement = "Boulangerie La Mie Câline" Then
+			Result = "47.214409,-1.555556"
+		ElseIf  idElement = "Pôle commercial" Then
+			Result = "47.228562,-1.587268"
+		ElseIf  idElement = "Ecole Jean Zay" Then
+			Result = "47.206581,-1.607891"
+		ElseIf  idElement = "47 Rue Georges Mélies" Then
+			Result = "47.233033,-1.585983"
+		ElseIf  idElement = "Place des Dervallières" Then
+			Result = "47.2204,-1.573487"
+		ElseIf  idElement = "Face à la mairie annexe Chantenay" Then
+			Result = "47.198766,-1.588641"
+		ElseIf  idElement = "Maille-Brézé" Then
+			Result = "47.206975,-1.571797"
+		ElseIf  idElement = "Place des Garennes" Then
+			Result = "47.201714,-1.57758"
+		ElseIf  idElement = "Parking du gymnase Marsauderies" Then
+			Result = "47.242344,-1.528769"
+		ElseIf  idElement = "22 Boulevard Professeur Auvigné" Then
+			Result = "47.254396,-1.517892"
+		ElseIf  idElement = "Place du Commandant Cousteau" Then
+			Result = "47.24031,-1.513201"
+		ElseIf  idElement = "Centre socio-culturel" Then
+			Result = "47.247732,-1.513306"
+		ElseIf  idElement = "Place de Talensac" Then
+			Result = "47.221179,-1.55572"
+		ElseIf  idElement = "Devant l'église Saint-Pasquier" Then
+			Result = "47.228971,-1.565874"
+		ElseIf  idElement = "TRAM Saint-Mihiel" Then
+			Result = "47.228649,-1.553174"
+		ElseIf  idElement = "Place Saint-Félix" Then
+			Result = "47.231028,-1.555727"
+		ElseIf  idElement = "Place de la Galarne" Then
+			Result = "47.208539,-1.529289"
+		ElseIf  idElement = "Ecole Nationale Supérieure d'Architecture" Then
+			Result = "47.207499,-1.557124"
+		ElseIf  idElement = "BUSWAY Ile de Nantes" Then
+			Result = "47.206069,-1.538601"
+		ElseIf  idElement = "Place Victor Mangin" Then
+			Result = "47.201491,-1.543754"
+		ElseIf  idElement = "Pôle commercial Malakoff" Then
+			Result = "47.213225,-1.534507"
+		ElseIf  idElement = "TRAM Santos Dumont" Then
+			Result = "47.253566,-1.561977"
+		ElseIf  idElement = "Ecole Dolto" Then
+			Result = "47.661168,-2.455203"
+		ElseIf  idElement = "84, route de la Chapelle" Then
+			Result = "47.258917,-1.575061"
+		ElseIf  idElement = "Ecole Jonelière" Then
+			Result = "47.252406,-1.546334"
+		ElseIf  idElement = "Mairie annexe Barberie/skate parc" Then
+			Result = "47.241496,-1.569058"
+		ElseIf  idElement = "Rue de la Fantaisie/Rue Clément Marot" Then
+			Result = "47.253373,-1.571788"
+		ElseIf  idElement = "Parking Beauséjour" Then
+			Result = "47.200088,-1.755946"
+		ElseIf  idElement = "TRAM Bourgeonnière" Then
+			Result = "47.252313,-1.549385"
+		ElseIf  idElement = "Intersection Rues Turpin et Gambetta" Then
+			Result = "47.220443,-1.545419"
+		ElseIf  idElement = "Rue Pitre Chevalier/Allée Reine Margot" Then
+			Result = "47.224887,-1.549293"
+		ElseIf  idElement = "66, bd Dalby" Then
+			Result = "47.224297,-1.530588"
+		ElseIf  idElement = "Place des enfants nantais" Then
+			Result = "47.228914,-1.542437"
+		End If
+	RemplaceEmplacementTrisac2 = Result
+End Function
+
+REM Verifie qu'une chaine horaire est correcte
+Function TestHoraires(PlageHoraire as String)
+	REM bon
+	TestHoraires = 1
+		
+	REM je decoupe les plages horaires
+	arrayElements = Split(PlageHoraire,",")
+	For Each Element in arrayElements
+		If Element <> "sauf_ferie" and Element <> "feries_suivant" Then
+			REM pour toutes les plages :
+			REM je decoupe les  horaires
+			arrayElements2 = Split(Element,"_")
+			Compteur = 0
+			For Each Element2 in arrayElements2
+				If Compteur = 0 Then
+					arrayJours = Split(Element2,"-")
+					For Each ElementJour in arrayJours
+						Jour =  CInt(Mid(ElementJour, 1, 2))
+						If Jour < 1 Or Jour > 31 Then
+							REM pas bon
+							TestHoraires = 0
+						EndIf
+						Mois =  CInt(Mid(ElementJour, 3, 2))
+						If Mois < 1 Or Mois > 12 Then
+							REM pas bon
+							TestHoraires = 0
+						EndIf
+						If Len(ElementJour)>4 Then
+							Annee =  CInt(Mid(ElementJour, 5, 2))
+							If Annee < 12 Or Annee > 20 Then
+								REM pas bon
+								TestHoraires = 0
+							EndIf
+						End If
+					Next ElementJour
+				End If
+				REM Jours de la semaine
+				If Compteur = 1 Then
+					arrayJoursDeSemaine = Split(Element2,"+")
+					For Each ElementJourDeSemaine in arrayJoursDeSemaine
+						If ElementJourDeSemaine <> "xx" and  ElementJourDeSemaine <> "lu" and ElementJourDeSemaine <> "ma" and ElementJourDeSemaine <> "me" and ElementJourDeSemaine <> "je" and ElementJourDeSemaine <> "ve" and ElementJourDeSemaine <> "sa" and ElementJourDeSemaine <> "di"  Then
+							REM pas bon
+							TestHoraires = 0
+						EndIf
+					Next ElementJourDeSemaine
+				End If
+				REM Heures
+				If Compteur = 2 Then
+					arrayHeures = Split(Element2,"+")
+					For Each ElementHeures in arrayHeures
+						arrayElementsHeures = Split(ElementHeures,"-")
+						For Each ElementHeure in arrayElementsHeures
+							Heure =  CInt(Mid(ElementHeure, 1, 2))
+							If Heure < 0 Or Heure > 23 Then
+								REM pas bon
+								TestHoraires = 0
+							EndIf
+							REM todo controle sur les heures
+							REM Minute = Len(ElementHeures)
+							REM Minute =  CInt(Mid(ElementHeures, 4, 2))
+							REM If Minute < 0 Or Minute > 59 Then
+							REM   	REM pas bon
+							REM  	TestHoraires = 0
+							REM EndIf
+						Next ElementHeure
+					Next ElementHeures
+				End If
+				Compteur = Compteur + 1				
+			Next Element2
+			REM je verifie que les horaires contiennent 3 '_'
+			If Compteur <> 3 and  Compteur <>  0  Then
+				REM pas bon
+				TestHoraires = 0
+			End If
+		End If
+	Next Element
+		
+End Function
+
+
+REM Verifie qu'une ville appartient a Nantes Metropole
+REM retourne 0 si non
+Function TestEstNantesMetropole(Element as String)
+	TestEstNantesMetropole = 0
+	If Element = "Basse-Goulaine" Or Element = "BASSE GOULAINE" Or Element = "BASSE-GOULAINE" Then
+		TestEstNantesMetropole = 1
+	ElseIf Element = "Bouaye" Or Element = "BOUAYE" Then
+		TestEstNantesMetropole = 1
+	ElseIf Element = "Bouguenais" Or Element = "BOUGUENAIS" Then
+		TestEstNantesMetropole = 1
+	ElseIf Element = "Brains" Or Element = "BRAINS" Then
+		TestEstNantesMetropole = 1
+	ElseIf Element = "Carquefou" Or Element = "CARQUEFOU" Then
+		TestEstNantesMetropole = 1
+	ElseIf Element = "Couëron" Or Element = "COUERON" Then
+		TestEstNantesMetropole = 1
+	ElseIf Element = "Indre" Or Element = "INDRE" Then
+		TestEstNantesMetropole = 1
+	ElseIf Element = "La Chapelle-sur-Erdre" Or Element = "LA CHAPELLE SUR ERDRE" Or Element = "LA CHAPELLE-SUR-ERDRE" Then
+		TestEstNantesMetropole = 1
+	ElseIf Element = "La Montagne" Or Element = "LA MONTAGNE" Then
+		TestEstNantesMetropole = 1
+	ElseIf Element = "Le Pellerin" Or Element = "LE PELLERIN" Then
+		TestEstNantesMetropole = 1
+	ElseIf Element = "Les Sorinieres" Or Element = "Les Sorinières" Or Element = "LES SORINIERES" Then
+		TestEstNantesMetropole = 1
+	ElseIf Element = "Mauves-sur-Loire" Or Element = "MAUVES SUR LOIRE" Or Element = "MAUVES-SUR-LOIRE" Then
+		TestEstNantesMetropole = 1
+	ElseIf Element = "Nantes" Or Element = "NANTES" Then
+		TestEstNantesMetropole = 1
+	ElseIf Element = "Orvault" Or Element = "ORVAULT" Then
+		TestEstNantesMetropole = 1
+	ElseIf Element = "Rezé" Or Element = "REZE" Then
+		TestEstNantesMetropole = 1
+	ElseIf Element = "Saint-Aignan-de-Grand-Lieu" Or Element = "SAINT AIGNAN DE GRAND LIEU" Or Element = "SAINT-AIGNAN-DE-GRAND-LIEU" Then
+		TestEstNantesMetropole = 1
+	ElseIf Element = "Saint-Herblain" Or Element = "SAINT HERBLAIN" Or Element = "SAINT-HERBLAIN" Then
+		TestEstNantesMetropole = 1
+	ElseIf Element = "Saint-Jean-de-Boiseau" Or Element = "SAINT JEAN DE BOISEAU" Or Element = "SAINT-JEAN-DE-BOISEAU" Then
+		TestEstNantesMetropole = 1
+	ElseIf Element = "Saint-Léger-les-Vignes" Or Element = "SAINT-LEGER-LES-VIGNES" Or Element = "SAINT LEGER LES VIGNES" Then
+		TestEstNantesMetropole = 1
+	ElseIf Element = "Saint-Sébastien-sur-Loire" Or Element = "SAINT-SEBASTIEN-SUR-LOIRE" Or Element = "SAINT SEBASTIEN SUR LOIRE" Then
+		TestEstNantesMetropole = 1
+	ElseIf Element = "Sainte-Luce-sur-Loire" Or Element = "SAINTE LUCE SUR LOIRE" Then
+		TestEstNantesMetropole = 1
+	ElseIf Element = "Sautron" Or Element = "SAUTRON" Then
+		TestEstNantesMetropole = 1
+	ElseIf Element = "Thouaré-sur-Loire" Or Element = "THOUARE-SUR-LOIRE" Then
+		TestEstNantesMetropole = 1
+	ElseIf Element = "Vertou" Or Element = "VERTOU" Then
+		TestEstNantesMetropole = 1
+	End If
+End Function
+
+Function GetHashStructures()
+	i = "a"
+	Temp = "var _hashStructuresDatas = [{'z':'z'"
+	Dim ArrayLesMotsCles(1 To 10000, 1 To 2) as String
+	ArrayLesMotsCles(10,1)="a"
+	ArrayLesMotsCles(10,2)="bba"
+ 	Temp = Temp & GetHashMotsCles(5, 63, "ReemploiAjouts", "A", "Y", ArrayLesMotsCles)
+ 	Temp = Temp & GetHashMotsCles(5,18, "VenteVrac", "A", "Y", ArrayLesMotsCles)
+ 	REM le code est pas terrible (exemple 1001) et les mots cles uniquement le nom de la decheterie
+ 	Temp = Temp & GetHashMotsCles(2,17, "DecheterieEcopoint", "A", "B", ArrayLesMotsCles)
+ 	Temp = Temp & "}, {'z':'z'"
+ 	Temp = Temp & GetHashMotsCles(5, 63, "ReemploiAjouts", "A", "AI", ArrayLesMotsCles)
+ 	Temp = Temp & GetHashMotsCles(5,18, "VenteVrac", "A", "AI", ArrayLesMotsCles)
+ 	Temp = Temp & GetHashMotsCles(2,17, "DecheterieEcopoint", "A", "B", ArrayLesMotsCles)
+ 	Temp = Temp & "} ];"
+	GetHashStructures = Temp
+End Function
+
+
+Function GetHashTrisacs()
+	i = "a"
+	Temp = "var _hashTrisacsDatas = [{'z':'z'"
+	Dim ArrayLesMotsCles(1 To 10000, 1 To 2) as String
+	ArrayLesMotsCles(10,1)="a"
+	ArrayLesMotsCles(10,2)="bba"
+ 	Temp = Temp & GetHashMotsCles(5, 128, "Trisac", "AF", "AE", ArrayLesMotsCles)
+ 	Temp = Temp & "} ];"
+	GetHashTrisacs = Temp
+End Function
+
+
+Function GetHashMotsCles(numColDebut as Integer, numColFin as Integer, nomFeuille as String, colCode as String, colMotsCles as String, ArrayLesMotsCles)
+	Temp = ""
+	GetHashMotsCles = Temp
+	colId = colId1
+	Doc = thisComponent
+	Sheet = Doc.Sheets.getByName(nomFeuille)
+	StPlage = colMotsCles & numColDebut & ":" & colMotsCles & numColFin
+	CellRange = Sheet.getCellRangeByName(StPlage)
+	oRanges = Doc.createInstance("com.sun.star.sheet.SheetCellRanges") 
+	oRanges.insertByName("", CellRange)   ' - I presume first parameter could be name of range ??, second is an object
+	oSearchCells = oRanges.Cells.createEnumeration 
+	idCurentColl = numColDebut
+	While oSearchCells.hasMoreElements 
+	   oCell = oSearchCells.nextElement 
+	   motsClesSeparesVirgules = UtilTransformeEnMotsCles(oCell.String)
+	   TempCode = Sheet.getCellRangeByName(colCode & idCurentColl)
+	   Code = TempCode.String
+	   	arrayElements = Split(motsClesSeparesVirgules,",")
+	   	REM pour tous les mots cles
+   		For Each Element in arrayElements
+			Element = UtilReplace(Element, " ", "")
+			Element = UtilTransformeEnMotsCles(Element)
+		   	ArrayLesMotsCles = AjouteSiNeContientPas(ArrayLesMotsCles, Element,Code)
+   		Next Element
+	idCurentColl = idCurentColl + 1
+	Wend
+	indexFin = 10000
+	for i = 1 to indexFin
+		TempMotCle =  ArrayLesMotsCles(i,1)
+		if TempMotCle="" Then
+			indexFin = i
+		Else
+			Temp2 =  ArrayLesMotsCles(i,2)
+			Temp = Temp & ",'" & TempMotCle & "':'" & Temp2 & "'"
+		End If
+	next i
+	
+	GetHashMotsCles = Temp
+End Function
+
+Function AjouteSiNeContientPas(MyArray, motCle as String, code as String)
+	trouve = 0
+	dernierIndex = 10000
+	for i = 1 to dernierIndex
+ 	   If MyArray(i,1)=motCle Then
+ 	   		trouve = i
+	   End If
+ 	   If MyArray(i,1)="" Then
+ 	   		dernierIndex = i
+	   End If
+ 	next i
+	If trouve=0 Then
+		 MyArray(dernierIndex,1) = motCle
+	 	 MyArray(dernierIndex,2) = code
+	Else
+		Temp3 =  MyArray(trouve,2)
+	 	 MyArray(trouve,2) = Temp3 & "," & code
+	End If
+	AjouteSiNeContientPas = MyArray
+End Function
+
+Sub Main
+
+
+
+End Sub

@@ -1,0 +1,316 @@
+REM  *****  BASIC  *****
+
+Const min As String = "abcdefghijklmnopqrstuvwxyz"
+Const maj As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ'"
+
+' La fonction retire les accents, supprime les mots inutiles, et met tout en minuscule
+Private Function UtilTransformeEnMotsCles(ByRef s As String) As String
+	Dim i As Integer
+	Dim lettre As String * 1
+	s = UtilSansAccents(s)
+	s = RetireMotsInutilesMotsCles(s)
+	For i = 1 To Len(maj)
+		lettre = Mid$(maj, i, 1)
+		If InStr(s, lettre) > 0 Then
+			s = Replace(s, lettre, Mid$(min, i, 1))
+		End If
+	Next i
+	Result = UtilReplace(s, " ", ",")
+	Result = RetireCaractereIdemConsecutif(Result, ",")
+	UtilTransformeEnMotsCles = Result
+End Function
+
+Private Function RetireMotsInutilesMotsCles(ByRef Chaine As String)
+	Result = Chaine
+	Result = UtilReplace(Result, " a ", " ")
+	Result = UtilReplace(Result, " aux ", " ")
+	Result = UtilReplace(Result, " pour ", " ")
+	Result = UtilReplace(Result, " et ", " ")
+	Result = UtilReplace(Result, " en ", " ")
+	Result = UtilReplace(Result, " de ", " ")
+	Result = UtilReplace(Result, " la ", " ")
+	Result = UtilReplace(Result, " du ", " ")
+	Result = UtilReplace(Result, " des ", " ")
+	Result = UtilReplace(Result, " d'", " ")
+	RetireMotsInutilesMotsCles = Result
+End Function
+
+
+' Cette fonction retirer les caracères consécutifs
+' Exemple 'Tom,,,Tim,Tam' et ',' renverra 'Tom,Tim,Tam'
+private Function RetireCaractereIdemConsecutif(Chaine As String, Texte as String)
+	Result = Chaine
+	Result = UtilReplace(Result, Texte & Texte, Texte)
+	Result = UtilReplace(Result, Texte & Texte, Texte)
+	Result = UtilReplace(Result, Texte & Texte, Texte)
+	Result = UtilReplace(Result, Texte & Texte, Texte)
+	RetireCaractereIdemConsecutif = Result
+End Function
+
+' Cette fonction extrait la donnee latitude de la chaine de caractère position.
+' Exemple : '43.6353857,1.4636376' renvoie '43.6353857'
+Function LatitudePos(Position as String)
+	ValeurDefaut = "47.20"
+	PosPointVirgule = InStr(1, Position, ",")
+	REM Position = Right(Position,Len(Position)-1)
+	If PosPointVirgule <> 0 Then
+		Temp = Left(Position, PosPointVirgule-1)
+	Else
+		Temp = ValeurDefaut
+	End If
+	LatitudePos = Temp
+End Function
+
+' Cette fonction extrait la donnee longitude de la chaine de caractère position.
+' Exemple : '43.6353857,1.4636376' renvoie '1.4636376'
+Function LongitudePos(Position as String)
+	ValeurDefaut = "-1.60"
+
+	PosPointVirgule = InStr(2, Position, ",")
+	REM à revoir
+	REM mettre une vérif sur la valeur
+	If PosPointVirgule <> 0 Then
+		Temp = Left(Position, PosPointVirgule)
+	Else
+		Temp = ValeurDefaut
+	End If
+	Temp = UtilReplace(Position, Temp, "")
+	LongitudePos = Temp
+End Function
+
+
+
+' Cette fonction genere une ligne du fichier JSON concernant les libelles specifiques
+Function JsonLibellesSpecifiques(colCode as String, colFr as String, colEn as String)
+	Result = "'" & colCode & "' : {"
+	Result = Result & getCleValeurPasVide("fr",colFr,",")	
+	Result = Result & getCleValeurPasVide("en",colEn,"")
+	Result = Result & "} ,"
+    JsonLibellesSpecifiques = Result
+End Function
+
+' Cette fonction genere une ligne du fichier JSON concernant les actualites
+Function JsonNews(colCode as String, nomFr as String, nomEn as String, descrFr as String, descrEn as String)
+ 	Result = "{"
+ 	Result = Result & getCleValeurPasVide("code",colCode,",")	
+ 	Result = Result & getCleValeurPasVide("nom",nomFr,",")	
+ 	Result = Result & getCleValeurPasVide("nom_en",nomEn,",")	
+ 	Result = Result & getCleValeurPasVide("descr",descrFr,",")	
+ 	Result = Result & getCleValeurPasVide("descr_en",descrEn,"")
+	Result = Result & "} ,"
+    JsonNews = Result
+End Function
+
+'' Fabrique le hash de donnees JSON.
+'' On appelle hash un tableau "mot_cle:codes" qui permet de retrouver immediatement les codes en fonction d'un mot cle.
+Function GetHashDatas(nomHash as String, numLigneDebut as Integer, numLigneFin as Integer, nomOnglet as String, numColCode as String, numColMotsFr as String, numColMotsEn as String)
+	i = "a"
+	Temp = "var " & nomHash & " = [{'z':'z'"
+ 	Temp = Temp & GetHashMotsCles(numLigneDebut, numLigneFin, nomOnglet, RemplaceNumerosColonneParLettresColonne(numColCode), RemplaceNumerosColonneParLettresColonne(numColMotsFr)) 
+ 	Temp = Temp & "}, {'z':'z'"
+ 	Temp = Temp & GetHashMotsCles(numLigneDebut, numLigneFin, nomOnglet, RemplaceNumerosColonneParLettresColonne(numColCode), RemplaceNumerosColonneParLettresColonne(numColMotsEn)) 
+ 	Temp = Temp & "} ];"
+	GetHashDatas = Temp
+End Function
+
+'' Fabrique le hash Mot Cle
+Function GetHashMotsCles(numColDebut as Integer, numColFin as Integer, nomFeuille as String, colCode as String, colMotsCles as String)
+	Temp = ""
+	Dim ArrayLesMotsCles(1 To 10000, 1 To 2) as String
+	ArrayLesMotsCles(10,1)="a"
+	ArrayLesMotsCles(10,2)="bba"
+	
+	GetHashMotsCles = Temp
+	colId = colId1
+	Doc = thisComponent
+	Sheet = Doc.Sheets.getByName(nomFeuille)
+	StPlage = colMotsCles & numColDebut & ":" & colMotsCles & numColFin
+	CellRange = Sheet.getCellRangeByName(StPlage)
+	oRanges = Doc.createInstance("com.sun.star.sheet.SheetCellRanges") 
+	oRanges.insertByName("", CellRange)   ' - I presume first parameter could be name of range ??, second is an object
+	oSearchCells = oRanges.Cells.createEnumeration 
+	idCurentColl = numColDebut
+	While oSearchCells.hasMoreElements 
+	   oCell = oSearchCells.nextElement 
+	   motsClesSeparesVirgules = UtilTransformeEnMotsCles(oCell.String)
+	   TempCode = Sheet.getCellRangeByName(colCode & idCurentColl)
+	   Code = TempCode.String
+	   	arrayElements = Split(motsClesSeparesVirgules,",")
+	   	REM pour tous les mots cles
+   		For Each Element in arrayElements
+			Element = UtilReplace(Element, " ", "")
+		   	ArrayLesMotsCles = UtilAjouteMotCleDansTableau(ArrayLesMotsCles, Element,Code)
+   		Next Element
+	idCurentColl = idCurentColl + 1
+	Wend
+	indexFin = 10000
+	for i = 1 to indexFin
+		TempMotCle =  ArrayLesMotsCles(i,1)
+		if TempMotCle="" Then
+			indexFin = i
+		Else
+			Temp2 =  ArrayLesMotsCles(i,2)
+			Temp = Temp & ",'" & TempMotCle & "':'" & Temp2 & "'"
+		End If
+	next i
+	
+	GetHashMotsCles = Temp
+End Function
+
+'' Ajoute dans un tableau MyArray à 2 colonnes (motCle, code), un element dont on precise le motCle et le code,
+'' Si l'element motCle n'est pas deja dans MyArray, on ajoute cet element a la fin du tableau,
+'' Si l'element motCle est deja dans MyArray, on modifie l'element du tableau, en ajoutant le code a la fin du code precedent (apres une virule)
+'' Exemples [['aa','11'],['ab','22']] "ac" "33" donne [['aa','11'],['ab','22'],['ac','33']]
+''          [['aa','11'],['ab','22']] "ab" "33" donne [['aa','11'],['ab','22,33']]
+private Function UtilAjouteMotCleDansTableau(MyArray, motCle as String, code as String)
+	trouve = 0
+	dernierIndex = 10000
+	for i = 1 to dernierIndex
+ 	   If MyArray(i,1)=motCle Then
+ 	   		trouve = i
+	   End If
+ 	   If MyArray(i,1)="" Then
+ 	   		dernierIndex = i
+	   End If
+ 	next i
+	If trouve=0 Then
+		 MyArray(dernierIndex,1) = motCle
+	 	 MyArray(dernierIndex,2) = code
+	Else
+		Temp3 =  MyArray(trouve,2)
+	 	 MyArray(trouve,2) = Temp3 & "," & code
+	End If
+	UtilAjouteMotCleDansTableau = MyArray
+End Function
+
+
+'' Verifie qu'une chaine horaire est correcte.
+Function TestHoraires(PlageHoraire as String)
+	REM bon
+	TestHoraires = 1
+		
+	REM je decoupe les plages horaires
+	arrayElements = Split(PlageHoraire,",")
+	For Each Element in arrayElements
+		If Element <> "sauf_ferie" and Element <> "feries_suivant" Then
+			REM pour toutes les plages :
+			REM je decoupe les  horaires
+			arrayElements2 = Split(Element,"_")
+			Compteur = 0
+			For Each Element2 in arrayElements2
+				If Compteur = 0 Then
+					arrayJours = Split(Element2,"-")
+					For Each ElementJour in arrayJours
+						Jour =  CInt(Mid(ElementJour, 1, 2))
+						If Jour < 1 Or Jour > 31 Then
+							REM pas bon
+							TestHoraires = 0
+						EndIf
+						Mois =  CInt(Mid(ElementJour, 3, 2))
+						If Mois < 1 Or Mois > 12 Then
+							REM pas bon
+							TestHoraires = 0
+						EndIf
+						If Len(ElementJour)>4 Then
+							Annee =  CInt(Mid(ElementJour, 5, 2))
+							If Annee < 12 Or Annee > 20 Then
+								REM pas bon
+								TestHoraires = 0
+							EndIf
+						End If
+					Next ElementJour
+				End If
+				REM Jours de la semaine
+				If Compteur = 1 Then
+					arrayJoursDeSemaine = Split(Element2,"+")
+					For Each ElementJourDeSemaine in arrayJoursDeSemaine
+						If ElementJourDeSemaine <> "xx" and  ElementJourDeSemaine <> "lu" and ElementJourDeSemaine <> "ma" and ElementJourDeSemaine <> "me" and ElementJourDeSemaine <> "je" and ElementJourDeSemaine <> "ve" and ElementJourDeSemaine <> "sa" and ElementJourDeSemaine <> "di"  Then
+							REM pas bon
+							TestHoraires = 0
+						EndIf
+					Next ElementJourDeSemaine
+				End If
+				REM Heures
+				If Compteur = 2 Then
+					arrayHeures = Split(Element2,"+")
+					For Each ElementHeures in arrayHeures
+						arrayElementsHeures = Split(ElementHeures,"-")
+						For Each ElementHeure in arrayElementsHeures
+							Heure =  CInt(Mid(ElementHeure, 1, 2))
+							If Heure < 0 Or Heure > 23 Then
+								REM pas bon
+								TestHoraires = 0
+							EndIf
+							REM todo controle sur les heures
+							REM Minute = Len(ElementHeures)
+							REM Minute =  CInt(Mid(ElementHeures, 4, 2))
+							REM If Minute < 0 Or Minute > 59 Then
+							REM   	REM pas bon
+							REM  	TestHoraires = 0
+							REM EndIf
+						Next ElementHeure
+					Next ElementHeures
+				End If
+				Compteur = Compteur + 1				
+			Next Element2
+			REM je verifie que les horaires contiennent 3 '_'
+			If Compteur <> 3 and  Compteur <>  0  Then
+				REM pas bon
+				TestHoraires = 0
+			End If
+		End If
+	Next Element
+		
+End Function
+
+
+Function UtilGetPlagePourHoraires(jour1 as String, heureDeb1 as String, heureFin1 as String)
+	Element = jour1
+	heureDeb = UtilReplace(heureDeb1, ":", "h")
+	heureFin = UtilReplace(heureFin1, ":", "h")
+	Annee = Mid(Element, 7, 4)
+	Mois = Mid(Element, 4, 2)
+	Jour  = Mid(Element, 1, 2)
+	jourDeLaSemaine = getJourDeLaSemaine(Annee, Mois, Jour)
+	Annee = Mid(Annee, 3, 2)
+	Result =  Jour & Mois & Annee & "_" & jourDeLaSemaine & "_"+heureDeb+"-"+heureFin
+	UtilGetPlagePourHoraires = Result
+End Function
+
+
+Public Const ouve As String = "{"
+Public Const separe As String = ":"
+Public Const virgule As String = ","
+Public Const ferme As String = ","
+
+
+Function getCleValeurPasVide(cle As String, valeur As String, separator as String)
+	If valeur = "" or valeur = " " or valeur = "0" Then
+	 	Result = ""
+	Else
+	 	Result = """" & cle & """:""" & valeur & """" & separator	
+	End If
+	getCleValeurPasVide = Result
+End Function
+
+
+Function getCleValeurAvecDefaut(cle As String, valeur As String, separator as String, defaut as String)
+	If valeur = "" or valeur = " " or valeur = "0" Then
+	 	Result = """" & cle & """:""" & defaut & """" & separator	
+	Else
+	 	Result = """" & cle & """:""" & valeur & """" & separator	
+	End If
+	getCleValeurAvecDefaut = Result
+End Function
+
+
+Function getLatitudeLongitude(latitudeLongitude as String)
+	Temp2 = UtilReplace(latitudeLongitude, "[ ", "")
+	Temp2 = UtilReplace(Temp2, "]", "")
+	Temp2 = UtilReplace(Temp2, " , ", ",")
+	getLatitudeLongitude = Temp2
+End Function
+
+Sub Main
+
+End Sub
