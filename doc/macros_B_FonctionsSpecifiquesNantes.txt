@@ -1,7 +1,7 @@
 REM  *****  BASIC  *****
 
-Const min As String = "abcdefghijklmnopqrstuvwxyz"
-Const maj As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ'"
+Const min As String = "abcdefghijklmnopqrstuvwxyz   "
+Const maj As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ'()"
 
 ' La fonction retire les accents, supprime les mots inutiles, et met tout en minuscule
 Private Function UtilTransformeEnMotsCles(ByRef s As String) As String
@@ -32,6 +32,7 @@ Private Function RetireMotsInutilesMotsCles(ByRef Chaine As String)
 	Result = UtilReplace(Result, " du ", " ")
 	Result = UtilReplace(Result, " des ", " ")
 	Result = UtilReplace(Result, " d'", " ")
+	Result = UtilReplace(Result, " )", " ")
 	RetireMotsInutilesMotsCles = Result
 End Function
 

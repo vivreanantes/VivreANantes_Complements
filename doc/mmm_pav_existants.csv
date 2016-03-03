@@ -1,0 +1,1424 @@
+gml_id,gid,num_col,type,vol_col,proj_exist,rue
+mmm_pav_existants.1,1,V921,Verre,3,Existant,avenue Etienne Méhul
+mmm_pav_existants.2,2,V337,Verre,0,Existant,RUE CIRCE
+mmm_pav_existants.3,3,V341,Verre,0,Existant,RUE EDMOND LAUTARD
+mmm_pav_existants.4,4,P109,Papier,0,Existant,AVENUE DE LODEVE
+mmm_pav_existants.5,5,P103,Papier,0,Existant,RUE CATALAN
+mmm_pav_existants.6,6,P105,Papier,0,Existant,AVENUE DE SAINT MAUR
+mmm_pav_existants.7,7,P106,Papier,0,Existant,AVENUE JEAN MERMOZ
+mmm_pav_existants.8,8,P111,Papier,0,Existant,AVENUE SAINT-LAZARE
+mmm_pav_existants.9,9,V363,Verre,0,Existant,PLACE MARCEL GALOT
+mmm_pav_existants.10,10,V366,Verre,0,Existant,AVENUE DU PONT JUVENAL
+mmm_pav_existants.11,11,V368,Verre,0,Existant,RUE CATALAN
+mmm_pav_existants.12,12,V646,Verre,0,Existant,RUE DU STADE
+mmm_pav_existants.13,13,V429,Verre,0,Existant,RUE ROBESPIERRE
+mmm_pav_existants.14,14,V444,Verre,0,Existant,RUE DE L'ARNEL
+mmm_pav_existants.15,15,V446,Verre,0,Existant,RUE JACQUES BOUNIN
+mmm_pav_existants.16,16,V004,Verre,0,Existant,CHEMIN DU PRADAS
+mmm_pav_existants.17,17,P008,Papier,0,Existant,RUE ROMANI
+mmm_pav_existants.18,18,V018,Verre,0,Existant,AVENUE DES APOLLONS
+mmm_pav_existants.19,19,V020,Verre,0,Existant,CHEMIN DES MENDROUS
+mmm_pav_existants.20,20,V023,Verre,0,Existant,CHEMIN DU PIOCH PELAT
+mmm_pav_existants.21,21,V026,Verre,0,Existant,AVENUE DU 8 MAI 1945
+mmm_pav_existants.22,22,P195,Papier,3,Existant,DECHETTERIE DE CASTELNAU
+mmm_pav_existants.23,23,V031,Verre,0,Existant,CHEMIN DES CHENES
+mmm_pav_existants.24,24,P015,Papier,0,Existant,AVENUE DE LA ROYALE
+mmm_pav_existants.25,25,P017,Papier,0,Existant,RUE DE LA GUESSE
+mmm_pav_existants.26,26,V037,Verre,0,Existant,CIMETIERRE
+mmm_pav_existants.27,27,V038,Verre,0,Existant,CIMETIERRE
+mmm_pav_existants.28,28,V039,Verre,0,Existant,RUE SAINTE-CATHERINE
+mmm_pav_existants.29,29,V040,Verre,0,Existant,PLACE DU CARTEL
+mmm_pav_existants.30,30,V836,Verre,0,Existant,AVENUE DE LA BORNIERE
+mmm_pav_existants.31,31,T,Textile,0,Existant,
+mmm_pav_existants.32,32,V310,Verre,0,Existant,RUE DE BARCELONE
+mmm_pav_existants.33,33,V801,Verre,0,Existant,PLACE DE LA RONCERAIE
+mmm_pav_existants.34,34,V824,Verre,0,Existant,AVENUE DES SOPHORAS
+mmm_pav_existants.35,35,P313,Papier,0,Existant,AVENUE DES SOPHORAS
+mmm_pav_existants.36,36,P347,Papier,0,Existant,RUE DE LA GARDIOLE
+mmm_pav_existants.37,37,V857,Verre,0,Existant,CHEMIN DU MAS DE JAUMES
+mmm_pav_existants.38,38,V814,Verre,0,Existant,RUE DES GARRIGUES BASSES
+mmm_pav_existants.39,39,T,Textile,0,Existant,
+mmm_pav_existants.40,40,P324,Papier,0,Existant,RUE JEAN-MARC ROUHAN
+mmm_pav_existants.41,41,P331,Papier,3,Existant,CHEMIN DE VENDARGUES A ST AUNES
+mmm_pav_existants.42,42,P338,Papier,0,Existant,DECHETERIE
+mmm_pav_existants.43,43,P340,Papier,0,Existant,CHEMIN DES BARQUES
+mmm_pav_existants.44,44,V388,Verre,0,Existant,AVENUE DE LA JUSTICE DE CASTELNAU
+mmm_pav_existants.45,45,V402,Verre,0,Existant,RUE DU CURAT
+mmm_pav_existants.46,46,V994,Verre,0,Existant,Avenue des moulins
+mmm_pav_existants.47,47,T,Textile,0,Existant,PLACE MARECHAL DE LATTRE DE TASSIGNY
+mmm_pav_existants.48,48,V185,Verre,0,Existant,MONTEE DES PICADOUS
+mmm_pav_existants.49,49,V187,Verre,0,Existant,RUE DES ASPHODELES
+mmm_pav_existants.50,50,V103,Verre,0,Existant,RUE DES CIGALES
+mmm_pav_existants.51,51,V231,Verre,3,Existant,RUE DE LA ROQUETURIERE
+mmm_pav_existants.52,52,V238,Verre,3,Existant,RUE DU PIOCH DE BOUTONNET
+mmm_pav_existants.53,53,V245,Verre,3,Existant,AVENUE DU VAL DE MONTFERRAND
+mmm_pav_existants.54,54,V613,Verre,0,Existant,D5 E5
+mmm_pav_existants.55,55,V216,Verre,0,Existant,RUE ANDRE LE NOTRE
+mmm_pav_existants.56,56,V249,Verre,0,Existant,ROUTE DE MENDE
+mmm_pav_existants.57,57,P091,Papier,0,Existant,RUE DU CADUCEE
+mmm_pav_existants.58,58,V072,Verre,0,Existant,RUE DE LAS DAVALADAS
+mmm_pav_existants.59,59,V091,Verre,0,Existant,AVENUE PASTEUR
+mmm_pav_existants.60,60,BD001,Biodéchets,2,Existant,Rue du Cinsault
+mmm_pav_existants.61,61,BD003,Biodéchets,2,Existant,D112 centre-ville
+mmm_pav_existants.62,62,BD002,Biodéchets,2,Existant,Rue de l'Abrivado
+mmm_pav_existants.63,63,BD004,Biodéchets,2,Existant,Rue de la Fontaine
+mmm_pav_existants.64,64,V110,Verre,0,Existant,RUE DES TERRASSES
+mmm_pav_existants.65,65,V112,Verre,0,Existant,RUE DE LA CROIX DE GUILLERY
+mmm_pav_existants.66,66,V115,Verre,0,Existant,RUE ANTOINE JEROME  BALARD
+mmm_pav_existants.67,67,V121,Verre,0,Existant,RUE DES JARDINS
+mmm_pav_existants.68,68,P041,Papier,0,Existant,RUE GASTON BAISSETTE
+mmm_pav_existants.69,69,V397,Verre,0,Existant,AVENUE SAINT-LAZARE
+mmm_pav_existants.70,70,P139,Papier,0,Existant,AVENUE DU PONT TRINQUAT
+mmm_pav_existants.71,71,V469,Verre,0,Existant,RUE DES GROSEILLIERS
+mmm_pav_existants.72,72,V321,Verre,0,Existant,RUE ADRIENNE BOLLAND
+mmm_pav_existants.73,73,V360,Verre,0,Existant,BD DES ARCEAUX
+mmm_pav_existants.74,74,V639,Verre,0,Existant,RUE DE LA GARDIOLE
+mmm_pav_existants.75,75,P188,Papier,0,Existant,RUE DES CARIGNANS
+mmm_pav_existants.76,76,P005,Papier,0,Existant,CHEMIN DE SUSSARGUES
+mmm_pav_existants.77,77,V035,Verre,0,Existant,RUE SAINTE-CATHERINE
+mmm_pav_existants.78,78,P300,Papier,0,Existant,RUE AIGUERELLES
+mmm_pav_existants.79,79,P383,Papier,0,Existant,RUE DES CIGALES
+mmm_pav_existants.80,80,V812,Verre,0,Existant,RUE DU BOURGUIDOU
+mmm_pav_existants.81,81,V518,Verre,0,Existant,RUE DE LA VIEILLE POSTE
+mmm_pav_existants.82,82,V570,Verre,0,Existant,RUE DU COLLEGE
+mmm_pav_existants.83,83,BD005,Biodéchets,,Existant,Boulevard Paul Valéry
+mmm_pav_existants.84,84,V394,Verre,3,Existant,STADE MOSSON
+mmm_pav_existants.85,85,V567,Verre,3,Existant,Boulevard Sarrail
+mmm_pav_existants.86,86,T,Textile,,Existant,Rue Jean Moulin
+mmm_pav_existants.87,87,V123,Verre,0,Existant,CHEMIN DE CAYLUS
+mmm_pav_existants.88,88,V150,Verre,0,Existant,AVENUE DES PLATANES
+mmm_pav_existants.89,89,V153,Verre,0,Existant,D21 E1
+mmm_pav_existants.90,90,V156,Verre,0,Existant,D132
+mmm_pav_existants.91,91,V208,Verre,0,Existant,ROND POINT ROBERT SHUMANN
+mmm_pav_existants.92,92,V474,Verre,3,Existant,AV.  DU PR. E. JEANBRAU
+mmm_pav_existants.93,93,V236,Verre,3,Existant,RUE DE MONTASINOS
+mmm_pav_existants.94,94,V413,Verre,0,Existant,BOULEVARD BERTHELOT
+mmm_pav_existants.95,95,V510,Verre,0,Existant,RUE FLAUGERGUES
+mmm_pav_existants.96,96,V514,Verre,0,Existant,RUE HENRI BERGSON
+mmm_pav_existants.97,97,V515,Verre,0,Existant,RUE TYCHO BRAHE
+mmm_pav_existants.98,98,V520,Verre,0,Existant,RUE LOUISE MICHEL
+mmm_pav_existants.99,99,V521,Verre,0,Existant,RUE PAUL MARES
+mmm_pav_existants.100,100,V522,Verre,0,Existant,RUE ASTIER DE LA VIGERIE
+mmm_pav_existants.101,101,V584,Verre,0,Existant,ROUTE DE MONTPELLIER
+mmm_pav_existants.102,102,V856,Verre,0,Existant,RUE DES CHASSEURS
+mmm_pav_existants.103,103,V860,Verre,0,Existant,AVENUE LEONARD DE VINCI
+mmm_pav_existants.104,104,T,Textile,,Existant,Rue Albert Camus
+mmm_pav_existants.105,105,T,Textile,,Existant,Route de Montferrier
+mmm_pav_existants.106,106,T,Textile,,Existant,Boulevard de la liberté
+mmm_pav_existants.107,107,V217,Verre,0,Existant,ALLEE ANTOINE COYSEVOX
+mmm_pav_existants.108,108,V768,Verre,0,Existant,Avenue Henri Becquerel
+mmm_pav_existants.109,109,V301,Verre,0,Existant,BOULEVARD PENELOPE
+mmm_pav_existants.110,110,V961,Verre,0,Existant,avenue st Cléophas
+mmm_pav_existants.111,111,V209,Verre,0,Existant,AVENUE DE LOUISVILLE
+mmm_pav_existants.112,112,P055,Papier,3,Existant,RUE DE LA ROQUETURIERE
+mmm_pav_existants.113,113,P058,Papier,3,Existant,RUE DE MONTASINOS
+mmm_pav_existants.114,114,V195,Verre,0,Existant,AVENUE GUILHEM DE POITIER
+mmm_pav_existants.115,115,V246,Verre,0,Existant,AVENUE AGROPOLIS
+mmm_pav_existants.116,116,V966,Verre,0,Existant,rue des brusses
+mmm_pav_existants.117,117,V540,Verre,3,Existant,RUE ALFRED SAUVY
+mmm_pav_existants.118,118,V511,Verre,3,Existant,LES JARDINS D'EMMA
+mmm_pav_existants.119,119,P348,Papier,0,Existant,AVENUE LEONARD DE VINCI
+mmm_pav_existants.120,120,P356,Papier,0,Existant,RUE AUGUSTE RENOIR
+mmm_pav_existants.121,121,T,Textile,0,Existant,RUE DU CINSAULT
+mmm_pav_existants.122,122,V553,Verre,3,Existant,ROUTE DE CARNON
+mmm_pav_existants.123,123,V533,Verre,3,Existant,RESTAURANT LA BOUCHERIE
+mmm_pav_existants.124,124,V554,Verre,3,Existant,AVENUE DU CAP
+mmm_pav_existants.125,125,P453,Papier,,Existant,Avenue Paul Bringuier
+mmm_pav_existants.126,126,V466,Verre,3,Existant,RUE DE PRADELAINE
+mmm_pav_existants.127,127,P194,Papier,0,Existant,D116 ROUTE DE MIREVAL
+mmm_pav_existants.128,128,V099,Verre,0,Existant,RUE FREDERIC MISTRAL
+mmm_pav_existants.129,129,V184,Verre,0,Existant,CHEMIN DES AIGUEILLERES
+mmm_pav_existants.130,130,V462,Verre,0,Existant,CHEMIN DE MOULARES
+mmm_pav_existants.131,131,V196,Verre,0,Existant,RUE AZALAIS D'ALTIER
+mmm_pav_existants.132,132,V198,Verre,0,Existant,RUE D'AJACCIO
+mmm_pav_existants.133,133,V248,Verre,0,Existant,CHEMIN DU RESERVOIR DE MONTMAUR
+mmm_pav_existants.134,134,T,Textile,0,Existant,AVENUE DE LA LIRONDE
+mmm_pav_existants.135,135,V138,Verre,0,Existant,AVENUE DE LA LIRONDE
+mmm_pav_existants.136,136,V881,Verre,0,Existant,AVENUE DE SEPTIMANIE
+mmm_pav_existants.137,137,P026,Papier,0,Existant,AVENUE DE LA LIRONDE
+mmm_pav_existants.138,138,T,Textile,0,Existant,CHEMIN DE COUREGES
+mmm_pav_existants.139,139,P306,Papier,0,Existant,D132
+mmm_pav_existants.140,140,P030,Papier,0,Existant,CHEMIN DES JARDINS DE MAGUELONE
+mmm_pav_existants.141,141,V932,Verre,0,Existant,RUE LOU CASTEL
+mmm_pav_existants.142,142,V596,Verre,0,Existant,AVENUE DE LA MEDITERRANEE
+mmm_pav_existants.143,143,V190,Verre,0,Existant,CHEMIN DE BAILLARGUET
+mmm_pav_existants.144,144,V414,Verre,0,Existant,BOULEVARD VIEUSSENS
+mmm_pav_existants.145,145,V100,Verre,0,Existant,IMPASSE DU VATICAN
+mmm_pav_existants.146,146,V102,Verre,0,Existant,RUE DES CIGALES
+mmm_pav_existants.147,147,V294,Verre,0,Existant,RUE DE CLEMENTVILLE
+mmm_pav_existants.148,148,P009,Papier,0,Existant,RUE DE CLAIRVAL
+mmm_pav_existants.149,149,V033,Verre,0,Existant,CHEMIN DE L'HIRONDELLE
+mmm_pav_existants.150,150,P442,Papier,0,Existant,rue de la figuière
+mmm_pav_existants.151,151,V937,Verre,0,Existant,AVENUE PROSSEUR ETIENNE ANTONELLI
+mmm_pav_existants.152,152,V080,Verre,0,Existant,AVENUE JEAN JAURES
+mmm_pav_existants.153,153,V087,Verre,0,Existant,CHEMIN DE L'AMOUR
+mmm_pav_existants.154,154,V313,Verre,3,Existant,RUE DE LA FIGAIRASSE
+mmm_pav_existants.155,155,P154,Papier,0,Existant,RUE DE LA VIEILLE POSTE
+mmm_pav_existants.156,156,V523,Verre,0,Existant,RUE MARIE DURAND
+mmm_pav_existants.157,157,V864,Verre,0,Existant,RUE HECTOR BERLIOZ
+mmm_pav_existants.158,158,P357,Papier,0,Existant,ROUTE DE BEZIERS
+mmm_pav_existants.159,159,V894,Verre,0,Existant,RUE DU MAIL
+mmm_pav_existants.160,160,V378,Verre,0,Existant,AVENUE XAVIER DE RICARD
+mmm_pav_existants.161,161,P449,Papier,0,Existant,RUE DES PASSSEREAUX
+mmm_pav_existants.162,162,V126,Verre,0,Existant,RUE DE LA RIVIERE
+mmm_pav_existants.163,163,V130,Verre,0,Existant,AVENUE DU PERRET
+mmm_pav_existants.164,164,V199,Verre,0,Existant,AVENUE DU COMTE DE NICE
+mmm_pav_existants.165,165,V200,Verre,0,Existant,RUE BERTRAND DE BORN
+mmm_pav_existants.166,166,V201,Verre,0,Existant,RUE JAUFRE RUDEL
+mmm_pav_existants.167,167,V603,Verre,0,Existant,CHEMIN D'ENCORNET
+mmm_pav_existants.168,168,V278,Verre,0,Existant,RUE ANDRE BOULLOCHE
+mmm_pav_existants.169,169,V459,Verre,0,Existant,PLACE DU 56ieme RGIMENT D'ARTILLERIE
+mmm_pav_existants.170,170,V642,Verre,0,Existant,RUE DES CARIGNANS
+mmm_pav_existants.171,171,V667,Verre,0,Existant,AVENUE DE PALAVAS
+mmm_pav_existants.172,172,V671,Verre,0,Existant,AVENUE DU MOULIN DE LA JASSE
+mmm_pav_existants.173,173,P160,Papier,0,Existant,RUE DE CLARET
+mmm_pav_existants.174,174,V564,Verre,0,Existant,AVENUE DU GENERAL LECLERC
+mmm_pav_existants.175,175,P025,Papier,0,Existant,D132
+mmm_pav_existants.176,176,P031,Papier,0,Existant,RUE DU LANTISSARGUES
+mmm_pav_existants.177,177,P033,Papier,0,Existant,CHEMIN DE SAINT-HUBERT
+mmm_pav_existants.178,178,P037,Papier,0,Existant,D132
+mmm_pav_existants.179,179,V136,Verre,0,Existant,D132
+mmm_pav_existants.180,180,V137,Verre,0,Existant,D132
+mmm_pav_existants.181,181,V142,Verre,0,Existant,RUE DE LA CAPITAINERIE
+mmm_pav_existants.182,182,V145,Verre,0,Existant,D116
+mmm_pav_existants.183,183,P123,Papier,0,Existant,PLACE FOURIER
+mmm_pav_existants.184,184,P134,Papier,0,Existant,RUE DES FOURBISSEURS
+mmm_pav_existants.185,185,V009,Verre,0,Existant,AVENUE DU STADE
+mmm_pav_existants.186,186,V017,Verre,0,Existant,RUE DES EGLANTIERS
+mmm_pav_existants.187,187,V028,Verre,0,Existant,ALLEE MARIE CURIE
+mmm_pav_existants.188,188,V041,Verre,0,Existant,IMPASSE DU STADE
+mmm_pav_existants.189,189,V1000,Verre,0,Existant,RUE DU MOULIN DE SEMALEN
+mmm_pav_existants.190,190,V210,Verre,0,Existant,AVENUE DE LOUISVILLE
+mmm_pav_existants.191,191,V211,Verre,0,Existant,RUE MERE VACQUIER
+mmm_pav_existants.192,192,V219,Verre,0,Existant,AVENUE DE LODEVE
+mmm_pav_existants.193,193,V220,Verre,0,Existant,RUE FRANCOIS D'ORBAY
+mmm_pav_existants.194,194,V499,Verre,0,Existant,RUE PIERRE BON
+mmm_pav_existants.195,195,V805,Verre,0,Existant,RUE DE LA SUBSTANTION
+mmm_pav_existants.196,196,P325,Papier,0,Existant,CHEMIN DE L'AMOUR
+mmm_pav_existants.197,197,V826,Verre,0,Existant,RUE SAINT BAUZILLE
+mmm_pav_existants.198,198,V852,Verre,3,Existant,Avenue d'occitanie
+mmm_pav_existants.199,199,V398,Verre,0,Existant,AVENUE SAINT-LAZARE
+mmm_pav_existants.200,200,V451,Verre,0,Existant,AVENUE DE MAURIN
+mmm_pav_existants.201,201,P147,Papier,0,Existant,RUE SIMONE DE BEAUVOIR
+mmm_pav_existants.202,202,V467,Verre,0,Existant,RUE JEAN VACHET
+mmm_pav_existants.203,203,V477,Verre,0,Existant,AVENUE DOCTEUR JACQUES FOURCADE
+mmm_pav_existants.204,204,V489,Verre,0,Existant,RUE MONTELS-EGLISE
+mmm_pav_existants.205,205,V490,Verre,0,Existant,AVENUE DU MARCHE GARE
+mmm_pav_existants.206,206,V517,Verre,0,Existant,RUE DENIS PAPIN
+mmm_pav_existants.207,207,T,Textile,0,Existant,RUE DE LA COSTA BRAVA
+mmm_pav_existants.208,208,P082,Papier,0,Existant,RUE DES AZALEES
+mmm_pav_existants.209,209,V744,Verre,0,Existant,RUE DU MARCHE AUX BESTIAUX
+mmm_pav_existants.210,210,V751,Verre,0,Existant,RUE RAIMOND DE TRENCAVEL
+mmm_pav_existants.211,211,V753,Verre,0,Existant,AVENUE DE MAURIN
+mmm_pav_existants.212,212,V752,Verre,0,Existant,RUE GUSTAVE FLAUBERT
+mmm_pav_existants.213,213,V964,Verre,0,Existant,
+mmm_pav_existants.214,214,V529,Verre,0,Existant,RUE FRUCTIDOR
+mmm_pav_existants.215,215,P207,Papier,0,Existant,AVENUE DU GENERAL LECLERC
+mmm_pav_existants.216,216,P028,Papier,0,Existant,RUE DE LA CAPITAINERIE
+mmm_pav_existants.217,217,V143,Verre,0,Existant,RUE DES GENETS
+mmm_pav_existants.218,218,V389,Verre,3,Existant,RUE DES GREZES
+mmm_pav_existants.219,219,V630,Verre,0,Existant,RUE DE L'ORTET
+mmm_pav_existants.220,220,P114,Papier,0,Existant,AVENUE BOUISSON BERTRAND
+mmm_pav_existants.221,221,V675,Verre,0,Existant,CHEMIN DES AIRES
+mmm_pav_existants.222,222,V022,Verre,0,Existant,RUE DE CLAIRVAL
+mmm_pav_existants.223,223,P330,Papier,0,Existant,CHEMIN DE CARNETTE
+mmm_pav_existants.224,224,P210,Papier,0,Existant,rue mas de merle
+mmm_pav_existants.225,225,P450,Papier,0,Existant,RUE BEAU SEJOUR
+mmm_pav_existants.226,226,P047,Papier,0,Existant,RUE DE LA NARBONNAISE
+mmm_pav_existants.227,227,P048,Papier,0,Existant,AVENUE GUILHEM DE POITIER
+mmm_pav_existants.228,228,P049,Papier,0,Existant,RUE D'UPPSALA
+mmm_pav_existants.229,229,P050,Papier,0,Existant,AVENUE DE LOUISVILLE
+mmm_pav_existants.230,230,V410,Verre,0,Existant,BD DES ARCEAUX
+mmm_pav_existants.231,231,P149,Papier,0,Existant,CARREFOUR LEON CORDES
+mmm_pav_existants.232,232,V486,Verre,0,Existant,CARREFOUR DES ALIZEES
+mmm_pav_existants.233,233,V488,Verre,0,Existant,RUE DE LA RESTANQUE
+mmm_pav_existants.234,234,V506,Verre,0,Existant,RUE EMILE BAUDOT
+mmm_pav_existants.235,235,V373,Verre,0,Existant,RUE DE THEBES
+mmm_pav_existants.236,236,P163,Papier,0,Existant,ALLEE DE LA MARTELLE
+mmm_pav_existants.237,237,P066,Papier,3,Existant,AVENUE DU PROF.JOSEPH ANGLADA
+mmm_pav_existants.238,238,P052,Papier,0,Existant,AVENUE DE LODEVE
+mmm_pav_existants.239,239,V192,Verre,0,Existant,RUE DE GIGNAC
+mmm_pav_existants.240,240,V491,Verre,0,Existant,ALLEE GEORGES PITOEFF
+mmm_pav_existants.241,241,V492,Verre,0,Existant,RUE SIMONE DE BEAUVOIR
+mmm_pav_existants.242,242,V494,Verre,0,Existant,RUE OLOF PALME
+mmm_pav_existants.243,243,V495,Verre,0,Existant,CARREFOUR LEON CORDES
+mmm_pav_existants.244,244,V496,Verre,0,Existant,BOULEVARD D'ORIENT
+mmm_pav_existants.245,245,V114,Verre,0,Existant,RUE DU CADUCEE
+mmm_pav_existants.246,246,V214,Verre,0,Existant,DECHETERIE
+mmm_pav_existants.247,247,V913,Verre,0,Existant,RUE DE LA CROIX DE ROSIERS
+mmm_pav_existants.248,248,V920,Verre,3,Existant,VOIE DOMITIENNE
+mmm_pav_existants.249,249,V915,Verre,0,Existant,ALLEE DU PARC TASTAVIN
+mmm_pav_existants.250,250,V919,Verre,3,Existant,RUE DU TRIOLET
+mmm_pav_existants.251,251,V608,Verre,0,Existant,CHEMIN DES BARAQUES
+mmm_pav_existants.252,252,V610,Verre,0,Existant,RUE DE LA DAME D'ORCAS
+mmm_pav_existants.253,253,V612,Verre,0,Existant,AVENUE DE MONTPELLIER
+mmm_pav_existants.254,254,V615,Verre,0,Existant,AVENUE D'OCCITANIE
+mmm_pav_existants.255,255,P150,Papier,0,Existant,RUE GUGLIELMO MARCONI
+mmm_pav_existants.256,256,P151,Papier,0,Existant,RUE EMILE BAUDOT
+mmm_pav_existants.257,257,P185,Papier,0,Existant,RUE DE L'ORTET
+mmm_pav_existants.258,258,VRS05,Verre,3,Existant,cité U vert bois
+mmm_pav_existants.259,259,V334,Verre,0,Existant,RUE DES PAPYRUS
+mmm_pav_existants.260,260,V335,Verre,0,Existant,RUE DES PAPYRUS
+mmm_pav_existants.261,261,V616,Verre,0,Existant,AVENUE D'OCCITANIE
+mmm_pav_existants.262,262,P183,Papier,0,Existant,AVENUE DE LIBRILLA
+mmm_pav_existants.263,263,P071,Papier,3,Existant,AVENUE DU PERE SOULAS
+mmm_pav_existants.264,264,P072,Papier,3,Existant,RUE DE LA MOUNEDA
+mmm_pav_existants.265,265,P074,Papier,0,Existant,RUE RENE ETIEMBLE
+mmm_pav_existants.266,266,P075,Papier,0,Existant,RUE ANDRE BOULLOCHE
+mmm_pav_existants.267,267,P076,Papier,0,Existant,RUE DE LA CROIX VERTE
+mmm_pav_existants.268,268,V228,Verre,3,Existant,RUE DE LA ROQUETURIERE
+mmm_pav_existants.269,269,V029,Verre,0,Existant,ALLEE MARIE CURIE
+mmm_pav_existants.270,270,V307,Verre,0,Existant,Rue michel teule
+mmm_pav_existants.271,271,V960,Verre,0,Existant,rue mas de merle
+mmm_pav_existants.272,272,V845,Verre,0,Existant,CHEMIN DE CARNETTE
+mmm_pav_existants.273,273,V820,Verre,0,Existant,RUE DES PIOCHS
+mmm_pav_existants.274,274,V237,Verre,3,Existant,RUE DE MONTASINOS
+mmm_pav_existants.275,275,V283,Verre,0,Existant,RUE JARDINS D'OMEYADE
+mmm_pav_existants.276,276,V254,Verre,3,Existant,RUE ADRIEN PROBY
+mmm_pav_existants.277,277,V255,Verre,3,Existant,RUE DES TILLEULS
+mmm_pav_existants.278,278,V257,Verre,3,Existant,AVENUE DE L'ABBE PAUL PARGUEL
+mmm_pav_existants.279,279,V258,Verre,0,Existant,PLACE JEAN BAUMEL
+mmm_pav_existants.280,280,V259,Verre,0,Existant,AVENUE DU PIC SAINT LOUP
+mmm_pav_existants.281,281,V262,Verre,3,Existant,ROUTE DE GANGES
+mmm_pav_existants.282,282,V866,Verre,0,Existant,CHEMIN DE COUREGES
+mmm_pav_existants.283,283,V261,Verre,3,Existant,AVENUE D'OCCITANIE
+mmm_pav_existants.284,284,V291,Verre,0,Existant,RUE DE LAS SORBES
+mmm_pav_existants.285,285,V391,Verre,0,Existant,RUE DE L'ECOLE NORMALE
+mmm_pav_existants.286,286,V267,Verre,3,Existant,AVENUE DU PERE SOULAS
+mmm_pav_existants.287,287,V269,Verre,3,Existant,RUE DE SAINT-PRIEST
+mmm_pav_existants.288,288,V287,Verre,0,Existant,D127
+mmm_pav_existants.289,289,P078,Papier,0,Existant,AVENUE SAINT CLEMENT
+mmm_pav_existants.290,290,P079,Papier,0,Existant,RUE DE LAS SORBES
+mmm_pav_existants.291,291,T,Textile,0,Existant,AVENUE GENERAL GROLLIER
+mmm_pav_existants.292,292,V129,Verre,0,Existant,CHEMIN DU LABOURNAS
+mmm_pav_existants.293,293,V912,Verre,0,Existant,AVENUE DE PALAVAS
+mmm_pav_existants.294,294,V931,Verre,0,Existant,RUE DU POUS DE LA SERS
+mmm_pav_existants.295,295,V762,Verre,0,Existant,RUE DE CHEN DU
+mmm_pav_existants.296,296,V223,Verre,3,Existant,RUE DU MAS DE CALENDA
+mmm_pav_existants.297,297,V940,Verre,0,Existant,RUE DU TRAITE DE ROME
+mmm_pav_existants.298,298,V941,Verre,0,Existant,CHEMIN DE LA PIERRE BLEUE
+mmm_pav_existants.299,299,P126,Papier,0,Existant,RUE JOHN LOCK
+mmm_pav_existants.300,300,V905,Verre,0,Existant,Parking souces de l'Avy
+mmm_pav_existants.301,301,V275,Verre,0,Existant,RUE DE SAINT-PRIEST
+mmm_pav_existants.302,302,V276,Verre,0,Existant,RUE DE LA CROIX DE LAVIT
+mmm_pav_existants.303,303,V277,Verre,0,Existant,RUE RENE ETIEMBLE
+mmm_pav_existants.304,304,V943,Verre,0,Existant,AVENUE DES MOULINS
+mmm_pav_existants.305,305,V516,Verre,0,Existant,RUE LOUIS LEPINE
+mmm_pav_existants.306,306,V526,Verre,0,Existant,AVENUE DE LA POMPIGNANE
+mmm_pav_existants.307,307,V536,Verre,0,Existant,CHEMIN DES BARQUES
+mmm_pav_existants.308,308,V569,Verre,0,Existant,PARKING DES ECOLES
+mmm_pav_existants.309,309,V574,Verre,0,Existant,ROUTE DE SAINT GEORGES D'ORQUES
+mmm_pav_existants.310,310,V021,Verre,0,Existant,RUE ROMANI
+mmm_pav_existants.311,311,V032,Verre,0,Existant,CHEMIN DU MAS DU DIABLE
+mmm_pav_existants.312,312,P018,Papier,0,Existant,DOMAINE DE FONDESPIERRE
+mmm_pav_existants.313,313,P310,Papier,0,Existant,CHEMIN D'ENCORNET
+mmm_pav_existants.314,314,V152,Verre,0,Existant,PLACE HENRI AUGE
+mmm_pav_existants.315,315,V911,Verre,0,Existant,RUE DU COMTE DE NICE
+mmm_pav_existants.316,316,V324,Verre,0,Existant,RUE DU MOULIN DES SEPT CANS
+mmm_pav_existants.317,317,V868,Verre,0,Existant,CHEMIN DE LA BASCULE
+mmm_pav_existants.318,318,V607,Verre,0,Existant,RUE DES CADES
+mmm_pav_existants.319,319,V563,Verre,0,Existant,RUE F. DEROSI
+mmm_pav_existants.320,320,V281,Verre,0,Existant,RUE DOMINIQUE LARREY
+mmm_pav_existants.321,321,P080,Papier,0,Existant,AVENUE ECOLE AGRICULTURE
+mmm_pav_existants.322,322,P084,Papier,0,Existant,RUE DE LA FIGAIRASSE
+mmm_pav_existants.323,323,P088,Papier,0,Existant,RUE DES FRENES
+mmm_pav_existants.324,324,V098,Verre,0,Existant,RUE DU LAVOIR
+mmm_pav_existants.325,325,P137,Papier,0,Existant,RUE JEAN VACHET
+mmm_pav_existants.326,326,V591,Verre,0,Existant,RUE PIERRE DE SAINT ROCH
+mmm_pav_existants.327,327,V282,Verre,0,Existant,RUE RENE ETIEMBLE
+mmm_pav_existants.328,328,V472,Verre,0,Existant,AVENUE DU PONT TRINQUAT
+mmm_pav_existants.329,329,V482,Verre,0,Existant,RUE JEAN VACHET
+mmm_pav_existants.330,330,V493,Verre,0,Existant,RUE OLOF PALME
+mmm_pav_existants.331,331,V304,Verre,0,Existant,RUE GEORGES BRASSENS
+mmm_pav_existants.332,332,V311,Verre,0,Existant,RUE ANDRE-MARIE AMPERE
+mmm_pav_existants.333,333,V332,Verre,0,Existant,RUE DES EUCALYPTUS
+mmm_pav_existants.334,334,V323,Verre,0,Existant,avenue de la pompignane
+mmm_pav_existants.335,335,V314,Verre,0,Existant,AVENUE GEORGES CLEMENCEAU
+mmm_pav_existants.336,336,V449,Verre,0,Existant,RUE VICTOR ROGER
+mmm_pav_existants.337,337,V005,Verre,0,Existant,RUE DE LA CROIX DE JALLE
+mmm_pav_existants.338,338,P301,Papier,0,Existant,
+mmm_pav_existants.339,339,P089,Papier,0,Existant,RUE DES PAPYRUS
+mmm_pav_existants.340,340,P092,Papier,0,Existant,RUE PAUL RIMBAUD
+mmm_pav_existants.341,341,P095,Papier,0,Existant,RUE DU PONT DE LAVERUNE
+mmm_pav_existants.342,342,V088,Verre,0,Existant,RUE MARECHAL
+mmm_pav_existants.343,343,P140,Papier,0,Existant,AVENUE DU PONT TRINQUAT
+mmm_pav_existants.344,344,P159,Papier,0,Existant,RUE DE L'ECOLE REPUBLICAINE
+mmm_pav_existants.345,345,P374,Papier,0,Existant,RUE MARIE CAIZERGUES
+mmm_pav_existants.346,346,V056,Verre,3,Existant,Avenue de l'Europe
+mmm_pav_existants.347,347,P036,Papier,3,Existant,AVENUE DE L'EUROPE
+mmm_pav_existants.348,348,T,Textile,0,Existant,RUE ALI BEN CHEKHAL
+mmm_pav_existants.349,349,V147,Verre,0,Existant,RUE GEORGES MELIES
+mmm_pav_existants.350,350,T,Textile,0,Existant,RUE RIGAUD
+mmm_pav_existants.351,351,T,Textile,0,Existant,RUE RIGAUD
+mmm_pav_existants.352,352,V618,Verre,0,Existant,D172
+mmm_pav_existants.353,353,T,Textile,0,Existant,ALLEE JOSEPH CAMBON
+mmm_pav_existants.354,354,V827,Verre,0,Existant,ALLEE JOSEPH CAMBON
+mmm_pav_existants.355,355,V092,Verre,0,Existant,RUE JEANNE D'ARC
+mmm_pav_existants.356,356,V096,Verre,0,Existant,RUE GEORGES POMPIDOU
+mmm_pav_existants.357,357,V097,Verre,0,Existant,RUE DES JARDINIERS
+mmm_pav_existants.358,358,V173,Verre,0,Existant,RUE DES CHASSEURS
+mmm_pav_existants.359,359,V177,Verre,0,Existant,IMPASSE FREDERIC CHOPIN
+mmm_pav_existants.360,360,V453,Verre,0,Existant,RUE DE LA COSTA BRAVA
+mmm_pav_existants.361,361,V455,Verre,0,Existant,RUE DE RIPOLL
+mmm_pav_existants.362,362,T,Textile,0,Existant,RUE DES OEILLETS
+mmm_pav_existants.363,363,T,Textile,0,Existant,RUE DE LA GARE
+mmm_pav_existants.364,364,T,Textile,0,Existant,RUE DE L'ORTET
+mmm_pav_existants.365,365,T,Textile,0,Existant,AVENUE GEORGES CLEMENCEAU
+mmm_pav_existants.366,366,V892,Verre,0,Existant,PARKING CARREFOUR
+mmm_pav_existants.367,367,V933,Verre,0,Existant,CHEMIN FONTAINE DE LA BANQUIERE
+mmm_pav_existants.368,368,T,Textile,0,Existant,CHEMIN DES JARDINS DE MAGUELONE
+mmm_pav_existants.369,369,V748,Verre,0,Existant,D189
+mmm_pav_existants.370,370,VRS003,Verre,0,Existant,263 RUE DU CADUCEE
+mmm_pav_existants.371,371,V460,Verre,0,Existant,RUE DE LA CROIX DU CAPTAINE
+mmm_pav_existants.372,372,P138,Papier,0,Existant,RUE DES RAZETEURS
+mmm_pav_existants.373,373,V954,Verre,0,Existant,RUE LEONARD DE VINCI
+mmm_pav_existants.374,374,P142,Papier,0,Existant,RUE JEAN VACHET
+mmm_pav_existants.375,375,P143,Papier,0,Existant,RUE FERDINAND DE LESSEPS
+mmm_pav_existants.376,376,P145,Papier,0,Existant,RUE DE LA RESTANQUE
+mmm_pav_existants.377,377,P148,Papier,0,Existant,RUE OLOF PALME
+mmm_pav_existants.378,378,V946,Verre,0,Existant,RUE DE L'AMETHYSTE
+mmm_pav_existants.379,379,V948,Verre,0,Existant,AVENUE DU MARECHAL LECLERC
+mmm_pav_existants.380,380,V947,Verre,0,Existant,AVENUE DU MARECHAL LECLERC
+mmm_pav_existants.381,381,V949,Verre,0,Existant,RUE CHARLES VANEL
+mmm_pav_existants.382,382,T002,Textile,,Existant,D26
+mmm_pav_existants.383,383,T006,Textile,,Existant,Avenue de l'Aube Rouge
+mmm_pav_existants.384,384,V233,Verre,3,Existant,RUE ANTOINE LAURENT JUSSIEU
+mmm_pav_existants.385,385,V234,Verre,3,Existant,RUE DU MAS DE CALENDA
+mmm_pav_existants.386,386,V235,Verre,3,Existant,RUE DU PIOCH DE BOUTONNET
+mmm_pav_existants.387,387,V247,Verre,3,Existant,RUE ALI BEN CHEKHAL
+mmm_pav_existants.388,388,T012,Textile,,Existant,Rond point du salinier
+mmm_pav_existants.389,389,T,Textile,0,Existant,RUE DE L'EGLISE
+mmm_pav_existants.390,390,T026,Textile,,Existant,Chemin du Pouget
+mmm_pav_existants.391,391,T030,Textile,,Existant,10 rue de clementville
+mmm_pav_existants.392,392,T033,Textile,,Existant,115 avenue de l'aeroport international
+mmm_pav_existants.393,393,T036,Textile,,Existant,1322 rue du Pioch Boutonnet
+mmm_pav_existants.394,394,T038,Textile,,Existant,1469 rue las sorbes
+mmm_pav_existants.395,395,T040,Textile,,Existant,157 rue Francois d'orbay
+mmm_pav_existants.396,396,T041,Textile,,Existant,190 rue Gustave eiffel
+mmm_pav_existants.397,397,T046,Textile,,Existant,219 rue Titien
+mmm_pav_existants.398,398,V995,Verre,0,Existant,Stade Sabathé
+mmm_pav_existants.399,399,V987,Verre,0,Existant,Rue du walhalla
+mmm_pav_existants.400,400,V997,Verre,0,Existant,Rue jugurtha
+mmm_pav_existants.401,401,V999,Verre,0,Existant,Rue de Fontcouverte
+mmm_pav_existants.402,402,V923,Verre,0,Existant,Impasse du mas saint-pierre
+mmm_pav_existants.403,403,VRS009,Verre,3,Existant,Université des sciences
+mmm_pav_existants.404,404,T047,Textile,,Existant,222 rue Louis Lépine
+mmm_pav_existants.405,405,T048,Textile,,Existant,Avenue de Lodève
+mmm_pav_existants.406,406,T049,Textile,,Existant,240 route de Vauguières
+mmm_pav_existants.407,407,T050,Textile,,Existant,26 rue de claret
+mmm_pav_existants.408,408,T055,Textile,,Existant,Rue Jules Guesde
+mmm_pav_existants.409,409,T056,Textile,,Existant,Allée de Paris
+mmm_pav_existants.410,410,T057,Textile,,Existant,Rue Uppsala
+mmm_pav_existants.411,411,T061,Textile,,Existant,4 rue du marché aux bestiaux
+mmm_pav_existants.412,412,T062,Textile,,Existant,Rue des colombes
+mmm_pav_existants.413,413,T063,Textile,,Existant,47 rue Azalaïs d'Altier
+mmm_pav_existants.414,414,T068,Textile,,Existant,Avenue Paul Rimbaud
+mmm_pav_existants.415,415,T017,Textile,,Existant,Le thôt
+mmm_pav_existants.416,416,P355,Papier,0,Existant,RUE FONTAINE DE L'HOSPITAL
+mmm_pav_existants.417,417,P358,Papier,0,Existant,RUE DE LA GARE
+mmm_pav_existants.418,418,T,Textile,0,Existant,RUE DES CHASSEURS
+mmm_pav_existants.419,419,V111,Verre,0,Existant,RUE DE LA MOSSON
+mmm_pav_existants.420,420,P023,Papier,0,Existant,CHEMIN DE COUREGES
+mmm_pav_existants.421,421,V844,Verre,0,Existant,
+mmm_pav_existants.422,422,V010,Verre,0,Existant,Avenue de la biste
+mmm_pav_existants.423,423,V464,Verre,0,Existant,RUE DE PORTO
+mmm_pav_existants.424,424,T,Textile,0,Existant,AVENUE DE LA MEDITERRANNEE
+mmm_pav_existants.425,425,T,Textile,0,Existant,
+mmm_pav_existants.426,426,T020,Textile,,Existant,Rue du Gua
+mmm_pav_existants.427,427,T021,Textile,,Existant,Avenue du Mistral
+mmm_pav_existants.428,428,T023,Textile,,Existant,Route de nîmes
+mmm_pav_existants.429,429,T027,Textile,,Existant,Route de mende
+mmm_pav_existants.430,430,T031,Textile,,Existant,1039 Rue de pinville
+mmm_pav_existants.431,431,V104,Verre,0,Existant,RUE DE GENETS
+mmm_pav_existants.432,432,V106,Verre,0,Existant,RUE DE LA TREILLE
+mmm_pav_existants.433,433,V465,Verre,0,Existant,RUE DES IRIS
+mmm_pav_existants.434,434,V468,Verre,0,Existant,AVENUE DU MARECHAL LECLERC
+mmm_pav_existants.435,435,V471,Verre,0,Existant,AVENUE DU PONT TRINQUAT
+mmm_pav_existants.436,436,V473,Verre,0,Existant,RUE LEON BLUM
+mmm_pav_existants.437,437,V243,Verre,3,Existant,RUE DE L'AIGUELONGUE
+mmm_pav_existants.438,438,P146,Papier,0,Existant,ALLEE GEORGES PITOEFF
+mmm_pav_existants.439,439,V312,Verre,3,Existant,RUE DU MAS RENE
+mmm_pav_existants.440,440,V503,Verre,0,Existant,RUE DU MAS DE BROUSSE
+mmm_pav_existants.441,441,T069,Textile,,Existant,Boulevard Berthelot
+mmm_pav_existants.442,442,V351,Verre,0,Existant,RUE DE LA LAICITE
+mmm_pav_existants.443,443,P040,Papier,0,Existant,AVENUE PAUL VALERY
+mmm_pav_existants.444,444,V202,Verre,0,Existant,RUE ARNAULT PEYRE
+mmm_pav_existants.445,445,V207,Verre,0,Existant,ROND POINT ROBERT SHUMANN
+mmm_pav_existants.446,446,V225,Verre,0,Existant,BOULEVARD PENELOPE
+mmm_pav_existants.447,447,T070,Textile,,Existant,Rue de Montasinos
+mmm_pav_existants.448,448,T018,Textile,,Existant,Place henri auge
+mmm_pav_existants.449,449,T024,Textile,,Existant,chemin de la qualité
+mmm_pav_existants.450,450,T025,Textile,,Existant,chemin de la qualité
+mmm_pav_existants.451,451,T028,Textile,,Existant,Rue de l'Améthyste
+mmm_pav_existants.452,452,T029,Textile,,Existant,1 rue Marcel Paul
+mmm_pav_existants.453,453,T032,Textile,,Existant,11 Boulevard Vieussens
+mmm_pav_existants.454,454,T034,Textile,,Existant,1152 rue de Bugarel
+mmm_pav_existants.455,455,T035,Textile,,Existant,1226 rue de la Roqueturière
+mmm_pav_existants.456,456,T037,Textile,,Existant,141 Rue de la Cardonille
+mmm_pav_existants.457,457,T039,Textile,,Existant,150 rue Francois-joseph Gossec
+mmm_pav_existants.458,458,T042,Textile,,Existant,Rue Robespierre
+mmm_pav_existants.459,459,T043,Textile,,Existant,20 Rue courte Oreille
+mmm_pav_existants.460,460,T019,Textile,,Existant,Rue des amandiers
+mmm_pav_existants.461,461,T022,Textile,,Existant,Avenue des chasseurs
+mmm_pav_existants.462,462,T067,Textile,,Existant,536 rue Jacques Bounin
+mmm_pav_existants.463,463,T044,Textile,,Existant,20 rue d'assas
+mmm_pav_existants.464,464,T045,Textile,,Existant,20 rue des tilleuls
+mmm_pav_existants.465,465,V750,Verre,0,Existant,CHEMIN DE POUTINGON
+mmm_pav_existants.466,466,V250,Verre,0,Existant,RUE AUGUSTE BROUSSONNET
+mmm_pav_existants.467,467,V119,Verre,0,Existant,RUE DE LA CARTAIRADE
+mmm_pav_existants.468,468,V764,Verre,0,Existant,AVENEU DE LA ROUVIERE
+mmm_pav_existants.469,469,V598,Verre,0,Existant,AVENUE DU BERANGE
+mmm_pav_existants.470,470,V599,Verre,0,Existant,CHEMIN DES CADES
+mmm_pav_existants.471,471,V601,Verre,0,Existant,RUE DE LA BARRIERE
+mmm_pav_existants.472,472,V602,Verre,0,Existant,RUE DE LA RIVIERETTE
+mmm_pav_existants.473,473,V475,Verre,0,Existant,RUE DES ACCONIERS
+mmm_pav_existants.474,474,V476,Verre,0,Existant,RUE DES BATELIERS
+mmm_pav_existants.475,475,T051,Textile,,Existant,Avenue Jean Mermoz
+mmm_pav_existants.476,476,T052,Textile,,Existant,272 rue Guglielmo marconi
+mmm_pav_existants.477,477,T053,Textile,,Existant,Rue Martin luther king
+mmm_pav_existants.478,478,V505,Verre,0,Existant,RUE GUGLIELMO MARCONI
+mmm_pav_existants.479,479,T054,Textile,,Existant,Rue Circé
+mmm_pav_existants.480,480,T058,Textile,,Existant,Rue de la Jalade
+mmm_pav_existants.481,481,T059,Textile,,Existant,377 rue d'Ajaccio
+mmm_pav_existants.482,482,T060,Textile,,Existant,39 Abbé Paul parguel
+mmm_pav_existants.483,483,T064,Textile,,Existant,Avenue de Saint-Lazare
+mmm_pav_existants.484,484,T066,Textile,,Existant,Rue de la costa brava
+mmm_pav_existants.485,485,T072,Textile,,Existant,Rue François Dezeuze
+mmm_pav_existants.486,486,T071,Textile,,Existant,670 rue de Bugarel
+mmm_pav_existants.487,487,T073,Textile,,Existant,673 avenue de la pompignane
+mmm_pav_existants.488,488,T074,Textile,,Existant,677 rue de la roqueturière
+mmm_pav_existants.489,489,T076,Textile,,Existant,rue Paul Marres
+mmm_pav_existants.490,490,T077,Textile,,Existant,Rue de Nazareth
+mmm_pav_existants.491,491,T079,Textile,,Existant,Avenue Bouisson-Bertrand
+mmm_pav_existants.492,492,T084,Textile,,Existant,Avenue de Palavas
+mmm_pav_existants.493,493,T086,Textile,,Existant,Avenue de Maurin
+mmm_pav_existants.494,494,T093,Textile,,Existant,Chemin de moulares
+mmm_pav_existants.495,495,T094,Textile,,Existant,Impasse des numides
+mmm_pav_existants.496,496,T097,Textile,,Existant,Route de mende
+mmm_pav_existants.497,497,T075,Textile,,Existant,805 avenue de l'occtanie
+mmm_pav_existants.498,498,T078,Textile,,Existant,Allée Henry II de Montmorency
+mmm_pav_existants.499,499,T087,Textile,,Existant,Avenue Jean Mermoz
+mmm_pav_existants.500,500,T089,Textile,,Existant,Avenue de saint maurice de sauret
+mmm_pav_existants.501,501,T090,Textile,,Existant,Boulevard d'Antigone
+mmm_pav_existants.502,502,V263,Verre,3,Existant,IMPASSE VALTELINE
+mmm_pav_existants.503,503,V271,Verre,0,Existant,RUE DE LA CROIX DE LAVIT
+mmm_pav_existants.504,504,V274,Verre,0,Existant,RUE DE LA GALERA
+mmm_pav_existants.505,505,V061,Verre,3,Existant,PLAN DES GARRIGUES
+mmm_pav_existants.506,506,V075,Verre,0,Existant,RUE DU STADE
+mmm_pav_existants.507,507,V069,Verre,0,Existant,RUE BRIOU GARENNE
+mmm_pav_existants.508,508,V070,Verre,0,Existant,RUE TRAS DE LA GLEIZE
+mmm_pav_existants.509,509,V125,Verre,0,Existant,D5 ROUTE DE MONTBAZIN
+mmm_pav_existants.510,510,V076,Verre,0,Existant,RUE DES MAZELIERS
+mmm_pav_existants.511,511,V064,Verre,3,Existant,RUE DU ROMARIN
+mmm_pav_existants.512,512,V478,Verre,0,Existant,AVENUE DE PALAVAS
+mmm_pav_existants.513,513,T092,Textile,,Existant,Boulevard d'orient
+mmm_pav_existants.514,514,V078,Verre,0,Existant,RUE DE LA DEVEZES
+mmm_pav_existants.515,515,V083,Verre,0,Existant,RUE DES ESCALETTES
+mmm_pav_existants.516,516,V086,Verre,0,Existant,ALLEE DU LAC
+mmm_pav_existants.517,517,V901,Verre,0,Existant,RUE DU CAPDALLIECH
+mmm_pav_existants.518,518,V089,Verre,0,Existant,RUE HENRI BARBUSSE
+mmm_pav_existants.519,519,V084,Verre,0,Existant,AVENUE DU 8 MAI 1945
+mmm_pav_existants.520,520,V090,Verre,0,Existant,CHEMIN DE LAGARELLE
+mmm_pav_existants.521,521,V483,Verre,0,Existant,Allée Vincent d'Indy
+mmm_pav_existants.522,522,V485,Verre,3,Existant,RUE FERDINAND DE LESSEPS
+mmm_pav_existants.523,523,T091,Textile,,Existant,Boulevard d'orient
+mmm_pav_existants.524,524,T096,Textile,,Existant,Place de thèbes
+mmm_pav_existants.525,525,T099,Textile,,Existant,Rue Ali ben Chekhal
+mmm_pav_existants.526,526,T100,Textile,,Existant,Rue Auguste broussonnet
+mmm_pav_existants.527,527,T080,Textile,,Existant,Avenue de la justice de castelnau
+mmm_pav_existants.528,528,V508,Verre,0,Existant,RUE HIPPOLYTE FIZEAU
+mmm_pav_existants.529,529,V621,Verre,0,Existant,RUE PIERRE ET MARIE CURIE
+mmm_pav_existants.530,530,V623,Verre,0,Existant,ROUTE DE SETE
+mmm_pav_existants.531,531,V625,Verre,0,Existant,RUE DES JASSES
+mmm_pav_existants.532,532,V626,Verre,0,Existant,RUE DE LA GARE
+mmm_pav_existants.533,533,V627,Verre,0,Existant,CHEMIN DE LA COMBE
+mmm_pav_existants.534,534,V628,Verre,0,Existant,RUE DE LA GARE
+mmm_pav_existants.535,535,V447,Verre,0,Existant,RUE DE LA MARQUEROSE
+mmm_pav_existants.536,536,P001,Papier,0,Existant,RUE DU CONTROLE
+mmm_pav_existants.537,537,P002,Papier,0,Existant,RUE DE LA CROIX DE JALLE
+mmm_pav_existants.538,538,V003,Verre,0,Existant,D26 ROUTE DE CASTRIES
+mmm_pav_existants.539,539,T082,Textile,,Existant,Avenue de la pompignane
+mmm_pav_existants.540,540,T083,Textile,,Existant,Avenue de Palavas
+mmm_pav_existants.541,541,T088,Textile,,Existant,Avenue raimbaud d'orange
+mmm_pav_existants.542,542,V631,Verre,0,Existant,AVENUE GEORGES CLEMENCEAU
+mmm_pav_existants.543,543,V635,Verre,0,Existant,CHEMIN DE LA MARQUEROSE
+mmm_pav_existants.544,544,V636,Verre,0,Existant,RUE DES PRES
+mmm_pav_existants.545,545,V296,Verre,0,Existant,AVENUE ECOLE AGRICULTURE
+mmm_pav_existants.546,546,V306,Verre,0,Existant,RUE DES BOUISSES
+mmm_pav_existants.547,547,V318,Verre,0,Existant,AVENUE ETIENNE MEHUL
+mmm_pav_existants.548,548,V320,Verre,0,Existant,RUE DES BOUISSES
+mmm_pav_existants.549,549,V329,Verre,0,Existant,RUE DU CHATEAU D'O
+mmm_pav_existants.550,550,V011,Verre,0,Existant,CHEMIN DE SUSSARGUES
+mmm_pav_existants.551,551,P007,Papier,0,Existant,AVENUE DES APOLLONS
+mmm_pav_existants.552,552,T095,Textile,,Existant,Place Alexandre laissac
+mmm_pav_existants.553,553,V342,Verre,0,Existant,PLACE PIERRE VIALA
+mmm_pav_existants.554,554,V343,Verre,0,Existant,RUE DES AVANTS MONTS
+mmm_pav_existants.555,555,V348,Verre,0,Existant,AVENUE DES MOULINS
+mmm_pav_existants.556,556,V350,Verre,0,Existant,ALLEE DE PARIS
+mmm_pav_existants.557,557,V352,Verre,3,Existant,RUE FRANCOIS DEZEUZE
+mmm_pav_existants.558,558,V353,Verre,3,Existant,RUE DU PONT DE LAVERUNE
+mmm_pav_existants.559,559,V356,Verre,0,Existant,RUE DES BOUISSES
+mmm_pav_existants.560,560,P097,Papier,0,Existant,BD DES ARCEAUX
+mmm_pav_existants.561,561,P098,Papier,0,Existant,RUE AUGUSTE BROUSSONNET
+mmm_pav_existants.562,562,P101,Papier,0,Existant,AVENUE DU PONT JUVENAL
+mmm_pav_existants.563,563,T098,Textile,,Existant,Rue Adrien Proby
+mmm_pav_existants.564,564,P115,Papier,0,Existant,RUE AUGUSTE BROUSSONNET
+mmm_pav_existants.565,565,P116,Papier,0,Existant,AVENUE D'ASSAS
+mmm_pav_existants.566,566,P117,Papier,0,Existant,AVENUE D'ASSAS
+mmm_pav_existants.567,567,P118,Papier,0,Existant,RUE LEON BLUM
+mmm_pav_existants.568,568,P121,Papier,0,Existant,RUE DE L'EPIRE
+mmm_pav_existants.569,569,V359,Verre,0,Existant,RUE FRA ANGELICO
+mmm_pav_existants.570,570,V362,Verre,0,Existant,AVENUE ECOLE AGRICULTURE
+mmm_pav_existants.571,571,P012,Papier,0,Existant,D26
+mmm_pav_existants.572,572,V637,Verre,0,Existant,RUE DES HORTS de VERNIS
+mmm_pav_existants.573,573,P187,Papier,0,Existant,RUE DES CARIGNANS
+mmm_pav_existants.574,574,V888,Verre,0,Existant,AVENUE DE LA GARE
+mmm_pav_existants.575,575,V648,Verre,0,Existant,ALLEE DES JARDINS D'HIVER
+mmm_pav_existants.576,576,V649,Verre,0,Existant,BOULEVARD FREDERIC MISTRAL
+mmm_pav_existants.577,577,V644,Verre,0,Existant,RUE DE L'ABRIVADO
+mmm_pav_existants.578,578,P189,Papier,0,Existant,RUE DE L'ABRIVADO
+mmm_pav_existants.579,579,P190,Papier,0,Existant,D116 ROUTE DE MIREVAL
+mmm_pav_existants.580,580,P197,Papier,0,Existant,RUE DES MYOSOTIS
+mmm_pav_existants.581,581,V487,Verre,0,Existant,RUE CASANOVA
+mmm_pav_existants.582,582,P199,Papier,0,Existant,AVENUE DE PALAVAS
+mmm_pav_existants.583,583,P202,Papier,0,Existant,D185 ROUTE DE MONTPELLIER
+mmm_pav_existants.584,584,V547,Verre,0,Existant,RUE DE L'AGATHOIS
+mmm_pav_existants.585,585,V654,Verre,0,Existant,D116 ROUTE DE MIREVAL
+mmm_pav_existants.586,586,V655,Verre,0,Existant,RUE DES PALOURDES
+mmm_pav_existants.587,587,V657,Verre,0,Existant,D 612
+mmm_pav_existants.588,588,V658,Verre,0,Existant,BOULEVARD DES MOURES
+mmm_pav_existants.589,589,V661,Verre,0,Existant,BOULEVARD DES MOURES
+mmm_pav_existants.590,590,V662,Verre,0,Existant,CHEMIN DU PILOU
+mmm_pav_existants.591,591,V663,Verre,0,Existant,RUE DES MYOSOTIS
+mmm_pav_existants.592,592,T103,Textile,,Existant,rue de la crête
+mmm_pav_existants.593,593,T104,Textile,,Existant,Rue de curat
+mmm_pav_existants.594,594,T109,Textile,,Existant,Rue de la cité saint roch
+mmm_pav_existants.595,595,V664,Verre,0,Existant,RUE HENRI POITEVIN
+mmm_pav_existants.596,596,V665,Verre,0,Existant,BOULEVARD DU CHAPITRE
+mmm_pav_existants.597,597,V669,Verre,0,Existant,RUE DE LA FIGUIERE
+mmm_pav_existants.598,598,V672,Verre,0,Existant,D185 ROUTE DE MONTPELLIER
+mmm_pav_existants.599,599,V693,Verre,0,Existant,POINT PROPRETE
+mmm_pav_existants.600,600,V364,Verre,0,Existant,AVENUE DE LA JUSTICE
+mmm_pav_existants.601,601,V539,Verre,0,Existant,RUE DE RHODES
+mmm_pav_existants.602,602,V807,Verre,0,Existant,RUE DES CHASSEURS
+mmm_pav_existants.603,603,V806,Verre,0,Existant,RUE DES CHANTERELLES
+mmm_pav_existants.604,604,V802,Verre,0,Existant,RUE AIGUERELLES
+mmm_pav_existants.605,605,T,Textile,0,Existant,AVENUE PAUL VALERY
+mmm_pav_existants.606,606,T111,Textile,,Existant,Rue de la vieille poste
+mmm_pav_existants.607,607,P179,Papier,0,Existant,POINT PROPRETE
+mmm_pav_existants.608,608,V604,Verre,3,Existant,AUBERGE DU BERANGES
+mmm_pav_existants.609,609,V055,Verre,3,Existant,RUE DE VENDARGUES
+mmm_pav_existants.610,610,V124,Verre,0,Existant,CHEMIN DE LA DRAYE
+mmm_pav_existants.611,611,V157,Verre,0,Existant,RUE DU LANTISSARGUES
+mmm_pav_existants.612,612,V543,Verre,0,Existant,RUE DE CLARET
+mmm_pav_existants.613,613,V546,Verre,0,Existant,RUE ETIENNE CHARTIER DIT ALAIN
+mmm_pav_existants.614,614,V548,Verre,0,Existant,RUE FRANCISCO GOYA
+mmm_pav_existants.615,615,V160,Verre,0,Existant,RUE DU MISTRAL
+mmm_pav_existants.616,616,V673,Verre,0,Existant,ESPLANADE DES OLIVIERS
+mmm_pav_existants.617,617,V674,Verre,0,Existant,CHEMIN DE CAYLUS
+mmm_pav_existants.618,618,V676,Verre,0,Existant,AVENUE ANDRE AMPERE
+mmm_pav_existants.619,619,P165,Papier,0,Existant,RUE DE CHEN DU
+mmm_pav_existants.620,620,V292,Verre,0,Existant,RUE DE LAS SORBES
+mmm_pav_existants.621,621,V293,Verre,0,Existant,RUE DE CLEMENTVILLE
+mmm_pav_existants.622,622,V295,Verre,0,Existant,RUE DE CLEMENTVILLE
+mmm_pav_existants.623,623,P124,Papier,0,Existant,RUE DE LA MADELEINE
+mmm_pav_existants.624,624,P125,Papier,0,Existant,RUE DE BUGAREL
+mmm_pav_existants.625,625,P127,Papier,0,Existant,RUE DANTON
+mmm_pav_existants.626,626,P128,Papier,0,Existant,RUE RAIMOND DE TRENCAVEL
+mmm_pav_existants.627,627,P073,Papier,0,Existant,RUE DE LA CROIX DE LAVIT
+mmm_pav_existants.628,628,P135,Papier,0,Existant,AVENUE DE MAURIN
+mmm_pav_existants.629,629,V417,Verre,0,Existant,AVENUE DE LA CROIX DU CAPITAINE
+mmm_pav_existants.630,630,V420,Verre,0,Existant,PLACE FOURIER
+mmm_pav_existants.631,631,V423,Verre,0,Existant,RUE DE LA MADELEINE
+mmm_pav_existants.632,632,V425,Verre,0,Existant,RUE DE BUGAREL
+mmm_pav_existants.633,633,V426,Verre,0,Existant,BOULEVARD PAUL VALERY
+mmm_pav_existants.634,634,V428,Verre,0,Existant,RUE CHARLES DE COULOMB
+mmm_pav_existants.635,635,V436,Verre,0,Existant,RUE FRANCOIS MIREUR
+mmm_pav_existants.636,636,V431,Verre,0,Existant,ROUTE DE LAVERUNE
+mmm_pav_existants.637,637,V433,Verre,0,Existant,RUE DANTON
+mmm_pav_existants.638,638,V435,Verre,0,Existant,RUE DU LAVANDIN
+mmm_pav_existants.639,639,V441,Verre,0,Existant,RUE PROFESSEUR HENRI ROSEAU
+mmm_pav_existants.640,640,V443,Verre,0,Existant,RUE DE MONTELS SAINT-PIERRE
+mmm_pav_existants.641,641,P328,Papier,0,Existant,RUE DES CADES
+mmm_pav_existants.642,642,V884,Verre,0,Existant,D132
+mmm_pav_existants.643,643,P366,Papier,0,Existant,RUE DANTON DEMAR
+mmm_pav_existants.644,644,V122,Verre,0,Existant,AVENUE PIERRE DE COUBERTIN
+mmm_pav_existants.645,645,V141,Verre,0,Existant,AVENUE LEONARD DE VINCI
+mmm_pav_existants.646,646,V118,Verre,0,Existant,CHEMIN DES TAMARIS
+mmm_pav_existants.647,647,T112,Textile,,Existant,Rue de monsieur Teste
+mmm_pav_existants.648,648,T117,Textile,,Existant,Rue des bouisses
+mmm_pav_existants.649,649,T119,Textile,,Existant,rue des chasseurs
+mmm_pav_existants.650,650,T120,Textile,,Existant,Rue des fourbisseurs
+mmm_pav_existants.651,651,T121,Textile,,Existant,rue des papyrus
+mmm_pav_existants.652,652,T122,Textile,,Existant,rue des pradiers
+mmm_pav_existants.653,653,V365,Verre,0,Existant,ALLEE DU NOUVEAU MONDE
+mmm_pav_existants.654,654,P311,Papier,0,Existant,CHEMIN DES CADES
+mmm_pav_existants.655,655,V822,Verre,0,Existant,IMPASSE DE L'HORIZON
+mmm_pav_existants.656,656,P315,Papier,0,Existant,REU SAINT BAUZILLE
+mmm_pav_existants.657,657,V828,Verre,0,Existant,RUE DE LA PEPINIERE
+mmm_pav_existants.658,658,P317,Papier,0,Existant,RUE DE LA PEPINIERE
+mmm_pav_existants.659,659,P319,Papier,0,Existant,RUE DES MARESTRELLES
+mmm_pav_existants.660,660,V834,Verre,0,Existant,RUE DELA BANQUIERE
+mmm_pav_existants.661,661,V840,Verre,0,Existant,CHEMIN DES COURECHES
+mmm_pav_existants.662,662,V392,Verre,0,Existant,RUE JACQUES BRIVES
+mmm_pav_existants.663,663,V396,Verre,0,Existant,QUAI DU VERDANSON
+mmm_pav_existants.664,664,V399,Verre,0,Existant,ROND POINT ODETTE BRAGER CAPION
+mmm_pav_existants.665,665,V400,Verre,0,Existant,RUE DE NAZARETH
+mmm_pav_existants.666,666,V401,Verre,0,Existant,RUE DU PIOCH DE BOUTONNET
+mmm_pav_existants.667,667,V653,Verre,0,Existant,D116 ROUTE DE MIREVAL
+mmm_pav_existants.668,668,V873,Verre,0,Existant,RUE FONTAINE DE L'HOSPITAL
+mmm_pav_existants.669,669,V815,Verre,0,Existant,RUE DU DEVOIS
+mmm_pav_existants.670,670,V817,Verre,0,Existant,ALLEE DE LA LIBERTE
+mmm_pav_existants.671,671,VRS07,Verre,3,Existant,cafette cité U triolet
+mmm_pav_existants.672,672,P102,Papier,0,Existant,RUE DU GRAND SAINT JEAN
+mmm_pav_existants.673,673,V345,Verre,3,Existant,IMPASSE LOUIS FERDINAND HEROLD
+mmm_pav_existants.674,674,P100,Papier,0,Existant,ALLEE DU NOUVEAU MONDE
+mmm_pav_existants.675,675,P384,Papier,0,Existant,Marco polo
+mmm_pav_existants.676,676,V992,Verre,0,Existant,Marco polo
+mmm_pav_existants.677,677,V989,Verre,0,Existant,Rue Bouissinesq
+mmm_pav_existants.678,678,V991,Verre,0,Existant,Chemin de castries
+mmm_pav_existants.679,679,V204,Verre,0,Existant,RUE DE BOLOGNE
+mmm_pav_existants.680,680,V285,Verre,0,Existant,RUE FRANCOIS HENRI D'HARCOURT
+mmm_pav_existants.681,681,V926,Verre,0,Existant,marche gare mercadis
+mmm_pav_existants.682,682,V809,Verre,0,Existant,RUE GASTON BAISSETTE
+mmm_pav_existants.683,683,P314,Papier,0,Existant,RUE DES ACACIAS
+mmm_pav_existants.684,684,V878,Verre,0,Existant,AVENUE DE LIBRILLA
+mmm_pav_existants.685,685,V151,Verre,0,Existant,RUE DU VIEUX CHENE
+mmm_pav_existants.686,686,P182,Papier,0,Existant,RUE THEOPHRASTE RENAUDOT
+mmm_pav_existants.687,687,V849,Verre,0,Existant,CHEMIN DU MAS BUISSON
+mmm_pav_existants.688,688,V850,Verre,0,Existant,RUE DE LA CADELLE
+mmm_pav_existants.689,689,V851,Verre,0,Existant,RUE DES CIGALES
+mmm_pav_existants.690,690,V383,Verre,0,Existant,AVENUE DE SAINT MAUR
+mmm_pav_existants.691,691,V874,Verre,0,Existant,RUE AUGUSTE RENOIR
+mmm_pav_existants.692,692,P068,Papier,3,Existant,AVENUE D'OCCITANIE
+mmm_pav_existants.693,693,V766,Verre,0,Existant,RUE DU SALAISON
+mmm_pav_existants.694,694,V085,Verre,0,Existant,AVENUE DU 8 MAI 1945
+mmm_pav_existants.695,695,V848,Verre,0,Existant,RUE DE COUPOUYRAN
+mmm_pav_existants.696,696,V298,Verre,3,Existant,RUE DU ROC DE PEZENAS
+mmm_pav_existants.697,697,V424,Verre,0,Existant,RUE RAIMOND DE TRENCAVEL
+mmm_pav_existants.698,698,V448,Verre,0,Existant,RUE DES FOURBISSEURS
+mmm_pav_existants.699,699,V528,Verre,0,Existant,RUE DE PINVILLE
+mmm_pav_existants.700,700,V580,Verre,0,Existant,ALLEE DU CIMETIERE
+mmm_pav_existants.701,701,V582,Verre,0,Existant,IMPASSE DU BRAGALOU
+mmm_pav_existants.702,702,T105,Textile,,Existant,Rue de Gignac
+mmm_pav_existants.703,703,T106,Textile,,Existant,Rue de l'Agathois
+mmm_pav_existants.704,704,T107,Textile,,Existant,Rue de l'Arnel
+mmm_pav_existants.705,705,T108,Textile,,Existant,rue de l'industrie
+mmm_pav_existants.706,706,T110,Textile,,Existant,Rue de la roqueturière
+mmm_pav_existants.707,707,V527,Verre,0,Existant,AVENUE DE LA POMPIGNANE
+mmm_pav_existants.708,708,P184,Papier,0,Existant,D613
+mmm_pav_existants.709,709,V498,Verre,0,Existant,RUE DU MOULIN DES SEPT CANS
+mmm_pav_existants.710,710,V534,Verre,0,Existant,AVENUE DU PONT JUVENAL
+mmm_pav_existants.711,711,V380,Verre,0,Existant,AVENUE DE SAINT-MAUR
+mmm_pav_existants.712,712,V962,Verre,0,Existant,DOMAINE DU GOLF
+mmm_pav_existants.713,713,V047,Verre,0,Existant,RUE DE LA GALUSTE
+mmm_pav_existants.714,714,V048,Verre,0,Existant,RUE DE LA GALUSTE
+mmm_pav_existants.715,715,V058,Verre,3,Existant,RUE DU PARAGUAY
+mmm_pav_existants.716,716,V525,Verre,0,Existant,RUE MARIE DURAND
+mmm_pav_existants.717,717,V555,Verre,0,Existant,RUE DES TAMARIS
+mmm_pav_existants.718,718,V557,Verre,0,Existant,AVENUE DU GENERAL LECLERC
+mmm_pav_existants.719,719,V558,Verre,0,Existant,AVENUE DU GENERAL LECLERC
+mmm_pav_existants.720,720,P172,Papier,0,Existant,AVENUE EMILE MERCIER
+mmm_pav_existants.721,721,V586,Verre,0,Existant,CHEMIN DU PRE
+mmm_pav_existants.722,722,T113,Textile,,Existant,Rue de Rhodes
+mmm_pav_existants.723,723,T114,Textile,,Existant,Rue de salaison
+mmm_pav_existants.724,724,T115,Textile,,Existant,Rue des bouisses
+mmm_pav_existants.725,725,V403,Verre,0,Existant,RUE MARIE CAIZERGUES
+mmm_pav_existants.726,726,P027,Papier,0,Existant,AVENUE LEONARD DE VINCI
+mmm_pav_existants.727,727,P168,Papier,0,Existant,RUE IMPASSE GALILEE
+mmm_pav_existants.728,728,P178,Papier,0,Existant,CHEMIN DES COLLEGIENS
+mmm_pav_existants.729,729,P180,Papier,0,Existant,AVENUE DE LA MEDITERRANEE
+mmm_pav_existants.730,730,V390,Verre,0,Existant,RUE EMILE DUPLOYE
+mmm_pav_existants.731,731,P161,Papier,0,Existant,ROND POINT ODETTE BRAGER CAPION
+mmm_pav_existants.732,732,P323,Papier,0,Existant,CHEMIN DES COURECHES
+mmm_pav_existants.733,733,P153,Papier,0,Existant,RUE LOUIS LEPINE
+mmm_pav_existants.734,734,V588,Verre,0,Existant,ROUTE DE BEAULIEU
+mmm_pav_existants.735,735,V916,Verre,0,Existant,AVENUE DU XV DE FRANCE
+mmm_pav_existants.736,736,V990,Verre,0,Existant,rue Gaucelin de la garde
+mmm_pav_existants.737,737,P064,Papier,0,Existant,ROUTE DE MENDE
+mmm_pav_existants.738,738,V049,Verre,0,Existant,AVENUE DU PIC SAINT-LOUP
+mmm_pav_existants.739,739,V050,Verre,0,Existant,RUE DE LA GUESSE
+mmm_pav_existants.740,740,V051,Verre,0,Existant,RUE DES COMBES
+mmm_pav_existants.741,741,P167,Papier,0,Existant,QUAI DU VERDANSON
+mmm_pav_existants.742,742,V545,Verre,0,Existant,RUE DU PAS DU LOUP
+mmm_pav_existants.743,743,P205,Papier,0,Existant,RUE DES GREZES
+mmm_pav_existants.744,744,V268,Verre,3,Existant,AVENUE DU PERE SOULAS
+mmm_pav_existants.745,745,V944,Verre,0,Existant,RUE DE LA THERIAQUE
+mmm_pav_existants.746,746,T116,Textile,,Existant,Rue des bouisses
+mmm_pav_existants.747,747,T118,Textile,,Existant,Rue des cétoines
+mmm_pav_existants.748,748,T123,Textile,,Existant,Rue des sureaux
+mmm_pav_existants.749,749,P110,Papier,0,Existant,PLACE DES BEAUX ARTS
+mmm_pav_existants.750,750,V053,Verre,0,Existant,CHEMIN DE LA PIERRE BLEUE
+mmm_pav_existants.751,751,V742,Verre,3,Existant,RUE DE LA JALADE
+mmm_pav_existants.752,752,V452,Verre,0,Existant,RUE SERGE LIFAR
+mmm_pav_existants.753,753,V226,Verre,0,Existant,BD D'ANTIGONE
+mmm_pav_existants.754,754,V194,Verre,0,Existant,RUE DE LEYDE
+mmm_pav_existants.755,755,V853,Verre,0,Existant,RUE DU MERLOT
+mmm_pav_existants.756,756,V854,Verre,0,Existant,DECHETERIE
+mmm_pav_existants.757,757,P345,Papier,0,Existant,RUE TRAS DE LA GLEIZE
+mmm_pav_existants.758,758,V013,Verre,0,Existant,La chichoumeille
+mmm_pav_existants.759,759,V239,Verre,3,Existant,AVENUE DE LA JUSTICE DE CASTELNAU
+mmm_pav_existants.760,760,V242,Verre,3,Existant,RUE DE L'AIGUELONGUE
+mmm_pav_existants.761,761,V405,Verre,0,Existant,AVENUE BOUISSON BERTRAND
+mmm_pav_existants.762,762,V406,Verre,0,Existant,RUE AUGUSTE BROUSSONNET
+mmm_pav_existants.763,763,V407,Verre,0,Existant,AVENUE D'ASSAS
+mmm_pav_existants.764,764,V408,Verre,0,Existant,AVENUE D'ASSAS
+mmm_pav_existants.765,765,V876,Verre,0,Existant,RUE DES OEILLETS
+mmm_pav_existants.766,766,P361,Papier,0,Existant,RUE DES OEILLETS
+mmm_pav_existants.767,767,T124,Textile,,Existant,Rue du grand saint jean
+mmm_pav_existants.768,768,T125,Textile,,Existant,Rue du latium
+mmm_pav_existants.769,769,T132,Textile,,Existant,Rue de Lavérune
+mmm_pav_existants.770,770,T137,Textile,,Existant,Rue henri rené
+mmm_pav_existants.771,771,T138,Textile,,Existant,Rue hippolthe rech
+mmm_pav_existants.772,772,T140,Textile,,Existant,Rue Leon Blum
+mmm_pav_existants.773,773,T144,Textile,,Existant,Rue Vendémiaire
+mmm_pav_existants.774,774,T171,Textile,,Existant,Rue Alexander Fleming
+mmm_pav_existants.775,775,V265,Verre,3,Existant,RUE DES MURIERS
+mmm_pav_existants.776,776,V479,Verre,0,Existant,RUE DE LA METAIRIE DE SAYSSET
+mmm_pav_existants.777,777,V877,Verre,0,Existant,PLACE DE LA MEDITERRANEE
+mmm_pav_existants.778,778,V880,Verre,0,Existant,RUE GUSTAVE CHARPENTIER
+mmm_pav_existants.779,779,V882,Verre,0,Existant,CHEMIN DE SORIECH
+mmm_pav_existants.780,780,P029,Papier,0,Existant,RUE DES GENETS
+mmm_pav_existants.781,781,V769,Verre,0,Existant,ROUTE DE SETE
+mmm_pav_existants.782,782,P186,Papier,0,Existant,AVENUE GEORGES CLEMENCEAU
+mmm_pav_existants.783,783,V316,Verre,3,Existant,AVENUE DE LA COLLINE
+mmm_pav_existants.784,784,V317,Verre,3,Existant,RUE DE LA CROIX DE FIGUEROLLES
+mmm_pav_existants.785,785,V331,Verre,0,Existant,RUE DES FRENES
+mmm_pav_existants.786,786,V333,Verre,0,Existant,RUE DES EUCALYPTUS
+mmm_pav_existants.787,787,V614,Verre,0,Existant,
+mmm_pav_existants.788,788,V054,Verre,0,Existant,DOMAINE DE FONDESPIERRE
+mmm_pav_existants.789,789,V886,Verre,0,Existant,AVENUE JEAN MOULIN
+mmm_pav_existants.790,790,P043,Papier,0,Existant,RUE DU BELVEDERE
+mmm_pav_existants.791,791,T172,Textile,,Existant,Rue du Brucq
+mmm_pav_existants.792,792,V617,Verre,0,Existant,RUE THEOPHRASTE RENAUDOT
+mmm_pav_existants.793,793,V330,Verre,0,Existant,RUE DE LA FREGATE
+mmm_pav_existants.794,794,V371,Verre,0,Existant,AVENUE JEAN MERMOZ
+mmm_pav_existants.795,795,V372,Verre,0,Existant,AVENUE DE L'AEROPORT INTERNATIONAL
+mmm_pav_existants.796,796,V374,Verre,0,Existant,PLACE SALENGRO
+mmm_pav_existants.797,797,P087,Papier,0,Existant,RUE DE LA FREGATE
+mmm_pav_existants.798,798,P144,Papier,0,Existant,CARREFOUR DES ALIZES
+mmm_pav_existants.799,799,V302,Verre,3,Existant,RUE DE LA CROIX DE FIGUEROLLES
+mmm_pav_existants.800,800,V509,Verre,0,Existant,AVENUE ALBERT EINSTEIN
+mmm_pav_existants.801,801,P400,Papier,0,Existant,rue des brusses
+mmm_pav_existants.802,802,V376,Verre,0,Existant,RUE DE LA FIGAIRASSE
+mmm_pav_existants.803,803,V377,Verre,0,Existant,AVENUE DE SAINT-MAUR
+mmm_pav_existants.804,804,V379,Verre,0,Existant,BOULEVARD MOUNIE
+mmm_pav_existants.805,805,V305,Verre,0,Existant,BOULEVARD HENRY IV
+mmm_pav_existants.806,806,V883,Verre,0,Existant,D132
+mmm_pav_existants.807,807,P370,Papier,0,Existant,RUE DE L'EGLISE
+mmm_pav_existants.808,808,P042,Papier,0,Existant,RUE DES ASPHODELES
+mmm_pav_existants.809,809,V647,Verre,0,Existant,rue robert shumann
+mmm_pav_existants.810,810,P131,Papier,0,Existant,Decheterie
+mmm_pav_existants.811,811,V562,Verre,0,Existant,D172
+mmm_pav_existants.812,812,V191,Verre,0,Existant,RUE DU BELVEDERE
+mmm_pav_existants.813,813,V065,Verre,3,Existant,RUE DE VENDARGUES
+mmm_pav_existants.814,814,P013,Papier,0,Existant,CIMETIERRE
+mmm_pav_existants.815,815,P016,Papier,0,Existant,RUE DE LA GALUSTE
+mmm_pav_existants.816,816,V036,Verre,0,Existant,RUE DES FAISSES
+mmm_pav_existants.817,817,V093,Verre,0,Existant,RUE JEAN-MARC ROUHAN
+mmm_pav_existants.818,818,V176,Verre,0,Existant,AVENUE PAUL VALERY
+mmm_pav_existants.819,819,P309,Papier,0,Existant,CHEMIN DE LA RIVIERETTE
+mmm_pav_existants.820,820,P133,Papier,0,Existant,RUE DU LAVANDIN
+mmm_pav_existants.821,821,P136,Papier,0,Existant,RUE SAINT-CLEOPHAS
+mmm_pav_existants.822,822,P336,Papier,0,Existant,RUE DU COLLEGE
+mmm_pav_existants.823,823,P372,Papier,0,Existant,ROUTE DE SAINT GEORGES D'ORQUES
+mmm_pav_existants.824,824,P032,Papier,0,Existant,ALLEE DE TOURNEFORT
+mmm_pav_existants.825,825,V139,Verre,0,Existant,CHEMIN DU MAS DE CAUSSE
+mmm_pav_existants.826,826,V450,Verre,0,Existant,RUE DES ESCARCELLIERS
+mmm_pav_existants.827,827,V303,Verre,3,Existant,RUE MARTIN LUTHER KING
+mmm_pav_existants.828,828,V007,Verre,0,Existant,ROUTE DE LA GARE
+mmm_pav_existants.829,829,V385,Verre,0,Existant,RUE DES PRADIERS
+mmm_pav_existants.830,830,V841,Verre,0,Existant,RUE DU CHATEAU DE BIONNE
+mmm_pav_existants.831,831,V336,Verre,0,Existant,RUE DES PAPYRUS
+mmm_pav_existants.832,832,V349,Verre,0,Existant,RUE DES ROCHES ROUGES
+mmm_pav_existants.833,833,P112,Papier,0,Existant,RUE DU CURAT
+mmm_pav_existants.834,834,V659,Verre,0,Existant,AVENUE DE PALAVAS
+mmm_pav_existants.835,835,V842,Verre,0,Existant,CHEMIN DE L'AMOUR
+mmm_pav_existants.836,836,V309,Verre,0,Existant,AVENUE DE PALAVAS
+mmm_pav_existants.837,837,V416,Verre,0,Existant,RUE DE L'EPIRE
+mmm_pav_existants.838,838,V422,Verre,0,Existant,RUE DES SABINES
+mmm_pav_existants.839,839,V442,Verre,0,Existant,RUE SAINT CLEOPHAS
+mmm_pav_existants.840,840,P162,Papier,0,Existant,ALLEE .H. II DE MONTMORENCY
+mmm_pav_existants.841,841,P130,Papier,0,Existant,ROUTE DE LAVERUNE
+mmm_pav_existants.842,842,T174,Textile,,Existant,Chemin des Garrigues basses
+mmm_pav_existants.843,843,P334,Papier,0,Existant,AVENUE SAINTE-CECILE
+mmm_pav_existants.844,844,V965,Verre,0,Existant,Avenue de Maurin
+mmm_pav_existants.845,845,T001,Textile,,Existant,Avenue de la biste
+mmm_pav_existants.846,846,P318,Papier,0,Existant,RUE DU PUIT
+mmm_pav_existants.847,847,V501,Verre,0,Existant,RUE LE TITIEN
+mmm_pav_existants.848,848,V502,Verre,0,Existant,RUE LE TITIEN
+mmm_pav_existants.849,849,V339,Verre,0,Existant,AVENUE DU PROFESSEUR LOUIS RAVAZ
+mmm_pav_existants.850,850,V395,Verre,0,Existant,RUE DE L'OLYMPIE
+mmm_pav_existants.851,851,V559,Verre,0,Existant,RUE D'OCCITANIE
+mmm_pav_existants.852,852,V409,Verre,0,Existant,RUE HIPPOLYTE RECH
+mmm_pav_existants.853,853,V862,Verre,0,Existant,AVENUE DE LAFONTVIN
+mmm_pav_existants.854,854,V440,Verre,3,Existant,ALLE DE LA MARTELLE
+mmm_pav_existants.855,855,V109,Verre,0,Existant,ROUTE DE MONTFERRIERT D127 E4
+mmm_pav_existants.856,856,V244,Verre,3,Existant,RUE DU MOULIN DE GASCONNE
+mmm_pav_existants.857,857,V914,Verre,0,Existant,RUE GUSTAVE EIFFEL
+mmm_pav_existants.858,858,V939,Verre,0,Existant,RUE D'ARGENCOURT
+mmm_pav_existants.859,859,V942,Verre,0,Existant,AVENUE DE VANIERES (STADE)
+mmm_pav_existants.860,860,V300,Verre,0,Existant,RUE DE LAS SORBES
+mmm_pav_existants.861,861,V461,Verre,0,Existant,RUE DES CHASSEURS
+mmm_pav_existants.862,862,V832,Verre,0,Existant,
+mmm_pav_existants.863,863,V338,Verre,0,Existant,AVENUE DU PROFESSEUR LOUIS RAVAZ
+mmm_pav_existants.864,864,V904,Verre,0,Existant,CHEMIN DE L'OLIVETTE
+mmm_pav_existants.865,865,P158,Papier,0,Existant,CHEMIN DES BARQUES
+mmm_pav_existants.866,866,V500,Verre,0,Existant,RUE DES PELICANS
+mmm_pav_existants.867,867,V232,Verre,3,Existant,ALLEE JEAN ROSTAND
+mmm_pav_existants.868,868,V756,Verre,0,Existant,RUE DE LA SPIRALE
+mmm_pav_existants.869,869,V252,Verre,3,Existant,AVENUE EMILE DIACON
+mmm_pav_existants.870,870,V270,Verre,3,Existant,RUE DE LA MOUNEDA
+mmm_pav_existants.871,871,V062,Verre,3,Existant,RUE DE LA FONTAINE
+mmm_pav_existants.872,872,P320,Papier,0,Existant,RUE DU MISTRAL
+mmm_pav_existants.873,873,T175,Textile,,Existant,avenue Georges Brassens
+mmm_pav_existants.874,874,T179,Textile,,Existant,Route de Mireval
+mmm_pav_existants.875,875,T180,Textile,,Existant,Boulevard des moures
+mmm_pav_existants.876,876,T102,Textile,,Existant,Rue corinthe
+mmm_pav_existants.877,877,V550,Verre,0,Existant,RUE DES CLAUZES
+mmm_pav_existants.878,878,V551,Verre,0,Existant,PLACE DU MAS GARENC
+mmm_pav_existants.879,879,V186,Verre,0,Existant,CHEMIN DU POUGET
+mmm_pav_existants.880,880,P051,Papier,0,Existant,RUE MERE VACQUIER
+mmm_pav_existants.881,881,P341,Papier,0,Existant,CHEMIN DU MAS BUISSON
+mmm_pav_existants.882,882,V319,Verre,0,Existant,rue henry Dunant
+mmm_pav_existants.883,883,V917,Verre,0,Existant,RUE VIOLLET-LE-DUC
+mmm_pav_existants.884,884,V590,Verre,0,Existant,AVENUE DE NIMES
+mmm_pav_existants.885,885,P107,Papier,0,Existant,RUE EMILE DUPLOYE
+mmm_pav_existants.886,886,V861,Verre,0,Existant,RUE DES MUSCADELS
+mmm_pav_existants.887,887,T101,Textile,,Existant,Rue Bernard Délicieux
+mmm_pav_existants.888,888,P176,Papier,0,Existant,AVENUE DE NIMES
+mmm_pav_existants.889,889,V760,Verre,3,Existant,AVENUE DU VAL DE MONTFERRAND
+mmm_pav_existants.890,890,P351,Papier,0,Existant,CHEMIN DE LA MARQUEROSE
+mmm_pav_existants.891,891,V875,Verre,0,Existant,RUE DE LA FLAMADE
+mmm_pav_existants.892,892,V887,Verre,0,Existant,RUE DU CINSAULT
+mmm_pav_existants.893,893,V869,Verre,0,Existant,AVENUE DU MEJEAN
+mmm_pav_existants.894,894,V149,Verre,0,Existant,CHEMIN DE SAPORTA
+mmm_pav_existants.895,895,V163,Verre,0,Existant,VOIE ROMAINE (D5e3)
+mmm_pav_existants.896,896,V167,Verre,0,Existant,RUE DES AMANDIERS
+mmm_pav_existants.897,897,V168,Verre,0,Existant,AVENUE DU JEU DE MAIL
+mmm_pav_existants.898,898,V169,Verre,0,Existant,CHEMIN DE L'ENGARRAN
+mmm_pav_existants.899,899,P060,Papier,3,Existant,ALLEE DE BON ACCUEIL
+mmm_pav_existants.900,900,P061,Papier,3,Existant,RUE DE L'AIGUELONGUE
+mmm_pav_existants.901,901,P010,Papier,3,Existant,AVENUE DU VAL DE MONTFERRAND
+mmm_pav_existants.902,902,V813,Verre,0,Existant,RUE LOUIS BOUIS
+mmm_pav_existants.903,903,V347,Verre,0,Existant,AV. DE LODEVE
+mmm_pav_existants.904,904,T085,Textile,,Existant,avenue du pirée
+mmm_pav_existants.905,905,T173,Textile,,Existant,Avenue de la condamine
+mmm_pav_existants.906,906,T,Textile,,Existant,Avenue de la mer
+mmm_pav_existants.907,907,P011,Papier,0,Existant,ALLEE MARIE CURIE
+mmm_pav_existants.908,908,V016,Verre,0,Existant,AVENUE DE LA GARRIGUE
+mmm_pav_existants.909,909,P367,Papier,0,Existant,AVENUE DU 8 MAI 1945
+mmm_pav_existants.910,910,P090,Papier,0,Existant,AVENUE DU PROFESSEUR LOUIS RAVAZ
+mmm_pav_existants.911,911,V073,Verre,0,Existant,RUE DE LA VIERGE
+mmm_pav_existants.912,912,V980,Verre,0,Existant,RUE HILAIRE BERNIGAUD
+mmm_pav_existants.913,913,P006,Papier,0,Existant,RUE DES EGLANTIERS
+mmm_pav_existants.914,914,P316,Papier,0,Existant,RUE FONTAINE DE LATTES
+mmm_pav_existants.915,915,V859,Verre,,Existant,Rue des consuls
+mmm_pav_existants.916,916,V935,Verre,0,Existant,AVENUE DE LA JUSTICE DE CASTELNAU
+mmm_pav_existants.917,917,V230,Verre,3,Existant,RUE DE LA ROQUETURIERE
+mmm_pav_existants.918,918,P196,Papier,0,Existant,BOULEVARD DES MOURES
+mmm_pav_existants.919,919,V046,Verre,0,Existant,AVENUE DE LA ROYALE
+mmm_pav_existants.920,920,V105,Verre,0,Existant,IMPASSE BASILES
+mmm_pav_existants.921,921,V181,Verre,0,Existant,AVENUE DE LA MEDITERRANEE
+mmm_pav_existants.922,922,P039,Papier,0,Existant,AVENUE DU MISTRAL
+mmm_pav_existants.923,923,P069,Papier,3,Existant,ROUTE DE GANGES
+mmm_pav_existants.924,924,P346,Papier,0,Existant,RUE DU STADE
+mmm_pav_existants.925,925,V170,Verre,0,Existant,AVENUE DU MISTRAL
+mmm_pav_existants.926,926,P155,Papier,0,Existant,RUE MARIE DURAND
+mmm_pav_existants.927,927,V241,Verre,3,Existant,ALLEE DE BON ACCUEIL
+mmm_pav_existants.928,928,P081,Papier,0,Existant,PLACE SALENGRO
+mmm_pav_existants.929,929,V174,Verre,0,Existant,RUE DU COUCHANT
+mmm_pav_existants.930,930,V127,Verre,0,Existant,RUE DE L'EGLISE
+mmm_pav_existants.931,931,V743,Verre,0,Existant,RUE ANATOLE FRANCE
+mmm_pav_existants.932,932,V556,Verre,0,Existant,RUE DU HANGAR
+mmm_pav_existants.933,933,P329,Papier,0,Existant,RUE DES CLAUZES
+mmm_pav_existants.934,934,V507,Verre,0,Existant,RUE ALFRED NOBEL
+mmm_pav_existants.935,935,V074,Verre,0,Existant,RUE DU STADE
+mmm_pav_existants.936,936,V600,Verre,0,Existant,CHEMIN DES PIERRES
+mmm_pav_existants.937,937,V899,Verre,0,Existant,AVENUE JUSTIN BEC
+mmm_pav_existants.938,938,V765,Verre,0,Existant,RUE MAX MOUSSERON
+mmm_pav_existants.939,939,V144,Verre,0,Existant,CHEMIN DES JARDINS DE MAGUELONE
+mmm_pav_existants.940,940,V934,Verre,3,Existant,RUE MAS DE CALENDA
+mmm_pav_existants.941,941,V412,Verre,0,Existant,RUE JOHN LOCK
+mmm_pav_existants.942,942,P212,Papier,0,Existant,AVENUE DES PLATANES
+mmm_pav_existants.943,943,P379,Papier,0,Existant,CHEMIN DE CAYLUS
+mmm_pav_existants.944,944,V411,Verre,0,Existant,PLACE JEAN ANTOINE DE CHAPTAL
+mmm_pav_existants.945,945,V107,Verre,0,Existant,RUE DE LA TREILLE
+mmm_pav_existants.946,946,V120,Verre,0,Existant,PLACE FREDERIC MISTRAL
+mmm_pav_existants.947,947,P019,Papier,0,Existant,PLACE JEAN BAUMEL
+mmm_pav_existants.948,948,V747,Verre,0,Existant,RUE ULYSSE VERGNES
+mmm_pav_existants.949,949,V749,Verre,0,Existant,RUE ROBERT CAPA
+mmm_pav_existants.950,950,V541,Verre,0,Existant,RUE DES ANTHEMIS
+mmm_pav_existants.951,951,V272,Verre,0,Existant,AVENUE DES MOULINS
+mmm_pav_existants.952,952,V071,Verre,0,Existant,IMPASSE DES CLAVOUX
+mmm_pav_existants.953,953,V081,Verre,0,Existant,RUE DANTON DENAR
+mmm_pav_existants.954,954,V095,Verre,0,Existant,RUE DES COUSSES
+mmm_pav_existants.955,955,V175,Verre,0,Existant,AVENUE PAUL VALERY
+mmm_pav_existants.956,956,P141,Papier,0,Existant,RUE DE CENTRAYRARGUES
+mmm_pav_existants.957,957,V463,Verre,0,Existant,RUE DES ANEMONES
+mmm_pav_existants.958,958,P152,Papier,0,Existant,RUE HENRI BERGSON
+mmm_pav_existants.959,959,V344,Verre,0,Existant,RUE PAUL RIMBAUD
+mmm_pav_existants.960,960,P353,Papier,0,Existant,Déchetterie
+mmm_pav_existants.961,961,V367,Verre,0,Existant,RUE DU GRAND SAINT JEAN
+mmm_pav_existants.962,962,V375,Verre,3,Existant,RUE PROSPER LISSARAGAY
+mmm_pav_existants.963,963,V542,Verre,0,Existant,RUE BERNARD LECACHE
+mmm_pav_existants.964,964,V415,Verre,0,Existant,BOULEVARD VIEUSSENS
+mmm_pav_existants.965,965,P129,Papier,0,Existant,RUE ETIENNE CHARTIER DIT ALAIN
+mmm_pav_existants.966,966,V430,Verre,0,Existant,RUE HEBERT
+mmm_pav_existants.967,967,P166,Papier,0,Existant,AVENUE PIERRE DE COUBERTIN
+mmm_pav_existants.968,968,V297,Verre,0,Existant,RUE FONTAINE DE LATTES
+mmm_pav_existants.969,969,V229,Verre,3,Existant,RUE DE LA ROQUETURIERE
+mmm_pav_existants.970,970,V240,Verre,3,Existant,RUE DES CETOINES
+mmm_pav_existants.971,971,P375,Papier,3,Existant,RUE DU PARAGUAY
+mmm_pav_existants.972,972,V108,Verre,0,Existant,route de montferrier
+mmm_pav_existants.973,973,P354,Papier,0,Existant,Allée du Lac
+mmm_pav_existants.974,974,T129,Textile,,Existant,Rue du pas du loup
+mmm_pav_existants.975,975,T,Textile,0,Existant,AVENUE DU GENERAL GROLLIER
+mmm_pav_existants.976,976,T,Textile,0,Existant,CHEMIN DE VENDARGUES A ST AUNES
+mmm_pav_existants.977,977,V117,Verre,0,Existant,CHEMIN DES TAMARIS
+mmm_pav_existants.978,978,T146,Textile,,Existant,Allée de la Martelle
+mmm_pav_existants.979,979,T151,Textile,,Existant,Route de saint georges d'orques
+mmm_pav_existants.980,980,T155,Textile,,Existant,2 rue samuel de Champlain
+mmm_pav_existants.981,981,T126,Textile,,Existant,Rue du mas de Calenda
+mmm_pav_existants.982,982,T127,Textile,,Existant,Rue du mas de Calenda
+mmm_pav_existants.983,983,T128,Textile,,Existant,Rue du moulin de Semalen
+mmm_pav_existants.984,984,T130,Textile,,Existant,Rue du pas du loup
+mmm_pav_existants.985,985,T131,Textile,,Existant,Rue du pont de lavérune
+mmm_pav_existants.986,986,T133,Textile,,Existant,Rue du professeur joseph Anglada
+mmm_pav_existants.987,987,T139,Textile,,Existant,Rue Jean Vachet
+mmm_pav_existants.988,988,T142,Textile,,Existant,Rue du pioch de boutonnet
+mmm_pav_existants.989,989,T147,Textile,,Existant,Espace mosson
+mmm_pav_existants.990,990,T148,Textile,,Existant,Espace mosson
+mmm_pav_existants.991,991,T149,Textile,,Existant,Espace mosson
+mmm_pav_existants.992,992,T135,Textile,,Existant,Rue fructidor
+mmm_pav_existants.993,993,T168,Textile,,Existant,Allée Joseph Cambon
+mmm_pav_existants.994,994,V260,Verre,3,Existant,AVENUE D'OCCITANIE
+mmm_pav_existants.995,995,V605,Verre,0,Existant,AUBERGE DU BERANGES
+mmm_pav_existants.996,996,V132,Verre,0,Existant,AVENUE DES HAUTS DE FONTCAUDE
+mmm_pav_existants.997,997,P062,Papier,0,Existant,RUE TYCHO BRAHE
+mmm_pav_existants.998,998,V945,Verre,3,Existant,RUE DE LA CHENAIE
+mmm_pav_existants.999,999,V256,Verre,3,Existant,AVENUE DE L'ABBE PAUL PARGUEL
+mmm_pav_existants.1000,1000,P024,Papier,3,Existant,RUE JEAN FRANCOIS BRETON
+mmm_pav_existants.1001,1001,P376,Papier,0,Existant,CHEMIN DES TAMARIS
+mmm_pav_existants.1002,1002,P378,Papier,0,Existant,RUE DES JARDINS
+mmm_pav_existants.1003,1003,V222,Verre,0,Existant,ROUTE DE MENDE
+mmm_pav_existants.1004,1004,V224,Verre,0,Existant,ROUTE DE MENDE
+mmm_pav_existants.1005,1005,T,Textile,0,Existant,RUE DE LA GALUSTE
+mmm_pav_existants.1006,1006,V902,Verre,0,Existant,PALADIUM
+mmm_pav_existants.1007,1007,V900,Verre,0,Existant,RUE JULES ISAAC
+mmm_pav_existants.1008,1008,V741,Verre,0,Existant,RUE ANATOLE FRANCE
+mmm_pav_existants.1009,1009,P099,Papier,0,Existant,AVENUE ALBERT EINSTEIN
+mmm_pav_existants.1010,1010,V512,Verre,0,Existant,AVENUE ALBERT EINSTEIN
+mmm_pav_existants.1011,1011,VRS002,Verre,0,Existant,2235 ROUTE DE VAUGUIERES
+mmm_pav_existants.1012,1012,P403,Papier,0,Existant,RUE GASTON BACHECHARD
+mmm_pav_existants.1013,1013,VRS008,Verre,0,Existant,RUE CHARLES GIDE
+mmm_pav_existants.1014,1014,P094,Papier,0,Existant,boulevard de la Lironde
+mmm_pav_existants.1015,1015,V967,Verre,0,Existant,rue de la Marqueros
+mmm_pav_existants.1016,1016,V903,Verre,0,Existant,avenue Georges Brassens
+mmm_pav_existants.1017,1017,VRS013,Verre,3,Existant,camping de l'arnel
+mmm_pav_existants.1018,1018,V973,Verre,0,Existant,ROUTE DE MURVIEL
+mmm_pav_existants.1019,1019,P175,Papier,0,Existant,ROUTE DE BEAULIEU
+mmm_pav_existants.1020,1020,P204,Papier,0,Existant,
+mmm_pav_existants.1021,1021,V585,Verre,0,Existant,RUE DU BELVEDERE
+mmm_pav_existants.1022,1022,V154,Verre,,Existant,Rue de Bionne
+mmm_pav_existants.1023,1023,V381,Verre,0,Existant,Rue de la grenade entrouverte
+mmm_pav_existants.1024,1024,T167,Textile,,Existant,8 avenue Georges Clemenceau
+mmm_pav_existants.1025,1025,V998,Verre,,Existant,Allée Henry II de Montmorency
+mmm_pav_existants.1026,1026,T170,Textile,,Existant,Avenue de la condamine
+mmm_pav_existants.1027,1027,T178,Textile,,Existant,140 rue de la figuiere
+mmm_pav_existants.1028,1028,T182,Textile,,Existant,Route de Mireval
+mmm_pav_existants.1029,1029,T181,Textile,,Existant,Route de Mireval
+mmm_pav_existants.1030,1030,V015,Verre,,Existant,Quai du verdanson
+mmm_pav_existants.1031,1031,V059,Verre,,Existant,RUE DES ROITELETS
+mmm_pav_existants.1032,1032,V159,Verre,,Existant,Avenue de Castelnau
+mmm_pav_existants.1033,1033,V918,Verre,3,Existant,Rue des Bougainvilliers
+mmm_pav_existants.1034,1034,VRS014,Verre,0,Existant,Allée de Tournefort
+mmm_pav_existants.1035,1035,V803,Verre,0,Existant,AVENUE DES BALEARES
+mmm_pav_existants.1036,1036,V182,Verre,3,Existant,Avenue de Maguelone
+mmm_pav_existants.1037,1037,V361,Verre,0,Existant,BD DES ARCEAUX
+mmm_pav_existants.1038,1038,V544,Verre,0,Existant,RUE BEAU SEJOUR
+mmm_pav_existants.1039,1039,P333,Papier,0,Existant,AVENUE DU GENERAL DE GAULLES
+mmm_pav_existants.1040,1040,V825,Verre,0,Existant,RUE DES ACACIAS
+mmm_pav_existants.1041,1041,V818,Verre,0,Existant,RUE DU STADE
+mmm_pav_existants.1042,1042,V481,Verre,0,Existant,RUE DE CENTRAYRARGUES
+mmm_pav_existants.1043,1043,V189,Verre,0,Existant,AVENUE DU CAMPUS AGROPOLIS
+mmm_pav_existants.1044,1044,V066,Verre,3,Existant,RUE DES SOPHORAS
+mmm_pav_existants.1045,1045,P096,Papier,0,Existant,
+mmm_pav_existants.1046,1046,P056,Papier,3,Existant,RUE DE LA ROQUETURIERE
+mmm_pav_existants.1047,1047,P053,Papier,0,Existant,RUE FRANCOIS D'ORBAY
+mmm_pav_existants.1048,1048,V178,Verre,0,Existant,AVENUE DES CEVENNES
+mmm_pav_existants.1049,1049,P303,Papier,0,Existant,RUE DE LA SUBSTANTION
+mmm_pav_existants.1050,1050,V835,Verre,0,Existant,D21 E1
+mmm_pav_existants.1051,1051,V606,Verre,0,Existant,DECHETERIE
+mmm_pav_existants.1052,1052,V034,Verre,0,Existant,D26
+mmm_pav_existants.1053,1053,V280,Verre,0,Existant,RUE DE LA CROIX VERTE
+mmm_pav_existants.1054,1054,P083,Papier,0,Existant,RUE GEORGES BRASSENS
+mmm_pav_existants.1055,1055,V538,Verre,0,Existant,RUE DE LA COURTE OREILLE
+mmm_pav_existants.1056,1056,P093,Papier,0,Existant,RUE DES ROCHES ROUGES
+mmm_pav_existants.1057,1057,V497,Verre,0,Existant,BOULEVARD D'ORIENT
+mmm_pav_existants.1058,1058,V513,Verre,0,Existant,ALLLEE RENE DESCARTES
+mmm_pav_existants.1059,1059,V519,Verre,0,Existant,RUE LOUISE MICHEL
+mmm_pav_existants.1060,1060,V253,Verre,3,Existant,AVENUE DU PROF.JOSEPH ANGLADA
+mmm_pav_existants.1061,1061,P085,Papier,3,Existant,ALLEE JEAN ROSTAND
+mmm_pav_existants.1062,1062,V006,Verre,0,Existant,RUE DU CONTROLE
+mmm_pav_existants.1063,1063,P327,Papier,0,Existant,AVENUE JUSTIN BEC
+mmm_pav_existants.1064,1064,V763,Verre,0,Existant,RUE JACQUES MONOD
+mmm_pav_existants.1065,1065,V355,Verre,0,Existant,RUE DES BOUISSES
+mmm_pav_existants.1066,1066,P164,Papier,0,Existant,RUE ULYSSE VERGNES
+mmm_pav_existants.1067,1067,V652,Verre,0,Existant,D116
+mmm_pav_existants.1068,1068,T,Textile,0,Existant,PLACE MARECHAL DE LATTRE DE TASSIGNY
+mmm_pav_existants.1069,1069,V418,Verre,0,Existant,Cours Veroneze
+mmm_pav_existants.1070,1070,V758,Verre,0,Existant,CHEMIN DEPARTEMENTAL N°172
+mmm_pav_existants.1071,1071,P113,Papier,0,Existant,Cours veroneze
+mmm_pav_existants.1072,1072,V045,Verre,0,Existant,PARKING PLAGE VILLENEUVE
+mmm_pav_existants.1073,1073,V535,Verre,0,Existant,RUE DE RHODES
+mmm_pav_existants.1074,1074,P307,Papier,0,Existant,RUE DU CAMP DE SOLEIL
+mmm_pav_existants.1075,1075,V821,Verre,0,Existant,RUE DE LA BAUMETTE
+mmm_pav_existants.1076,1076,V632,Verre,0,Existant,ALLEE JOSEPH CAMBON
+mmm_pav_existants.1077,1077,V811,Verre,0,Existant,D 54
+mmm_pav_existants.1078,1078,V823,Verre,0,Existant,ROUTE DE MONTPELLIER
+mmm_pav_existants.1079,1079,T,Textile,0,Existant,IMPASSE DU STADE
+mmm_pav_existants.1080,1080,V384,Verre,0,Existant,RUE DU MOULIN DE SALICATE
+mmm_pav_existants.1081,1081,V641,Verre,0,Existant,RUE DE BELBEZETH
+mmm_pav_existants.1082,1082,V609,Verre,0,Existant,CHEMIN DES BARAQUES
+mmm_pav_existants.1083,1083,V273,Verre,0,Existant,RUE CLAUDE BERTHOLET
+mmm_pav_existants.1084,1084,V358,Verre,0,Existant,RUE DOYEN DE ROUVILLE
+mmm_pav_existants.1085,1085,P020,Papier,0,Existant,IMPASSE BASILES
+mmm_pav_existants.1086,1086,P385,Papier,0,Existant,RUE DE L'AMETHYSTE
+mmm_pav_existants.1087,1087,V968,Verre,0,Existant,RUE GASTON BACHECHARD
+mmm_pav_existants.1088,1088,P305,Papier,0,Existant,RUE DES CHANTERELLES
+mmm_pav_existants.1089,1089,V221,Verre,3,Existant,RUE DE LA CARDONILLE
+mmm_pav_existants.1090,1090,V986,Verre,0,Existant,rue des passerines
+mmm_pav_existants.1091,1091,V984,Verre,3,Existant,Rue des bruyères
+mmm_pav_existants.1092,1092,T150,Textile,,Existant,Rue jacques fabres de morlhon
+mmm_pav_existants.1093,1093,T160,Textile,,Existant,D106
+mmm_pav_existants.1094,1094,T161,Textile,,Existant,Rue de la rivierette
+mmm_pav_existants.1095,1095,T134,Textile,,Existant,Rue Edouard VII
+mmm_pav_existants.1096,1096,T136,Textile,,Existant,Rue John Lock
+mmm_pav_existants.1097,1097,V101,Verre,0,Existant,AVENUE CE COURNONTERRAL
+mmm_pav_existants.1098,1098,T141,Textile,,Existant,Rue Max Mousseron
+mmm_pav_existants.1099,1099,T143,Textile,,Existant,rue saint vincent de paul
+mmm_pav_existants.1100,1100,T145,Textile,,Existant,Avenue du val de Montferrand
+mmm_pav_existants.1101,1101,T152,Textile,,Existant,13 avenue jean mermoz
+mmm_pav_existants.1102,1102,T153,Textile,,Existant,Avenue des levades
+mmm_pav_existants.1103,1103,T154,Textile,,Existant,16 rue pierre Valadier
+mmm_pav_existants.1104,1104,T156,Textile,,Existant,Pailletrice
+mmm_pav_existants.1105,1105,T157,Textile,,Existant,Eurotel fenouillet
+mmm_pav_existants.1106,1106,T158,Textile,,Existant,Rue des Pénitents
+mmm_pav_existants.1107,1107,T159,Textile,,Existant,Rue de belzebeth
+mmm_pav_existants.1108,1108,T162,Textile,,Existant,Rue de clairdouy
+mmm_pav_existants.1109,1109,V757,Verre,3,Existant,Rue des hérons
+mmm_pav_existants.1110,1110,V014,Verre,3,Existant,Rue de Rhodes
+mmm_pav_existants.1111,1111,V524,Verre,,Existant,Avenue de la pompignane
+mmm_pav_existants.1112,1112,V530,Verre,,Existant,Avenue de la pompignane
+mmm_pav_existants.1113,1113,T163,Textile,,Existant,Rue de la dame d'orcas
+mmm_pav_existants.1114,1114,T164,Textile,,Existant,Avenue de Librilla
+mmm_pav_existants.1115,1115,T165,Textile,,Existant,Avenue Georges Clemenceau
+mmm_pav_existants.1116,1116,T166,Textile,,Existant,7 rue de la gare
+mmm_pav_existants.1117,1117,T169,Textile,,Existant,Avenue de la condamine
+mmm_pav_existants.1118,1118,T176,Textile,,Existant,Avenue Mendes France
+mmm_pav_existants.1119,1119,T177,Textile,,Existant,1 rue du Courlis
+mmm_pav_existants.1120,1120,VRS016,Verre,,Existant,Avenue de l'agau
+mmm_pav_existants.1121,1121,V996,Verre,3,Existant,Quai du verdanson
+mmm_pav_existants.1122,1122,V251,Verre,3,Existant,IMPASSE GEORGES COSTES
+mmm_pav_existants.1123,1123,V993,Verre,,Existant,Rue Rigoberta Menchu
+mmm_pav_existants.1124,1124,V012,Verre,,Existant,Rue du mas d'Aussel
+mmm_pav_existants.1125,1125,V264,Verre,3,Existant,Rue Wangarri mathai
+mmm_pav_existants.1126,1126,V206,Verre,2,Existant,Rue Samuel Morse
+mmm_pav_existants.1127,1127,VRS019,Verre,3,Existant,ROUTE DE MONTPELLIER
+mmm_pav_existants.1128,1128,V611,Verre,,Existant,Domaine du Manse
+mmm_pav_existants.1129,1129,P057,Papier,3,Existant,RUE JEAN FRANCOIS BRETON
+mmm_pav_existants.1130,1130,V284,Verre,3,Existant,Rue du Lavandin
+mmm_pav_existants.1131,1131,V951,Verre,0,Existant,Avenue Nina Simone
+mmm_pav_existants.1132,1132,V113,Verre,0,Existant,RUE DE JUPITER
+mmm_pav_existants.1133,1133,V953,Verre,3,Existant,Rue Puech Radier
+mmm_pav_existants.1134,1134,V952,Verre,0,Existant,chemin du Floréal
+mmm_pav_existants.1135,1135,V532,Verre,3,Existant,CHEMIN DE LA fABRIQUE
+mmm_pav_existants.1136,1136,V504,Verre,0,Existant,BOULEVARD  PENELOPE
+mmm_pav_existants.1137,1137,VRS06,Verre,3,Existant,cité U vert bois
+mmm_pav_existants.1138,1138,V218,Verre,3,Existant,Rue de la Jalade
+mmm_pav_existants.1139,1139,V227,Verre,3,Existant,Avenue près d'arènes
+mmm_pav_existants.1140,1140,V308,Verre,3,Existant,Rue des rouges-Gorges
+mmm_pav_existants.1141,1141,V179,Verre,3,Existant,Avenue de Castelnau
+mmm_pav_existants.1142,1142,V172,Verre,3,Existant,Avenue de Castelnau
+mmm_pav_existants.1143,1143,V354,Verre,3,Existant,RUE DU PONT DE LAVERUNE
+mmm_pav_existants.1144,1144,P108,Papier,0,Existant,RUE DE L'ECOLE NORMALE
+mmm_pav_existants.1145,1145,P120,Papier,0,Existant,PLACE JEAN ANTOINE DE CHAPTAL
+mmm_pav_existants.1146,1146,V619,Verre,,Existant,Avenue Paul Bringuier
+mmm_pav_existants.1147,1147,V620,Verre,,Existant,Chateau de Grammont
+mmm_pav_existants.1148,1148,V694,Verre,,Existant,Route de Lavérune
+mmm_pav_existants.1149,1149,V696,Verre,,Existant,Rue des pointes
+mmm_pav_existants.1150,1150,V870,Verre,3,Existant,Route de cournonterral
+mmm_pav_existants.1151,1151,VRS015,Verre,,Existant,Allée de tournefort
+mmm_pav_existants.1152,1152,V955,Verre,,Existant,Les molières
+mmm_pav_existants.1153,1153,V959,Verre,,Existant,La jasse de Maurin
+mmm_pav_existants.1154,1154,V988,Verre,0,Existant,Chemin du mas de Fangousse
+mmm_pav_existants.1155,1155,V140,Verre,0,Existant,CHEMIN DE SORIECH
+mmm_pav_existants.1156,1156,V754,Verre,0,Existant,CHEMIN DE SORIECH
+mmm_pav_existants.1157,1157,V060,Verre,3,Existant,CHEMIN DU FESQUET
+mmm_pav_existants.1158,1158,V357,Verre,0,Existant,Rue de Fontcarrade
+mmm_pav_existants.1159,1159,V289,Verre,0,Existant,RUE D'ALCO
+mmm_pav_existants.1160,1160,V290,Verre,0,Existant,AVENUE SAINT CLEMENT
+mmm_pav_existants.1161,1161,V042,Verre,3,Existant,Rue Etienne Mehul
+mmm_pav_existants.1162,1162,V419,Verre,3,Existant,Quai mathieu laurens
+mmm_pav_existants.1163,1163,V438,Verre,3,Existant,Allée de Corfou
+mmm_pav_existants.1164,1164,V030,Verre,3,Existant,Boulevard Berthelot
+mmm_pav_existants.1165,1165,V456,Verre,0,Existant,RUE DE L'ECOLE REPUBLICAINE
+mmm_pav_existants.1166,1166,P192,Papier,0,Existant,CHEMIN DES 4 CANTONS
+mmm_pav_existants.1167,1167,V008,Verre,0,Existant,RUE JEAN VILLAR
+mmm_pav_existants.1168,1168,V019,Verre,0,Existant,CHEMIN DE LA DRAYE DU MARBRE
+mmm_pav_existants.1169,1169,V810,Verre,3,Existant,CHEMIN DE VENDARGUES A ST AUNES
+mmm_pav_existants.1170,1170,V858,Verre,0,Existant,RUE PALLIADO
+mmm_pav_existants.1171,1171,T,Textile,0,Existant,DECHETERIE
+mmm_pav_existants.1172,1172,V589,Verre,0,Existant,ROUTE DE BEAULIEU
+mmm_pav_existants.1173,1173,P343,Papier,0,Existant,AVENUE D'OCCITANIE
+mmm_pav_existants.1174,1174,V855,Verre,0,Existant,RUE DES MICOCOULIERS
+mmm_pav_existants.1175,1175,V155,Verre,0,Existant,D132
+mmm_pav_existants.1176,1176,V299,Verre,3,Existant,RUE DES AZALEES
+mmm_pav_existants.1177,1177,V624,Verre,0,Existant,AVENUE DE LIBRILLA
+mmm_pav_existants.1178,1178,V161,Verre,0,Existant,RUE DE LA CROISETTE
+mmm_pav_existants.1179,1179,V166,Verre,0,Existant,CHEMIN DE LA CHICANETTE
+mmm_pav_existants.1180,1180,V212,Verre,0,Existant,RUE VIRGINIE MONTAGNOL
+mmm_pav_existants.1181,1181,P054,Papier,3,Existant,RUE DE LA ROQUETURIERE
+mmm_pav_existants.1182,1182,V382,Verre,0,Existant,RUE DES PASSSEREAUX
+mmm_pav_existants.1183,1183,V595,Verre,0,Existant,AVENUE DE LA MEDITERRANEE
+mmm_pav_existants.1184,1184,P381,Papier,0,Existant,RUE DES COUSSES
+mmm_pav_existants.1185,1185,V575,Verre,0,Existant,RUE DE LA FRAISSAIE
+mmm_pav_existants.1186,1186,V759,Verre,0,Existant,DOMAINE DE LA PROVIDENCE
+mmm_pav_existants.1187,1187,V421,Verre,0,Existant,AVENUE DE PALAVAS
+mmm_pav_existants.1188,1188,V427,Verre,0,Existant,IMPASSE MAS D'ARGELLIERS
+mmm_pav_existants.1189,1189,V470,Verre,0,Existant,RUE DE CENTRAYRARGUES
+mmm_pav_existants.1190,1190,V480,Verre,0,Existant,RUE MION SAINT MICHEL
+mmm_pav_existants.1191,1191,V445,Verre,0,Existant,BOULEVARD PAUL VALERY
+mmm_pav_existants.1192,1192,V135,Verre,0,Existant,RUE GEORGES MELIES
+mmm_pav_existants.1193,1193,VRS020,Verre,3,Existant,RUE JEAN FRANCOIS BRETON
+mmm_pav_existants.1194,1194,T,Textile,0,Existant,
+mmm_pav_existants.1195,1195,T,Textile,0,Existant,RUE DU STADE
+mmm_pav_existants.1196,1196,P063,Papier,0,Existant,ROUTE DE MENDE
+mmm_pav_existants.1197,1197,P377,Papier,3,Existant,RUE DE VENDARGUES
+mmm_pav_existants.1198,1198,V027,Verre,0,Existant,AVENUE ARISTIDE BRIAND
+mmm_pav_existants.1199,1199,V386,Verre,0,Existant,AVENUE JEAN MERMOZ
+mmm_pav_existants.1200,1200,P363,Papier,0,Existant,ALLEE JOSEPH CAMBON
+mmm_pav_existants.1201,1201,V871,Verre,0,Existant,ALLEE JOSEPH CAMBON
+mmm_pav_existants.1202,1202,V484,Verre,0,Existant,rue du mas st-Pierre
+mmm_pav_existants.1203,1203,V266,Verre,3,Existant,
+mmm_pav_existants.1204,1204,V963,Verre,0,Existant,Rue de la vieille poste
+mmm_pav_existants.1205,1205,P104,Papier,0,Existant,Rue de Fontcarrade
+mmm_pav_existants.1206,1206,V326,Verre,0,Existant,
+mmm_pav_existants.1207,1207,V327,Verre,0,Existant,pas du loup
+mmm_pav_existants.1208,1208,V315,Verre,0,Existant,Rue ronsard
+mmm_pav_existants.1209,1209,V975,Verre,0,Existant,rue henry moynier
+mmm_pav_existants.1210,1210,V970,Verre,3,Existant,Mas des moulins
+mmm_pav_existants.1211,1211,P404,Papier,0,Existant,rue Paul Marres
+mmm_pav_existants.1212,1212,VRS011,Verre,0,Existant,Dans cité IBM
+mmm_pav_existants.1213,1213,VRS012,Verre,0,Existant,Dans cité IBM
+mmm_pav_existants.1214,1214,V974,Verre,0,Existant,Rue du four de la Caux
+mmm_pav_existants.1215,1215,V981,Verre,0,Existant,Domaine Puech le haut
+mmm_pav_existants.1216,1216,V079,Verre,0,Existant,Route de la Taillade
+mmm_pav_existants.1217,1217,V587,Verre,0,Existant,ROUTE DE BEAULIEU
+mmm_pav_existants.1218,1218,V094,Verre,0,Existant,rue Léon Blum
+mmm_pav_existants.1219,1219,V982,Verre,0,Existant,Avenue Charles de Gaulle
+mmm_pav_existants.1220,1220,V983,Verre,0,Existant,Rue Louis Aragon
+mmm_pav_existants.1221,1221,V819,Verre,0,Existant,Rue Dante Alighieri
+mmm_pav_existants.1222,1222,P312,Papier,0,Existant,Rue Dante Alighieri
+mmm_pav_existants.1223,1223,V593,Verre,0,Existant,"Intermarché, route de Montpellier"
+mmm_pav_existants.1224,1224,T,Textile,0,Existant,RUE DES GENETS
+mmm_pav_existants.1225,1225,V043,Verre,,Existant,place Ernest Granier
+mmm_pav_existants.1226,1226,V133,Verre,,Existant,AVENUE SAINT MAURICE DE SAURET
+mmm_pav_existants.1227,1227,V134,Verre,,Existant,Rue xavier de Ricard
+mmm_pav_existants.1228,1228,V024,Verre,,Existant,Rue Fra Angelico
+mmm_pav_existants.1229,1229,V162,Verre,0,Existant,AVENUE DE L'ANCIENNE GARE
+mmm_pav_existants.1230,1230,V203,Verre,0,Existant,AVENUE RAIMBAUD D'ORANGE
+mmm_pav_existants.1231,1231,V213,Verre,0,Existant,RUE PIERRE CAUSSE
+mmm_pav_existants.1232,1232,V052,Verre,0,Existant,RUE DU ROMARIN
+mmm_pav_existants.1233,1233,V597,Verre,0,Existant,LOT. LOU MIRADOU
+mmm_pav_existants.1234,1234,V629,Verre,0,Existant,ROUTE DE BEZIERS
+mmm_pav_existants.1235,1235,V158,Verre,0,Existant,AVENUE DE MONTPELLIERET
+mmm_pav_existants.1236,1236,P003,Papier,0,Existant,AVENUE DU STADE
+mmm_pav_existants.1237,1237,V843,Verre,0,Existant,AVENUE DE LA LIBERTE
+mmm_pav_existants.1238,1238,V865,Verre,0,Existant,AVENUE DE FREJORGUES
+mmm_pav_existants.1239,1239,T,Textile,0,Existant,RUE PIERRE DE SAINT ROCH
+mmm_pav_existants.1240,1240,T,Textile,0,Existant,AVENUE DES BALEARES
+mmm_pav_existants.1241,1241,P157,Papier,3,Existant,Rue de la Chenaie
+mmm_pav_existants.1242,1242,T,Textile,0,Existant,CHEMIN DES PIERRES
+mmm_pav_existants.1243,1243,V829,Verre,0,Existant,RUE DES PITTOSPORES
+mmm_pav_existants.1244,1244,V831,Verre,0,Existant,RUE DU PUIT
+mmm_pav_existants.1245,1245,T,Textile,0,Existant,
+mmm_pav_existants.1246,1246,P322,Papier,0,Existant,PARKING DES ECOLES
+mmm_pav_existants.1247,1247,P337,Papier,0,Existant,CHEMIN DE LA BORNIERE
+mmm_pav_existants.1248,1248,V847,Verre,0,Existant,DECHETERIE
+mmm_pav_existants.1249,1249,V549,Verre,0,Existant,DECHETERIE
+mmm_pav_existants.1250,1250,V552,Verre,0,Existant,PLACE DE LA POSTE
+mmm_pav_existants.1251,1251,V568,Verre,0,Existant,LES FONTAINES DU PIGNAREL
+mmm_pav_existants.1252,1252,V592,Verre,0,Existant,CHEMIN DES COLLEGIENS
+mmm_pav_existants.1253,1253,V566,Verre,0,Existant,AVENUE SAINTE-CECILE
+mmm_pav_existants.1254,1254,V576,Verre,0,Existant,AVENUE SAINTE-CECILE
+mmm_pav_existants.1255,1255,V572,Verre,0,Existant,RUE GUSTAVE EIFFEL
+mmm_pav_existants.1256,1256,V573,Verre,0,Existant,AVENUE DU GENERAL GROLLIER
+mmm_pav_existants.1257,1257,T,Textile,0,Existant,RUE DES ARAMONS
+mmm_pav_existants.1258,1258,V369,Verre,3,Existant,Boulevard des Moures
+mmm_pav_existants.1259,1259,V404,Verre,3,Existant,Avenue de Bigos
+mmm_pav_existants.1260,1260,VRS021,Verre,3,Existant,Cité universitaire Boutonnet
+mmm_pav_existants.1261,1261,V838,Verre,0,Existant,DECHETERIE
+mmm_pav_existants.1262,1262,V578,Verre,0,Existant,RUE DU MAS D'AUSSEL
+mmm_pav_existants.1263,1263,V579,Verre,0,Existant,AVENUE DES PLATANES
+mmm_pav_existants.1264,1264,P181,Papier,0,Existant,AVENUE DU BERANGE
+mmm_pav_existants.1265,1265,V594,Verre,0,Existant,CHEMIN DES AZEROLLES
+mmm_pav_existants.1266,1266,V755,Verre,0,Existant,ROUTE DE VAUGUIERE
+mmm_pav_existants.1267,1267,P035,Papier,0,Existant,PLACE HENRI AUGE
+mmm_pav_existants.1268,1268,V340,Verre,0,Existant,CHEMIN PIOCH VILLA
+mmm_pav_existants.1269,1269,P174,Papier,0,Existant,CHEMIN DU PRE
+mmm_pav_existants.1270,1270,P209,Papier,0,Existant,RUE D'OCCITANIE
+mmm_pav_existants.1271,1271,P373,Papier,0,Existant,DECHETERIE
+mmm_pav_existants.1272,1272,V890,Verre,0,Existant,CHEMIN DE LA BORNIERE
+mmm_pav_existants.1273,1273,P218,Papier,0,Existant,AVENUE DU PERRET
+mmm_pav_existants.1274,1274,P217,Papier,0,Existant,ROUTE DE BEAULIEU
+mmm_pav_existants.1275,1275,V889,Verre,0,Existant,AVENUE DU GENERAL DE GAULLE
+mmm_pav_existants.1276,1276,V893,Verre,0,Existant,AVENUE DU GRAND JEU
+mmm_pav_existants.1277,1277,T,Textile,0,Existant,PLACE DE LA COOPERATIVE
+mmm_pav_existants.1278,1278,V068,Verre,0,Existant,RUE DU STADE
+mmm_pav_existants.1279,1279,V180,Verre,0,Existant,RUE DE LA SERPE
+mmm_pav_existants.1280,1280,P193,Papier,0,Existant,BOULEVARD DES MOURES
+mmm_pav_existants.1281,1281,V666,Verre,0,Existant,RUE DU MARIGNY
+mmm_pav_existants.1282,1282,V002,Verre,0,Existant,D26 ROUTE DE CASTRIES
+mmm_pav_existants.1283,1283,T,Textile,0,Existant,AVENUE SAINT VINCENT
+mmm_pav_existants.1284,1284,T,Textile,0,Existant,RUE GASTON BAISSETTE
+mmm_pav_existants.1285,1285,T,Textile,0,Existant,CHEMIN DE L'AMOUR
+mmm_pav_existants.1286,1286,P344,Papier,0,Existant,RUE DES AMANDIERS
+mmm_pav_existants.1287,1287,P364,Papier,0,Existant,CHEMIN DE PARRELOUP
+mmm_pav_existants.1288,1288,P359,Papier,0,Existant,RUE DE LA FLAMADE
+mmm_pav_existants.1289,1289,P371,Papier,0,Existant,RUE DU COLOMBIER
+mmm_pav_existants.1290,1290,V001,Verre,0,Existant,AVENUE DE LA BISTE
+mmm_pav_existants.1291,1291,V077,Verre,0,Existant,CHEMIN DE POUVIEL
+mmm_pav_existants.1292,1292,V082,Verre,0,Existant,CHEMIN DE POUVIEL
+mmm_pav_existants.1293,1293,P369,Papier,0,Existant,CHEMIN DE POUVIEL
+mmm_pav_existants.1294,1294,V387,Verre,0,Existant,RUE DU MOULIN DE SEMALEN
+mmm_pav_existants.1295,1295,P342,Papier,0,Existant,RUE DE LA CADELLE
+mmm_pav_existants.1296,1296,V808,Verre,0,Existant,RUE DU PUIS DU MARIN
+mmm_pav_existants.1297,1297,P332,Papier,0,Existant,AVENUE DE CASTELNAU
+mmm_pav_existants.1298,1298,V800,Verre,0,Existant,AVENUE DE CASTELNAU
+mmm_pav_existants.1299,1299,V956,Verre,0,Existant,RUE RAYMOND RECOULY
+mmm_pav_existants.1300,1300,V279,Verre,0,Existant,AVENUE DES APOTHICAIRES
+mmm_pav_existants.1301,1301,T,Textile,0,Existant,RUE DES CARIGNANS
+mmm_pav_existants.1302,1302,V650,Verre,0,Existant,PLACE DE LA REPUBLIQUE
+mmm_pav_existants.1303,1303,V131,Verre,0,Existant,AVENUE DU PERRET
+mmm_pav_existants.1304,1304,V146,Verre,0,Existant,ALLEE DE TOURNEFORT
+mmm_pav_existants.1305,1305,V148,Verre,0,Existant,CHEMIN DE SAINT-HUBERT
+mmm_pav_existants.1306,1306,V164,Verre,0,Existant,RUE DE LA CROIX
+mmm_pav_existants.1307,1307,V205,Verre,0,Existant,RUE D'UPPSALA
+mmm_pav_existants.1308,1308,V215,Verre,0,Existant,RUE ANDRE LE NOTRE
+mmm_pav_existants.1309,1309,V057,Verre,3,Existant,ALLEE YVES STOURDZE
+mmm_pav_existants.1310,1310,V197,Verre,0,Existant,AVENUE GUILHEM DE POITIER
+mmm_pav_existants.1311,1311,V816,Verre,0,Existant,IMPASSE DES AMANDIERS
+mmm_pav_existants.1312,1312,V063,Verre,3,Existant,RUE DU ROMARIN
+mmm_pav_existants.1313,1313,V454,Verre,0,Existant,RUE DE LA COSTA DORADA
+mmm_pav_existants.1314,1314,V622,Verre,0,Existant,ROUTE DE MONTPELLIER
+mmm_pav_existants.1315,1315,V634,Verre,0,Existant,CHEMIN DE PARRELOUP
+mmm_pav_existants.1316,1316,V640,Verre,0,Existant,RUE DE LA GARDIOLE
+mmm_pav_existants.1317,1317,V643,Verre,0,Existant,RUE DES CARIGNANS
+mmm_pav_existants.1318,1318,V651,Verre,0,Existant,RUE DE LA CAVE COOPERATIVE
+mmm_pav_existants.1319,1319,P200,Papier,0,Existant,RUE DES PEUPLIERS
+mmm_pav_existants.1320,1320,V656,Verre,0,Existant,CHEMIN DES 4 CANTONS
+mmm_pav_existants.1321,1321,V668,Verre,0,Existant,RUE DES PEUPLIERS
+mmm_pav_existants.1322,1322,V432,Verre,3,Existant,Rue d'Argencourt
+mmm_pav_existants.1323,1323,V067,Verre,0,Existant,BOTANIC
+mmm_pav_existants.1324,1324,V929,Verre,0,Existant,PLACE CARNOT
+mmm_pav_existants.1325,1325,VRS001,Verre,0,Existant,AVENUE MARCEL PAGNOL
+mmm_pav_existants.1326,1326,V922,Verre,0,Existant,rue de la réglisse
+mmm_pav_existants.1327,1327,V193,Verre,0,Existant,RUE SAINTE BARBE
+mmm_pav_existants.1328,1328,P350,Papier,0,Existant,
+mmm_pav_existants.1329,1329,V116,Verre,0,Existant,RUE DE LA VALCIERE
+mmm_pav_existants.1330,1330,T,Textile,0,Existant,AVENUE DU BERANGE
+mmm_pav_existants.1331,1331,T,Textile,0,Existant,Route de la gare
+mmm_pav_existants.1332,1332,T,Textile,0,Existant,rue du controle
+mmm_pav_existants.1333,1333,T,Textile,0,Existant,Avenue du 8 Mai 1945
+mmm_pav_existants.1334,1334,T,Textile,0,Existant,Rue des Coustelies
+mmm_pav_existants.1335,1335,T,Textile,0,Existant,Avenue Jean Jaures
+mmm_pav_existants.1336,1336,T,Textile,0,Existant,IMPASSE LOUISE MICHEL
+mmm_pav_existants.1337,1337,T,Textile,0,Existant,Avenue de Vendargues
+mmm_pav_existants.1338,1338,V846,Verre,0,Existant,RUE DES MICOCOULIERS
+mmm_pav_existants.1339,1339,T,Textile,0,Existant,ROUTE DE BEAULIEU
+mmm_pav_existants.1340,1340,T,Textile,0,Existant,ROUTE DE BEAULIEU
+mmm_pav_existants.1341,1341,P077,Papier,0,Existant,RUE MAS D'ARMAND
+mmm_pav_existants.1342,1342,P352,Papier,0,Existant,RUE DE LA GARDIOLE
+mmm_pav_existants.1343,1343,T,Textile,0,Existant,AVENUE Saint Cecile
+mmm_pav_existants.1344,1344,V577,Verre,0,Existant,ROND POINT RTE DE ST GEORGES
+mmm_pav_existants.1345,1345,T,Textile,0,Existant,ROND POINT RTE DE ST GEORGES
+mmm_pav_existants.1346,1346,V128,Verre,3,Existant,RUE JEAN FRANCOIS BRETON
+mmm_pav_existants.1347,1347,V393,Verre,0,Existant,RUE DE LA FOND FROIDE
+mmm_pav_existants.1348,1348,P198,Verre,0,Existant,RUE HENRI POITEVIN
+mmm_pav_existants.1349,1349,P191,Papier,0,Existant,RUE HENRI POITEVIN
+mmm_pav_existants.1350,1350,V930,Verre,0,Existant,RUE LOUIS BREGUET
+mmm_pav_existants.1351,1351,T,Textile,0,Existant,RUE HENRI POITEVIN
+mmm_pav_existants.1352,1352,V746,Verre,0,Existant,RUE DES ACACIAS
+mmm_pav_existants.1353,1353,T,Textile,0,Existant,CHEMIN DU POUGET
+mmm_pav_existants.1354,1354,T,Textile,3,Existant,RUE DE VENDARGUES
+mmm_pav_existants.1355,1355,T,Textile,0,Existant,AVENUE DES APOLLONS
+mmm_pav_existants.1356,1356,P119,Papier,0,Existant,RUE DE COUPOUYRAN
+mmm_pav_existants.1357,1357,T,Textile,0,Existant,ROUTE DE SAINT GEORGES
+mmm_pav_existants.1358,1358,T,Textile,30,Existant,ROUTE DE SAINT GEORGES
+mmm_pav_existants.1359,1359,V565,Verre,0,Existant,AVENUE JEAN MONNET
+mmm_pav_existants.1360,1360,P360,Papier,0,Existant,AVENUE JEAN MONNET
+mmm_pav_existants.1361,1361,T,Textile,0,Existant,D21 E1
+mmm_pav_existants.1362,1362,V346,Verre,3,Existant,Rue de Saint-hilaire
+mmm_pav_existants.1363,1363,T,Textile,0,Existant,RUE DE LA GUESSE
+mmm_pav_existants.1364,1364,T,Textile,0,Existant,RUE DE L'ARGILE
+mmm_pav_existants.1365,1365,P177,Papier,0,Existant,RUE PIERRE DE SAINT ROCH
+mmm_pav_existants.1366,1366,V044,Verre,0,Existant,AVENUE DE LA COOPERATIVE
+mmm_pav_existants.1367,1367,P014,Papier,0,Existant,AVENUE DE LA COOPERATIVE
+mmm_pav_existants.1368,1368,T,Textile,0,Existant,AVENUE DE NIMES
+mmm_pav_existants.1369,1369,P219,Papier,0,Existant,CHEMIN DES PIERRES
+mmm_pav_existants.1370,1370,P382,Papier,0,Existant,RUE DES PENITENTS
+mmm_pav_existants.1371,1371,V638,Verre,0,Existant,RUE DES PENITENTS
+mmm_pav_existants.1372,1372,V183,Verre,0,Existant,CHEMIN DES MAZES
+mmm_pav_existants.1373,1373,V188,Verre,0,Existant,
+mmm_pav_existants.1374,1374,V325,Verre,0,Existant,rue des chasseurs
+mmm_pav_existants.1375,1375,V670,Verre,0,Existant,St jean de clapasse
+mmm_pav_existants.1376,1376,V288,Verre,0,Existant,AVENUE DU MISTRAL
+mmm_pav_existants.1377,1377,V867,Verre,0,Existant,Rue Jean moulin
+mmm_pav_existants.1378,1378,V979,Verre,0,Existant,rue henry moynier
+mmm_pav_existants.1379,1379,V976,Verre,0,Existant,mas du pont
+mmm_pav_existants.1380,1380,V897,Verre,0,Existant,chemin de la qualité
+mmm_pav_existants.1381,1381,V971,Verre,0,Existant,rue des terres noires
+mmm_pav_existants.1382,1382,V972,Verre,0,Existant,cave coopérative
+mmm_pav_existants.1383,1383,P451,Papier,0,Existant,Rue des bougainvilliers
+mmm_pav_existants.1384,1384,V985,Verre,0,Existant,Déchetterie
+mmm_pav_existants.1385,1385,P405,Papier,3,Existant,Chemin du fesquet
+mmm_pav_existants.1386,1386,V370,Verre,3,Existant,BOULEVARD DE LA LIBERTE
+mmm_pav_existants.1387,1387,P004,Papier,3,Existant,BOULEVARD DE LA LIBERTE
+mmm_pav_existants.1388,1388,P044,Papier,3,Existant,CIT2 UNIVERSITAIRE BOUTONNET
+mmm_pav_existants.1389,1389,V678,Verre,3,Existant,Rue de Montferrier
+mmm_pav_existants.1390,1390,V681,Verre,3,Existant,Rue des Moulières
+mmm_pav_existants.1391,1391,V439,Verre,3,Existant,Avenue Eveche de Maguelone
+mmm_pav_existants.1392,1392,V457,Verre,3,Existant,RUE DES ANEMONES
+mmm_pav_existants.1393,1393,V677,Verre,3,Existant,Parking du skate park
+mmm_pav_existants.1394,1394,V680,Verre,3,Existant,Allée Roland Micheu
+mmm_pav_existants.1395,1395,V660,Verre,3,Existant,RUE DES 4 VENTS
+mmm_pav_existants.1396,1396,V434,Verre,3,Existant,DECHETTERIE
+mmm_pav_existants.1397,1397,V437,Verre,3,Existant,AVENUE AGROPOLIS
+mmm_pav_existants.1398,1398,VRS022,Verre,3,Existant,1000 avenue de l'Europe
+mmm_pav_existants.1399,1399,VRS017,Verre,3,Existant,Courte paille
+mmm_pav_existants.1400,1400,V907,Verre,3,Existant,Rue des prtes domitiennes
+mmm_pav_existants.1401,1401,V171,Verre,,Existant,Palais des sport
+mmm_pav_existants.1402,1402,P201,Papier,3,Existant,BOULEVARD DES ARCEAUX
+mmm_pav_existants.1403,1403,P406,Papier,3,Existant,Parking skate parc
+mmm_pav_existants.1404,1404,P407,Papier,3,Existant,Rue de Montferrier
+mmm_pav_existants.1405,1405,P409,Papier,3,Existant,Allée Roland Micheu
+mmm_pav_existants.1406,1406,P410,Papier,3,Existant,Rue des Moulières
+mmm_pav_existants.1407,1407,V286,Verre,3,Existant,RUE SAINT PRIEST
+mmm_pav_existants.1408,1408,V633,Verre,3,Existant,ALLEE YVES STOURDZE
+mmm_pav_existants.1409,1409,V969,Verre,,Existant,CHALET SUISSE
+mmm_pav_existants.1410,1410,P156,Papier,0,Existant,RUE FRA ANGELICO
+mmm_pav_existants.1411,1411,V537,Verre,3,Existant,RUE DE LA FONTAINE
+mmm_pav_existants.1412,1412,P171,Papier,3,Existant,DECHETTERIE PRES D'ARENES
+mmm_pav_existants.1413,1413,P169,Papier,3,Existant,AVENUE DE LA POMPIGNANE
+mmm_pav_existants.1414,1414,V761,Verre,3,Existant,DECHETTERIE DE CASTELNAU
+mmm_pav_existants.1415,1415,P173,Papier,3,Existant,DECHETTERIE CASTELNAU
+mmm_pav_existants.1416,1416,V458,Verre,3,Existant,DECHETTERIE CASTELNAU
+mmm_pav_existants.1417,1417,V645,Verre,0,Existant,
+mmm_pav_existants.1418,1418,V885,Verre,0,Existant,RUE DES COMBES
+mmm_pav_existants.1419,1419,V936,Verre,0,Existant,RUE DU PLAN
+mmm_pav_existants.1420,1420,P447,Papier,3,Existant,AVENUE DU VAL DE MONTFERRAND
+mmm_pav_existants.1421,1421,P448,Papier,3,Existant,Route de mende
+mmm_pav_existants.1422,1422,V977,Verre,0,Existant,rond point Richter
+mmm_pav_existants.1423,1423,P446,Papier,0,Existant,Rue des bruyères

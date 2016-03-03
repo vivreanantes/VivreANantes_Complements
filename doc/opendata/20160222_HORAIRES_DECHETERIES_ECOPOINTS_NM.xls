@@ -1,0 +1,77 @@
+
+================================================
+TITRE DU JEU DE DONNEES
+================================================
+
+Horaires des déchèteries-écopoints de Nantes Métropole
+
+================================================
+DESCRIPTION
+================================================
+Horaires des déchèteries-écopoints de Nantes Métropole. Ils sont classés en deux
+catégories : les ouvertures dites normales qui sont schématisées en « semaine type
+d'ouverture » du lundi au dimanche et les exceptions qui précisent les jours de fermeture
+des équipements
+
+
+Thèmes 							: Environnement
+Granularité						: Commune
+
+================================================
+INFORMATIONS TECHNIQUES
+================================================
+
+Date de dernière mise à jour    : 22/02/2016
+Fréquence de mise à jour 		: Annuelle
+Couverture Temporelle : Valable du 01/01/2016 au 31/12/2016 
+
+Derniere mise à jour technique	:
+
+	Date : 22/02/2016
+	Nature de la modification : Mise à jour du 22 février 2016
+	Description de la modification : Mise à jour - données 2016
+
+================================================
+ATTRIBUTS
+================================================
+
+
+_IDOBJ            : Identifiant de l'objet
+nom_complet       : Nom de la déchèterie ou de l'écopoint
+libelle_periode   : Libellé de la période
+libelle_exception : Libellé de l'exception
+date_debut        : Date de début de validité des horaires indiqués
+date_fin          : Date de fin de validité des horaires indiqués
+date_exception    : Date de l'exception
+jour              : Jour de la semaine
+fermeture         : Indique si la déchèterie ou l'écopoint est fermé(e) (valeur OUI) ou pas (valeur NON)
+heure_debut       : Heure d'ouverture
+heure_fin         : Heure de fermeture
+ 
+
+================================================
+CONTACT
+================================================
+
+Pour toute demande d'information ou remarque, 
+merci de passer par le forum du site http://data.nantes.fr
+
+================================================
+INFORMATIONS LEGALES
+================================================
+
+
+Propriétaire : Nantes Métropole
+
+Gestionnaire : Nantes Métropole
+
+Diffuseur	 : Nantes Métropole
+
+Licence      : Open Database License (ODbL)
+
+================================================
+SIGNATURES DES FICHIERS
+================================================
+
+HORAIRES_NORM_DECHETERIES_ECOPOINTS_NM.xls (md5) : 9df809fbbbf32fb99a237bf09dd6e67b
+HORAIRES_EXCEPT_DECHETERIES_ECOPOINTS_NM.xls (md5) : 9c3199fbd1b23ef53e201a6b8a04537e
