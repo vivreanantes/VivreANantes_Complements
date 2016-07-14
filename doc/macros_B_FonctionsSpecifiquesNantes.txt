@@ -312,6 +312,28 @@ Function getLatitudeLongitude(latitudeLongitude as String)
 	getLatitudeLongitude = Temp2
 End Function
 
+Function getTraduction(nomFeuille as String, colDebut as String, colFin as String, numColDebut as Integer, numColFin as Integer, inutile as String, nomAttribut as String)
+	Result = ""
+	Doc = thisComponent
+	Sheet = Doc.Sheets.getByName(nomFeuille)
+	StPlage = colDebut & numColDebut & ":" & colDebut & numColFin
+	CellRange = Sheet.getCellRangeByName(StPlage)
+	oRanges = Doc.createInstance("com.sun.star.sheet.SheetCellRanges") 
+	oRanges.insertByName("", CellRange)   ' - I presume first parameter could be name of range ??, second is an object
+	oSearchCells = oRanges.Cells.createEnumeration 
+	idCurentColl = numColDebut
+	While oSearchCells.hasMoreElements 
+	   oCell = oSearchCells.nextElement 
+	   value = oCell.String
+	   CellCommentaire = Sheet.getCellRangeByName(colFin & idCurentColl)
+	   codeCommentaire = CellCommentaire.String
+	   '' "dec_antigel.nom" : "Antigel",
+ 	   Result = Result & """" & value & "." & nomAttribut & """:""" & codeCommentaire & ""","
+		idCurentColl = idCurentColl + 1
+	Wend
+	getTraduction = Result
+End Function
+
 Sub Main
 
 End Sub
