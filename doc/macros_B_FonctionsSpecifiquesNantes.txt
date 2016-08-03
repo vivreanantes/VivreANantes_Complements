@@ -334,6 +334,55 @@ Function getTraduction(nomFeuille as String, colDebut as String, colFin as Strin
 	getTraduction = Result
 End Function
 
+Function ExportJson(repertoire as String, nomFichierJson as String, nomFeuille as String, nomObjet as String, colElements as String, numColDebut as String, numColFin as String) As String
+
+    Dim FileNo As Integer
+    Dim CurrentLine As String
+    Dim Filename As String
+    Filename = "C:\dev\github-repositories\VivreANantes_Complements\doc\export\" & repertoire & "\" & nomFichierJson            ' Define file name 
+    FileNo = Freefile               ' Establish free file handle
+ 
+    Open Filename For Output As #FileNo         ' Open file (writing mode)
+    Print #FileNo, "var " & nomObjet & " = ["      ' Save line
+	Doc = thisComponent
+	Sheet = Doc.Sheets.getByName(nomFeuille)
+	StPlage = colElements & numColDebut & ":" & colElements & numColFin
+	CellRange = Sheet.getCellRangeByName(StPlage)
+	oRanges = Doc.createInstance("com.sun.star.sheet.SheetCellRanges") 
+	oRanges.insertByName("", CellRange)   ' - I presume first parameter could be name of range ??, second is an object
+	oSearchCells = oRanges.Cells.createEnumeration 
+	idCurentColl = numColDebut
+	While oSearchCells.hasMoreElements 
+	   oCell = oSearchCells.nextElement 
+	   value = oCell.String
+       Print #FileNo, value      ' Save line 
+	   idCurentColl = idCurentColl + 1
+	Wend
+    Print #FileNo, "{} ];"   ' Save line 
+    Close #FileNo                  ' Close file
+
+End Function
+
+
+Function ExportHashJson(repertoire as String, nomFichierJson as String, nomFeuille as String, idCell as String) As String
+
+    Dim FileNo As Integer
+    Dim CurrentLine As String
+    Dim Filename As String
+    Filename = "C:\dev\github-repositories\VivreANantes_Complements\doc\export\" & repertoire & "\" & nomFichierJson            ' Define file name 
+    FileNo = Freefile               ' Establish free file handle
+ 
+    Open Filename For Output As #FileNo         ' Open file (writing mode)
+    Doc = thisComponent
+	Sheet = Doc.Sheets.getByName(nomFeuille)
+	value = Sheet.getCellRangeByName(idCell).String
+    Print #FileNo, value      ' Save line 
+	Close #FileNo                  ' Close file
+
+End Function
+
+
+
 Sub Main
 
 End Sub
