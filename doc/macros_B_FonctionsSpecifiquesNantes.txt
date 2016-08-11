@@ -83,22 +83,24 @@ End Function
 
 ' Cette fonction genere une ligne du fichier JSON concernant les libelles specifiques
 Function JsonLibellesSpecifiques(colCode as String, colFr as String, colEn as String)
-	Result = "'" & colCode & "' : {"
-	Result = Result & getCleValeurPasVide("fr",colFr,",")	
-	Result = Result & getCleValeurPasVide("en",colEn,"")
-	Result = Result & "} ,"
+	Result = "   '" & colCode & "' : {" & chr(10) & "   "
+	Result = Result &  getCleValeurPasVide("fr",colFr,",")	
+	Result = Result &  getCleValeurPasVide("en",colEn,"")
+	Result = Result &  "},"
+	Result = UtilReplace(Result, "," & chr(10) & "      }",  chr(10) & "   }")
     JsonLibellesSpecifiques = Result
 End Function
 
 ' Cette fonction genere une ligne du fichier JSON concernant les actualites
 Function JsonNews(colCode as String, nomFr as String, nomEn as String, descrFr as String, descrEn as String)
- 	Result = "{"
- 	Result = Result & getCleValeurPasVide("code",colCode,",")	
- 	Result = Result & getCleValeurPasVide("nom",nomFr,",")	
- 	Result = Result & getCleValeurPasVide("nom_en",nomEn,",")	
- 	Result = Result & getCleValeurPasVide("descr",descrFr,",")	
- 	Result = Result & getCleValeurPasVide("descr_en",descrEn,"")
-	Result = Result & "} ,"
+ 	Result = "   {" & chr(10) & "      "
+ 	Result = Result &  getCleValeurPasVide("code",colCode,",")	
+ 	Result = Result &   getCleValeurPasVide("nom",nomFr,",")	
+ 	Result = Result &   getCleValeurPasVide("nom_en",nomEn,",")	
+ 	Result = Result &   getCleValeurPasVide("descr",descrFr,",")	
+ 	Result = Result &   getCleValeurPasVide("descr_en",descrEn,"")
+	Result = Result &  "},"
+	Result = UtilReplace(Result, "," & chr(10) & "      }",  chr(10) & "   }")
     JsonNews = Result
 End Function
 
@@ -106,11 +108,11 @@ End Function
 '' On appelle hash un tableau "mot_cle:codes" qui permet de retrouver immediatement les codes en fonction d'un mot cle.
 Function GetHashDatas(nomHash as String, numLigneDebut as Integer, numLigneFin as Integer, nomOnglet as String, numColCode as String, numColMotsFr as String, numColMotsEn as String)
 	i = "a"
-	Temp = "var " & nomHash & " = [{'z':'z'"
+	Temp = "var " & nomHash & " = [ " & chr(10) & "   {'z':'z'"
  	Temp = Temp & GetHashMotsCles(numLigneDebut, numLigneFin, nomOnglet, RemplaceNumerosColonneParLettresColonne(numColCode), RemplaceNumerosColonneParLettresColonne(numColMotsFr)) 
- 	Temp = Temp & "}, {'z':'z'"
+ 	Temp = Temp & "}," & chr(10) & "   {'z':'z'"
  	Temp = Temp & GetHashMotsCles(numLigneDebut, numLigneFin, nomOnglet, RemplaceNumerosColonneParLettresColonne(numColCode), RemplaceNumerosColonneParLettresColonne(numColMotsEn)) 
- 	Temp = Temp & "} ];"
+ 	Temp = Temp & chr(10) & "   } ];"
 	GetHashDatas = Temp
 End Function
 
@@ -130,11 +132,11 @@ Function GetHashMotsCles(numColDebut as Integer, numColFin as Integer, nomFeuill
 	oRanges = Doc.createInstance("com.sun.star.sheet.SheetCellRanges") 
 	oRanges.insertByName("", CellRange)   ' - I presume first parameter could be name of range ??, second is an object
 	oSearchCells = oRanges.Cells.createEnumeration 
-	idCurentColl = numColDebut
+	idCurentLigne = numColDebut
 	While oSearchCells.hasMoreElements 
 	   oCell = oSearchCells.nextElement 
 	   motsClesSeparesVirgules = UtilTransformeEnMotsCles(oCell.String)
-	   TempCode = Sheet.getCellRangeByName(colCode & idCurentColl)
+	   TempCode = Sheet.getCellRangeByName(colCode & idCurentLigne)
 	   Code = TempCode.String
 	   	arrayElements = Split(motsClesSeparesVirgules,",")
 	   	REM pour tous les mots cles
@@ -142,7 +144,7 @@ Function GetHashMotsCles(numColDebut as Integer, numColFin as Integer, nomFeuill
 			Element = UtilReplace(Element, " ", "")
 		   	ArrayLesMotsCles = UtilAjouteMotCleDansTableau(ArrayLesMotsCles, Element,Code)
    		Next Element
-	idCurentColl = idCurentColl + 1
+	idCurentLigne = idCurentLigne + 1
 	Wend
 	indexFin = 10000
 	for i = 1 to indexFin
@@ -151,7 +153,7 @@ Function GetHashMotsCles(numColDebut as Integer, numColFin as Integer, nomFeuill
 			indexFin = i
 		Else
 			Temp2 =  ArrayLesMotsCles(i,2)
-			Temp = Temp & ",'" & TempMotCle & "':'" & Temp2 & "'"
+			Temp = Temp & "," & chr(10) & "   '" & TempMotCle & "':'" & Temp2 & "'"
 		End If
 	next i
 	
@@ -286,6 +288,9 @@ Public Const ferme As String = ","
 
 
 Function getCleValeurPasVide(cle As String, valeur As String, separator as String)
+    separator = "," & chr(10) & "      "
+    ' Remplace des " par des '
+	valeur = UtilReplace(valeur, """", "'")
 	If valeur = "" or valeur = " " or valeur = "0" Then
 	 	Result = ""
 	Else
@@ -296,6 +301,8 @@ End Function
 
 
 Function getCleValeurAvecDefaut(cle As String, valeur As String, separator as String, defaut as String)
+    separator = "," & chr(10) & "      "
+	valeur = UtilReplace(valeur, """", "'")
 	If valeur = "" or valeur = " " or valeur = "0" Then
 	 	Result = """" & cle & """:""" & defaut & """" & separator	
 	Else
@@ -312,34 +319,66 @@ Function getLatitudeLongitude(latitudeLongitude as String)
 	getLatitudeLongitude = Temp2
 End Function
 
-Function getTraduction(nomFeuille as String, colDebut as String, colFin as String, numColDebut as Integer, numColFin as Integer, inutile as String, nomAttribut as String)
+Function getTraduction(nomFeuille as String, numColDebut as String, numColFin as String, numLigneDebut as Integer, numLigneFin as Integer, nomAttribut as String)
 	Result = ""
 	Doc = thisComponent
 	Sheet = Doc.Sheets.getByName(nomFeuille)
-	StPlage = colDebut & numColDebut & ":" & colDebut & numColFin
+	colDebut = RemplaceNumerosColonneParLettresColonne(numColDebut)
+	colFin = RemplaceNumerosColonneParLettresColonne(numColFin)
+	StPlage = colDebut & numLigneDebut & ":" & colDebut & numLigneFin
 	CellRange = Sheet.getCellRangeByName(StPlage)
 	oRanges = Doc.createInstance("com.sun.star.sheet.SheetCellRanges") 
 	oRanges.insertByName("", CellRange)   ' - I presume first parameter could be name of range ??, second is an object
 	oSearchCells = oRanges.Cells.createEnumeration 
-	idCurentColl = numColDebut
+	idCurentLigne = numLigneDebut
 	While oSearchCells.hasMoreElements 
 	   oCell = oSearchCells.nextElement 
 	   value = oCell.String
-	   CellCommentaire = Sheet.getCellRangeByName(colFin & idCurentColl)
+	   CellCommentaire = Sheet.getCellRangeByName(colFin & idCurentLigne)
 	   codeCommentaire = CellCommentaire.String
 	   '' "dec_antigel.nom" : "Antigel",
- 	   Result = Result & """" & value & "." & nomAttribut & """:""" & codeCommentaire & ""","
-		idCurentColl = idCurentColl + 1
+ 	   Result = Result &  """" & value & "." & nomAttribut & """:""" & codeCommentaire & """," & chr(10)
+		idCurentLigne = idCurentLigne + 1
 	Wend
 	getTraduction = Result
 End Function
 
-Function ExportJson(repertoire as String, nomFichierJson as String, nomFeuille as String, nomObjet as String, colElements as String, numColDebut as String, numColFin as String) As String
+'' (nomSousRepertoire, 7, "Actualites", "newsDatas", "G", 6, 8
+Function ExportAllJson2(Ligne as String)
+   Dim oDoc As Object , Feuille As Object 
+   Dim Cellule As Object 
+   oDoc = ThisComponent 
+   Feuille = oDoc.getSheets.getByName("EXPORT")
+   nomSousRepertoire = Feuille.getCellRangeByName("E2").String
+   nomFichierJson = Feuille.getCellRangeByName("F" & Ligne).String
+   nomFeuille = Feuille.getCellRangeByName("A" & Ligne).String
+   nomObjet = Feuille.getCellRangeByName("G" & Ligne).String
+   colElements = RemplaceNumerosColonneParLettresColonne(Feuille.getCellRangeByName("E" & Ligne).String)
+   numColDebut = Feuille.getCellRangeByName("B" & Ligne).String
+   numColFin = Feuille.getCellRangeByName("C" & Ligne).String
+   ExportJson(nomSousRepertoire, nomFichierJson, nomFeuille, nomObjet, colElements, numColDebut, numColFin)
+End Function
+
+'' repertoire as String, nomFichierJson as String, nomFeuille as String, idCell as String
+Function ExportHashJson2(Ligne as String)
+   Dim oDoc As Object , Feuille As Object 
+   Dim Cellule As Object 
+   oDoc = ThisComponent 
+   Feuille = oDoc.getSheets.getByName("EXPORT")
+   nomSousRepertoire = Feuille.getCellRangeByName("E2").String
+   nomFichierJson = Feuille.getCellRangeByName("H" & Ligne).String
+   nomFeuille = Feuille.getCellRangeByName("A" & Ligne).String
+   idCell = RemplaceNumerosColonneParLettresColonne(Feuille.getCellRangeByName("I" & Ligne).String) & Feuille.getCellRangeByName("J" & Ligne).String
+ 
+   ExportHashJson(nomSousRepertoire, nomFichierJson, nomFeuille, idCell)
+End Function
+
+Function ExportJson2(repertoire as String, nomFichierJson as String, nomFeuille as String, nomObjet as String, colElements as String, numColDebut as String, numColFin as String) As String
 
     Dim FileNo As Integer
     Dim CurrentLine As String
     Dim Filename As String
-    Filename = "C:\dev\github-repositories\VivreANantes_Complements\doc\export\" & repertoire & "\" & nomFichierJson            ' Define file name 
+    Filename = repertoire & "\" & nomFichierJson            ' Define file name 
     FileNo = Freefile               ' Establish free file handle
  
     Open Filename For Output As #FileNo         ' Open file (writing mode)
@@ -351,37 +390,80 @@ Function ExportJson(repertoire as String, nomFichierJson as String, nomFeuille a
 	oRanges = Doc.createInstance("com.sun.star.sheet.SheetCellRanges") 
 	oRanges.insertByName("", CellRange)   ' - I presume first parameter could be name of range ??, second is an object
 	oSearchCells = oRanges.Cells.createEnumeration 
-	idCurentColl = numColDebut
+	idCurentLigne = numColDebut
 	While oSearchCells.hasMoreElements 
 	   oCell = oSearchCells.nextElement 
 	   value = oCell.String
        Print #FileNo, value      ' Save line 
-	   idCurentColl = idCurentColl + 1
+	   idCurentLigne = idCurentLigne + 1
 	Wend
     Print #FileNo, "{} ];"   ' Save line 
     Close #FileNo                  ' Close file
 
 End Function
 
+Function ExportJson(repertoire as String, nomFichierJson as String, nomFeuille as String, nomObjet as String, colElements as String, numColDebut as String, numColFin as String) As String
+
+    Dim myTextFile As Object, sf As Object, fileStream As Object
+    Dim myFilePath As String
+
+    myFilePath = convertToURL(repertoire & "\" & nomFichierJson)
+    sf = createUnoService("com.sun.star.ucb.SimpleFileAccess")
+    fileStream = sf.openFileWrite(myFilePath)
+    myTextFile = createUnoService("com.sun.star.io.TextOutputStream")
+    myTextFile.OutputStream = fileStream
+    myTextFile.Encoding = "UTF-8"
+	If nomObjet <> "" and nomObjet <> " " and nomObjet <> "0" Then
+	   myTextFile.writeString("var " & nomObjet & " = [" & chr(10))
+	Else
+	 myTextFile.writeString("{")	
+	End If
+   
+	Doc = thisComponent
+	Sheet = Doc.Sheets.getByName(nomFeuille)
+	StPlage = colElements & numColDebut & ":" & colElements & numColFin
+	CellRange = Sheet.getCellRangeByName(StPlage)
+	oRanges = Doc.createInstance("com.sun.star.sheet.SheetCellRanges") 
+	oRanges.insertByName("", CellRange)   ' - I presume first parameter could be name of range ??, second is an object
+	oSearchCells = oRanges.Cells.createEnumeration 
+	idCurentLigne = numColDebut
+	While oSearchCells.hasMoreElements 
+	   oCell = oSearchCells.nextElement 
+	   value = oCell.String
+       myTextFile.writeString(value & chr(10))      ' Save line 
+	   idCurentLigne = idCurentLigne + 1
+	Wend
+	If nomObjet = "" or nomObjet = " " or nomObjet <> "0" Then
+	   myTextFile.writeString("};")
+	Else
+	   myTextFile.writeString("{} ];")
+	End If
+       ' Save line 
+    fileStream.closeOutput
+    myTextFile.closeOutput
+End Function
 
 Function ExportHashJson(repertoire as String, nomFichierJson as String, nomFeuille as String, idCell as String) As String
 
-    Dim FileNo As Integer
-    Dim CurrentLine As String
-    Dim Filename As String
-    Filename = "C:\dev\github-repositories\VivreANantes_Complements\doc\export\" & repertoire & "\" & nomFichierJson            ' Define file name 
-    FileNo = Freefile               ' Establish free file handle
- 
-    Open Filename For Output As #FileNo         ' Open file (writing mode)
+
+    Dim myTextFile As Object, sf As Object, fileStream As Object
+    Dim myFilePath As String
+
+    myFilePath = convertToURL(repertoire & "\" & nomFichierJson)
+    sf = createUnoService("com.sun.star.ucb.SimpleFileAccess")
+    fileStream = sf.openFileWrite(myFilePath)
+    myTextFile = createUnoService("com.sun.star.io.TextOutputStream")
+    myTextFile.OutputStream = fileStream
+    myTextFile.Encoding = "UTF-8"
+
     Doc = thisComponent
 	Sheet = Doc.Sheets.getByName(nomFeuille)
 	value = Sheet.getCellRangeByName(idCell).String
-    Print #FileNo, value      ' Save line 
-	Close #FileNo                  ' Close file
+    myTextFile.writeString(value & chr(10))      ' Save line 
+	 fileStream.closeOutput
+    myTextFile.closeOutput
 
 End Function
-
-
 
 Sub Main
 
