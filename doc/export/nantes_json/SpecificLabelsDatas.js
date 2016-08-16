@@ -15,6 +15,8 @@ var _specificLabelsDatas = [
    "fr":"Par des b&eacute;n&eacute;voles<br/>www.mieuxtrieranantes.fr<br/>Version 1.21 (Inès)<br/><i>Nouveaut&eacute;s : Mises à jour données des structures réemploi + données Open Data Nantes : jours de collecte, emplacements conteneurs.",
       "en":"By volunteers <br/> www.mieuxtrieranantes.fr <br/> Version 1.21 (Inès) <br/> <i> New : Data Updates of reuse structures."
    },
+};ures."
+   },
 };
       
    },

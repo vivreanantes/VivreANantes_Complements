@@ -20,6 +20,8 @@ var _newsDatas = [
       "descr":"Le magasin O Bôcal vient d'ouvrir en face de la mairie. Un magasin sans emballage.",
       "descr_en":"Le magasin O Bôcal vient d'ouvrir en face de la mairie. Un magasin sans emballage."
    },
+};emballage."
+   },
 }; },
 {}];
 };  

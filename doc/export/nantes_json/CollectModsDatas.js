@@ -468,6 +468,12 @@ var _collectModsDatas = [
       "mots_cles":"reemploi,velos",
       "mots_cles_en":"reuse,bicycle"
    },
+};</a>,  <a href='lieu:stco_reemploiajout2'>Transformeur</a>, Vélo Campus) récupèrent les anciens vélos.",
+      "descr_en":"Several organizations (associations <a href='lieu:stco_reemploi14'> ATAO </a> <a href='lieu:stco_reemploi14'> Place </a> bikes <a href='lieu:stco_reemploiajout2'> Transformer < / a>, Bicycle Campus) recover old bikes.",
+      "image":"reemploi_petit.png",
+      "mots_cles":"reemploi,velos",
+      "mots_cles_en":"reuse,bicycle"
+   },
 };èrent les anciens véhicules.",
       "descr_en":"The car breaks ('headland') recover older vehicles.",
       

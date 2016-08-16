@@ -64,6 +64,9 @@ var _hashDocsDatas = [
    'atlantique':'doc_listeasso',
    'bulk':'doc_listeasso'
    } ];
+atlantique':'doc_listeasso',
+   'bulk':'doc_listeasso'
+   } ];
 listeasso',
       'enterprise':'doc_listeasso',
       'reuse':'doc_listeasso',

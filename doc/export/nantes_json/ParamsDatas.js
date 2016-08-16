@@ -67,6 +67,9 @@ var _paramsDatas = [
       "code":"pages.page7.nom",
       "valeur":"trisacs_nantes"
    },
+};"code":"pages.page7.nom",
+      "valeur":"trisacs_nantes"
+   },
 };    
    },
 };,

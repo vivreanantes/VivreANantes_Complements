@@ -403,6 +403,16 @@ var _advicesDatas = [
       "descr":"Non ce n'est pas obligatoire.",
       "descr_en":"No this is not mandatory. "
    },
+};bouteille que vous déposez dans le sac bleu ou dans le bac bleu.",
+      "descr_en":"Put the oil in a bottle you drop in the blue bag or in the blue bin."
+   },
+   {
+      "code":"cons_spirale",
+      "nom":"Doit-on supprimer les spirales ?",
+      "nom_en":"Should we remove the spirals ?",
+      "descr":"Non ce n'est pas obligatoire.",
+      "descr_en":"No this is not mandatory. "
+   },
 }; ];in La Chapelle-sur-Erdre and Saint-Sébastien-sur-Loire.",
       
       },

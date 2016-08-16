@@ -152,6 +152,12 @@ var _usualCategoriesDatas = [
       "source":"telephone_fixe_mini.png",
       "image":"Vérif le 03/2013"
    },
+};ique",
+      "estSousCategorie":"false",
+      "sous_cat":"cu",
+      "source":"telephone_fixe_mini.png",
+      "image":"Vérif le 03/2013"
+   },
 };at":"false",
       
       "image":"batterie_voiture_mini.png",

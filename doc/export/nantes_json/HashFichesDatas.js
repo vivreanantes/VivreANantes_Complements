@@ -172,3 +172,9 @@ var _hashFichesDatas = [
    'coueron':'fiche_telephone',
    'valorena':'fiche_arcenciel'
    } ];
+ry':'fiche_telephone,fiche_arcenciel',
+   'arc':'fiche_telephone',
+   'ciel':'fiche_telephone',
+   'coueron':'fiche_telephone',
+   'valorena':'fiche_arcenciel'
+   } ];

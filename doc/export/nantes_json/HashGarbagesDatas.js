@@ -848,3 +848,22 @@ var _hashGarbagesDatas = [
    'dress':'dec_vetementEnBonEtat,dec_vetementUsage',
    'window':'dec_vitre'
    } ];
+rcelaine',
+   'cup':'dec_vaisselleCarton,dec_vaissellePlastique,dec_vaisselleVerrePorcelaine',
+   'bowl':'dec_vaisselleVerrePorcelaine',
+   'dish':'dec_vaisselleVerrePorcelaine',
+   'drinking':'dec_vaisselleVerrePorcelaine,dec_verreaboire',
+   'earthenware':'dec_vaisselleVerrePorcelaine',
+   'jug':'dec_vaisselleVerrePorcelaine',
+   'bike':'dec_velo,dec_velo',
+   'bicycle':'dec_velo',
+   'skateboard':'dec_velo',
+   'clothing':'dec_vetementEnBonEtat,dec_vetementUsage',
+   'pants':'dec_vetementEnBonEtat,dec_vetementUsage',
+   'shirt':'dec_vetementEnBonEtat,dec_vetementUsage',
+   'sweater':'dec_vetementEnBonEtat,dec_vetementUsage',
+   'jacket':'dec_vetementEnBonEtat,dec_vetementUsage',
+   'skirt':'dec_vetementEnBonEtat,dec_vetementUsage',
+   'dress':'dec_vetementEnBonEtat,dec_vetementUsage',
+   'window':'dec_vitre'
+   } ];
