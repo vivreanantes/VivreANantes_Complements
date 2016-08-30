@@ -337,7 +337,7 @@ Function getTraduction(nomFeuille as String, numColDebut as String, numColFin as
 	   CellCommentaire = Sheet.getCellRangeByName(colFin & idCurentLigne)
 	   codeCommentaire = CellCommentaire.String
 	   '' "dec_antigel.nom" : "Antigel",
- 	   Result = Result &  """" & value & "." & nomAttribut & """:""" & codeCommentaire & """," & chr(10)
+ 	   Result = Result &  """" & value & "." & nomAttribut & """:""" & codeCommentaire & """," & chr(10) & "   "
 		idCurentLigne = idCurentLigne + 1
 	Wend
 	getTraduction = Result
@@ -416,7 +416,7 @@ Function ExportJson(repertoire as String, nomFichierJson as String, nomFeuille a
 	If nomObjet <> "" and nomObjet <> " " and nomObjet <> "0" Then
 	   myTextFile.writeString("var " & nomObjet & " = [" & chr(10))
 	Else
-	 myTextFile.writeString("{")	
+	 myTextFile.writeString("{" & chr(10) & "   ")
 	End If
    
 	Doc = thisComponent
@@ -434,9 +434,9 @@ Function ExportJson(repertoire as String, nomFichierJson as String, nomFeuille a
 	   idCurentLigne = idCurentLigne + 1
 	Wend
 	If nomObjet = "" or nomObjet = " " or nomObjet <> "0" Then
-	   myTextFile.writeString("};")
+	   myTextFile.writeString("")
 	Else
-	   myTextFile.writeString("{} ];")
+	   myTextFile.writeString("{}" & chr(10) & "   ];")
 	End If
        ' Save line 
     fileStream.closeOutput
