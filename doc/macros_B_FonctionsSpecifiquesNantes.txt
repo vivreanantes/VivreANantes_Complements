@@ -336,8 +336,7 @@ Function getTraduction(nomFeuille as String, numColDebut as String, numColFin as
 	   value = oCell.String
 	   CellCommentaire = Sheet.getCellRangeByName(colFin & idCurentLigne)
 	   codeCommentaire = CellCommentaire.String
-	   '' "dec_antigel.nom" : "Antigel",
- 	   Result = Result &  """" & value & "." & nomAttribut & """:""" & codeCommentaire & """," & chr(10) & "   "
+ 	   Result = Result &  """" & value & "-" & nomAttribut & """:""" & codeCommentaire & """," & chr(10)
 		idCurentLigne = idCurentLigne + 1
 	Wend
 	getTraduction = Result
